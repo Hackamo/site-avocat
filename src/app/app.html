@@ -1,13 +1,13 @@
 <!-- Navigation -->
 <mat-toolbar class="app-toolbar">
-	<span class="logo">Maître Martinet</span>
+	<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
 	<span class="spacer"></span>
 	<nav>
 		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
 		<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
 		<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
 		<a mat-button routerLink="/contact" routerLinkActive="active-link">Contact</a>
-		<button mat-flat-button>Prendre RDV</button>
+		<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>Prendre RDV</button>
 	</nav>
 </mat-toolbar>
 

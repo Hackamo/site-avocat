@@ -7,8 +7,13 @@
 	min-height: 60vh;
 }
 
-.home-content {
-	max-width: 50%;
+.home-image-container {
+	img {
+		border-radius: 0.5rem;
+		width: 100%;
+		height: auto;
+		max-width: 500px;
+	}
 }
 
 .cta-button {
