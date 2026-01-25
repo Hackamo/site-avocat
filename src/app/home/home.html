@@ -1,40 +1,42 @@
 <!-- Hero Section (Bannière) -->
 <header class="home-section container">
-	<div class="home-content">
-		<h1 class="mat-display-3">Votre avocate en droit des étrangers</h1>
-		<p class="mat-headline-5">Accompagnement juridique pour vos démarches de séjour et de nationalité en France</p>
-		<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button color="neutral" class="cta-button">
-			Demander une consultation
-		</button>
-	</div>
-	<!-- Image d'illustration -->
-	<div class="home-image-container">
-		<img ngSrc="assets/debora_home_crop.JPG" width="400" height="600" alt="Image du Maître Martinet" priority />
-	</div>
+  <div class="home-content">
+    <h1 class="mat-display-3">Votre avocate en droit des étrangers</h1>
+    <p class="mat-headline-5">
+      Accompagnement juridique pour vos démarches de séjour et de nationalité en France
+    </p>
+    <button
+      routerLink="/contact"
+      routerLinkActive="active-link"
+      mat-flat-button
+      color="neutral"
+      class="cta-button"
+    >
+      Demander une consultation
+    </button>
+  </div>
 </header>
 
 <!-- Section Prestations -->
 <section class="container">
-	<h2 class="mat-display-1 text-center mb-4">Nos Domaines d'Intervention</h2>
+  <h2 class="mat-display-1 text-center mb-4">Nos Domaines d'Intervention</h2>
 
-	<div class="cards-grid">
-		@for (service of services; track service.title) {
-
-		<mat-card routerLink="/prestations" fragment="{{service.anchor}}" class="prestation-card" appearance="outlined">
-			<mat-card-header>
-				<div mat-card-avatar class="service-icon">
-					<mat-icon color="primary">{{service.icon}}</mat-icon>
-				</div>
-				<mat-card-title>{{service.title}}</mat-card-title>
-			</mat-card-header>
-			<mat-card-content>
-				<p>{{service.description}}</p>
-			</mat-card-content>
-			<mat-card-actions align="end">
-				<button mat-button color="primary">EN SAVOIR PLUS</button>
-			</mat-card-actions>
-		</mat-card>
-
-		}
-	</div>
+  <div class="cards-grid">
+    @for (service of services; track service.title) {
+      <mat-card routerLink="/prestations" class="prestation-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="service-icon">
+            <mat-icon color="primary">{{ service.icon }}</mat-icon>
+          </div>
+          <mat-card-title>{{ service.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ service.description }}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button color="primary">EN SAVOIR PLUS</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
 </section>
