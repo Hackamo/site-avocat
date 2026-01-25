@@ -1,0 +1,70 @@
+.app-toolbar {
+	position: sticky;
+	// background-color: #800020;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+}
+
+nav a.active-link {
+	// Exemple de style pour le lien actif
+	text-decoration: underline;
+	text-underline-offset: 6px;
+}
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+.app-footer {
+	background-color: var(--mat-sys-primary);
+	color: var(--mat-sys-on-primary);
+	padding: 2rem;
+	text-align: center;
+	margin-top: 4rem;
+}
+
+@media (max-width: 600px) {
+	.app-toolbar {
+		flex-direction: column;
+		height: auto;
+		padding: 1rem 0;
+	}
+	.spacer {
+		display: none;
+	}
+	nav {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+}
+
+::view-transition-old(root) {
+	animation: 200ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+	animation: 300ms ease-in 100ms both fade-in;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}

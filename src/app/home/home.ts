@@ -1,29 +1,29 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { CommonModule, NgOptimizedImage } from '@angular/common'
-import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
+import { RouterLink } from '@angular/router'
+import { ServicesDataService } from '../services/services-data.service'
 
 @Component({
-	selector: 'app-root',
+	selector: 'app-home',
 	imports: [
-		// Imports pour le routage
-		RouterModule,
-		RouterOutlet,
-		RouterLink,
-		RouterLinkActive,
-
 		// Imports pour Angular Material
 		MatToolbarModule,
 		MatButtonModule,
 		MatCardModule,
 		MatIconModule,
+		NgOptimizedImage,
 		CommonModule,
+		RouterLink,
 	],
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	templateUrl: './app.html',
-	styleUrl: './app.scss',
+	templateUrl: './home.html',
+	styleUrl: './home.scss',
 })
-export class App {}
+export class Home {
+	private servicesDataService = inject(ServicesDataService)
+
+	services = this.servicesDataService.services()
+}
