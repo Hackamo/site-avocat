@@ -1,0 +1,8 @@
+<div class="container blog-page">
+	<article class="blog-post" *ngIf="article() as art">
+		<h1 class="mat-display-2">{{ art.title || 'Article introuvable' }}</h1>
+		<p class="mat-headline-5">{{ art.summary || 'Aucun résumé disponible'}}</p>
+		<div [innerHTML]="art.content"></div>
+	</article>
+	<p class="mat-body-1" *ngIf="!article()">Article introuvable.</p>
+</div>

@@ -28,10 +28,9 @@ nav a.active-link {
 	color: var(--mat-sys-on-primary);
 	padding: 2rem;
 	text-align: center;
-	margin-top: 4rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	.app-toolbar {
 		flex-direction: column;
 		height: auto;

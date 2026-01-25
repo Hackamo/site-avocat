@@ -5,6 +5,7 @@ export interface ServiceItem {
 	icon: string
 	description: string
 	subtitle?: string
+	anchor?: string
 	detailedDescription?: string
 	items?: string[]
 }
@@ -19,6 +20,7 @@ export class ServicesDataService {
 			icon: 'badge',
 			description: 'Demande de régularisation, renouvellement, changement de statut et regroupement familial.',
 			subtitle: 'Obtention et renouvellement de votre droit au séjour',
+			anchor: 'titres-de-sejour',
 			detailedDescription:
 				'Nous vous assistons dans la constitution de votre dossier et vous représentons auprès des préfectures pour sécuriser votre situation administrative en France.',
 			items: [
@@ -35,6 +37,7 @@ export class ServicesDataService {
 			icon: 'flag',
 			description: 'Procédures de naturalisation par décret, mariage ou déclaration.',
 			subtitle: 'Devenir citoyen français',
+			anchor: 'nationalite-francaise',
 			detailedDescription:
 				"L'acquisition de la nationalité française est une étape majeure. Nous vous guidons à travers les différentes procédures pour maximiser vos chances de succès.",
 			items: [
@@ -50,6 +53,7 @@ export class ServicesDataService {
 			icon: 'gavel',
 			description: 'Défense contre les OQTF, refus de visa et contentieux devant le tribunal administratif.',
 			subtitle: 'Défense de vos droits devant les juridictions',
+			anchor: 'contentieux-recours',
 			detailedDescription:
 				'Face à une décision administrative défavorable, une action rapide et stratégique est essentielle. Nous vous défendons avec pugnacité devant les tribunaux administratifs.',
 			items: [

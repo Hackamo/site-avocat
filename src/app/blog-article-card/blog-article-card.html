@@ -1,0 +1,10 @@
+<a class="blog-card" [routerLink]="['/blog', article.slug]">
+	<mat-card>
+		<mat-card-header>
+			<mat-card-title>{{ article.title }}</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<p>{{ article.summary }}</p>
+		</mat-card-content>
+	</mat-card>
+</a>
