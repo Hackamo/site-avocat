@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './app/styles/theme-colors' as theme;
+
+@include mat.core();
+
+$avocat-theme: mat.define-theme(
+	(
+		color: (
+			theme-type: light,
+			primary: theme.$primary-palette,
+			tertiary: theme.$tertiary-palette,
+		),
+		typography: (
+			brand-family: "'Playfair Display', serif",
+			plain-family: "'Lato', sans-serif",
+			bold-weight: 800,
+			medium-weight: 500,
+			regular-weight: 300,
+		),
+		density: (
+			scale: 0,
+		),
+	)
+);
+
+@include mat.all-component-themes($avocat-theme);
+
+@include mat.core();
+
+// Reset et styles de base
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background: var(--mat-sys-surface);
+	color: var(--mat-sys-on-surface);
+}
+
+// Classes utilitaires pour le design épuré
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.text-center {
+	text-align: center;
+}
+.mb-2 {
+	margin-bottom: 1rem;
+}
+.mb-4 {
+	margin-bottom: 2rem;
+}
+.mt-4 {
+	margin-top: 2rem;
+}
+
+// Style spécifique pour les titres
+h1,
+h2,
+h3 {
+	color: var(--mat-sys-primary);
+	letter-spacing: -0.5px;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 16px 0;
+}
+
+.list-item {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: '•';
+		color: var(--mat-sys-primary);
+		margin-right: 16px;
+		font-size: 1.2em;
+	}
+}

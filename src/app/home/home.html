@@ -1,0 +1,37 @@
+<!-- Hero Section (Bannière) -->
+<header class="home-section container">
+	<div class="home-content">
+		<h1 class="mat-display-3">Votre avocate en droit des étrangers</h1>
+		<p class="mat-headline-5">Accompagnement juridique pour vos démarches de séjour et de nationalité en France</p>
+		<button mat-flat-button color="neutral" class="cta-button">Demander une consultation</button>
+	</div>
+	<!-- Image d'illustration (remplacez par votre image réelle) -->
+	<div class="home-image-container">
+		<!-- Utilisez une image réelle ici, ex: assets/lawyer-office.jpg -->
+		<img ngSrc="https://placehold.co/600x400/EEE/31343C" width="600" height="400" alt="Bureau avocat" priority />
+	</div>
+</header>
+
+<!-- Section Prestations -->
+<section class="container">
+	<h2 class="mat-display-1 text-center mb-4">Nos Domaines d'Intervention</h2>
+
+	<div class="cards-grid">
+		@for (service of services; track service.title) {
+		<mat-card class="prestation-card" appearance="outlined">
+			<mat-card-header>
+				<div mat-card-avatar class="service-icon">
+					<mat-icon color="primary">{{service.icon}}</mat-icon>
+				</div>
+				<mat-card-title>{{service.title}}</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<p>{{service.description}}</p>
+			</mat-card-content>
+			<mat-card-actions align="end">
+				<button mat-button color="primary" routerLink="/prestations">EN SAVOIR PLUS</button>
+			</mat-card-actions>
+		</mat-card>
+		}
+	</div>
+</section>

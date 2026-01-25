@@ -1,0 +1,130 @@
+<div class="container contact-page">
+	<header class="page-header">
+		<h1 class="mat-display-2">Contactez-nous</h1>
+		<p class="mat-headline-5">
+			Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous vous
+			répondrons dans les plus brefs délais.
+		</p>
+	</header>
+
+	<div class="contact-content">
+		<!-- Informations de contact -->
+		<section class="contact-info">
+			<mat-card class="info-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>location_on</mat-icon>
+					<mat-card-title>Adresse</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>123 Avenue des Avocats<br />75001 Paris, France</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="info-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>phone</mat-icon>
+					<mat-card-title>Téléphone</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>01 23 45 67 89</p>
+					<p class="subtitle">Du lundi au vendredi, 9h-18h</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="info-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>email</mat-icon>
+					<mat-card-title>Email</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>contact@maitre-martinet.fr</p>
+					<p class="subtitle">Réponse sous 24h</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="info-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>schedule</mat-icon>
+					<mat-card-title>Horaires d'ouverture</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>Lundi - Vendredi : 9h00 - 18h00</p>
+					<p>Samedi : Sur rendez-vous</p>
+					<p>Dimanche : Fermé</p>
+				</mat-card-content>
+			</mat-card>
+		</section>
+
+		<!-- Formulaire de contact -->
+		<section class="contact-form">
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>Envoyez-nous un message</mat-card-title>
+					<mat-card-subtitle>Remplissez le formulaire ci-dessous</mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-content>
+					<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-fields">
+						<mat-form-field appearance="outline" class="full-width">
+							<mat-label>Nom complet</mat-label>
+							<input matInput formControlName="name" required />
+							<mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+								Le nom est requis
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="outline" class="full-width">
+							<mat-label>Email</mat-label>
+							<input matInput type="email" formControlName="email" required />
+							<mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+								Email valide requis
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="outline" class="full-width">
+							<mat-label>Téléphone</mat-label>
+							<input matInput formControlName="phone" />
+						</mat-form-field>
+
+						<mat-form-field appearance="outline" class="full-width">
+							<mat-label>Sujet</mat-label>
+							<mat-select formControlName="subject" required>
+								<mat-option value="consultation">Demande de consultation</mat-option>
+								<mat-option value="information">Demande d'information</mat-option>
+								<mat-option value="urgence">Urgence juridique</mat-option>
+								<mat-option value="autre">Autre</mat-option>
+							</mat-select>
+							<mat-error *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+								Veuillez sélectionner un sujet
+							</mat-error>
+						</mat-form-field>
+
+						<mat-form-field appearance="outline" class="full-width">
+							<mat-label>Message</mat-label>
+							<textarea matInput formControlName="message" rows="5" required></textarea>
+							<mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+								Le message est requis
+							</mat-error>
+						</mat-form-field>
+
+						<div class="form-actions">
+							<button mat-flat-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
+								<span *ngIf="!isSubmitting">Envoyer le message</span>
+								<span *ngIf="isSubmitting">Envoi en cours...</span>
+							</button>
+						</div>
+					</form>
+				</mat-card-content>
+			</mat-card>
+		</section>
+	</div>
+
+	<!-- Section CTA -->
+	<section class="cta-section text-center">
+		<h2 class="mat-headline-4">Besoin d'une consultation urgente ?</h2>
+		<p>Contactez-nous directement par téléphone pour une prise en charge rapide.</p>
+		<button mat-flat-button color="primary" href="tel:+33123456789">
+			<mat-icon>phone</mat-icon>
+			Appeler maintenant
+		</button>
+	</section>
+</div>
