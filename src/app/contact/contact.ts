@@ -59,36 +59,40 @@ export class Contact {
 				this.speechSupported.set(true)
 				this.recognition = new SpeechRecognition()
 				this.recognition.lang = 'fr-FR'
-			this.recognition.continuous = true
-			this.recognition.interimResults = true
+				this.recognition.continuous = true
+				this.recognition.interimResults = true
 
-			this.recognition.onresult = (event: any) => {
-				let interimTranscript = ''
-				let finalTranscript = ''
+				this.recognition.onresult = (event: any) => {
+					let interimTranscript = ''
+					let finalTranscript = ''
 
-				for (let i = event.resultIndex; i < event.results.length; i++) {
-					const transcript = event.results[i][0].transcript
-					if (event.results[i].isFinal) {
-						finalTranscript += transcript + ' '
-					} else {
-						interimTranscript += transcript
+					for (let i = event.resultIndex; i < event.results.length; i++) {
+						const transcript = event.results[i][0].transcript
+						if (event.results[i].isFinal) {
+							finalTranscript += transcript + ' '
+						} else {
+							interimTranscript += transcript
+						}
 					}
-				}
 
-				const currentMessage = this.contactForm.get('message')?.value || ''
-				
-				// Si on a un résultat final, on l'ajoute au message
-				if (finalTranscript) {
-					const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-					const newMessage = baseMessage ? `${baseMessage} ${finalTranscript.trim()}` : finalTranscript.trim()
-					this.contactForm.patchValue({ message: newMessage })
-				} 
-				// Sinon, on affiche le résultat intermédiaire
-				else if (interimTranscript) {
-					const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-					const newMessage = baseMessage ? `${baseMessage} [En cours de dictée...]` : '[En cours de dictée...]'
-					this.contactForm.patchValue({ message: newMessage })
-				}
+					const currentMessage = this.contactForm.get('message')?.value || ''
+
+					// Si on a un résultat final, on l'ajoute au message
+					if (finalTranscript) {
+						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
+						const newMessage = baseMessage
+							? `${baseMessage} ${finalTranscript.trim()}`
+							: finalTranscript.trim()
+						this.contactForm.patchValue({ message: newMessage })
+					}
+					// Sinon, on affiche le résultat intermédiaire
+					else if (interimTranscript) {
+						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
+						const newMessage = baseMessage
+							? `${baseMessage} [En cours de dictée...]`
+							: '[En cours de dictée...]'
+						this.contactForm.patchValue({ message: newMessage })
+					}
 					console.error('Speech recognition error:', event.error)
 					this.isListening.set(false)
 					let errorMessage = 'Erreur de reconnaissance vocale'

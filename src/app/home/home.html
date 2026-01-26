@@ -15,7 +15,12 @@
 
 	<div class="cards-grid">
 		@for (service of services; track service.title) {
-		<mat-card class="prestation-card" appearance="outlined" [routerLink]="['/prestations']" [fragment]="service.anchor">
+		<mat-card
+			class="prestation-card"
+			appearance="outlined"
+			[routerLink]="['/prestations']"
+			[fragment]="service.anchor"
+		>
 			<mat-card-header>
 				<div mat-card-avatar class="service-icon">
 					<mat-icon color="primary">{{ service.icon }}</mat-icon>

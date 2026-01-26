@@ -2,8 +2,8 @@
 	<header class="page-header">
 		<h1 class="mat-display-2">Contactez-nous</h1>
 		<p class="mat-headline-5">
-			Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous vous
-			répondrons dans les plus brefs délais.
+			Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous
+			vous répondrons dans les plus brefs délais.
 		</p>
 	</header>
 
@@ -160,8 +160,17 @@
 						<mat-hint>Soyez précis pour nous aider à mieux comprendre votre situation</mat-hint>
 
 						<div class="form-actions">
-							<button mat-flat-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
-								@if (!isSubmitting) {<span>Envoyer le message</span>} @else {<span>Envoi en cours...</span>}
+							<button
+								mat-flat-button
+								color="primary"
+								type="submit"
+								[disabled]="contactForm.invalid || isSubmitting"
+							>
+								@if (!isSubmitting) {
+								<span>Envoyer le message</span>
+								} @else {
+								<span>Envoi en cours...</span>
+								}
 							</button>
 						</div>
 					</form>
