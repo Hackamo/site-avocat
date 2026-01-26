@@ -6,11 +6,12 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
 import { RouterLink } from '@angular/router'
 import { ServicesDataService } from '../services/services-data.service'
+import { AnimateOnScroll } from '../directives/animate-on-scroll.directive'
 
 @Component({
 	selector: 'app-services',
 	standalone: true,
-	imports: [MatCardModule, MatListModule, MatIconModule, MatButtonModule, RouterLink],
+	imports: [MatCardModule, MatListModule, MatIconModule, MatButtonModule, RouterLink, AnimateOnScroll],
 	templateUrl: './prestations.html',
 	styleUrl: './prestations.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,

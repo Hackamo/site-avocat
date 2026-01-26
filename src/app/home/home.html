@@ -1,5 +1,5 @@
 <!-- Hero Section (Bannière) -->
-<header class="home-section container">
+<header class="home-section container" animateOnScroll="fade">
 	<div class="home-content">
 		<h1 class="mat-display-3">Votre avocate en droit des étrangers</h1>
 		<p class="mat-headline-5">Accompagnement juridique pour vos démarches de séjour et de nationalité en France</p>
@@ -7,15 +7,24 @@
 			Demander une consultation
 		</button>
 	</div>
+	<img
+		class="hero-image"
+		ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
+		priority
+		width="400"
+		height="600"
+		alt="Image représentant une balance de justice"
+	/>
 </header>
 
 <!-- Section Prestations -->
-<section class="container">
+<section class="container" animateOnScroll="fade">
 	<h2 class="mat-display-1 text-center mb-4">Nos Domaines d'Intervention</h2>
 
 	<div class="cards-grid">
 		@for (service of services; track service.title) {
 		<mat-card
+			animateText="fade"
 			class="prestation-card"
 			appearance="outlined"
 			[routerLink]="['/prestations']"

@@ -144,7 +144,7 @@
 
 	input,
 	textarea {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	@media (max-width: 1250px) {
@@ -248,17 +248,13 @@
 }
 /* Textarea styling for better UX */
 textarea.message-textarea {
-	font-size: 1rem !important;
-	line-height: 1.6 !important;
-	padding: 1rem !important;
 	font-family: 'Lato', sans-serif;
 	resize: vertical;
 	min-height: 140px;
 	letter-spacing: 0.3px;
 
 	&::placeholder {
-		color: var(--mat-sys-on-surface) !important;
-		opacity: 0.7;
+		opacity: 0.3;
 	}
 
 	&:focus {
@@ -329,4 +325,27 @@ mat-form-field.full-width {
 	&.mat-focused .mat-mdc-floating-label {
 		font-weight: 500;
 	}
+}
+
+/* Autofill override */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	box-shadow: 0 0 0 1000px #f7f2e8 inset; /* your background */
+	-webkit-text-fill-color: #1f2933; /* your text color */
+	caret-color: #1f2933;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+	box-shadow: 0 0 0 1000px #f7f2e8 inset; /* focus background */
+	-webkit-text-fill-color: #0f1720;
+}
+
+/* Optional: keep transitions from flashing */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	transition: background-color 9999s ease-out;
 }

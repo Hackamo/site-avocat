@@ -1,6 +1,6 @@
 <div class="about-page">
 	<!-- Hero Section -->
-	<header class="hero-section">
+	<header class="hero-section" animateOnScroll="fade">
 		<div class="container">
 			<div class="hero-content">
 				<h1 class="mat-display-2">À Propos de Maître Martinet</h1>
@@ -10,14 +10,7 @@
 				</p>
 			</div>
 			<div class="hero-image">
-				<img
-					ngSrc="assets/debora_about.jpeg"
-					ngSrcset="300w,600w,   900w"
-					priority
-					width="300"
-					height="400"
-					alt="Image du Maître Martinet"
-				/>
+				<img ngSrc="assets/debora_about.jpg" priority width="400" height="600" alt="Image du Maître Martinet" />
 			</div>
 		</div>
 	</header>
@@ -25,15 +18,15 @@
 	<!-- Main Content -->
 	<main class="container">
 		<!-- Introduction -->
-		<section class="intro-section">
+		<section class="intro-section" animateOnScroll="fade">
 			<div class="intro-content">
 				<h2 class="mat-display-1 section-title">Mon Engagement</h2>
-				<p class="mat-body-1">
+				<p class="mat-body-1" animateText="fade">
 					Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise au
 					service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d'installation
 					et de naturalisation en France.
 				</p>
-				<p class="mat-body-1">
+				<p class="mat-body-1" animateText="fade">
 					Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un accompagnement
 					personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une chance de réussir son projet
 					de vie en France, et je m'engage à défendre vos droits avec détermination et professionnalisme.
@@ -46,7 +39,7 @@
 			<h2 class="mat-display-1 section-title text-center">Parcours Professionnel</h2>
 
 			<div class="experience-grid">
-				<mat-card class="experience-card">
+				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>school</mat-icon>
 						<mat-card-title>Formation</mat-card-title>
@@ -62,7 +55,7 @@
 					</mat-card-content>
 				</mat-card>
 
-				<mat-card class="experience-card">
+				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>work</mat-icon>
 						<mat-card-title>Expérience</mat-card-title>
@@ -78,7 +71,7 @@
 					</mat-card-content>
 				</mat-card>
 
-				<mat-card class="experience-card">
+				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>gavel</mat-icon>
 						<mat-card-title>Domaines d'Expertise</mat-card-title>
@@ -101,7 +94,7 @@
 			<h2 class="mat-display-1 section-title text-center">Mes Valeurs</h2>
 
 			<div class="values-grid">
-				<div class="value-item">
+				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">accessibility</mat-icon>
 					<h3 class="mat-headline-6">Accessibilité</h3>
 					<p class="mat-body-2">
@@ -110,7 +103,7 @@
 					</p>
 				</div>
 
-				<div class="value-item">
+				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">balance</mat-icon>
 					<h3 class="mat-headline-6">Intégrité</h3>
 					<p class="mat-body-2">
@@ -119,7 +112,7 @@
 					</p>
 				</div>
 
-				<div class="value-item">
+				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">people</mat-icon>
 					<h3 class="mat-headline-6">Humanité</h3>
 					<p class="mat-body-2">
@@ -128,7 +121,7 @@
 					</p>
 				</div>
 
-				<div class="value-item">
+				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">lightbulb</mat-icon>
 					<h3 class="mat-headline-6">Innovation</h3>
 					<p class="mat-body-2">
@@ -141,7 +134,7 @@
 
 		<!-- Languages Section -->
 		<section class="languages-section">
-			<mat-card class="languages-card">
+			<mat-card class="languages-card" animateText="fade">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>language</mat-icon>
 					<mat-card-title>Langues Parlées</mat-card-title>
@@ -167,7 +160,7 @@
 			<h2 class="mat-display-1 section-title text-center">Activités Professionnelles</h2>
 
 			<div class="activities-grid">
-				<mat-card class="activity-card">
+				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>article</mat-icon>
 						<mat-card-title>Publications</mat-card-title>
@@ -181,7 +174,7 @@
 					</mat-card-content>
 				</mat-card>
 
-				<mat-card class="activity-card">
+				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>school</mat-icon>
 						<mat-card-title>Formation</mat-card-title>
@@ -195,7 +188,7 @@
 					</mat-card-content>
 				</mat-card>
 
-				<mat-card class="activity-card">
+				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>groups</mat-icon>
 						<mat-card-title>Associations</mat-card-title>
@@ -213,7 +206,7 @@
 	</main>
 
 	<!-- Call to Action -->
-	<section class="cta-section">
+	<section class="cta-section" animateText="fade">
 		<div class="container text-center">
 			<h2 class="mat-headline-4">Prêt à commencer votre démarche ?</h2>
 			<p class="mat-body-1">
