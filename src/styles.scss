@@ -45,31 +45,31 @@ $avocat-dark-theme: mat.define-theme(
 
 @include mat.all-component-themes($avocat-theme);
 
-@media (prefers-color-scheme: light) {
-	@include mat.all-component-colors($avocat-dark-theme);
+// @media (prefers-color-scheme: dark) {
+// 	@include mat.all-component-colors($avocat-dark-theme);
 
-	body {
-		background: #121212 !important;
-		color: #ffffff !important;
-	}
+// 	body {
+// 		background: #121212 !important;
+// 		color: #ffffff !important;
+// 	}
 
-	h1,
-	h2,
-	h3 {
-		color: #ffb3b5 !important;
-	}
+// 	h1,
+// 	h2,
+// 	h3 {
+// 		color: #ffb3b5 !important;
+// 	}
 
-	.list-item::before {
-		color: #ffb3b5 !important;
-	}
+// 	.list-item::before {
+// 		color: #ffb3b5 !important;
+// 	}
 
-	p,
-	div,
-	span,
-	li {
-		color: #ffffff !important;
-	}
-}
+// 	p,
+// 	div,
+// 	span,
+// 	li {
+// 		color: #ffffff !important;
+// 	}
+// }
 
 :root {
 	@include mat.snack-bar-overrides(
