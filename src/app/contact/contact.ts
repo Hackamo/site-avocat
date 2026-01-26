@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatSelectModule } from '@angular/material/select'
 import { MatIconModule } from '@angular/material/icon'
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { CommonModule } from '@angular/common'
 import { Router, NavigationStart } from '@angular/router'
 import emailjs from '@emailjs/browser'
@@ -32,6 +33,7 @@ declare global {
 		MatSelectModule,
 		MatIconModule,
 		MatSnackBarModule,
+		MatProgressSpinnerModule,
 		AnimateText,
 	],
 	templateUrl: './contact.html',
@@ -43,7 +45,7 @@ export class Contact implements OnDestroy {
 	private platformId = inject(PLATFORM_ID)
 	private router = inject(Router)
 
-	isSubmitting = false
+	isSubmitting = signal(false)
 	isListening = signal(false)
 	speechSupported = signal(false)
 	private recognition: any = null
@@ -189,9 +191,12 @@ export class Contact implements OnDestroy {
 			// Stop mic when submitting form
 			this.stopVoiceInput()
 
-			this.isSubmitting = true
+			this.isSubmitting.set(true)
 
 			try {
+				// Simulate 1s delay
+				await new Promise((resolve) => setTimeout(resolve, 1000))
+
 				// EmailJS configuration - Replace with your actual EmailJS credentials
 				const serviceId = 'service_nhi3txj' // Get from EmailJS dashboard
 				const templateId = 'template_9x1kaok' // Create in EmailJS dashboard
@@ -224,7 +229,7 @@ export class Contact implements OnDestroy {
 					verticalPosition: 'top',
 				})
 			} finally {
-				this.isSubmitting = false
+				this.isSubmitting.set(false)
 			}
 		}
 	}

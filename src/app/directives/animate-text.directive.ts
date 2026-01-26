@@ -8,9 +8,9 @@ export class AnimateText implements AfterViewInit {
 	private readonly element = inject(ElementRef)
 	private readonly platformId = inject(PLATFORM_ID)
 	animateText = input<'fade' | 'slide-up' | 'slide-left' | 'slide-right'>('fade')
-	threshold = input<number>(0.4)
+	threshold = input<number>(0.3)
 	delay = input<number>(0)
-	duration = input<number>(1500)
+	duration = input<number>(1400)
 
 	ngAfterViewInit() {
 		// Only run in browser environment

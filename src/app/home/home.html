@@ -31,8 +31,8 @@
 	<div class="cards-grid">
 		@for (service of services; track service.title) {
 		<mat-card
-			animateText="fade"
 			class="prestation-card"
+			animateText="fade"
 			appearance="outlined"
 			[routerLink]="['/prestations']"
 			[fragment]="service.anchor"

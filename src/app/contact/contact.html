@@ -1,4 +1,10 @@
 <div class="container contact-page">
+	@if (isSubmitting()) {
+	<div class="submission-overlay" role="alert" aria-live="polite">
+		<mat-spinner diameter="64"></mat-spinner>
+		<p class="submission-overlay__text">Envoi en cours...</p>
+	</div>
+	}
 	<header class="page-header">
 		<h1 class="mat-display-2">Contactez-nous</h1>
 		<p class="mat-headline-5">
@@ -171,8 +177,9 @@
 						<mat-hint>Soyez précis pour nous aider à mieux comprendre votre situation</mat-hint>
 
 						<div class="form-actions">
-							<button mat-flat-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
-								@if (!isSubmitting) {
+							<button matFab extended type="submit" [disabled]="contactForm.invalid || isSubmitting()">
+								<mat-icon>send</mat-icon>
+								@if (!isSubmitting()) {
 								<span>Envoyer le message</span>
 								} @else {
 								<span>Envoi en cours...</span>
