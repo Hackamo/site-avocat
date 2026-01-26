@@ -4,95 +4,195 @@
 @include mat.core();
 
 $avocat-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: theme.$primary-palette,
-      tertiary: theme.$tertiary-palette,
-    ),
-    typography: (
-      brand-family: "'Playfair Display', serif",
-      plain-family: "'Lato', sans-serif",
-      bold-weight: 800,
-      medium-weight: 500,
-      regular-weight: 300,
-    ),
-    density: (
-      scale: 0,
-    ),
-  )
+	(
+		color: (
+			theme-type: light,
+			primary: theme.$primary-palette,
+			tertiary: theme.$tertiary-palette,
+		),
+		typography: (
+			brand-family: "'Playfair Display', serif",
+			plain-family: "'Lato', sans-serif",
+			bold-weight: 800,
+			medium-weight: 500,
+			regular-weight: 300,
+		),
+		density: (
+			scale: maximum,
+		),
+	)
+);
+
+$avocat-dark-theme: mat.define-theme(
+	(
+		color: (
+			theme-type: dark,
+			primary: theme.$primary-palette,
+			tertiary: theme.$tertiary-palette,
+		),
+		typography: (
+			brand-family: "'Playfair Display', serif",
+			plain-family: "'Lato', sans-serif",
+			bold-weight: 800,
+			medium-weight: 500,
+			regular-weight: 300,
+		),
+		density: (
+			scale: maximum,
+		),
+	)
 );
 
 @include mat.all-component-themes($avocat-theme);
 
-@include mat.core();
+@media (prefers-color-scheme: light) {
+	@include mat.all-component-colors($avocat-dark-theme);
+
+	body {
+		background: #121212 !important;
+		color: #ffffff !important;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #ffb3b5 !important;
+	}
+
+	.list-item::before {
+		color: #ffb3b5 !important;
+	}
+
+	p,
+	div,
+	span,
+	li {
+		color: #ffffff !important;
+	}
+}
+
+:root {
+	@include mat.snack-bar-overrides(
+		(
+			supporting-text-size: 1.2rem,
+			supporting-text-weight: 400,
+			supporting-text-line-height: 1.5rem,
+			container-shape: 0.8rem,
+		)
+	);
+}
 
 // Reset et styles de base
-html,
-body {
-  height: 100%;
+html {
+	height: 100%;
+	overflow-x: hidden;
+	max-width: 100%;
+	scroll-behavior: smooth;
 }
+
 body {
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-  background: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
+	height: 100%;
+	overflow-x: hidden;
+	max-width: 100%;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background: var(--mat-sys-surface);
+	color: var(--mat-sys-on-surface);
+	position: relative;
 }
 
 // Classes utilitaires pour le design épuré
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 .mb-2 {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 .mb-4 {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 .mt-4 {
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 // Style spécifique pour les titres
 h1,
 h2,
 h3 {
-  color: var(--mat-sys-primary);
-  letter-spacing: -0.5px;
+	color: var(--mat-sys-primary);
+	letter-spacing: -0.5px;
 }
 
 .list {
-  list-style-type: none;
-  padding: 0;
-  margin: 16px 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 16px 0;
 }
 
 .list-item {
-  padding: 8px 0;
-  display: flex;
-  align-items: center;
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
 
-  &::before {
-    content: '•';
-    color: var(--mat-sys-primary);
-    margin-right: 16px;
-    font-size: 1.2em;
-  }
+	&::before {
+		content: '•';
+		color: var(--mat-sys-primary);
+		margin-right: 16px;
+		font-size: 1.2em;
+	}
 }
 
 /* Remove per-target fragment offset since fragments are no longer used */
 .service-category-card {
-  scroll-margin-top: initial;
+	scroll-margin-top: initial;
+}
+
+// Button animations
+button,
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-flat-button,
+.mat-mdc-stroked-button {
+	transition: all 0.1s cubic-bezier(0.3, 0, 0.1, 1);
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	}
 }
 
 @media (max-width: 768px) {
-  .service-category-card {
-    scroll-margin-top: initial;
-  }
+	.service-category-card {
+		scroll-margin-top: initial;
+	}
+
+	// Disable button hover effects on touch devices
+	button,
+	.mat-mdc-button,
+	.mat-mdc-raised-button,
+	.mat-mdc-flat-button,
+	.mat-mdc-stroked-button {
+		&:hover {
+			transform: none;
+			box-shadow: none;
+
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
 }

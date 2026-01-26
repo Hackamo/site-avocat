@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject, signal, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { MatCardModule } from '@angular/material/card'
 import { MatListModule } from '@angular/material/list'
 import { MatIconModule } from '@angular/material/icon'
@@ -16,6 +17,14 @@ import { ServicesDataService } from '../services/services-data.service'
 })
 export class Services {
 	private servicesDataService = inject(ServicesDataService)
+	private platformId = inject(PLATFORM_ID)
 
 	services = this.servicesDataService.services()
+	zoomedCardIndex = signal<number | null>(null)
+
+	onCardClick(index: number): void {
+		if (isPlatformBrowser(this.platformId) && window.innerWidth >= 960) {
+			this.zoomedCardIndex.set(this.zoomedCardIndex() === index ? null : index)
+		}
+	}
 }

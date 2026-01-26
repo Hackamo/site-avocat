@@ -4,6 +4,27 @@
 	margin: 0 auto;
 }
 
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(154, 148, 148, 0.6);
+	z-index: 999;
+	animation: fadeIn 0.3s ease;
+	cursor: pointer;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 .page-header {
 	text-align: center;
 	margin-bottom: 4rem;
@@ -18,11 +39,39 @@
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 2rem;
 	margin-bottom: 4rem;
+
+	&:has(.zoomed) .service-category-card:not(.zoomed) {
+		opacity: 0.9;
+		filter: blur(1px);
+		transform: scale(0.95);
+		pointer-events: none;
+	}
 }
 
 .service-category-card {
 	display: flex;
 	flex-direction: column;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	&.zoomed {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1.4);
+		transition-duration: 400ms;
+		z-index: 1000;
+		max-width: 800px;
+		width: 90vw;
+		max-height: 85vh;
+		overflow-y: auto;
+		box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+	}
 
 	.mat-card-header .mat-icon {
 		font-size: 40px;
@@ -68,6 +117,25 @@
 	.services-grid {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.service-category-card {
+		cursor: default;
+
+		&:hover {
+			transform: none;
+			box-shadow: none;
+		}
+
+		&.zoomed {
+			position: static;
+			transform: none;
+			z-index: auto;
+			max-width: none;
+			width: 100%;
+			max-height: none;
+			box-shadow: none;
+		}
 	}
 }
 

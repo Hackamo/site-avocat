@@ -10,13 +10,21 @@
 	<div class="contact-content">
 		<!-- Informations de contact -->
 		<section class="contact-info">
-			<mat-card class="info-card">
+			<mat-card
+				class="info-card"
+				(click)="copyToClipboard('123 Avenue des Avocats, 75001 Paris, France', 'Adresse copiée')"
+			>
 				<mat-card-header>
 					<mat-icon mat-card-avatar>location_on</mat-icon>
 					<mat-card-title>Adresse</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<p>123 Avenue des Avocats<br />75001 Paris, France</p>
+					<div class="copy-row" aria-label="Adresse du cabinet">
+						<p class="copy-text">123 Avenue des Avocats<br />75001 Paris, France</p>
+						<button mat-icon-button class="copy-btn" aria-label="Copier l'adresse">
+							<mat-icon>content_copy</mat-icon>
+						</button>
+					</div>
 				</mat-card-content>
 			</mat-card>
 
@@ -27,17 +35,27 @@
 				</mat-card-header>
 				<mat-card-content>
 					<p>01 23 45 67 89</p>
+
 					<p class="subtitle">Du lundi au vendredi, 9h-18h</p>
+					<a mat-flat-button color="primary" href="tel:+33123456789">
+						<mat-icon>phone</mat-icon>
+						Appeler
+					</a>
 				</mat-card-content>
 			</mat-card>
 
-			<mat-card class="info-card">
+			<mat-card class="info-card" (click)="copyToClipboard('contact@maitre-martinet.fr', 'E-mail copié')">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>email</mat-icon>
 					<mat-card-title>Email</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<p>contact@maitre-martinet.fr</p>
+					<div class="copy-row" aria-label="Adresse e-mail du cabinet">
+						<p class="copy-text">contact@maitre-martinet.fr</p>
+						<button mat-icon-button class="copy-btn" aria-label="Copier l'e-mail">
+							<mat-icon>content_copy</mat-icon>
+						</button>
+					</div>
 					<p class="subtitle">Réponse sous 24h</p>
 				</mat-card-content>
 			</mat-card>
@@ -48,9 +66,23 @@
 					<mat-card-title>Horaires d'ouverture</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<p>Lundi - Vendredi : 9h00 - 18h00</p>
-					<p>Samedi : Sur rendez-vous</p>
-					<p>Dimanche : Fermé</p>
+					<ul class="hours-list" aria-label="Horaires d'ouverture du cabinet">
+						<li class="hours-item open" aria-label="Ouvert du lundi au vendredi de 9h à 18h">
+							<mat-icon aria-hidden="true">check_circle</mat-icon>
+							<span class="day">Lundi – Vendredi</span>
+							<span class="time">9h00 – 18h00</span>
+						</li>
+						<li class="hours-item appointment" aria-label="Samedi sur rendez-vous">
+							<mat-icon aria-hidden="true">event_available</mat-icon>
+							<span class="day">Samedi</span>
+							<span class="note">Sur rendez-vous</span>
+						</li>
+						<li class="hours-item closed" aria-label="Dimanche fermé">
+							<mat-icon aria-hidden="true">cancel</mat-icon>
+							<span class="day">Dimanche</span>
+							<span class="note">Fermé</span>
+						</li>
+					</ul>
 				</mat-card-content>
 			</mat-card>
 		</section>
@@ -67,17 +99,17 @@
 						<mat-form-field appearance="outline" class="full-width">
 							<mat-label>Nom complet</mat-label>
 							<input matInput formControlName="name" required />
-							<mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-								Le nom est requis
-							</mat-error>
+							@if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+							<mat-error>Le nom est requis</mat-error>
+							}
 						</mat-form-field>
 
 						<mat-form-field appearance="outline" class="full-width">
 							<mat-label>Email</mat-label>
 							<input matInput type="email" formControlName="email" required />
-							<mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-								Email valide requis
-							</mat-error>
+							@if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+							<mat-error>Email valide requis</mat-error>
+							}
 						</mat-form-field>
 
 						<mat-form-field appearance="outline" class="full-width">
@@ -93,23 +125,43 @@
 								<mat-option value="urgence">Urgence juridique</mat-option>
 								<mat-option value="autre">Autre</mat-option>
 							</mat-select>
-							<mat-error *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
-								Veuillez sélectionner un sujet
-							</mat-error>
+							@if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+							<mat-error>Veuillez sélectionner un sujet</mat-error>
+							}
 						</mat-form-field>
 
-						<mat-form-field appearance="outline" class="full-width">
-							<mat-label>Message</mat-label>
-							<textarea matInput formControlName="message" rows="5" required></textarea>
-							<mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-								Le message est requis
-							</mat-error>
+						<mat-form-field appearance="outline" class="full-width message-field-wrapper">
+							<textarea
+								matInput
+								formControlName="message"
+								rows="7"
+								maxlength="1000"
+								required
+								spellcheck="true"
+								class="message-textarea"
+								placeholder="Décrivez votre situation juridique, votre demande (titre de séjour, naturalisation, etc.) et vos besoins..."
+							></textarea>
+							@if (speechSupported()) {
+							<button
+								mat-icon-button
+								type="button"
+								class="voice-input-button"
+								[class.listening]="isListening()"
+								(click)="startVoiceInput()"
+								matSuffix
+							>
+								<mat-icon>{{ isListening() ? 'mic' : 'mic_none' }}</mat-icon>
+							</button>
+							} @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+							<mat-error>Le message est requis</mat-error>
+							}
+							<mat-hint>{{ contactForm.get('message')?.value?.length || 0 }}/1000 caractères</mat-hint>
 						</mat-form-field>
+						<mat-hint>Soyez précis pour nous aider à mieux comprendre votre situation</mat-hint>
 
 						<div class="form-actions">
 							<button mat-flat-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
-								<span *ngIf="!isSubmitting">Envoyer le message</span>
-								<span *ngIf="isSubmitting">Envoi en cours...</span>
+								@if (!isSubmitting) {<span>Envoyer le message</span>} @else {<span>Envoi en cours...</span>}
 							</button>
 						</div>
 					</form>

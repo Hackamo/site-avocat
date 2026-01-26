@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core'
+import { Component, inject, signal, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 import { MatCardModule } from '@angular/material/card'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -9,6 +10,13 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar'
 import { CommonModule } from '@angular/common'
 import emailjs from '@emailjs/browser'
+
+declare global {
+	interface Window {
+		SpeechRecognition: any
+		webkitSpeechRecognition: any
+	}
+}
 
 @Component({
 	selector: 'app-contact',
@@ -29,8 +37,12 @@ import emailjs from '@emailjs/browser'
 export class Contact {
 	private fb = inject(FormBuilder)
 	private snackBar = inject(MatSnackBar)
+	private platformId = inject(PLATFORM_ID)
 
 	isSubmitting = false
+	isListening = signal(false)
+	speechSupported = signal(false)
+	private recognition: any = null
 
 	contactForm: FormGroup = this.fb.group({
 		name: ['', Validators.required],
@@ -39,6 +51,114 @@ export class Contact {
 		subject: ['', Validators.required],
 		message: ['', Validators.required],
 	})
+
+	constructor() {
+		if (isPlatformBrowser(this.platformId)) {
+			const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+			if (SpeechRecognition) {
+				this.speechSupported.set(true)
+				this.recognition = new SpeechRecognition()
+				this.recognition.lang = 'fr-FR'
+			this.recognition.continuous = true
+			this.recognition.interimResults = true
+
+			this.recognition.onresult = (event: any) => {
+				let interimTranscript = ''
+				let finalTranscript = ''
+
+				for (let i = event.resultIndex; i < event.results.length; i++) {
+					const transcript = event.results[i][0].transcript
+					if (event.results[i].isFinal) {
+						finalTranscript += transcript + ' '
+					} else {
+						interimTranscript += transcript
+					}
+				}
+
+				const currentMessage = this.contactForm.get('message')?.value || ''
+				
+				// Si on a un résultat final, on l'ajoute au message
+				if (finalTranscript) {
+					const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
+					const newMessage = baseMessage ? `${baseMessage} ${finalTranscript.trim()}` : finalTranscript.trim()
+					this.contactForm.patchValue({ message: newMessage })
+				} 
+				// Sinon, on affiche le résultat intermédiaire
+				else if (interimTranscript) {
+					const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
+					const newMessage = baseMessage ? `${baseMessage} [En cours de dictée...]` : '[En cours de dictée...]'
+					this.contactForm.patchValue({ message: newMessage })
+				}
+					console.error('Speech recognition error:', event.error)
+					this.isListening.set(false)
+					let errorMessage = 'Erreur de reconnaissance vocale'
+					if (event.error === 'not-allowed') {
+						errorMessage = 'Autorisation microphone refusée'
+					} else if (event.error === 'no-speech') {
+						errorMessage = 'Aucune parole détectée'
+					}
+					this.snackBar.open(errorMessage, 'Fermer', { duration: 3000 })
+				}
+
+				this.recognition.onend = () => {
+					this.isListening.set(false)
+				}
+			}
+		}
+	}
+
+	startVoiceInput() {
+		if (!this.recognition || !this.speechSupported()) return
+
+		if (this.isListening()) {
+			this.recognition.stop()
+			this.isListening.set(false)
+		} else {
+			try {
+				this.recognition.start()
+				this.isListening.set(true)
+				this.snackBar.open('🎤 Parlez maintenant...', '', { duration: 3000 })
+			} catch (error) {
+				console.error('Failed to start recognition:', error)
+				this.snackBar.open('Impossible de démarrer le microphone', 'Fermer', { duration: 3000 })
+			}
+		}
+	}
+
+	copyToClipboard(text: string, successMessage: string) {
+		try {
+			if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(text)
+				this.snackBar.open(successMessage, 'Fermer', {
+					duration: 1500,
+					horizontalPosition: 'center',
+					verticalPosition: 'top',
+				})
+				return
+			}
+			// Fallback
+			const textarea = document.createElement('textarea')
+			textarea.value = text
+			textarea.style.position = 'fixed'
+			textarea.style.opacity = '0'
+			document.body.appendChild(textarea)
+			textarea.focus()
+			textarea.select()
+			document.execCommand('copy')
+			document.body.removeChild(textarea)
+			this.snackBar.open(successMessage, 'Fermer', {
+				duration: 1500,
+				horizontalPosition: 'center',
+				verticalPosition: 'top',
+			})
+		} catch (e) {
+			this.snackBar.open('Impossible de copier. Veuillez copier manuellement.', 'Fermer', {
+				duration: 2000,
+				horizontalPosition: 'center',
+				verticalPosition: 'top',
+			})
+		}
+	}
 
 	async onSubmit() {
 		if (this.contactForm.valid) {

@@ -1,0 +1,46 @@
+[
+	{
+		"slug": "victoires-juridiques-decembre-2025",
+		"title": "Nos victoires juridiques – Décembre 2025",
+		"summary": "Décembre 2025 a été particulièrement fructueux pour le Cabinet Martinet. Découvrez nos 9 victoires en droit des étrangers et droit pénal à Bordeaux.",
+		"category": "Actualités",
+		"date": "2026-01-06",
+		"author": "Maître Martinet",
+		"markdownFile": "victoires-juridiques-decembre-2025.md",
+		"similarSlugs": [
+			"oqtf-5-erreurs-eviter-contester-bordeaux",
+			"post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux",
+			"naturalisation-refusee-erreur-administrative-coute-2-ans"
+		]
+	},
+	{
+		"slug": "oqtf-5-erreurs-eviter-contester-bordeaux",
+		"title": "OQTF : 5 erreurs fatales à éviter corentin",
+		"summary": "Conseils pour contester efficacement une obligation de quitter le territoire français.",
+		"category": "Conseils",
+		"date": "2026-01-05",
+		"author": "Maître Martinet",
+		"markdownFile": "oqtf-5-erreurs-eviter.md",
+		"similarSlugs": []
+	},
+	{
+		"slug": "post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux",
+		"title": "Régularisation, Renouvellement ou Changement de statut ?",
+		"summary": "Le guide complet pour ne plus se tromper dans vos démarches de titre de séjour.",
+		"category": "Guides",
+		"date": "2026-01-04",
+		"author": "Maître Martinet",
+		"markdownFile": "regularisation-renouvellement-changement-statut.md",
+		"similarSlugs": []
+	},
+	{
+		"slug": "naturalisation-refusee-erreur-administrative-coute-2-ans",
+		"title": "Naturalisation refusée : Cette erreur administrative vous coûte 2 ans",
+		"summary": "Comprendre les pièges à éviter lors d'une demande de naturalisation.",
+		"category": "Actualités",
+		"date": "2026-01-03",
+		"author": "Maître Martinet",
+		"markdownFile": "naturalisation-refusee-erreur-administrative.md",
+		"similarSlugs": []
+	}
+]
