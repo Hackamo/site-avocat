@@ -6,13 +6,43 @@
 	background-color: var(--mat-sys-background);
 }
 
-.hero-image {
+.hero-image-wrapper {
+	position: relative;
 	width: clamp(240px, 40vw, 500px);
 	max-width: 35%;
+
+	.image-skeleton {
+		position: absolute;
+		width: 100%;
+		height: 600px;
+		border-radius: 0.5rem;
+		background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+		background-size: 200% 100%;
+		animation: shimmer 1.5s infinite;
+	}
+}
+
+.hero-image {
+	width: 100%;
 	height: auto;
 	display: block;
 	object-fit: cover;
 	border-radius: 0.5rem;
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
+
+	&.loaded {
+		opacity: 1;
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
 }
 
 .home-image-container {
@@ -68,7 +98,7 @@
 		/* ensure proper rendering with fill mode */
 		object-fit: cover;
 	}
-	.hero-image {
+	.hero-image-wrapper {
 		display: none;
 	}
 }

@@ -13,7 +13,9 @@
 <router-outlet></router-outlet>
 
 @if (scrolledDown()) {
-<button type="button" aria-label="Revenir en haut de la page" class="scroll-top-btn" (click)="scrollToTop()">↑</button>
+<button mat-button aria-label="Revenir en haut de la page" class="scroll-top-btn" (click)="scrollToTop()">
+	<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="north"></mat-icon>
+</button>
 }
 
 <!-- Footer -->

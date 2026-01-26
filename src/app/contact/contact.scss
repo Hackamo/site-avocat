@@ -331,7 +331,7 @@ mat-form-field.full-width {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-	box-shadow: 0 0 0 1000px #f7f2e8 inset; /* your background */
+	box-shadow: 0 0 0 1000px --mat-primary-color inset; /* your background */
 	-webkit-text-fill-color: #1f2933; /* your text color */
 	caret-color: #1f2933;
 }
@@ -339,7 +339,7 @@ select:-webkit-autofill {
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:focus,
 select:-webkit-autofill:focus {
-	box-shadow: 0 0 0 1000px #f7f2e8 inset; /* focus background */
+	box-shadow: 0 0 0 1000px --mat-primary-color inset; /* focus background */
 	-webkit-text-fill-color: #0f1720;
 }
 

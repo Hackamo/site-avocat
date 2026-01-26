@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core'
+import { Component, inject, signal } from '@angular/core'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
@@ -28,4 +28,9 @@ export class Home {
 	private servicesDataService = inject(ServicesDataService)
 
 	services = this.servicesDataService.services()
+	imageLoaded = signal(false)
+
+	onImageLoad() {
+		this.imageLoaded.set(true)
+	}
 }

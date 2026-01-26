@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, signal } from '@angular/core'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
@@ -22,4 +22,10 @@ import { AnimateText } from '../directives/animate-text.directive'
 	templateUrl: './about.html',
 	styleUrl: './about.scss',
 })
-export class About {}
+export class About {
+	imageLoaded = signal(false)
+
+	onImageLoad() {
+		this.imageLoaded.set(true)
+	}
+}

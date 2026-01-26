@@ -10,7 +10,18 @@
 				</p>
 			</div>
 			<div class="hero-image">
-				<img ngSrc="assets/debora_about.jpg" priority width="400" height="600" alt="Image du Maître Martinet" />
+				@if (!imageLoaded()) {
+				<div class="image-skeleton"></div>
+				}
+				<img
+					ngSrc="assets/debora_about.jpg"
+					priority
+					width="400"
+					height="600"
+					alt="Image du Maître Martinet"
+					(load)="onImageLoad()"
+					[class.loaded]="imageLoaded()"
+				/>
 			</div>
 		</div>
 	</header>

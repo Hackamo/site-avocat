@@ -8,7 +8,7 @@ function getBlogSlugs(): string[] {
 	// If BlogDataService is not available at build time, hardcode the slugs here
 	return [
 		'victoires-juridiques-decembre-2025',
-		'oqtf-5-erreurs-eviter-contester-bordeaux',
+		'oqtf-erreurs-eviter-contester-bordeaux',
 		'post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux',
 		'naturalisation-refusee-erreur-administrative-coute-2-ans',
 	]

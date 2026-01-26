@@ -31,20 +31,18 @@ nav a.active-link {
 }
 
 .scroll-top-btn {
-	transition:
-		background 0.2s,
-		box-shadow 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	transition: box-shadow 0.5s;
 	position: fixed;
-	right: 1rem;
-	bottom: 1rem;
+	right: 2rem;
+	bottom: 2rem;
 	z-index: 1000;
-	background: linear-gradient(135deg, #af2b3e 40%, #ffb3b5 100%);
-	color: #fff;
-	border-radius: 50%;
-	width: 48px;
-	height: 48px;
+	width: 50px;
+	height: 60px;
 	border: none;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 	font-size: 1.5rem;
 }
 

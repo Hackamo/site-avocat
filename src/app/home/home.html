@@ -7,14 +7,21 @@
 			Demander une consultation
 		</button>
 	</div>
-	<img
-		class="hero-image"
-		ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
-		priority
-		width="400"
-		height="600"
-		alt="Image représentant une balance de justice"
-	/>
+	<div class="hero-image-wrapper">
+		@if (!imageLoaded()) {
+		<div class="image-skeleton"></div>
+		}
+		<img
+			class="hero-image"
+			ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
+			priority
+			width="400"
+			height="600"
+			alt="Image représentant une balance de justice"
+			(load)="onImageLoad()"
+			[class.loaded]="imageLoaded()"
+		/>
+	</div>
 </header>
 
 <!-- Section Prestations -->
