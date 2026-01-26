@@ -14,7 +14,7 @@
 				<div class="image-skeleton"></div>
 				}
 				<img
-					ngSrc="assets/debora_about.jpg"
+					[ngSrc]="darkMode() ? 'assets/debora_about.jpg' : 'assets/debora_about_no_color.JPG'"
 					priority
 					width="400"
 					height="600"

@@ -1,5 +1,9 @@
 .blog-page {
 	padding-bottom: clamp(1rem, 3vw, 2.5rem);
+
+	.back-button {
+		margin-bottom: 1.5rem;
+	}
 }
 
 .blog-post {

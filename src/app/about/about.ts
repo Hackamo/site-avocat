@@ -14,6 +14,19 @@ import { AnimateText } from '../directives/animate-text.directive'
 })
 export class About {
 	imageLoaded = signal(false)
+	darkMode = signal(this.isDarkMode())
+
+	constructor() {
+		this.darkMode.set(document.body.classList.contains('dark-theme'))
+		const observer = new MutationObserver(() => {
+			this.darkMode.set(document.body.classList.contains('dark-theme'))
+		})
+		observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+	}
+
+	isDarkMode(): boolean {
+		return document.body.classList.contains('dark-theme')
+	}
 
 	onImageLoad() {
 		this.imageLoaded.set(true)

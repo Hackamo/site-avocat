@@ -25,11 +25,19 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 })
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
+	readonly darkMode = signal(false)
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
-	constructor(private router: Router) {}
+	constructor(private router: Router) {
+		if (this.isBrowser) {
+			const savedTheme = localStorage.getItem('theme')
+			const isDark = savedTheme === 'dark'
+			this.darkMode.set(isDark)
+			this.applyTheme(isDark)
+		}
+	}
 
 	ngOnInit(): void {
 		if (!this.isBrowser) return
@@ -75,6 +83,23 @@ export class App implements OnInit {
 	scrollToTop(): void {
 		if (this.isBrowser) {
 			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}
+	}
+
+	toggleDarkMode(): void {
+		if (!this.isBrowser) return
+		const isDark = !this.darkMode()
+		this.darkMode.set(isDark)
+		this.applyTheme(isDark)
+		localStorage.setItem('theme', isDark ? 'dark' : 'light')
+	}
+
+	private applyTheme(isDark: boolean): void {
+		if (!this.isBrowser) return
+		if (isDark) {
+			document.body.classList.add('dark-theme')
+		} else {
+			document.body.classList.remove('dark-theme')
 		}
 	}
 }

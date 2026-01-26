@@ -23,6 +23,15 @@ nav a.active-link {
 	flex: 1 1 auto;
 }
 
+.theme-toggle {
+	margin-left: 0.5rem;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: rotate(180deg);
+	}
+}
+
 .app-footer {
 	background-color: var(--mat-sys-primary);
 	color: var(--mat-sys-on-primary);

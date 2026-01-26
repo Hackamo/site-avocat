@@ -1,4 +1,7 @@
 <div class="container blog-page">
+	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
+		<mat-icon>arrow_back</mat-icon>Revenir au blog
+	</button>
 	<article class="blog-post" *ngIf="article() as art">
 		<h1 class="mat-display-2">{{ art.title || 'Article introuvable' }}</h1>
 		<p class="mat-headline-5">{{ art.summary || 'Aucun résumé disponible' }}</p>

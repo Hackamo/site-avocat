@@ -8,6 +8,14 @@
 		<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
 		<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
 		<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>Contact</button>
+		<button
+			mat-icon-button
+			(click)="toggleDarkMode()"
+			[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+			class="theme-toggle"
+		>
+			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+		</button>
 	</nav>
 </mat-toolbar>
 
