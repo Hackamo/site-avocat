@@ -80,7 +80,7 @@ export class BlogDataService {
 		try {
 			const articles: BlogArticle[] = await Promise.all(
 				ARTICLES_METADATA.map(async (meta) => {
-					const response = await fetch(`/assets/blog/${meta.markdownFile}`)
+					const response = await fetch(`assets/blog/${meta.markdownFile}`)
 					const markdown = await response.text()
 					const content = await marked(markdown)
 

@@ -1,13 +1,12 @@
-import { ChangeDetectionStrategy, Component, inject, signal, PLATFORM_ID } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
-import { MatCardModule } from '@angular/material/card'
-import { MatListModule } from '@angular/material/list'
-import { MatIconModule } from '@angular/material/icon'
+import { ChangeDetectionStrategy, Component, inject, PLATFORM_ID, signal } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
+import { MatCardModule } from '@angular/material/card'
+import { MatIconModule } from '@angular/material/icon'
+import { MatListModule } from '@angular/material/list'
 import { RouterLink } from '@angular/router'
-import { ServicesDataService } from '../services/services-data.service'
-import { AnimateOnScroll } from '../directives/animate-on-scroll.directive'
 import { AnimateText } from '../directives/animate-text.directive'
+import { ServicesDataService } from '../services/services-data.service'
 
 @Component({
 	selector: 'app-services',

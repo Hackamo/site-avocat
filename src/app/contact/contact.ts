@@ -11,7 +11,7 @@ import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar'
 import { CommonModule } from '@angular/common'
 import { Router, NavigationStart } from '@angular/router'
 import emailjs from '@emailjs/browser'
-import { AnimateOnScroll } from '../directives/animate-on-scroll.directive'
+import { AnimateText } from '../directives/animate-text.directive'
 
 declare global {
 	interface Window {
@@ -32,7 +32,7 @@ declare global {
 		MatSelectModule,
 		MatIconModule,
 		MatSnackBarModule,
-		AnimateOnScroll,
+		AnimateText,
 	],
 	templateUrl: './contact.html',
 	styleUrl: './contact.scss',

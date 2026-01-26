@@ -33,15 +33,17 @@ nav a.active-link {
 .scroll-top-btn {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	transition: box-shadow 0.5s;
 	position: fixed;
-	right: 2rem;
-	bottom: 2rem;
+	right: 3rem;
+	bottom: 3rem;
 	z-index: 1000;
-	width: 50px;
-	height: 60px;
+	width: 3rem;
+	height: 3rem;
+	padding: 2rem;
 	border: none;
+	border-radius: 100%;
 	box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 	font-size: 1.5rem;
 }

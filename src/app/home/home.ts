@@ -1,12 +1,12 @@
+import { CommonModule, NgOptimizedImage } from '@angular/common'
 import { Component, inject, signal } from '@angular/core'
-import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
-import { CommonModule, NgOptimizedImage } from '@angular/common'
+import { MatToolbarModule } from '@angular/material/toolbar'
 import { RouterLink } from '@angular/router'
+import { AnimateText } from '../directives/animate-text.directive'
 import { ServicesDataService } from '../services/services-data.service'
-import { AnimateOnScroll } from '../directives/animate-on-scroll.directive'
 
 @Component({
 	selector: 'app-home',
@@ -19,7 +19,7 @@ import { AnimateOnScroll } from '../directives/animate-on-scroll.directive'
 		NgOptimizedImage,
 		CommonModule,
 		RouterLink,
-		AnimateOnScroll,
+		AnimateText,
 	],
 	templateUrl: './home.html',
 	styleUrl: './home.scss',
