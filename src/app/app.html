@@ -3,9 +3,7 @@
 	<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
 	<span class="spacer"></span>
 	<nav>
-		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
-			>Accueil</a
-		>
+		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
 		<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
 		<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
 		<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
@@ -14,11 +12,12 @@
 </mat-toolbar>
 <router-outlet></router-outlet>
 
+@if (scrolledDown()) {
+<button type="button" aria-label="Revenir en haut de la page" class="scroll-top-btn" (click)="scrollToTop()">↑</button>
+}
+
 <!-- Footer -->
 <footer class="app-footer">
 	<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
 	<p>123 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
 </footer>
-@if (showScrollTop()) {
-<button type="button" aria-label="Revenir en haut de la page" class="scroll-top-btn" (click)="scrollToTop()">↑</button>
-}

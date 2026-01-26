@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, inject, OnInit } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { BlogDataService } from '../services/blog-data.service'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
@@ -11,9 +11,13 @@ import { BlogArticleCard } from '../blog-article-card/blog-article-card'
 	styleUrl: './blog.scss',
 	standalone: true,
 })
-export class Blog {
-	readonly articles
-	constructor(private blogData: BlogDataService) {
-		this.articles = this.blogData.articles
+export class Blog implements OnInit {
+	private readonly blogData = inject(BlogDataService)
+	readonly articles = this.blogData.articles
+
+	ngOnInit(): void {
+		console.log('Blog component initialized')
+		console.log('Articles signal:', this.articles())
+		console.log('Articles count:', this.articles().length)
 	}
 }

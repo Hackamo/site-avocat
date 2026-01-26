@@ -1,13 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal, effect, inject } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { CommonModule, isPlatformBrowser } from '@angular/common'
+import { ChangeDetectionStrategy, Component, inject, NgZone, OnInit, PLATFORM_ID, signal } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
-import { CommonModule } from '@angular/common'
-import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
-import { PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
 
 @Component({
 	selector: 'app-root',
@@ -25,27 +22,43 @@ import { isPlatformBrowser } from '@angular/common'
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',
 	styleUrl: './app.scss',
-	host: {
-		'(window:scroll)': 'onWindowScroll()',
-	},
 })
-export class App {
-	private readonly scrolledDown = signal(false)
+export class App implements OnInit {
+	readonly scrolledDown = signal(false)
 	private readonly platformId = inject(PLATFORM_ID)
+	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
 	constructor(private router: Router) {
-		if (this.isBrowser) {
-			effect(() => {
-				this.scrolledDown.set(window.scrollY > 200)
-			})
-		}
+		console.log('App constructor - isBrowser:', this.isBrowser)
 	}
 
-	onWindowScroll(): void {
-		if (this.isBrowser) {
-			this.scrolledDown.set(window.scrollY > 200)
+	ngOnInit(): void {
+		console.log('ngOnInit called - isBrowser:', this.isBrowser)
+		if (!this.isBrowser) {
+			console.log('Not in browser, skipping scroll listener')
+			return
 		}
+
+		console.log('Setting up scroll listener...')
+
+		// Listen outside Angular zone for performance
+		this.ngZone.runOutsideAngular(() => {
+			window.addEventListener('scroll', () => {
+				const scrollY = window.scrollY
+				const shouldShow = scrollY > 250
+
+				// Only run change detection when state actually changes
+				if (this.scrolledDown() !== shouldShow) {
+					this.ngZone.run(() => {
+						console.log('SCROLL EVENT - scrollY:', scrollY, 'shouldShow:', shouldShow)
+						this.scrolledDown.set(shouldShow)
+					})
+				}
+			})
+		})
+
+		console.log('Scroll listener attached!')
 	}
 
 	ngAfterViewInit() {
@@ -68,10 +81,6 @@ export class App {
 			const y = el.getBoundingClientRect().top + window.scrollY + yOffset
 			window.scrollTo({ top: y, behavior: 'smooth' })
 		}
-	}
-
-	showScrollTop(): boolean {
-		return this.scrolledDown()
 	}
 
 	scrollToTop(): void {

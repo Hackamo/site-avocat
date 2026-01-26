@@ -38,7 +38,7 @@ nav a.active-link {
 	right: 1rem;
 	bottom: 1rem;
 	z-index: 1000;
-	background: linear-gradient(135deg, var(--mat-sys-primary) 40%, #ffb3b5 100%);
+	background: linear-gradient(135deg, #af2b3e 40%, #ffb3b5 100%);
 	color: #fff;
 	border-radius: 50%;
 	width: 48px;
@@ -52,9 +52,6 @@ nav a.active-link {
 	outline: 2px solid #fff;
 	outline-offset: 2px;
 	box-shadow: 0 0 0 4px #005fcc;
-}
-.scroll-top-btn:hover {
-	background: #005fcc;
 }
 
 @media (max-width: 800px) {
