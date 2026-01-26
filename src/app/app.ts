@@ -29,18 +29,10 @@ export class App implements OnInit {
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
-	constructor(private router: Router) {
-		console.log('App constructor - isBrowser:', this.isBrowser)
-	}
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {
-		console.log('ngOnInit called - isBrowser:', this.isBrowser)
-		if (!this.isBrowser) {
-			console.log('Not in browser, skipping scroll listener')
-			return
-		}
-
-		console.log('Setting up scroll listener...')
+		if (!this.isBrowser) return
 
 		// Listen outside Angular zone for performance
 		this.ngZone.runOutsideAngular(() => {
@@ -51,14 +43,11 @@ export class App implements OnInit {
 				// Only run change detection when state actually changes
 				if (this.scrolledDown() !== shouldShow) {
 					this.ngZone.run(() => {
-						console.log('SCROLL EVENT - scrollY:', scrollY, 'shouldShow:', shouldShow)
 						this.scrolledDown.set(shouldShow)
 					})
 				}
 			})
 		})
-
-		console.log('Scroll listener attached!')
 	}
 
 	ngAfterViewInit() {

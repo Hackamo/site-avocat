@@ -16,8 +16,6 @@ export class Blog implements OnInit {
 	readonly articles = this.blogData.articles
 
 	ngOnInit(): void {
-		console.log('Blog component initialized')
-		console.log('Articles signal:', this.articles())
-		console.log('Articles count:', this.articles().length)
+		// Articles are loaded via BlogDataService
 	}
 }

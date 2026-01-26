@@ -1,4 +1,4 @@
-import { Component, inject, signal, PLATFORM_ID } from '@angular/core'
+import { Component, inject, signal, PLATFORM_ID, OnDestroy } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 import { MatCardModule } from '@angular/material/card'
@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatIconModule } from '@angular/material/icon'
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar'
 import { CommonModule } from '@angular/common'
+import { Router, NavigationStart } from '@angular/router'
 import emailjs from '@emailjs/browser'
 
 declare global {
@@ -34,10 +35,11 @@ declare global {
 	templateUrl: './contact.html',
 	styleUrl: './contact.scss',
 })
-export class Contact {
+export class Contact implements OnDestroy {
 	private fb = inject(FormBuilder)
 	private snackBar = inject(MatSnackBar)
 	private platformId = inject(PLATFORM_ID)
+	private router = inject(Router)
 
 	isSubmitting = false
 	isListening = signal(false)
@@ -80,19 +82,18 @@ export class Contact {
 					// Si on a un résultat final, on l'ajoute au message
 					if (finalTranscript) {
 						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-						const newMessage = baseMessage
-							? `${baseMessage} ${finalTranscript.trim()}`
-							: finalTranscript.trim()
+						const newMessage = baseMessage ? `${baseMessage} ${finalTranscript.trim()}` : finalTranscript.trim()
 						this.contactForm.patchValue({ message: newMessage })
 					}
 					// Sinon, on affiche le résultat intermédiaire
 					else if (interimTranscript) {
 						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-						const newMessage = baseMessage
-							? `${baseMessage} [En cours de dictée...]`
-							: '[En cours de dictée...]'
+						const newMessage = baseMessage ? `${baseMessage} [En cours de dictée...]` : '[En cours de dictée...]'
 						this.contactForm.patchValue({ message: newMessage })
 					}
+				}
+
+				this.recognition.onerror = (event: any) => {
 					console.error('Speech recognition error:', event.error)
 					this.isListening.set(false)
 					let errorMessage = 'Erreur de reconnaissance vocale'
@@ -108,6 +109,24 @@ export class Contact {
 					this.isListening.set(false)
 				}
 			}
+
+			// Stop mic on route change
+			this.router.events.subscribe((event) => {
+				if (event instanceof NavigationStart) {
+					this.stopVoiceInput()
+				}
+			})
+		}
+	}
+
+	ngOnDestroy(): void {
+		this.stopVoiceInput()
+	}
+
+	private stopVoiceInput(): void {
+		if (this.recognition && this.isListening()) {
+			this.recognition.stop()
+			this.isListening.set(false)
 		}
 	}
 
@@ -115,8 +134,7 @@ export class Contact {
 		if (!this.recognition || !this.speechSupported()) return
 
 		if (this.isListening()) {
-			this.recognition.stop()
-			this.isListening.set(false)
+			this.stopVoiceInput()
 		} else {
 			try {
 				this.recognition.start()
@@ -166,6 +184,9 @@ export class Contact {
 
 	async onSubmit() {
 		if (this.contactForm.valid) {
+			// Stop mic when submitting form
+			this.stopVoiceInput()
+
 			this.isSubmitting = true
 
 			try {

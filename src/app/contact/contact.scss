@@ -101,54 +101,6 @@
 			gap: 0.5rem;
 			padding: 0.4rem 0;
 			border-radius: 6px;
-
-			mat-icon {
-				color: var(--mat-sys-primary);
-			}
-
-			.day {
-				font-weight: 600;
-				color: var(--mat-sys-on-surface);
-			}
-
-			.time,
-			.note {
-				margin-left: auto;
-				color: var(--mat-text-secondary-color);
-			}
-
-			&.open {
-				background: color-mix(in oklab, var(--mat-sys-primary-container) 30%, transparent);
-				mat-icon {
-					color: var(--mat-sys-primary);
-				}
-				.day {
-					color: var(--mat-sys-primary);
-				}
-			}
-
-			&.appointment {
-				background: color-mix(in oklab, var(--mat-sys-tertiary-container) 25%, transparent);
-				mat-icon {
-					color: var(--mat-sys-tertiary);
-				}
-				.day {
-					color: var(--mat-sys-tertiary);
-				}
-			}
-
-			&.closed {
-				background: color-mix(in oklab, var(--mat-sys-error-container) 20%, transparent);
-				mat-icon {
-					color: var(--mat-sys-error);
-				}
-				.day {
-					color: var(--mat-sys-error);
-				}
-				.note {
-					font-weight: 600;
-				}
-			}
 		}
 	}
 
