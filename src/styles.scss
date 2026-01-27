@@ -3,11 +3,31 @@
 
 @include mat.core();
 
-$avocat-theme: mat.define-theme(
+$avocat-red-theme: mat.define-theme(
 	(
 		color: (
 			theme-type: light,
 			primary: theme.$primary-palette,
+			tertiary: theme.$tertiary-palette,
+		),
+		typography: (
+			brand-family: "'Playfair Display', Lato",
+			plain-family: "'Playfair Display', Lato",
+			bold-weight: 800,
+			medium-weight: 500,
+			regular-weight: 300,
+		),
+		density: (
+			scale: maximum,
+		),
+	)
+);
+
+$avocat-blue-theme: mat.define-theme(
+	(
+		color: (
+			theme-type: light,
+			primary: theme.$blue-primary-palette,
 			tertiary: theme.$tertiary-palette,
 		),
 		typography: (
@@ -43,7 +63,35 @@ $avocat-dark-theme: mat.define-theme(
 	)
 );
 
-@include mat.all-component-themes($avocat-theme);
+// Scope theme colors by body class for runtime switching
+.theme-blue {
+	@include mat.all-component-themes($avocat-blue-theme);
+
+	// Ensure card borders follow blue primary in light mode
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	// Override residual red-tinted card surfaces with blue-neutral tones
+	--mat-card-elevated-container-color: #f5f9ff !important; // light blue surface
+	--mat-card-container-color: #fbfdff !important; // near-white with blue tint
+	--mat-card-outlined-container-color: #f5f9ff !important; // light blue surface
+	--mat-toolbar-container-background-color: #f5f9ff !important;
+	--mat-divider-color: #d0e4ff !important;
+	--mat-select-panel-background-color: #f5f9ff !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			// Blue snackbar styling
+			container-color: #1e88e5,
+			supporting-text-color: #ffffff
+		)
+	);
+}
+
+.theme-red {
+	@include mat.all-component-themes($avocat-red-theme);
+}
 
 body.dark-theme {
 	@include mat.all-component-colors($avocat-dark-theme);
@@ -59,6 +107,40 @@ body.dark-theme {
 	--mat-sys-on-surface-variant: #d0d0d0;
 	--mat-sys-outline: #666666;
 	--mat-sys-outline-variant: #444444;
+	--mat-tab-divider-color: #ffd740 !important;
+	--mat-tab-active-indicator-color: #ffd740 !important;
+
+	// Complete slide toggle override - all yellow in selected state
+	--mat-slide-toggle-selected-track-color: #666666 !important;
+	--mat-slide-toggle-selected-handle-color: #666666 !important;
+	--mat-slide-toggle-selected-hover-track-color: #666666 !important;
+	--mat-slide-toggle-selected-hover-handle-color: #666666 !important;
+	--mat-slide-toggle-selected-focus-track-color: #666666 !important;
+	--mat-slide-toggle-selected-focus-handle-color: #666666 !important;
+	--mat-slide-toggle-selected-pressed-track-color: #666666 !important;
+	--mat-slide-toggle-selected-pressed-handle-color: #666666 !important;
+
+	// Unselected state - grey tones
+	--mat-slide-toggle-unselected-track-color: #666666 !important;
+	--mat-slide-toggle-unselected-handle-color: #999999 !important;
+	--mat-slide-toggle-unselected-hover-track-color: #666666 !important;
+	--mat-slide-toggle-unselected-hover-handle-color: #999999 !important;
+	--mat-slide-toggle-unselected-focus-track-color: #666666 !important;
+	--mat-slide-toggle-unselected-focus-handle-color: #999999 !important;
+	--mat-slide-toggle-unselected-pressed-track-color: #666666 !important;
+	--mat-slide-toggle-unselected-pressed-handle-color: #999999 !important;
+	--mat-slide-toggle-unselected-focus-state-layer-color: #666666 !important;
+	--mat-slide-toggle-unselected-hover-state-layer-color: #666666 !important;
+	--mat-slide-toggle-unselected-pressed-state-layer-color: #666666 !important;
+
+	// Track outline
+	--mat-slide-toggle-track-outline-color: transparent !important;
+	--mat-slide-toggle-selected-track-outline-color: transparent !important;
+	--mat-slide-toggle-unselected-track-outline-color: transparent !important;
+
+	// State layer opacity
+	--mat-slide-toggle-state-layer-size: 40px !important;
+	--mat-slide-toggle-label-text-color: #e8e8e8 !important;
 
 	mat-icon,
 	.mat-icon {
@@ -82,13 +164,64 @@ body.dark-theme {
 	.mat-mdc-card {
 		background: #242424;
 		color: #e8e8e8;
-		border: 1px solid #ffca28 !important;
+		border: 1px solid var(--mat-sys-primary) !important;
 	}
 
 	// Card subtitles
 	.mat-mdc-card-subtitle,
 	mat-card-subtitle {
 		color: #d0d0d0 !important;
+	}
+
+	// Yellow tabs in dark mode
+	.mat-mdc-tab-group {
+		border-bottom-color: #ffd740 !important;
+	}
+
+	.mat-mdc-tab:not(.mat-mdc-tab-disabled) {
+		--mdc-tab-indicator-active-indicator-color: #ffd740;
+		--mat-tab-header-active-label-text-color: #ffd740;
+		--mat-tab-header-active-focus-label-text-color: #ffd740;
+		--mat-tab-header-active-hover-label-text-color: #ffd740;
+		--mat-tab-header-inactive-label-text-color: #ffffff;
+		--mat-tab-header-inactive-focus-label-text-color: #ffffff;
+		--mat-tab-header-inactive-hover-label-text-color: #ffffff;
+
+		.mdc-tab__text-label,
+		.mat-mdc-tab-link,
+		.mat-icon {
+			color: #ffffff;
+		}
+
+		&.mdc-tab--active {
+			.mdc-tab__text-label,
+			.mat-icon {
+				color: #ffd740;
+			}
+		}
+	}
+
+	// Full yellow toggle in dark mode (all states)
+	.mat-mdc-slide-toggle {
+		--mdc-switch-selected-track-color: #ffd740 !important;
+		--mdc-switch-selected-handle-color: #ffd740 !important;
+		--mdc-switch-selected-hover-track-color: #ffd740 !important;
+		--mdc-switch-selected-focus-track-color: #ffd740 !important;
+		--mdc-switch-selected-pressed-track-color: #ffd740 !important;
+		--mdc-switch-selected-hover-handle-color: #ffd740 !important;
+		--mdc-switch-selected-focus-handle-color: #ffd740 !important;
+		--mdc-switch-selected-pressed-handle-color: #ffd740 !important;
+		--mdc-switch-unselected-track-color: rgba(255, 215, 64, 0.3) !important;
+		--mdc-switch-unselected-handle-color: #ffd740 !important;
+
+		.mdc-switch__handle::after {
+			background: #ffd740 !important;
+		}
+
+		.mdc-switch__track {
+			background-color: #ffd740 !important;
+			border-color: #ffd740 !important;
+		}
 	}
 
 	// Improved text contrast

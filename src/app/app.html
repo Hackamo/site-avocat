@@ -3,7 +3,9 @@
 	<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
 	<span class="spacer"></span>
 	<nav>
-		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+			>Accueil</a
+		>
 		<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
 		<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
 		<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
@@ -32,4 +34,18 @@
 <footer class="app-footer">
 	<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
 	<p>123 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
+
+	<div class="footer-theme-select">
+		<mat-form-field appearance="outline">
+			<mat-label>Thème</mat-label>
+			<mat-select
+				[value]="colorTheme()"
+				(selectionChange)="onThemeSelect($event.value)"
+				aria-label="Choisir le thème"
+			>
+				<mat-option value="blue">Bleu</mat-option>
+				<mat-option value="red">Rouge</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
 </footer>

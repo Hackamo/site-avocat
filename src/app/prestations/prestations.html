@@ -5,12 +5,18 @@
 	<header class="page-header">
 		<h1 class="mat-display-2">Nos domaines d'expertise</h1>
 		<p class="mat-headline-5">
-			Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit des
-			étrangers et de la nationalité. Nous mettons notre expertise à votre service pour défendre vos droits et
+			Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit
+			des étrangers et de la nationalité. Nous mettons notre expertise à votre service pour défendre vos droits et
 			concrétiser votre projet de vie en France.
 		</p>
+		<div class="view-toggle">
+			<mat-slide-toggle [checked]="isGridView()" (change)="isGridView.set($event.checked)">
+				Vue en grille
+			</mat-slide-toggle>
+		</div>
 	</header>
 
+	@if (isGridView()) {
 	<div class="services-grid">
 		@for (service of services; track service.title; let i = $index) {
 		<mat-card
@@ -44,6 +50,32 @@
 		</mat-card>
 		}
 	</div>
+	} @else {
+	<mat-tab-group class="services-tabs">
+		@for (service of services; track service.title) {
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
+				{{ service.title }}
+			</ng-template>
+			<div class="tab-content">
+				<h2 class="mat-headline-4">{{ service.title }}</h2>
+				@if (service.subtitle) {
+				<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>
+				} @if (service.detailedDescription) {
+				<p class="description">{{ service.detailedDescription }}</p>
+				} @if (service.items && service.items.length > 0) {
+				<ul class="list">
+					@for (item of service.items; track item) {
+					<li class="list-item">{{ item }}</li>
+					}
+				</ul>
+				}
+			</div>
+		</mat-tab>
+		}
+	</mat-tab-group>
+	}
 
 	<section class="cta-section text-center">
 		<h2 class="mat-headline-4">Besoin d'une assistance juridique ?</h2>

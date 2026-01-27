@@ -3,6 +3,8 @@ import { ChangeDetectionStrategy, Component, inject, NgZone, OnInit, PLATFORM_ID
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
 
@@ -17,6 +19,8 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 		MatButtonModule,
 		MatCardModule,
 		MatIconModule,
+		MatFormFieldModule,
+		MatSelectModule,
 		CommonModule,
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -26,6 +30,7 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
 	readonly darkMode = signal(false)
+	readonly colorTheme = signal<'blue' | 'red'>('blue')
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
@@ -35,7 +40,10 @@ export class App implements OnInit {
 			const savedTheme = localStorage.getItem('theme')
 			const isDark = savedTheme === 'dark'
 			this.darkMode.set(isDark)
+			const savedColor = (localStorage.getItem('colorTheme') as 'blue' | 'red') || 'blue'
+			this.colorTheme.set(savedColor)
 			this.applyTheme(isDark)
+			this.applyColorTheme(savedColor)
 		}
 	}
 
@@ -101,5 +109,17 @@ export class App implements OnInit {
 		} else {
 			document.body.classList.remove('dark-theme')
 		}
+	}
+
+	private applyColorTheme(theme: 'blue' | 'red'): void {
+		if (!this.isBrowser) return
+		document.body.classList.remove('theme-blue', 'theme-red')
+		document.body.classList.add(theme === 'blue' ? 'theme-blue' : 'theme-red')
+	}
+
+	onThemeSelect(theme: 'blue' | 'red') {
+		this.colorTheme.set(theme)
+		this.applyColorTheme(theme)
+		localStorage.setItem('colorTheme', theme)
 	}
 }

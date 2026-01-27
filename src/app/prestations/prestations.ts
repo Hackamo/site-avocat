@@ -4,6 +4,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatTabsModule } from '@angular/material/tabs'
 import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
 import { ServicesDataService } from '../services/services-data.service'
@@ -11,7 +13,16 @@ import { ServicesDataService } from '../services/services-data.service'
 @Component({
 	selector: 'app-services',
 	standalone: true,
-	imports: [MatCardModule, MatListModule, MatIconModule, MatButtonModule, RouterLink, AnimateText],
+	imports: [
+		MatCardModule,
+		MatListModule,
+		MatIconModule,
+		MatButtonModule,
+		MatSlideToggleModule,
+		MatTabsModule,
+		RouterLink,
+		AnimateText,
+	],
 	templateUrl: './prestations.html',
 	styleUrl: './prestations.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,6 +33,7 @@ export class Services {
 
 	services = this.servicesDataService.services()
 	zoomedCardIndex = signal<number | null>(null)
+	isGridView = signal(true)
 
 	onCardClick(index: number): void {
 		if (isPlatformBrowser(this.platformId)) {

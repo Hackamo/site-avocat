@@ -136,6 +136,29 @@ $_rest: (
 $primary-palette: map.merge(map.get($_palettes, primary), $_rest);
 $tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);
 
+// Blue primary tonal palette for the Avocat Blue theme (Material 3-style tones)
+$_blue_primary: (
+	0: #000000,
+	10: #001a33,
+	20: #003355,
+	25: #00406a,
+	30: #004d80,
+	35: #005a96,
+	40: #0067ac,
+	50: #1e88e5,
+	60: #4aa0f2,
+	70: #77b9ff,
+	80: #a7d2ff,
+	90: #d0e4ff,
+	95: #e7f2ff,
+	98: #f5f9ff,
+	99: #fbfdff,
+	100: #ffffff,
+);
+
+// Exported blue primary palette (merged with shared neutrals, variants, and error)
+$blue-primary-palette: map.merge($_blue_primary, $_rest);
+
 @function _high-contrast-value($light, $dark, $theme-type) {
 	@if ($theme-type == light) {
 		@return $light;

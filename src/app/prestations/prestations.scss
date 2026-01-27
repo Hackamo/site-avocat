@@ -32,6 +32,13 @@
 	.mat-display-2 {
 		margin-bottom: 1rem;
 	}
+
+	.view-toggle {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .services-grid {
@@ -78,6 +85,7 @@
 		font-size: 40px;
 		width: 40px;
 		height: 40px;
+		gap: 1rem;
 		color: var(--mat-sys-primary);
 	}
 
@@ -107,6 +115,57 @@
 		margin-top: 1.5rem;
 		padding: 1rem 2rem;
 		font-size: 1.1rem;
+	}
+}
+
+.services-tabs {
+	margin-bottom: 4rem;
+
+	.mat-tab-icon {
+		margin-right: 1rem;
+	}
+
+	.tab-content {
+		padding: 2rem;
+		max-width: 900px;
+		margin: 0 auto;
+
+		h2 {
+			margin-bottom: 1rem;
+			color: var(--mat-sys-primary);
+		}
+
+		.subtitle {
+			margin-bottom: 1.5rem;
+			color: var(--mat-sys-secondary);
+			font-weight: 500;
+		}
+
+		.description {
+			margin-bottom: 1.5rem;
+			line-height: 1.6;
+		}
+
+		.list {
+			list-style: none;
+			padding: 0;
+
+			.list-item {
+				padding: 0.75rem 0;
+				border-bottom: 1px solid var(--mat-sys-outline-variant);
+
+				&:before {
+					content: '▹';
+					color: var(--mat-sys-primary);
+					margin-right: 8px;
+					font-weight: bold;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
 	}
 }
 
@@ -141,6 +200,11 @@
 }
 
 @media (max-width: 600px) {
+	.services-tabs {
+		.mat-tab-icon {
+			margin-right: 0.4rem;
+		}
+	}
 	.services-page {
 		padding: 1rem;
 	}
@@ -152,6 +216,10 @@
 	.services-grid {
 		gap: 1rem;
 		margin-bottom: 2rem;
+	}
+
+	.services-tabs .tab-content {
+		padding: 1rem;
 	}
 
 	.cta-section {
