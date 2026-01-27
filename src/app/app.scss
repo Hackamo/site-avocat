@@ -48,7 +48,7 @@ nav a.active-link {
 
 .app-footer {
 	color: var(--mat-sys-on-primary);
-	padding: 1rem;
+	margin: 1.5rem;
 	text-align: center;
 }
 
@@ -110,16 +110,17 @@ nav a.active-link {
 	}
 
 	.footer-links {
-		display: flex !important;
-		gap: 2rem;
-		justify-content: center;
-		margin-top: 1rem;
-		flex-wrap: wrap;
+		gap: 1rem;
+		color: black;
+
+		.footer-links-separator {
+			opacity: 0.5;
+		}
 
 		a {
-			color: var(--mat-sys-primary);
+			color: black;
 			text-decoration: none;
-			font-size: 0.875rem;
+			font-size: 0.9rem;
 			transition: opacity 0.2s ease;
 			padding: 1rem;
 			&:hover {
@@ -128,7 +129,7 @@ nav a.active-link {
 			}
 
 			&:focus-visible {
-				outline: 2px solid var(--mat-sys-primary);
+				outline: 2px solid var(--mat-button-filled-container-color);
 				outline-offset: 2px;
 			}
 

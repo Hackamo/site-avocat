@@ -245,27 +245,6 @@ $_orange_primary: (
 );
 $orange-primary-palette: map.merge($_orange_primary, $_rest);
 
-// Chartreuse primary tonal palette
-$_chartreuse_primary: (
-	0: #000000,
-	10: #1f3600,
-	20: #335200,
-	25: #3f6100,
-	30: #4b7100,
-	35: #578100,
-	40: #649100,
-	50: #7ebb00,
-	60: #9dd700,
-	70: #c1f500,
-	80: #e0ff40,
-	90: #f1ff8f,
-	95: #f8ffc7,
-	98: #fffbff,
-	99: #fffbff,
-	100: #ffffff,
-);
-$chartreuse-primary-palette: map.merge($_chartreuse_primary, $_rest);
-
 // Azure primary tonal palette
 $_azure_primary: (
 	0: #000000,

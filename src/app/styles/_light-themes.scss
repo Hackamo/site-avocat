@@ -160,31 +160,6 @@
 	);
 }
 
-.theme-chartreuse {
-	@include mat.all-component-themes(themes.$avocat-chartreuse-theme);
-	@include theme-component-base;
-	--mat-sys-primary: #f8ffc7 !important;
-	--mat-card-elevated-container-color: #f8ffc7 !important;
-	--mat-card-container-color: #fffbff !important;
-	--mat-divider-color: #e0ff40 !important;
-
-	@include mat.snack-bar-overrides(
-		(
-			container-color: #9dd700,
-			supporting-text-color: #ffffff,
-		)
-	);
-
-	@include slide-toggle-common;
-	@include mat.slide-toggle-overrides(
-		(
-			unselected-handle-color: white,
-			unselected-icon-color: var(--mat-button-filled-container-color),
-			unselected-pressed-handle-color: var(--mat-sys-primary),
-		)
-	);
-}
-
 .theme-azure {
 	@include mat.all-component-themes(themes.$avocat-azure-theme);
 	@include theme-component-base;

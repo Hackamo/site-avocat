@@ -31,7 +31,7 @@ export class App implements OnInit {
 	readonly scrolledDown = signal(false)
 	readonly darkMode = signal(false)
 	readonly colorTheme = signal<
-		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'chartreuse' | 'azure' | 'violet' | 'rose'
+		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
 	>('red')
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly ngZone = inject(NgZone)
@@ -50,7 +50,6 @@ export class App implements OnInit {
 					| 'yellow'
 					| 'magenta'
 					| 'orange'
-					| 'chartreuse'
 					| 'azure'
 					| 'violet'
 					| 'rose') || 'red'
@@ -125,7 +124,7 @@ export class App implements OnInit {
 	}
 
 	private applyColorTheme(
-		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'chartreuse' | 'azure' | 'violet' | 'rose',
+		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose',
 	): void {
 		if (!this.isBrowser) return
 		document.body.classList.remove(
@@ -135,7 +134,6 @@ export class App implements OnInit {
 			'theme-yellow',
 			'theme-magenta',
 			'theme-orange',
-			'theme-chartreuse',
 			'theme-azure',
 			'theme-violet',
 			'theme-rose',
@@ -143,9 +141,7 @@ export class App implements OnInit {
 		document.body.classList.add(`theme-${theme}`)
 	}
 
-	onThemeSelect(
-		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'chartreuse' | 'azure' | 'violet' | 'rose',
-	) {
+	onThemeSelect(theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose') {
 		this.colorTheme.set(theme)
 		this.applyColorTheme(theme)
 		localStorage.setItem('colorTheme', theme)
