@@ -43,6 +43,11 @@ export const routes: Routes = [
 		],
 	},
 	{
+		path: 'admin/blog',
+		loadComponent: () => import('./blog-admin/blog-admin').then((m) => m.BlogAdmin),
+		title: 'Gestion du Blog',
+	},
+	{
 		path: '**',
 		redirectTo: '',
 		pathMatch: 'full',

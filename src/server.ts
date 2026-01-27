@@ -6,11 +6,88 @@ import {
 } from '@angular/ssr/node'
 import express from 'express'
 import { join } from 'node:path'
+import { existsSync, mkdirSync } from 'node:fs'
+import { promises as fs } from 'node:fs'
+import multer from 'multer'
 
 const browserDistFolder = join(import.meta.dirname, '../browser')
+const blogDir = join(browserDistFolder, 'assets/blog')
+const metadataPath = join(blogDir, 'articles-config.json')
 
 const app = express()
 const angularApp = new AngularNodeAppEngine()
+
+// Middleware for parsing JSON and handling file uploads
+app.use(express.json({ limit: '10mb' }))
+app.use(express.urlencoded({ limit: '10mb', extended: true }))
+
+// Configure multer for file uploads
+const upload = multer({ dest: 'uploads/' })
+
+const ensureBlogDir = () => {
+	if (!existsSync(blogDir)) {
+		mkdirSync(blogDir, { recursive: true })
+	}
+}
+
+/**
+ * API endpoint for uploading blog markdown files
+ */
+app.post('/api/upload-blog-file', upload.single('file'), async (req, res) => {
+	try {
+		if (!req.file) {
+			return res.status(400).json({ error: 'No file provided' })
+		}
+
+		ensureBlogDir()
+
+		const fileName = req.file.originalname
+		const filePath = join(blogDir, fileName)
+
+		// Move uploaded file to blog directory
+		await fs.copyFile(req.file.path, filePath)
+		await fs.unlink(req.file.path) // Clean up temp file
+
+		return res.json({ success: true, fileName })
+	} catch (error) {
+		console.error('File upload error:', error)
+		return res.status(500).json({ error: 'Failed to upload file' })
+	}
+})
+
+/**
+ * API endpoints for reading/writing blog metadata
+ */
+app.get('/api/blog-metadata', async (_req, res) => {
+	try {
+		ensureBlogDir()
+		const fileExists = existsSync(metadataPath)
+		if (!fileExists) {
+			await fs.writeFile(metadataPath, '[]', 'utf8')
+		}
+		const raw = await fs.readFile(metadataPath, 'utf8')
+		const data = raw ? JSON.parse(raw) : []
+		return res.json(data)
+	} catch (error) {
+		console.error('Failed to read blog metadata:', error)
+		return res.status(500).json({ error: 'Failed to read metadata' })
+	}
+})
+
+app.post('/api/blog-metadata', async (req, res) => {
+	try {
+		ensureBlogDir()
+		const payload = req.body
+		if (!Array.isArray(payload)) {
+			return res.status(400).json({ error: 'Metadata must be an array' })
+		}
+		await fs.writeFile(metadataPath, JSON.stringify(payload, null, 2), 'utf8')
+		return res.json({ success: true })
+	} catch (error) {
+		console.error('Failed to write blog metadata:', error)
+		return res.status(500).json({ error: 'Failed to write metadata' })
+	}
+})
 
 /**
  * Example Express Rest API endpoints can be defined here.
