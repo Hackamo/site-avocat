@@ -1,245 +1,39 @@
 @use '@angular/material' as mat;
 @use './theme-colors' as theme;
 
-$avocat-red-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
+// Function for light themes with shared typography and density
+@function light-theme($primary-palette) {
+	@return mat.define-theme(
+		(
+			color: (
+				theme-type: light,
+				primary: $primary-palette,
+				tertiary: theme.$tertiary-palette,
+			),
+			typography: (
+				brand-family: "'Playfair Display', Lato",
+				plain-family: "'Playfair Display', Lato",
+				bold-weight: 800,
+				medium-weight: 500,
+				regular-weight: 300,
+			),
+			density: (
+				scale: 0,
+			),
+		)
+	);
+}
 
-$avocat-blue-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$blue-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-green-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$green-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-yellow-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$yellow-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-cyan-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$cyan-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-magenta-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$magenta-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-orange-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$orange-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-chartreuse-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$chartreuse-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-spring-green-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$spring-green-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-azure-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$azure-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-violet-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$violet-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
-
-$avocat-rose-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: light,
-			primary: theme.$rose-primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', Lato",
-			plain-family: "'Playfair Display', Lato",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: maximum,
-		),
-	)
-);
+$avocat-red-theme: light-theme(theme.$primary-palette);
+$avocat-blue-theme: light-theme(theme.$blue-primary-palette);
+$avocat-green-theme: light-theme(theme.$green-primary-palette);
+$avocat-yellow-theme: light-theme(theme.$yellow-primary-palette);
+$avocat-magenta-theme: light-theme(theme.$magenta-primary-palette);
+$avocat-orange-theme: light-theme(theme.$orange-primary-palette);
+$avocat-chartreuse-theme: light-theme(theme.$chartreuse-primary-palette);
+$avocat-azure-theme: light-theme(theme.$azure-primary-palette);
+$avocat-violet-theme: light-theme(theme.$violet-primary-palette);
+$avocat-rose-theme: light-theme(theme.$rose-primary-palette);
 
 $avocat-dark-theme: mat.define-theme(
 	(
@@ -256,7 +50,7 @@ $avocat-dark-theme: mat.define-theme(
 			regular-weight: 300,
 		),
 		density: (
-			scale: maximum,
+			scale: 0,
 		),
 	)
 );

@@ -203,27 +203,6 @@ $_yellow_primary: (
 );
 $yellow-primary-palette: map.merge($_yellow_primary, $_rest);
 
-// Cyan primary tonal palette
-$_cyan_primary: (
-	0: #000000,
-	10: #001a1f,
-	20: #00333e,
-	25: #00424c,
-	30: #00515a,
-	35: #006068,
-	40: #007077,
-	50: #188a94,
-	60: #30a3ad,
-	70: #48bcc6,
-	80: #61d4e0,
-	90: #7ff0f9,
-	95: #b0f8ff,
-	98: #d7fffd,
-	99: #eaffff,
-	100: #ffffff,
-);
-$cyan-primary-palette: map.merge($_cyan_primary, $_rest);
-
 // Magenta primary tonal palette
 $_magenta_primary: (
 	0: #000000,
@@ -286,27 +265,6 @@ $_chartreuse_primary: (
 	100: #ffffff,
 );
 $chartreuse-primary-palette: map.merge($_chartreuse_primary, $_rest);
-
-// Spring Green primary tonal palette
-$_spring-green_primary: (
-	0: #000000,
-	10: #003d24,
-	20: #005a3a,
-	25: #006b48,
-	30: #007c56,
-	35: #008d65,
-	40: #009e74,
-	50: #00b897,
-	60: #2dd4bf,
-	70: #5ff9d6,
-	80: #7ffef0,
-	90: #a7fef5,
-	95: #c7fffa,
-	98: #dffffb,
-	99: #effffd,
-	100: #ffffff,
-);
-$spring-green-primary-palette: map.merge($_spring-green_primary, $_rest);
 
 // Azure primary tonal palette
 $_azure_primary: (

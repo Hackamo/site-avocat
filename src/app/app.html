@@ -47,11 +47,9 @@
 					<mat-option value="blue">Bleu</mat-option>
 					<mat-option value="green">Vert</mat-option>
 					<mat-option value="yellow">Jaune</mat-option>
-					<mat-option value="cyan">Cyan</mat-option>
 					<mat-option value="magenta">Magenta</mat-option>
 					<mat-option value="orange">Orange</mat-option>
 					<mat-option value="chartreuse">Chartreuse</mat-option>
-					<mat-option value="spring-green">Vert Printemps</mat-option>
 					<mat-option value="azure">Azur</mat-option>
 					<mat-option value="violet">Violet</mat-option>
 					<mat-option value="rose">Rose</mat-option>
@@ -61,5 +59,9 @@
 
 		<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
 		<p>5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
+		<div class="footer-links">
+			<a [routerLink]="'/mentions-legales'" routerLinkActive="active">Mentions Légales _</a>
+			<a [routerLink]="'/politique-confidentialite'" routerLinkActive="active"> Politique de Confidentialité</a>
+		</div>
 	</footer>
 </div>

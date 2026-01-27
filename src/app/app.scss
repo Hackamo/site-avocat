@@ -108,6 +108,35 @@ nav a.active-link {
 			}
 		}
 	}
+
+	.footer-links {
+		display: flex !important;
+		gap: 2rem;
+		justify-content: center;
+		margin-top: 1rem;
+		flex-wrap: wrap;
+
+		a {
+			color: var(--mat-sys-primary);
+			text-decoration: none;
+			font-size: 0.875rem;
+			transition: opacity 0.2s ease;
+			padding: 1rem;
+			&:hover {
+				opacity: 0.8;
+				text-decoration: underline;
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--mat-sys-primary);
+				outline-offset: 2px;
+			}
+
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 ::view-transition-old(root) {
