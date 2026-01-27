@@ -1,0 +1,543 @@
+@use '@angular/material' as mat;
+@use './theme-definitions' as themes;
+
+.theme-blue {
+	@include mat.all-component-themes(themes.$avocat-blue-theme);
+	--mat-sys-primary: #f5f9ff !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: var(--mat-sys-primary) !important;
+	--mat-card-container-color: #fafcff !important;
+	--mat-card-outlined-container-color: var(--mat-sys-primary) !important;
+	--mat-toolbar-container-background-color: var(--mat-sys-primary) !important;
+	--mat-divider-color: #d0e4ff !important;
+	--mat-select-panel-background-color: var(--mat-sys-primary) !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+	--mat-tab-divider-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: var(--mat-button-filled-container-color),
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: var(--mat-sys-primary),
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-green {
+	@include mat.all-component-themes(themes.$avocat-green-theme);
+	--mat-sys-primary: #e8fef5 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #e8fef5 !important;
+	--mat-card-container-color: #f4fffb !important;
+	--mat-card-outlined-container-color: #e8fef5 !important;
+	--mat-toolbar-container-background-color: #e8fef5 !important;
+	--mat-divider-color: #a0f5da !important;
+	--mat-select-panel-background-color: #e8fef5 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #1e8e76,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-yellow {
+	@include mat.all-component-themes(themes.$avocat-yellow-theme);
+	--mat-sys-primary: #fffae5 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #fffae5 !important;
+	--mat-card-container-color: #fffbff !important;
+	--mat-card-outlined-container-color: #fffae5 !important;
+	--mat-toolbar-container-background-color: #fffae5 !important;
+	--mat-divider-color: #ffe77f !important;
+	--mat-select-panel-background-color: #fffae5 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #c2a800,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-cyan {
+	@include mat.all-component-themes(themes.$avocat-cyan-theme);
+	--mat-sys-primary: #d7fffd !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #d7fffd !important;
+	--mat-card-container-color: #eaffff !important;
+	--mat-card-outlined-container-color: #d7fffd !important;
+	--mat-toolbar-container-background-color: #d7fffd !important;
+	--mat-divider-color: #7ff0f9 !important;
+	--mat-select-panel-background-color: #d7fffd !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #188a94,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-magenta {
+	@include mat.all-component-themes(themes.$avocat-magenta-theme);
+	--mat-sys-primary: #ffebf5 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #ffebf5 !important;
+	--mat-card-container-color: #fff7fb !important;
+	--mat-card-outlined-container-color: #ffebf5 !important;
+	--mat-toolbar-container-background-color: #ffebf5 !important;
+	--mat-divider-color: #ffb3dd !important;
+	--mat-select-panel-background-color: #ffebf5 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #c35a91,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-orange {
+	@include mat.all-component-themes(themes.$avocat-orange-theme);
+	--mat-sys-primary: #fff0db !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #fff0db !important;
+	--mat-card-container-color: #fffbf5 !important;
+	--mat-card-outlined-container-color: #fff0db !important;
+	--mat-toolbar-container-background-color: #fff0db !important;
+	--mat-divider-color: #ffc97a !important;
+	--mat-select-panel-background-color: #fff0db !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #fb9505,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-chartreuse {
+	@include mat.all-component-themes(themes.$avocat-chartreuse-theme);
+	--mat-sys-primary: #f8ffc7 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #f8ffc7 !important;
+	--mat-card-container-color: #fffbff !important;
+	--mat-card-outlined-container-color: #f8ffc7 !important;
+	--mat-toolbar-container-background-color: #f8ffc7 !important;
+	--mat-divider-color: #e0ff40 !important;
+	--mat-select-panel-background-color: #f8ffc7 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #9dd700,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-spring-green {
+	@include mat.all-component-themes(themes.$avocat-spring-green-theme);
+	--mat-sys-primary: #c7fffa !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #c7fffa !important;
+	--mat-card-container-color: #effffd !important;
+	--mat-card-outlined-container-color: #c7fffa !important;
+	--mat-toolbar-container-background-color: #c7fffa !important;
+	--mat-divider-color: #5ff9d6 !important;
+	--mat-select-panel-background-color: #c7fffa !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #00b897,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-azure {
+	@include mat.all-component-themes(themes.$avocat-azure-theme);
+	--mat-sys-primary: #e7f0ff !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #e7f0ff !important;
+	--mat-card-container-color: #fbfdff !important;
+	--mat-card-outlined-container-color: #e7f0ff !important;
+	--mat-toolbar-container-background-color: #e7f0ff !important;
+	--mat-divider-color: #9ab4ff !important;
+	--mat-select-panel-background-color: #e7f0ff !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #1a7ad4,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-violet {
+	@include mat.all-component-themes(themes.$avocat-violet-theme);
+	--mat-sys-primary: #faf0ff !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #faf0ff !important;
+	--mat-card-container-color: #fef7ff !important;
+	--mat-card-outlined-container-color: #faf0ff !important;
+	--mat-toolbar-container-background-color: #faf0ff !important;
+	--mat-divider-color: #e8c9ff !important;
+	--mat-select-panel-background-color: #faf0ff !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #9168e5,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-rose {
+	@include mat.all-component-themes(themes.$avocat-rose-theme);
+	--mat-sys-primary: #fff7f9 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #fff7f9 !important;
+	--mat-card-container-color: #fffbfd !important;
+	--mat-card-outlined-container-color: #fff7f9 !important;
+	--mat-toolbar-container-background-color: #fff7f9 !important;
+	--mat-divider-color: #ffd9e3 !important;
+	--mat-select-panel-background-color: #fff7f9 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #be7b96,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}
+
+.theme-red {
+	@include mat.all-component-themes(themes.$avocat-red-theme);
+	--mat-sys-primary: #ffe6e6 !important;
+
+	.mat-mdc-card {
+		border: 1px solid var(--mat-sys-primary) !important;
+	}
+
+	--mat-card-elevated-container-color: #ffe6e6 !important;
+	--mat-card-container-color: #fff5f5 !important;
+	--mat-card-outlined-container-color: #ffe6e6 !important;
+	--mat-toolbar-container-background-color: #ffe6e6 !important;
+	--mat-divider-color: #ffb3b3 !important;
+	--mat-select-panel-background-color: #ffe6e6 !important;
+	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
+
+	@include mat.snack-bar-overrides(
+		(
+			container-color: #c62828,
+			supporting-text-color: #ffffff,
+		)
+	);
+
+	@include mat.slide-toggle-overrides(
+		(
+			selected-focus-state-layer-color: transparent,
+			selected-hover-state-layer-color: transparent,
+			selected-hover-handle-color: white,
+			unselected-focus-state-layer-color: transparent,
+			unselected-hover-track-color: var(--mat-button-filled-container-color),
+			unselected-hover-handle-color: white,
+			unselected-hover-state-layer-color: transparent,
+			selected-focus-handle-color: white,
+			unselected-focus-handle-color: white,
+			unselected-focus-track-color: var(--mat-button-filled-container-color),
+			unselected-handle-color: white,
+			unselected-icon-color: var(--mat-button-filled-container-color),
+			unselected-pressed-handle-color: var(--mat-sys-primary),
+			unselected-pressed-state-layer-color: var(--mat-button-filled-container-color),
+			unselected-pressed-track-color: var(--mat-button-filled-container-color),
+			unselected-track-color: var(--mat-button-filled-container-color),
+		)
+	);
+}

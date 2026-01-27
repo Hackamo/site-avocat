@@ -1,0 +1,127 @@
+// Button animations
+button,
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-flat-button,
+.mat-mdc-stroked-button {
+	transition: all 0.1s cubic-bezier(0.3, 0, 0.1, 1);
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	}
+}
+
+// Button Switch for touch devices
+button,
+.mat-mdc-switch {
+	transition: all 0.1s cubic-bezier(0.3, 0, 0.1, 1);
+
+	&:hover {
+		transform: translateY(0px);
+		background-color: transparent !important;
+		box-shadow: none !important;
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: none !important;
+	}
+}
+
+// Scroll animations
+.animate-scroll {
+	transition:
+		opacity 0.6s ease,
+		transform 0.6s ease;
+
+	&.animate-fade {
+		opacity: 0;
+	}
+
+	&.animate-slide-up {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	&.animate-slide-left {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+
+	&.animate-slide-right {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+
+	&.animate-zoom {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	&.visible {
+		opacity: 1;
+		transform: translateY(0) translateX(0) scale(1);
+	}
+}
+
+// Text animations (slower)
+.animate-text {
+	transition:
+		opacity 1.2s ease-out,
+		transform 1.2s ease-out;
+
+	&.animate-text-fade {
+		opacity: 0;
+	}
+
+	&.animate-text-slide-up {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	&.animate-text-slide-left {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+
+	&.animate-text-slide-right {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	&.visible {
+		opacity: 1;
+		transform: translateY(0) translateX(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.service-category-card {
+		scroll-margin-top: initial;
+	}
+
+	// Disable button hover effects on touch devices
+	button,
+	.mat-mdc-button,
+	.mat-mdc-raised-button,
+	.mat-mdc-flat-button,
+	.mat-mdc-stroked-button {
+		&:hover {
+			transform: none;
+			box-shadow: none;
+
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+}
