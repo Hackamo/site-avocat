@@ -30,7 +30,20 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
 	readonly darkMode = signal(false)
-	readonly colorTheme = signal<'blue' | 'red'>('blue')
+	readonly colorTheme = signal<
+		| 'blue'
+		| 'red'
+		| 'green'
+		| 'yellow'
+		| 'cyan'
+		| 'magenta'
+		| 'orange'
+		| 'chartreuse'
+		| 'spring-green'
+		| 'azure'
+		| 'violet'
+		| 'rose'
+	>('red')
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
@@ -40,7 +53,20 @@ export class App implements OnInit {
 			const savedTheme = localStorage.getItem('theme')
 			const isDark = savedTheme === 'dark'
 			this.darkMode.set(isDark)
-			const savedColor = (localStorage.getItem('colorTheme') as 'blue' | 'red') || 'blue'
+			const savedColor =
+				(localStorage.getItem('colorTheme') as
+					| 'blue'
+					| 'red'
+					| 'green'
+					| 'yellow'
+					| 'cyan'
+					| 'magenta'
+					| 'orange'
+					| 'chartreuse'
+					| 'spring-green'
+					| 'azure'
+					| 'violet'
+					| 'rose') || 'red'
 			this.colorTheme.set(savedColor)
 			this.applyTheme(isDark)
 			this.applyColorTheme(savedColor)
@@ -111,13 +137,54 @@ export class App implements OnInit {
 		}
 	}
 
-	private applyColorTheme(theme: 'blue' | 'red'): void {
+	private applyColorTheme(
+		theme:
+			| 'blue'
+			| 'red'
+			| 'green'
+			| 'yellow'
+			| 'cyan'
+			| 'magenta'
+			| 'orange'
+			| 'chartreuse'
+			| 'spring-green'
+			| 'azure'
+			| 'violet'
+			| 'rose',
+	): void {
 		if (!this.isBrowser) return
-		document.body.classList.remove('theme-blue', 'theme-red')
-		document.body.classList.add(theme === 'blue' ? 'theme-blue' : 'theme-red')
+		document.body.classList.remove(
+			'theme-blue',
+			'theme-red',
+			'theme-green',
+			'theme-yellow',
+			'theme-cyan',
+			'theme-magenta',
+			'theme-orange',
+			'theme-chartreuse',
+			'theme-spring-green',
+			'theme-azure',
+			'theme-violet',
+			'theme-rose',
+		)
+		document.body.classList.add(`theme-${theme}`)
 	}
 
-	onThemeSelect(theme: 'blue' | 'red') {
+	onThemeSelect(
+		theme:
+			| 'blue'
+			| 'red'
+			| 'green'
+			| 'yellow'
+			| 'cyan'
+			| 'magenta'
+			| 'orange'
+			| 'chartreuse'
+			| 'spring-green'
+			| 'azure'
+			| 'violet'
+			| 'rose',
+	) {
 		this.colorTheme.set(theme)
 		this.applyColorTheme(theme)
 		localStorage.setItem('colorTheme', theme)

@@ -86,13 +86,17 @@ export class Contact implements OnDestroy {
 					// Si on a un résultat final, on l'ajoute au message
 					if (finalTranscript) {
 						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-						const newMessage = baseMessage ? `${baseMessage} ${finalTranscript.trim()}` : finalTranscript.trim()
+						const newMessage = baseMessage
+							? `${baseMessage} ${finalTranscript.trim()}`
+							: finalTranscript.trim()
 						this.contactForm.patchValue({ message: newMessage })
 					}
 					// Sinon, on affiche le résultat intermédiaire
 					else if (interimTranscript) {
 						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-						const newMessage = baseMessage ? `${baseMessage} [En cours de dictée...]` : '[En cours de dictée...]'
+						const newMessage = baseMessage
+							? `${baseMessage} [En cours de dictée...]`
+							: '[En cours de dictée...]'
 						this.contactForm.patchValue({ message: newMessage })
 					}
 				}

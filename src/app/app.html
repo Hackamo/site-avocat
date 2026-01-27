@@ -1,51 +1,65 @@
-<!-- Navigation -->
-<mat-toolbar class="app-toolbar">
-	<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
-	<span class="spacer"></span>
-	<nav>
-		<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
-			>Accueil</a
-		>
-		<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
-		<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
-		<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
-		<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>Contact</button>
-		<button
-			mat-icon-button
-			(click)="toggleDarkMode()"
-			[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
-			class="theme-toggle"
-		>
-			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-		</button>
-	</nav>
-</mat-toolbar>
-
-<!-- Main Content -->
-<router-outlet></router-outlet>
-
-@if (scrolledDown()) {
-<button mat-fab class="scroll-top-btn" aria-label="Revenir en haut de la page" (click)="scrollToTop()">
-	<mat-icon>north</mat-icon>
-</button>
-}
-
-<!-- Footer -->
-<footer class="app-footer">
-	<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
-	<p>123 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
-
-	<div class="footer-theme-select">
-		<mat-form-field appearance="outline">
-			<mat-label>Thème</mat-label>
-			<mat-select
-				[value]="colorTheme()"
-				(selectionChange)="onThemeSelect($event.value)"
-				aria-label="Choisir le thème"
+<div class="app-container">
+	<!-- Navigation -->
+	<mat-toolbar class="app-toolbar">
+		<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
+		<span class="spacer"></span>
+		<nav>
+			<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+				>Accueil</a
 			>
-				<mat-option value="blue">Bleu</mat-option>
-				<mat-option value="red">Rouge</mat-option>
-			</mat-select>
-		</mat-form-field>
+			<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
+			<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
+			<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
+			<a color="primary" routerLink="/contact" routerLinkActive="active-link" mat-flat-button>Contact</a>
+		</nav>
+	</mat-toolbar>
+
+	<!-- Main Content -->
+	<div class="content-wrapper">
+		<router-outlet></router-outlet>
 	</div>
-</footer>
+
+	@if (scrolledDown()) {
+	<button mat-fab class="scroll-top-btn" aria-label="Revenir en haut de la page" (click)="scrollToTop()">
+		<mat-icon>north</mat-icon>
+	</button>
+	}
+
+	<!-- Footer -->
+	<footer class="app-footer">
+		<div class="footer-theme-select">
+			<button
+				mat-icon-button
+				(click)="toggleDarkMode()"
+				[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+				class="theme-toggle"
+			>
+				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+			</button>
+			<mat-form-field appearance="outline">
+				<mat-label>Thème</mat-label>
+				<mat-select
+					[value]="colorTheme()"
+					(selectionChange)="onThemeSelect($event.value)"
+					aria-label="Choisir le thème"
+				>
+					<mat-option value="red">Rouge</mat-option>
+					<mat-option value="blue">Bleu</mat-option>
+					<mat-option value="green">Vert</mat-option>
+					<mat-option value="yellow">Jaune</mat-option>
+					<mat-option value="cyan">Cyan</mat-option>
+					<mat-option value="magenta">Magenta</mat-option>
+					<mat-option value="orange">Orange</mat-option>
+					<mat-option value="chartreuse">Chartreuse</mat-option>
+					<mat-option value="spring-green">Vert Printemps</mat-option>
+					<mat-option value="azure">Azur</mat-option>
+					<mat-option value="violet">Violet</mat-option>
+					<mat-option value="rose">Rose</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+
+		<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
+		<p>5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
+	</footer>
+</div>

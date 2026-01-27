@@ -159,6 +159,218 @@ $_blue_primary: (
 // Exported blue primary palette (merged with shared neutrals, variants, and error)
 $blue-primary-palette: map.merge($_blue_primary, $_rest);
 
+// Green primary tonal palette for the Avocat Green theme (Material 3-style tones)
+$_green_primary: (
+	0: #000000,
+	10: #001f16,
+	20: #003d2b,
+	25: #004b38,
+	30: #005844,
+	35: #006651,
+	40: #00755d,
+	50: #1e8e76,
+	60: #43a88f,
+	70: #62c2a8,
+	80: #81dcc1,
+	90: #a0f5da,
+	95: #c7ffe8,
+	98: #e8fef5,
+	99: #f4fffb,
+	100: #ffffff,
+);
+
+// Exported green primary palette (merged with shared neutrals, variants, and error)
+$green-primary-palette: map.merge($_green_primary, $_rest);
+
+// Yellow primary tonal palette
+$_yellow_primary: (
+	0: #000000,
+	10: #1f1b00,
+	20: #3e3600,
+	25: #4c4400,
+	30: #5b5200,
+	35: #6a6100,
+	40: #796e00,
+	50: #9d8a00,
+	60: #c2a800,
+	70: #e8c900,
+	80: #ffd700,
+	90: #ffe77f,
+	95: #fff0ba,
+	98: #fffae5,
+	99: #fffbff,
+	100: #ffffff,
+);
+$yellow-primary-palette: map.merge($_yellow_primary, $_rest);
+
+// Cyan primary tonal palette
+$_cyan_primary: (
+	0: #000000,
+	10: #001a1f,
+	20: #00333e,
+	25: #00424c,
+	30: #00515a,
+	35: #006068,
+	40: #007077,
+	50: #188a94,
+	60: #30a3ad,
+	70: #48bcc6,
+	80: #61d4e0,
+	90: #7ff0f9,
+	95: #b0f8ff,
+	98: #d7fffd,
+	99: #eaffff,
+	100: #ffffff,
+);
+$cyan-primary-palette: map.merge($_cyan_primary, $_rest);
+
+// Magenta primary tonal palette
+$_magenta_primary: (
+	0: #000000,
+	10: #3d0a23,
+	20: #5f1a3b,
+	25: #6f2547,
+	30: #7f3053,
+	35: #8f3b60,
+	40: #9f466d,
+	50: #c35a91,
+	60: #e873b1,
+	70: #ff8cc9,
+	80: #ffb3dd,
+	90: #ffd9f0,
+	95: #ffebf5,
+	98: #fff7fb,
+	99: #fffbff,
+	100: #ffffff,
+);
+$magenta-primary-palette: map.merge($_magenta_primary, $_rest);
+
+// Orange primary tonal palette
+$_orange_primary: (
+	0: #000000,
+	10: #331900,
+	20: #552e00,
+	25: #663c00,
+	30: #764a00,
+	35: #875800,
+	40: #986600,
+	50: #c97d0d,
+	60: #fb9505,
+	70: #ffb347,
+	80: #ffc97a,
+	90: #ffe4b5,
+	95: #fff0db,
+	98: #fffbf5,
+	99: #fffbff,
+	100: #ffffff,
+);
+$orange-primary-palette: map.merge($_orange_primary, $_rest);
+
+// Chartreuse primary tonal palette
+$_chartreuse_primary: (
+	0: #000000,
+	10: #1f3600,
+	20: #335200,
+	25: #3f6100,
+	30: #4b7100,
+	35: #578100,
+	40: #649100,
+	50: #7ebb00,
+	60: #9dd700,
+	70: #c1f500,
+	80: #e0ff40,
+	90: #f1ff8f,
+	95: #f8ffc7,
+	98: #fffbff,
+	99: #fffbff,
+	100: #ffffff,
+);
+$chartreuse-primary-palette: map.merge($_chartreuse_primary, $_rest);
+
+// Spring Green primary tonal palette
+$_spring-green_primary: (
+	0: #000000,
+	10: #003d24,
+	20: #005a3a,
+	25: #006b48,
+	30: #007c56,
+	35: #008d65,
+	40: #009e74,
+	50: #00b897,
+	60: #2dd4bf,
+	70: #5ff9d6,
+	80: #7ffef0,
+	90: #a7fef5,
+	95: #c7fffa,
+	98: #dffffb,
+	99: #effffd,
+	100: #ffffff,
+);
+$spring-green-primary-palette: map.merge($_spring-green_primary, $_rest);
+
+// Azure primary tonal palette
+$_azure_primary: (
+	0: #000000,
+	10: #001939,
+	20: #003259,
+	25: #00408f,
+	30: #004d87,
+	35: #005a9f,
+	40: #0068b7,
+	50: #1a7ad4,
+	60: #4894f4,
+	70: #6ba4ff,
+	80: #9ab4ff,
+	90: #c8d9ff,
+	95: #e7f0ff,
+	98: #f5f8ff,
+	99: #fbfdff,
+	100: #ffffff,
+);
+$azure-primary-palette: map.merge($_azure_primary, $_rest);
+
+// Violet primary tonal palette
+$_violet_primary: (
+	0: #000000,
+	10: #2b0d52,
+	20: #431c74,
+	25: #502a88,
+	30: #5d389c,
+	35: #6a46b0,
+	40: #7654c4,
+	50: #9168e5,
+	60: #ae87ff,
+	70: #cba8ff,
+	80: #e8c9ff,
+	90: #f5e4ff,
+	95: #faf0ff,
+	98: #fef7ff,
+	99: #fffbff,
+	100: #ffffff,
+);
+$violet-primary-palette: map.merge($_violet_primary, $_rest);
+
+// Rose primary tonal palette
+$_rose_primary: (
+	0: #000000,
+	10: #3d1f28,
+	20: #5d3340,
+	25: #6d3f4e,
+	30: #7d4b5d,
+	35: #8d576c,
+	40: #9d637b,
+	50: #be7b96,
+	60: #e295b1,
+	70: #ffb3cc,
+	80: #ffd9e3,
+	90: #ffecf0,
+	95: #fff7f9,
+	98: #fffbfd,
+	99: #fffbff,
+	100: #ffffff,
+);
+$rose-primary-palette: map.merge($_rose_primary, $_rest);
+
 @function _high-contrast-value($light, $dark, $theme-type) {
 	@if ($theme-type == light) {
 		@return $light;

@@ -11,6 +11,7 @@ import { BlogArticleCard } from '../blog-article-card/blog-article-card'
 	templateUrl: './blog.html',
 	styleUrl: './blog.scss',
 	standalone: true,
+	providers: [],
 })
 export class Blog {
 	private readonly blogData = inject(BlogDataService)

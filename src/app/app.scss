@@ -1,3 +1,13 @@
+.app-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.content-wrapper {
+	flex: 1;
+}
+
 .app-toolbar {
 	position: sticky;
 	color: var(--mat-sys-on-primary);
@@ -11,6 +21,7 @@
 	font-weight: 700;
 	font-size: 1.5rem;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 nav a.active-link {
@@ -24,16 +35,18 @@ nav a.active-link {
 }
 
 .theme-toggle {
-	margin-left: 0.5rem;
-	transition: transform 0.3s ease;
-
+	margin-right: 1rem;
+	transition: transform 1s ease-in-out;
+	vertical-align: middle !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
 	&:hover {
 		transform: rotate(180deg);
 	}
 }
 
 .app-footer {
-	background-color: var(--mat-sys-primary);
 	color: var(--mat-sys-on-primary);
 	padding: 1rem;
 	text-align: center;

@@ -132,7 +132,6 @@
 
 		h2 {
 			margin-bottom: 1rem;
-			color: var(--mat-sys-primary);
 		}
 
 		.subtitle {
@@ -156,7 +155,7 @@
 
 				&:before {
 					content: '▹';
-					color: var(--mat-sys-primary);
+					color: black;
 					margin-right: 8px;
 					font-weight: bold;
 				}

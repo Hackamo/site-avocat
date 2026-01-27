@@ -153,6 +153,7 @@
 	}
 	@media (max-width: 800px) {
 		margin-left: 1rem;
+		margin-top: 1rem;
 		gap: 1rem;
 	}
 	.contact-form-fields {
@@ -278,7 +279,7 @@
 textarea.message-textarea {
 	font-family: 'Lato', sans-serif;
 	resize: vertical;
-	min-height: 140px;
+	min-height: 300px;
 	letter-spacing: 0.3px;
 
 	&::placeholder {
