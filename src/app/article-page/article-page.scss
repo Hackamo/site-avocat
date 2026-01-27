@@ -78,6 +78,25 @@
 	}
 }
 
+.similar-articles {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 clamp(1rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2.5rem);
+}
+
+.similar-title {
+	font-size: clamp(1.1rem, 3vw, 1.5rem);
+	font-weight: 600;
+	margin: 0 0 1rem 0;
+	color: var(--mat-primary-color);
+}
+
+.similar-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: clamp(1rem, 3vw, 1.5rem);
+}
+
 @keyframes shimmer {
 	0% {
 		background-position: -200% 0;

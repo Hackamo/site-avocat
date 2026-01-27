@@ -59,9 +59,10 @@
 		<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
 		<p>5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
 		<div class="footer-links">
-			<a [routerLink]="'/mentions-legales'" routerLinkActive="active">Mentions Légales</a>
-			<span class="footer-links-separator"> | </span>
-			<a [routerLink]="'/politique-confidentialite'" routerLinkActive="active">Politique de Confidentialité</a>
+			<a mat-button="link" [routerLink]="'/mentions-legales'" routerLinkActive="active">Mentions Légales</a>
+			<a mat-button="link" [routerLink]="'/politique-confidentialite'" routerLinkActive="active"
+				>Politique de Confidentialité</a
+			>
 		</div>
 	</footer>
 </div>

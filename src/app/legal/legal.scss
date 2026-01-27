@@ -1,0 +1,40 @@
+.container {
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 2rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: var(--mat-button-filled-container-color);
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: var(--mat-button-filled-container-color);
+}
+
+section {
+	margin-bottom: 2rem;
+	line-height: 1.8;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+a {
+	color: var(--mat-sys-primary);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.back-button {
+	margin-bottom: 2rem;
+}

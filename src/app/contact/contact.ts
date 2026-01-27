@@ -200,7 +200,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 
 			try {
 				// Simulate 1s delay
-				await new Promise((resolve) => setTimeout(resolve, 1000))
+				await new Promise((resolve) => setTimeout(resolve, 500))
 
 				// EmailJS configuration - Replace with your actual EmailJS credentials
 				const serviceId = 'service_nhi3txj' // Get from EmailJS dashboard
@@ -247,6 +247,6 @@ export class Contact implements OnDestroy, AfterViewInit {
 		// Set a timeout to hide the loading spinner since external iframes don't fire load events
 		setTimeout(() => {
 			this.iframeLoading.set(false)
-		}, 1000)
+		}, 500)
 	}
 }
