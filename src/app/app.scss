@@ -78,6 +78,22 @@ nav a.active-link {
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 0.5rem;
+
+		// Remove persistent effects on mobile
+		a,
+		button {
+			-webkit-tap-highlight-color: transparent;
+
+			&:active,
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--mat-sys-primary);
+				outline-offset: 2px;
+			}
+		}
 	}
 }
 

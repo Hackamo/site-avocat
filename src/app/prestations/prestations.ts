@@ -24,8 +24,30 @@ export class Services {
 	zoomedCardIndex = signal<number | null>(null)
 
 	onCardClick(index: number): void {
-		if (isPlatformBrowser(this.platformId) && window.innerWidth >= 960) {
-			this.zoomedCardIndex.set(this.zoomedCardIndex() === index ? null : index)
+		if (isPlatformBrowser(this.platformId)) {
+			if (window.innerWidth >= 960) {
+				this.zoomedCardIndex.set(this.zoomedCardIndex() === index ? null : index)
+			}
+			// Scroll to the card on any device
+			this.scrollToCard(index)
+		}
+	}
+
+	private scrollToCard(index: number): void {
+		console.log('Scrolling to card index:', index)
+		const anchor = this.services[index]?.anchor
+		if (anchor) {
+			const element = document.getElementById(anchor)
+			if (element) {
+				const offset = 80 // Toolbar height offset
+				const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+				const offsetPosition = elementPosition - offset
+
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: 'smooth',
+				})
+			}
 		}
 	}
 }
