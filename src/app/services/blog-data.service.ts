@@ -96,6 +96,9 @@ export class BlogDataService {
 				}),
 			)
 
+			// Simulate 1 second loading delay
+			await new Promise((resolve) => setTimeout(resolve, 1000))
+
 			this._articles.set(articles)
 		} catch (error) {
 			console.error('Failed to load blog articles:', error)

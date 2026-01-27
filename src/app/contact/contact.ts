@@ -1,4 +1,4 @@
-import { Component, inject, signal, PLATFORM_ID, OnDestroy } from '@angular/core'
+import { Component, inject, signal, PLATFORM_ID, OnDestroy, AfterViewInit } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 import { MatCardModule } from '@angular/material/card'
@@ -39,7 +39,7 @@ declare global {
 	templateUrl: './contact.html',
 	styleUrl: './contact.scss',
 })
-export class Contact implements OnDestroy {
+export class Contact implements OnDestroy, AfterViewInit {
 	private fb = inject(FormBuilder)
 	private snackBar = inject(MatSnackBar)
 	private platformId = inject(PLATFORM_ID)
@@ -48,6 +48,7 @@ export class Contact implements OnDestroy {
 	isSubmitting = signal(false)
 	isListening = signal(false)
 	speechSupported = signal(false)
+	iframeLoading = signal(true)
 	private recognition: any = null
 
 	contactForm: FormGroup = this.fb.group({
@@ -236,5 +237,16 @@ export class Contact implements OnDestroy {
 				this.isSubmitting.set(false)
 			}
 		}
+	}
+
+	onIframeLoad() {
+		this.iframeLoading.set(false)
+	}
+
+	ngAfterViewInit() {
+		// Set a timeout to hide the loading spinner since external iframes don't fire load events
+		setTimeout(() => {
+			this.iframeLoading.set(false)
+		}, 1000)
 	}
 }

@@ -7,7 +7,7 @@ body.dark-theme {
 	color: #e8e8e8;
 
 	--mat-sys-surface: #1a1a1a;
-	--mat-sys-surface-container: #242424;
+	--mat-sys-surface-container: #1e1919;
 	--mat-sys-surface-container-high: #2e2e2e;
 	--mat-sys-surface-container-highest: #383838;
 	--mat-sys-on-surface: #e8e8e8;
@@ -16,7 +16,13 @@ body.dark-theme {
 	--mat-sys-outline-variant: #444444;
 	--mat-tab-divider-color: #ffd740 !important;
 	--mat-tab-active-indicator-color: #ffd740 !important;
+
+	--mat-fab-container-color: #ffca28 !important;
+	--mat-icon-button-icon-color: #ffca28 !important;
+
 	--mat-divider-color: #ffd740 !important;
+	--mat-button-filled-container-color: #c59f16 !important;
+	--mat-button-filled-label-text-color: rgb(255, 243, 207) !important;
 
 	// Slide toggle
 	--mat-slide-toggle-selected-track-color: #666666 !important;
@@ -56,7 +62,7 @@ body.dark-theme {
 	.mat-mdc-card {
 		background: #242424;
 		color: #e8e8e8;
-		border: 1px solid var(--mat-sys-primary) !important;
+		border: 1px solid #d5b336 !important;
 	}
 
 	.mat-mdc-card-subtitle,
@@ -70,7 +76,7 @@ body.dark-theme {
 
 	.mat-mdc-tab:not(.mat-mdc-tab-disabled) {
 		--mdc-tab-indicator-active-indicator-color: #ffd740;
-		--mat-tab-header-active-label-text-color: #ffd740;
+		--mat-tab-header-active-label-text-color: #3a310f;
 		--mat-tab-header-active-focus-label-text-color: #ffd740;
 		--mat-tab-header-active-hover-label-text-color: #ffd740;
 		--mat-tab-header-inactive-label-text-color: #ffffff;
@@ -146,6 +152,15 @@ body.dark-theme {
 		border-top: 1px solid #383838;
 	}
 
+	.blog-card {
+		background: #2e2e2e !important;
+		mat-card {
+			background: #2e2e2e !important;
+		}
+	}
+	.blog-post {
+		background-color: #2e2e2e;
+	}
 	.mat-mdc-form-field {
 		--mat-form-field-focus-color: #ffca28 !important;
 		--mat-form-field-hover-color: #ffd740 !important;
@@ -277,5 +292,10 @@ body.dark-theme {
 		&.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(.mdc-list-item--disabled) {
 			background: rgba(255, 215, 64, 0.2) !important;
 		}
+	}
+
+	// Override mat-icon arrow_up color to red
+	.scroll-top-btn mat-icon {
+		color: white !important;
 	}
 }

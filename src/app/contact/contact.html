@@ -33,6 +33,12 @@
 						</button>
 					</div>
 					<div class="map-container">
+						@if (iframeLoading()) {
+						<div class="iframe-loader">
+							<mat-spinner diameter="60"></mat-spinner>
+							<p>Chargement de la carte...</p>
+						</div>
+						}
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.078425044478!2d-0.5997146!3d44.840336199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527da20689615%3A0x1a5b7e0cc1d30f05!2sDefis%20avocats!5e0!3m2!1sfr!2sfr!4v1769534638232!5m2!1sfr!2sfr"
 							width="100%"
@@ -42,6 +48,8 @@
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
 							title="Carte de l'adresse du cabinet"
+							(load)="onIframeLoad()"
+							[style.display]="iframeLoading() ? 'none' : 'block'"
 						></iframe>
 					</div>
 				</mat-card-content>
@@ -56,7 +64,7 @@
 					<p>01 23 45 67 89</p>
 
 					<p class="subtitle">Du lundi au vendredi, 9h-18h</p>
-					<a mat-flat-button color="primary" href="tel:+33123456789">
+					<a mat-flat-button href="tel:+33123456789">
 						<mat-icon>phone</mat-icon>
 						Appeler
 					</a>
@@ -82,7 +90,6 @@
 					<p class="subtitle">Réponse sous 24h</p>
 					<a
 						mat-flat-button
-						color="primary"
 						href="mailto:contact@maitre-martinet.fr?subject=Demande%20de%20consultation%20juridique&body=Bonjour%20Ma%C3%AEtre%20Martinet%2C%0A%0AJe%20vous%20contacte%20au%20sujet%20de%20%3A%0A%0ANom%20%3A%20%0APr%C3%A9nom%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AObjet%20de%20la%20demande%20%3A%0A%0A%0ACordialement%2C"
 					>
 						<mat-icon>email</mat-icon>
@@ -216,7 +223,7 @@
 	<section class="cta-section text-center" animateText="fade">
 		<h2 class="mat-headline-4">Besoin d'une consultation urgente ?</h2>
 		<p>Contactez-nous directement par téléphone pour une prise en charge rapide.</p>
-		<a mat-flat-button color="primary" href="tel:+33123456789">
+		<a mat-flat-button href="tel:+33123456789">
 			<mat-icon>phone</mat-icon>
 			Appeler maintenant
 		</a>

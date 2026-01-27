@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core'
+import { Component, computed, effect, inject, signal } from '@angular/core'
 import { CommonModule, Location } from '@angular/common'
 import { ActivatedRoute, RouterModule } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
@@ -14,17 +14,25 @@ import { BlogArticle } from '../models/blog-article.model'
 	styleUrl: './article-page.scss',
 })
 export class ArticlePage {
-	readonly article = computed(() => {
-		const slug = this.route.snapshot.paramMap.get('slug')
-		return slug ? this.blogData.getBySlug(slug) : undefined
-	})
-
+	private readonly blogData = inject(BlogDataService)
+	private readonly route = inject(ActivatedRoute)
 	private readonly location = inject(Location)
 
-	constructor(
-		private blogData: BlogDataService,
-		private route: ActivatedRoute,
-	) {}
+	readonly loading = signal(true)
+	readonly article = signal<BlogArticle | undefined>(undefined)
+
+	constructor() {
+		effect(() => {
+			const slug = this.route.snapshot.paramMap.get('slug')
+			const blogArticle = slug ? this.blogData.getBySlug(slug) : undefined
+
+			this.loading.set(true)
+			setTimeout(() => {
+				this.article.set(blogArticle)
+				this.loading.set(false)
+			}, 1000)
+		})
+	}
 
 	goBack() {
 		this.location.back()
