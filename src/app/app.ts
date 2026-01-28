@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
+import { TranslateModule, TranslateService } from '@ngx-translate/core'
 
 @Component({
 	selector: 'app-root',
@@ -22,6 +23,7 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 		MatFormFieldModule,
 		MatSelectModule,
 		CommonModule,
+		TranslateModule,
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',
@@ -30,12 +32,14 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, Rout
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
 	readonly darkMode = signal(false)
+	readonly currentLanguage = signal<'fr' | 'en'>('fr')
 	readonly colorTheme = signal<
 		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
 	>('red')
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
+	private readonly translate = inject(TranslateService)
 
 	constructor(private router: Router) {
 		if (this.isBrowser) {
@@ -56,6 +60,11 @@ export class App implements OnInit {
 			this.colorTheme.set(savedColor)
 			this.applyTheme(isDark)
 			this.applyColorTheme(savedColor)
+
+			// Initialize language from localStorage or use default 'fr'
+			const savedLanguage = (localStorage.getItem('language') as 'fr' | 'en') || 'fr'
+			this.currentLanguage.set(savedLanguage)
+			this.translate.use(savedLanguage)
 		}
 	}
 
@@ -145,5 +154,11 @@ export class App implements OnInit {
 		this.colorTheme.set(theme)
 		this.applyColorTheme(theme)
 		localStorage.setItem('colorTheme', theme)
+	}
+
+	changeLanguage(language: 'fr' | 'en'): void {
+		this.currentLanguage.set(language)
+		this.translate.use(language)
+		localStorage.setItem('language', language)
 	}
 }

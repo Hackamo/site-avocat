@@ -79,7 +79,7 @@ h3 {
 
 	&::before {
 		content: '•';
-		color: var(--mat-sys-primary);
+		color: var(--mat-button-filled-container-color);
 		margin-right: 16px;
 		font-size: 1.2em;
 	}

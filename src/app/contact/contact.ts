@@ -12,6 +12,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { CommonModule } from '@angular/common'
 import { Router, NavigationStart } from '@angular/router'
 import emailjs from '@emailjs/browser'
+import { TranslateModule, TranslateService } from '@ngx-translate/core'
 import { AnimateText } from '../directives/animate-text.directive'
 
 declare global {
@@ -35,6 +36,7 @@ declare global {
 		MatSnackBarModule,
 		MatProgressSpinnerModule,
 		AnimateText,
+		TranslateModule,
 	],
 	templateUrl: './contact.html',
 	styleUrl: './contact.scss',
@@ -44,6 +46,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 	private snackBar = inject(MatSnackBar)
 	private platformId = inject(PLATFORM_ID)
 	private router = inject(Router)
+	private translate = inject(TranslateService)
 
 	isSubmitting = signal(false)
 	isListening = signal(false)
@@ -83,10 +86,13 @@ export class Contact implements OnDestroy, AfterViewInit {
 					}
 
 					const currentMessage = this.contactForm.get('message')?.value || ''
+					const dictatingText = `[${this.translate.instant('contact.voice.dictating')}]`
 
 					// Si on a un résultat final, on l'ajoute au message
 					if (finalTranscript) {
-						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
+						const baseMessage = currentMessage
+							.replace(new RegExp(`\\[${this.translate.instant('contact.voice.dictating')}\\]$`), '')
+							.trim()
 						const newMessage = baseMessage
 							? `${baseMessage} ${finalTranscript.trim()}`
 							: finalTranscript.trim()
@@ -94,10 +100,10 @@ export class Contact implements OnDestroy, AfterViewInit {
 					}
 					// Sinon, on affiche le résultat intermédiaire
 					else if (interimTranscript) {
-						const baseMessage = currentMessage.replace(/\[En cours de dictée\.\.\.\]$/, '').trim()
-						const newMessage = baseMessage
-							? `${baseMessage} [En cours de dictée...]`
-							: '[En cours de dictée...]'
+						const baseMessage = currentMessage
+							.replace(new RegExp(`\\[${this.translate.instant('contact.voice.dictating')}\\]$`), '')
+							.trim()
+						const newMessage = baseMessage ? `${baseMessage} ${dictatingText}` : dictatingText
 						this.contactForm.patchValue({ message: newMessage })
 					}
 				}
@@ -105,13 +111,15 @@ export class Contact implements OnDestroy, AfterViewInit {
 				this.recognition.onerror = (event: any) => {
 					console.error('Speech recognition error:', event.error)
 					this.isListening.set(false)
-					let errorMessage = 'Erreur de reconnaissance vocale'
+					let errorMessage = 'contact.voice.micError'
 					if (event.error === 'not-allowed') {
-						errorMessage = 'Autorisation microphone refusée'
+						errorMessage = 'contact.voice.noPermission'
 					} else if (event.error === 'no-speech') {
-						errorMessage = 'Aucune parole détectée'
+						errorMessage = 'contact.voice.noSpeech'
 					}
-					this.snackBar.open(errorMessage, 'Fermer', { duration: 3000 })
+					this.snackBar.open(this.translate.instant(errorMessage), this.translate.instant('common.close'), {
+						duration: 3000,
+					})
 				}
 
 				this.recognition.onend = () => {
@@ -148,19 +156,27 @@ export class Contact implements OnDestroy, AfterViewInit {
 			try {
 				this.recognition.start()
 				this.isListening.set(true)
-				this.snackBar.open('🎤 Parlez maintenant...', '', { duration: 3000 })
+				this.snackBar.open(
+					this.translate.instant('contact.voice.listening'),
+					this.translate.instant('common.close'),
+					{ duration: 3000 },
+				)
 			} catch (error) {
 				console.error('Failed to start recognition:', error)
-				this.snackBar.open('Impossible de démarrer le microphone', 'Fermer', { duration: 3000 })
+				this.snackBar.open(
+					this.translate.instant('contact.voice.error'),
+					this.translate.instant('common.close'),
+					{ duration: 3000 },
+				)
 			}
 		}
 	}
 
-	copyToClipboard(text: string, successMessage: string) {
+	copyToClipboard(text: string, messageKey: string) {
 		try {
 			if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
 				navigator.clipboard.writeText(text)
-				this.snackBar.open(successMessage, 'Fermer', {
+				this.snackBar.open(this.translate.instant(messageKey), this.translate.instant('common.close'), {
 					duration: 1500,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',
@@ -177,13 +193,13 @@ export class Contact implements OnDestroy, AfterViewInit {
 			textarea.select()
 			document.execCommand('copy')
 			document.body.removeChild(textarea)
-			this.snackBar.open(successMessage, 'Fermer', {
+			this.snackBar.open(this.translate.instant(messageKey), this.translate.instant('common.close'), {
 				duration: 1500,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
 			})
 		} catch (e) {
-			this.snackBar.open('Impossible de copier. Veuillez copier manuellement.', 'Fermer', {
+			this.snackBar.open(this.translate.instant('contact.copyError'), this.translate.instant('common.close'), {
 				duration: 2000,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
@@ -200,7 +216,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 
 			try {
 				// Simulate 1s delay
-				await new Promise((resolve) => setTimeout(resolve, 500))
+				await new Promise((resolve) => setTimeout(resolve, 300))
 
 				// EmailJS configuration - Replace with your actual EmailJS credentials
 				const serviceId = 'service_nhi3txj' // Get from EmailJS dashboard
@@ -210,7 +226,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 				const templateParams = {
 					from_name: this.contactForm.value.name,
 					from_email: this.contactForm.value.email,
-					phone: this.contactForm.value.phone || 'Non fourni',
+					phone: this.contactForm.value.phone || this.translate.instant('contact.form.phone.notProvided'),
 					subject: this.contactForm.value.subject,
 					message: this.contactForm.value.message,
 					to_email: 'corentin.rodrigo@gmail.com',
@@ -219,7 +235,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 
 				// await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-				this.snackBar.open('Message envoyé avec succès !', 'Fermer', {
+				this.snackBar.open(this.translate.instant('contact.success'), this.translate.instant('common.close'), {
 					duration: 5000,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',
@@ -228,7 +244,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 				this.contactForm.reset()
 			} catch (error) {
 				console.error("Erreur lors de l'envoi:", error)
-				this.snackBar.open("Erreur lors de l'envoi du message. Veuillez réessayer.", 'Fermer', {
+				this.snackBar.open(this.translate.instant('contact.error'), this.translate.instant('common.close'), {
 					duration: 5000,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',

@@ -1,0 +1,326 @@
+{
+	"nav": {
+		"home": "Home",
+		"services": "Services",
+		"blog": "Blog",
+		"about": "About",
+		"contact": "Contact",
+		"language": "Language"
+	},
+	"common": {
+		"language": "Language",
+		"languageFr": "Français",
+		"languageEn": "English",
+		"back": "Back",
+		"backToBlog": "Back to blog",
+		"similarArticles": "Similar articles",
+		"readMore": "Read the full article",
+		"loading": "Loading...",
+		"notFound": "Article not found",
+		"learnMore": "LEARN MORE",
+		"close": "Close"
+	},
+	"home": {
+		"heroTitle": "Your immigration law attorney",
+		"heroSubtitle": "Legal support for your residence permit and nationality procedures in France",
+		"ctaConsultation": "Request a consultation",
+		"servicesTitle": "Our Areas of Practice",
+		"imageAlt": "Image representing scales of justice"
+	},
+	"about": {
+		"title": "About Maître Martinet",
+		"subtitle": "Immigration law specialist, I assist you with rigor and humanity in all your administrative and legal procedures in France.",
+		"imageAlt": "Image of Maître Martinet",
+		"engagementTitle": "My Commitment",
+		"engagementText1": "With over 5 years of experience in immigration law, I put my expertise at the service of individuals and businesses to support them in their residence, settlement and naturalization projects in France.",
+		"engagementText2": "My approach is characterized by attentive listening, rigorous legal analysis and personalized support adapted to each situation. I firmly believe that everyone deserves a chance to succeed in their life project in France, and I am committed to defending your rights with determination and professionalism.",
+		"experienceTitle": "Professional Background",
+		"formation": {
+			"title": "Education",
+			"subtitle": "Degrees and Qualifications",
+			"items": [
+				"Master's Degree in Immigration Law - University of Paris II",
+				"Attorney Degree - Bar School",
+				"Specialization Certificate in Immigration Law",
+				"Continuing education in European Community law"
+			]
+		},
+		"experience": {
+			"title": "Experience",
+			"subtitle": "15+ years of practice",
+			"items": [
+				"Attorney at the Paris Bar since 2008",
+				"Immigration and nationality law specialist",
+				"Consultant for migrant assistance associations",
+				"Immigration law trainer"
+			]
+		},
+		"expertise": {
+			"title": "Areas of Expertise",
+			"subtitle": "Areas of Specialization",
+			"items": [
+				"Residence permit law",
+				"Naturalization procedures",
+				"Administrative litigation",
+				"International family law"
+			]
+		},
+		"valuesTitle": "My Values",
+		"values": {
+			"accessibility": {
+				"title": "Accessibility",
+				"description": "I am committed to making law accessible to all, by explaining complex procedures in a clear and understandable manner."
+			},
+			"integrity": {
+				"title": "Integrity",
+				"description": "My independence and impartiality guarantee honest and transparent representation of your interests."
+			},
+			"humanity": {
+				"title": "Humanity",
+				"description": "Each case is unique and deserves special attention. I treat each client with respect and empathy."
+			},
+			"innovation": {
+				"title": "Innovation",
+				"description": "I stay constantly informed of legislative and judicial developments to offer you the best strategies."
+			}
+		},
+		"languagesTitle": "Languages Spoken",
+		"languages": {
+			"title": "Languages Spoken",
+			"subtitle": "Multilingual communication",
+			"items": ["French (native)", "English (fluent)", "Spanish (intermediate)", "Arabic (basic)"],
+			"description": "This linguistic diversity allows me to assist an international clientele and facilitate communications with foreign administrations."
+		},
+		"languagesSubtitle": "Multilingual communication",
+		"languagesList": {
+			"french": "French (native)",
+			"english": "English (fluent)",
+			"spanish": "Spanish (intermediate)",
+			"arabic": "Arabic (basic)"
+		},
+		"languagesDescription": "This linguistic diversity allows me to assist an international clientele and facilitate communications with foreign administrations.",
+		"activitiesTitle": "Professional Activities",
+		"activities": {
+			"publications": {
+				"title": "Publications",
+				"items": [
+					"\"Immigration law in the digital age\" - Legal Review 2023",
+					"\"French naturalization: strategies and perspectives\" - 2022",
+					"Regular articles in specialized press"
+				]
+			},
+			"training": {
+				"title": "Training",
+				"items": [
+					"Trainer for the Paris Bar",
+					"University lectures",
+					"Workshops for migrant assistance associations"
+				]
+			},
+			"associations": {
+				"title": "Associations",
+				"items": [
+					"Member of the French Association of Immigration Law Attorneys",
+					"Volunteer for legal aid associations",
+					"Partner of international organizations"
+				]
+			}
+		},
+		"publications": {
+			"title": "Publications",
+			"items": [
+				"\"Immigration law in the digital age\" - Legal Review 2023",
+				"\"French naturalization: strategies and perspectives\" - 2022",
+				"Regular articles in specialized press"
+			]
+		},
+		"training": {
+			"title": "Training",
+			"items": [
+				"Trainer for the Paris Bar",
+				"University lectures",
+				"Workshops for migrant assistance associations"
+			]
+		},
+		"cta": {
+			"title": "Ready to start your journey?",
+			"description": "Contact me for an initial consultation and let's assess together your needs and the best strategies to adopt.",
+			"contactButton": "Contact Me",
+			"servicesButton": "My Services"
+		}
+	},
+	"services": {
+		"title": "Our areas of expertise",
+		"subtitle": "Martinet Law Office assists you with rigor and humanity in all your immigration and nationality matters. We put our expertise at your service to defend your rights and realize your life project in France.",
+		"gridView": "Grid view",
+		"ctaTitle": "Need legal assistance?",
+		"ctaDescription": "Each situation is unique. Contact us for an initial analysis of your case.",
+		"ctaButton": "Make an appointment",
+		"viewToggle": "Grid view",
+		"cta.title": "Need legal assistance?",
+		"cta.description": "Each situation is unique. Contact us for an initial analysis of your case.",
+		"cta.button": "Make an appointment",
+		"categories": {
+			"residencePermits": {
+				"title": "Residence Permits",
+				"description": "Regularization request, renewal, status change and family reunification.",
+				"subtitle": "Obtaining and renewing your right to stay",
+				"detailedDescription": "We assist you in preparing your file and represent you before the prefectures to secure your administrative situation in France.",
+				"items": [
+					"\"Private and family life\" residence cards",
+					"Residence permits for professional reasons (employee, talent passport)",
+					"\"Student\" and \"visitor\" status",
+					"Family reunification procedures",
+					"Exceptional admission to stay applications",
+					"Status changes"
+				]
+			},
+			"nationality": {
+				"title": "French Nationality",
+				"description": "Naturalization procedures by decree, marriage or declaration.",
+				"subtitle": "Becoming a French citizen",
+				"detailedDescription": "Acquiring French nationality is a major step. We guide you through the different procedures to maximize your chances of success.",
+				"items": [
+					"Preparation of naturalization files by decree",
+					"Declaration of nationality by marriage",
+					"Declaration of nationality based on birth and residence in France",
+					"Appeals against deferral or rejection decisions",
+					"French Nationality Certificate (CNF) applications"
+				]
+			},
+			"litigation": {
+				"title": "Litigation & Appeals",
+				"description": "Defense against deportation orders, visa refusals and litigation before administrative courts.",
+				"subtitle": "Defending your rights before the courts",
+				"detailedDescription": "Faced with an unfavorable administrative decision, rapid and strategic action is essential. We defend you tenaciously before administrative courts.",
+				"items": [
+					"Appeals against Orders to Leave French Territory (OQTF)",
+					"Contesting refusals of residence permits and renewal refusals",
+					"Appeals against \"Dublin\" transfer decisions",
+					"Litigation regarding placement in administrative detention and residence assignments"
+				]
+			}
+		}
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Find our news, legal analyses and practical advice on immigration and nationality law.",
+		"noArticles": "No articles at the moment. Come back soon!",
+		"article": "Article not found."
+	},
+	"contact": {
+		"title": "Contact us",
+		"subtitle": "Do you have questions about your rights or need a consultation? Do not hesitate to contact us. We will respond to you as soon as possible.",
+		"submitting": "Sending...",
+		"copyError": "Unable to copy. Please copy manually.",
+		"phone": {
+			"title": "Phone",
+			"number": "01 23 45 67 89",
+			"hours": "Monday to Friday, 9am-6pm",
+			"button": "Call"
+		},
+		"email": {
+			"title": "Email",
+			"address": "contact@maitre-martinet.fr",
+			"response": "Response within 24 hours",
+			"button": "Send an email",
+			"copied": "Email copied",
+			"aria": "Law firm email address",
+			"copyLabel": "Copy email"
+		},
+		"hours": {
+			"title": "Opening hours",
+			"aria": "Law firm opening hours",
+			"weekdays": {
+				"label": "Monday – Friday",
+				"time": "9:00 AM – 6:00 PM",
+				"aria": "Open Monday to Friday from 9am to 6pm"
+			},
+			"saturday": {
+				"label": "Saturday",
+				"note": "By appointment",
+				"aria": "Saturday by appointment"
+			},
+			"sunday": {
+				"label": "Sunday",
+				"note": "Closed",
+				"aria": "Sunday closed"
+			}
+		},
+		"address": {
+			"title": "Address",
+			"line1": "5 Av. de la République",
+			"line2": "33000 Bordeaux",
+			"aria": "Law firm address",
+			"copyLabel": "Copy address",
+			"copied": "Address copied",
+			"mapLoading": "Loading map...",
+			"mapTitle": "Map of the law firm address"
+		},
+		"form": {
+			"title": "Send us a message",
+			"subtitle": "Fill out the form below",
+			"name": {
+				"label": "Full name",
+				"error": "Name is required"
+			},
+			"email": {
+				"label": "Email",
+				"error": "Valid email required"
+			},
+			"phone": {
+				"label": "Phone",
+				"notProvided": "Not provided"
+			},
+			"subject": {
+				"label": "Subject",
+				"error": "Please select a subject",
+				"options": {
+					"consultation": "Consultation request",
+					"information": "Information request",
+					"urgence": "Legal emergency",
+					"autre": "Other"
+				}
+			},
+			"message": {
+				"label": "Message",
+				"placeholder": "Describe your legal situation, your request (residence permit, naturalization, etc.) and your needs...",
+				"error": "Message is required",
+				"characters": "characters",
+				"hint": "Be specific to help us better understand your situation"
+			},
+			"submit": "Send message",
+			"submitting": "Sending..."
+		},
+		"cta": {
+			"title": "Need an urgent consultation?",
+			"description": "Contact us directly by phone for quick assistance.",
+			"button": "Call now"
+		},
+		"success": "Message sent successfully!",
+		"error": "Error sending message. Please try again.",
+		"voice": {
+			"listening": "🎤 Speak now...",
+			"dictating": "Dictating...",
+			"error": "Unable to start microphone",
+			"micError": "Speech recognition error",
+			"noPermission": "Microphone permission denied",
+			"noSpeech": "No speech detected"
+		}
+	},
+	"footer": {
+		"copyright": "© 2026 Martinet Law Office. All rights reserved.",
+		"address": "5 Avenue de la République, 33000 Bordeaux | Tel: 01 23 45 67 89",
+		"legal": "Legal Notice",
+		"privacy": "Privacy Policy",
+		"theme": "Theme"
+	},
+	"legal": {
+		"title": "Legal Notice",
+		"backButton": "Back"
+	},
+	"privacy": {
+		"title": "Privacy Policy",
+		"backButton": "Back"
+	}
+}

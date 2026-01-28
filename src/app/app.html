@@ -5,13 +5,36 @@
 		<span class="spacer"></span>
 		<nav>
 			<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
-				>Accueil</a
+				>{{ 'nav.home' | translate }}</a
 			>
-			<a mat-button routerLink="/prestations" routerLinkActive="active-link">Nos Prestations</a>
-			<a mat-button routerLink="/blog" routerLinkActive="active-link">Blog</a>
-			<a mat-button routerLink="/a-propos" routerLinkActive="active-link">À Propos</a>
-			<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>Contact</button>
+			<a mat-button routerLink="/prestations" routerLinkActive="active-link">{{ 'nav.services' | translate }}</a>
+			<a mat-button routerLink="/blog" routerLinkActive="active-link">{{ 'nav.blog' | translate }}</a>
+			<a mat-button routerLink="/a-propos" routerLinkActive="active-link">{{ 'nav.about' | translate }}</a>
+			<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>
+				{{ 'nav.contact' | translate }}
+			</button>
 		</nav>
+		<div class="language-switch">
+			<button
+				mat-icon-button
+				(click)="toggleDarkMode()"
+				[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+				class="theme-toggle"
+			>
+				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+			</button>
+			<mat-form-field appearance="outline">
+				<mat-label>{{ 'nav.language' | translate }}</mat-label>
+				<mat-select
+					[value]="currentLanguage()"
+					(selectionChange)="changeLanguage($event.value)"
+					aria-label="Select language"
+				>
+					<mat-option value="fr">Français</mat-option>
+					<mat-option value="en">English</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
 	</mat-toolbar>
 
 	<!-- Main Content -->
@@ -28,16 +51,8 @@
 	<!-- Footer -->
 	<footer class="app-footer">
 		<div class="footer-theme-select">
-			<button
-				mat-icon-button
-				(click)="toggleDarkMode()"
-				[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
-				class="theme-toggle"
-			>
-				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-			</button>
 			<mat-form-field appearance="outline">
-				<mat-label>Thème</mat-label>
+				<mat-label>{{ 'footer.theme' | translate }}</mat-label>
 				<mat-select
 					[value]="colorTheme()"
 					(selectionChange)="onThemeSelect($event.value)"
@@ -54,14 +69,34 @@
 					<mat-option value="rose">Rose</mat-option>
 				</mat-select>
 			</mat-form-field>
+			<mat-form-field appearance="outline" class="footer-language-select">
+				<mat-label>{{ 'nav.language' | translate }}</mat-label>
+				<mat-select
+					[value]="currentLanguage()"
+					(selectionChange)="changeLanguage($event.value)"
+					aria-label="Select language"
+				>
+					<mat-option value="fr">Français</mat-option>
+					<mat-option value="en">English</mat-option>
+				</mat-select>
+			</mat-form-field>
 		</div>
-
-		<p>&copy; 2026 Cabinet Martinet. Tous droits réservés.</p>
-		<p>5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89</p>
+		<button
+			mat-icon-button
+			(click)="toggleDarkMode()"
+			[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+			class="theme-toggle theme-switch"
+		>
+			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+		</button>
+		<p>{{ 'footer.copyright' | translate }}</p>
+		<p>{{ 'footer.address' | translate }}</p>
 		<div class="footer-links">
-			<a mat-button="link" [routerLink]="'/mentions-legales'" routerLinkActive="active">Mentions Légales</a>
+			<a mat-button="link" [routerLink]="'/mentions-legales'" routerLinkActive="active"
+				>{{ 'footer.legal' | translate }}</a
+			>
 			<a mat-button="link" [routerLink]="'/politique-confidentialite'" routerLinkActive="active"
-				>Politique de Confidentialité</a
+				>{{ 'footer.privacy' | translate }}</a
 			>
 		</div>
 	</footer>

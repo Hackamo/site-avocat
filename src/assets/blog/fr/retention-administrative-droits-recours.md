@@ -1,4 +1,4 @@
-Être placé en centre de rétention administrative (CRA) est une situation d'urgence qui nécessite une réaction rapide. Vos droits sont encadrés et vous disposez de recours pour contester cette mesure. Voici ce qu'il faut savoir absolument.
+Le placement en centre de rétention administrative (CRA) est une situation d'urgence qui nécessite une réaction rapide. Vos droits sont encadrés et vous disposez de recours pour contester cette mesure. Voici ce qu'il faut savoir absolument.
 
 ## Qu'est-ce qu'un centre de rétention administrative ?
 

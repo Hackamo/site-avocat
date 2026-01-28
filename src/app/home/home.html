@@ -1,10 +1,10 @@
 <!-- Hero Section (Bannière) -->
 <header class="home-section container">
 	<div class="home-content">
-		<h1 class="mat-display-3">Votre avocate en droit des étrangers</h1>
-		<p class="mat-headline-5">Accompagnement juridique pour vos démarches de séjour et de nationalité en France</p>
+		<h1 class="mat-display-3">{{ 'home.heroTitle' | translate }}</h1>
+		<p class="mat-headline-5">{{ 'home.heroSubtitle' | translate }}</p>
 		<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button color="neutral" class="cta-button">
-			Demander une consultation
+			{{ 'home.ctaConsultation' | translate }}
 		</a>
 	</div>
 	<div class="hero-image-wrapper">
@@ -17,7 +17,7 @@
 			priority
 			width="400"
 			height="600"
-			alt="Image représentant une balance de justice"
+			[alt]="'home.imageAlt' | translate"
 			(load)="onImageLoad()"
 			[class.loaded]="imageLoaded()"
 		/>
@@ -26,10 +26,10 @@
 
 <!-- Section Prestations -->
 <section class="container">
-	<h2 class="mat-display-1 text-center mb-4">Nos Domaines d'Intervention</h2>
+	<h2 class="mat-display-1 text-center mb-4">{{ 'home.servicesTitle' | translate }}</h2>
 
 	<div class="cards-grid">
-		@for (service of services; track service.title) {
+		@for (service of services; track service.titleKey) {
 		<mat-card
 			class="prestation-card"
 			animateText="fade"
@@ -41,13 +41,13 @@
 				<div mat-card-avatar class="service-icon">
 					<mat-icon>{{ service.icon }}</mat-icon>
 				</div>
-				<mat-card-title>{{ service.title }}</mat-card-title>
+				<mat-card-title>{{ getServiceTitle(service) }}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<p>{{ service.description }}</p>
+				<p>{{ getServiceDescription(service) }}</p>
 			</mat-card-content>
 			<mat-card-actions align="end">
-				<button mat-button>EN SAVOIR PLUS</button>
+				<button mat-button>{{ 'common.learnMore' | translate }}</button>
 			</mat-card-actions>
 		</mat-card>
 		}

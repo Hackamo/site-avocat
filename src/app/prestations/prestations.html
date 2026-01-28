@@ -3,26 +3,22 @@
 	<div class="overlay" (click)="onCardClick(zoomedCardIndex()!)" role="button" tabindex="0"></div>
 	}
 	<header class="page-header">
-		<h1 class="mat-display-2">Nos domaines d'expertise</h1>
-		<p class="mat-headline-5">
-			Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit
-			des étrangers et de la nationalité. Nous mettons notre expertise à votre service pour défendre vos droits et
-			concrétiser votre projet de vie en France.
-		</p>
+		<h1 class="mat-display-2">{{ 'services.title' | translate }}</h1>
+		<p class="mat-headline-5">{{ 'services.subtitle' | translate }}</p>
 		<div class="view-toggle">
 			<mat-slide-toggle [checked]="isGridView()" (change)="isGridView.set($event.checked)">
-				Vue en grille
+				{{ 'services.viewToggle' | translate }}
 			</mat-slide-toggle>
 		</div>
 	</header>
 
 	@if (isGridView()) {
 	<div class="services-grid">
-		@for (service of services; track service.title; let i = $index) {
+		@for (service of services; track service.titleKey; let i = $index) {
 		<mat-card
 			class="service-category-card"
 			[class.zoomed]="zoomedCardIndex() === i"
-			aria-label="Section {{ service.title }}"
+			[attr.aria-label]="'Section ' + getServiceTitle(service)"
 			id="{{ service.anchor }}"
 			(click)="onCardClick(i)"
 			role="button"
@@ -31,17 +27,17 @@
 		>
 			<mat-card-header>
 				<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
-				<mat-card-title>{{ service.title }}</mat-card-title>
-				@if (service.subtitle) {
-				<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
+				<mat-card-title>{{ getServiceTitle(service) }}</mat-card-title>
+				@if (getServiceSubtitle(service)) {
+				<mat-card-subtitle>{{ getServiceSubtitle(service) }}</mat-card-subtitle>
 				}
 			</mat-card-header>
 			<mat-card-content>
-				@if (service.detailedDescription) {
-				<p>{{ service.detailedDescription }}</p>
-				} @if (service.items && service.items.length > 0) {
+				@if (getServiceDetailedDescription(service)) {
+				<p>{{ getServiceDetailedDescription(service) }}</p>
+				} @if (getServiceItems(service) && getServiceItems(service)!.length > 0) {
 				<ul class="list">
-					@for (item of service.items; track item) {
+					@for (item of getServiceItems(service); track item) {
 					<li class="list-item">{{ item }}</li>
 					}
 				</ul>
@@ -52,21 +48,21 @@
 	</div>
 	} @else {
 	<mat-tab-group class="services-tabs">
-		@for (service of services; track service.title) {
+		@for (service of services; track service.titleKey) {
 		<mat-tab>
 			<ng-template mat-tab-label>
 				<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
-				{{ service.title }}
+				{{ getServiceTitle(service) }}
 			</ng-template>
 			<div class="tab-content">
-				<h2 class="mat-headline-4">{{ service.title }}</h2>
-				@if (service.subtitle) {
-				<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>
-				} @if (service.detailedDescription) {
-				<p class="description">{{ service.detailedDescription }}</p>
-				} @if (service.items && service.items.length > 0) {
+				<h2 class="mat-headline-4">{{ getServiceTitle(service) }}</h2>
+				@if (getServiceSubtitle(service)) {
+				<p class="mat-headline-6 subtitle">{{ getServiceSubtitle(service) }}</p>
+				} @if (getServiceDetailedDescription(service)) {
+				<p class="description">{{ getServiceDetailedDescription(service) }}</p>
+				} @if (getServiceItems(service) && getServiceItems(service)!.length > 0) {
 				<ul class="list">
-					@for (item of service.items; track item) {
+					@for (item of getServiceItems(service); track item) {
 					<li class="list-item">{{ item }}</li>
 					}
 				</ul>
@@ -78,8 +74,8 @@
 	}
 
 	<section class="cta-section text-center">
-		<h2 class="mat-headline-4">Besoin d'une assistance juridique ?</h2>
-		<p>Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.</p>
-		<a mat-flat-button routerLink="/contact" class="cta-button">Prendre rendez-vous</a>
+		<h2 class="mat-headline-4">{{ 'services.cta.title' | translate }}</h2>
+		<p>{{ 'services.cta.description' | translate }}</p>
+		<a mat-flat-button routerLink="/contact" class="cta-button">{{ 'services.cta.button' | translate }}</a>
 	</section>
 </div>

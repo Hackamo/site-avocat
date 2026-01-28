@@ -1,13 +1,13 @@
 import { Injectable, signal } from '@angular/core'
 
 export interface ServiceItem {
-	title: string
+	titleKey: string
 	icon: string
-	description: string
-	subtitle?: string
+	descriptionKey: string
+	subtitleKey?: string
 	anchor?: string
-	detailedDescription?: string
-	items?: string[]
+	detailedDescriptionKey?: string
+	itemsKey?: string[]
 }
 
 @Injectable({
@@ -16,51 +16,48 @@ export interface ServiceItem {
 export class ServicesDataService {
 	private readonly _services = signal<ServiceItem[]>([
 		{
-			title: 'Titres de Séjour',
+			titleKey: 'services.categories.residencePermits.title',
 			icon: 'badge',
-			description: 'Demande de régularisation, renouvellement, changement de statut et regroupement familial.',
-			subtitle: 'Obtention et renouvellement de votre droit au séjour',
+			descriptionKey: 'services.categories.residencePermits.description',
+			subtitleKey: 'services.categories.residencePermits.subtitle',
 			anchor: 'titres-de-sejour',
-			detailedDescription:
-				'Nous vous assistons dans la constitution de votre dossier et vous représentons auprès des préfectures pour sécuriser votre situation administrative en France.',
-			items: [
-				'Cartes de séjour "vie privée et familiale"',
-				'Titres de séjour pour motifs professionnels (salarié, passeport talent)',
-				'Statut "étudiant" et "visiteur"',
-				'Procédures de regroupement familial',
-				"Demandes d'admission exceptionnelle au séjour",
-				'Changements de statut',
+			detailedDescriptionKey: 'services.categories.residencePermits.detailedDescription',
+			itemsKey: [
+				'services.categories.residencePermits.items.0',
+				'services.categories.residencePermits.items.1',
+				'services.categories.residencePermits.items.2',
+				'services.categories.residencePermits.items.3',
+				'services.categories.residencePermits.items.4',
+				'services.categories.residencePermits.items.5',
 			],
 		},
 		{
-			title: 'Nationalité Française',
+			titleKey: 'services.categories.nationality.title',
 			icon: 'flag',
-			description: 'Procédures de naturalisation par décret, mariage ou déclaration.',
-			subtitle: 'Devenir citoyen français',
+			descriptionKey: 'services.categories.nationality.description',
+			subtitleKey: 'services.categories.nationality.subtitle',
 			anchor: 'nationalite-francaise',
-			detailedDescription:
-				"L'acquisition de la nationalité française est une étape majeure. Nous vous guidons à travers les différentes procédures pour maximiser vos chances de succès.",
-			items: [
-				'Constitution des dossiers de naturalisation par décret',
-				'Déclaration de nationalité par mariage',
-				'Déclaration de nationalité à raison de la naissance et de la résidence en France',
-				"Recours contre les décisions d'ajournement ou de rejet",
-				'Demandes de Certificat de Nationalité Française (CNF)',
+			detailedDescriptionKey: 'services.categories.nationality.detailedDescription',
+			itemsKey: [
+				'services.categories.nationality.items.0',
+				'services.categories.nationality.items.1',
+				'services.categories.nationality.items.2',
+				'services.categories.nationality.items.3',
+				'services.categories.nationality.items.4',
 			],
 		},
 		{
-			title: 'Contentieux & Recours',
+			titleKey: 'services.categories.litigation.title',
 			icon: 'gavel',
-			description: 'Défense contre les OQTF, refus de visa et contentieux devant le tribunal administratif.',
-			subtitle: 'Défense de vos droits devant les juridictions',
+			descriptionKey: 'services.categories.litigation.description',
+			subtitleKey: 'services.categories.litigation.subtitle',
 			anchor: 'contentieux-recours',
-			detailedDescription:
-				'Face à une décision administrative défavorable, une action rapide et stratégique est essentielle. Nous vous défendons avec pugnacité devant les tribunaux administratifs.',
-			items: [
-				'Recours contre les Obligations de Quitter le Territoire Français (OQTF)',
-				'Contestation des refus de titre de séjour et des refus de renouvellement',
-				'Recours contre les décisions de transfert "Dublin"',
-				"Contentieux du placement en rétention administrative et de l'assignation à résidence",
+			detailedDescriptionKey: 'services.categories.litigation.detailedDescription',
+			itemsKey: [
+				'services.categories.litigation.items.0',
+				'services.categories.litigation.items.1',
+				'services.categories.litigation.items.2',
+				'services.categories.litigation.items.3',
 			],
 		},
 	])

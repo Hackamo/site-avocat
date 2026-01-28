@@ -29,15 +29,56 @@ nav a.active-link {
 	text-underline-offset: 6px;
 }
 
+.language-switch {
+	display: flex;
+	gap: 0.5rem;
+	margin-left: 1rem;
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	padding-left: 1rem;
+	align-items: center;
+	height: 100%;
+
+	mat-form-field {
+		width: 120px;
+		font-size: 0.875rem;
+		margin-bottom: 0;
+
+		::ng-deep {
+			.mat-mdc-text-field-wrapper {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.mat-mdc-form-field-flex {
+				height: 40px;
+				align-items: center;
+			}
+
+			.mat-mdc-form-field-infix {
+				padding-top: 8px;
+				padding-bottom: 8px;
+				min-height: auto;
+			}
+
+			.mat-mdc-form-field-subscript-wrapper {
+				display: none;
+			}
+		}
+	}
+}
+
 .spacer {
 	flex: 1 1 auto;
+}
+
+.theme-switch {
+	display: none;
 }
 
 .theme-toggle {
 	margin-right: 1rem;
 	transition: transform 1s ease-in-out;
 	vertical-align: middle !important;
-	display: inline-flex !important;
 	align-items: center !important;
 	justify-content: center !important;
 	&:hover {
@@ -49,6 +90,10 @@ nav a.active-link {
 	color: var(--mat-sys-on-primary);
 	padding: 1rem 0.5rem;
 	text-align: center;
+}
+
+.footer-language-select {
+	display: none;
 }
 
 .scroll-top-btn {
@@ -84,6 +129,12 @@ nav a.active-link {
 	.spacer {
 		display: none;
 	}
+	.language-switch {
+		display: none;
+	}
+	.footer-language-select {
+		display: inline-flex;
+	}
 	nav {
 		margin-top: 0.5rem;
 		display: flex;
@@ -106,6 +157,13 @@ nav a.active-link {
 				outline-offset: 2px;
 			}
 		}
+	}
+
+	.footer-theme-select {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin: 0 1rem;
 	}
 
 	.footer-links {

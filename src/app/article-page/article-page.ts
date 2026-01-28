@@ -3,6 +3,7 @@ import { CommonModule, Location } from '@angular/common'
 import { ActivatedRoute, RouterModule } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
+import { TranslateModule } from '@ngx-translate/core'
 import { BlogDataService } from '../services/blog-data.service'
 import { BlogArticle } from '../models/blog-article.model'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
@@ -12,7 +13,7 @@ import { map } from 'rxjs/operators'
 @Component({
 	selector: 'app-article-page',
 	standalone: true,
-	imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule, BlogArticleCard],
+	imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule, BlogArticleCard, TranslateModule],
 	templateUrl: './article-page.html',
 	styleUrl: './article-page.scss',
 })

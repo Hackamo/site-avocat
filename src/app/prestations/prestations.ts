@@ -7,8 +7,9 @@ import { MatListModule } from '@angular/material/list'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatTabsModule } from '@angular/material/tabs'
 import { RouterLink } from '@angular/router'
+import { TranslateModule, TranslateService } from '@ngx-translate/core'
 import { AnimateText } from '../directives/animate-text.directive'
-import { ServicesDataService } from '../services/services-data.service'
+import { ServicesDataService, ServiceItem } from '../services/services-data.service'
 
 @Component({
 	selector: 'app-services',
@@ -22,6 +23,7 @@ import { ServicesDataService } from '../services/services-data.service'
 		MatTabsModule,
 		RouterLink,
 		AnimateText,
+		TranslateModule,
 	],
 	templateUrl: './prestations.html',
 	styleUrl: './prestations.scss',
@@ -30,10 +32,32 @@ import { ServicesDataService } from '../services/services-data.service'
 export class Services {
 	private servicesDataService = inject(ServicesDataService)
 	private platformId = inject(PLATFORM_ID)
+	private translate = inject(TranslateService)
 
 	services = this.servicesDataService.services()
 	zoomedCardIndex = signal<number | null>(null)
 	isGridView = signal(true)
+
+	getServiceTitle(service: ServiceItem): string {
+		return this.translate.instant(service.titleKey)
+	}
+
+	getServiceDescription(service: ServiceItem): string {
+		return this.translate.instant(service.descriptionKey)
+	}
+
+	getServiceSubtitle(service: ServiceItem): string | undefined {
+		return service.subtitleKey ? this.translate.instant(service.subtitleKey) : undefined
+	}
+
+	getServiceDetailedDescription(service: ServiceItem): string | undefined {
+		return service.detailedDescriptionKey ? this.translate.instant(service.detailedDescriptionKey) : undefined
+	}
+
+	getServiceItems(service: ServiceItem): string[] | undefined {
+		if (!service.itemsKey) return undefined
+		return service.itemsKey.map((key) => this.translate.instant(key))
+	}
 
 	onCardClick(index: number): void {
 		if (isPlatformBrowser(this.platformId)) {

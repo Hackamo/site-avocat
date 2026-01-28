@@ -5,11 +5,21 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { RouterLink } from '@angular/router'
+import { TranslateModule } from '@ngx-translate/core'
 import { AnimateText } from '../directives/animate-text.directive'
 
 @Component({
 	selector: 'app-about',
-	imports: [CommonModule, MatCardModule, MatIconModule, MatButtonModule, RouterLink, NgOptimizedImage, AnimateText],
+	imports: [
+		CommonModule,
+		MatCardModule,
+		MatIconModule,
+		MatButtonModule,
+		RouterLink,
+		NgOptimizedImage,
+		AnimateText,
+		TranslateModule,
+	],
 	templateUrl: './about.html',
 	styleUrl: './about.scss',
 })
