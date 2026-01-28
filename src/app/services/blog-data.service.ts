@@ -32,7 +32,8 @@ export class BlogDataService {
 				this.loadingPromise = null
 				this.ensureLoaded()
 			})
-			this.ensureLoaded()
+			// Don't load during prerendering - wait for explicit user interaction
+			// Load will happen on first access via ensureLoaded
 		}
 	}
 
@@ -56,37 +57,69 @@ export class BlogDataService {
 			// Construct language-specific path
 			const languagePath = lang === 'fr' ? 'fr' : 'en'
 
-			const metadataResponse = await fetch(`assets/blog/${languagePath}/articles.json`)
-			if (!metadataResponse.ok) {
-				throw new Error(`Failed to load articles metadata for language ${lang}: ${metadataResponse.status}`)
+			// Create an abort controller with timeout
+			const controller = new AbortController()
+			const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
+			try {
+				const metadataResponse = await fetch(`assets/blog/${languagePath}/articles.json`, {
+					signal: controller.signal,
+				})
+				clearTimeout(timeoutId)
+
+				if (!metadataResponse.ok) {
+					throw new Error(`Failed to load articles metadata for language ${lang}: ${metadataResponse.status}`)
+				}
+
+				const metadata = (await metadataResponse.json()) as ArticleMetadata[]
+				const articles: BlogArticle[] = await Promise.all(
+					metadata.map(async (meta) => {
+						const articleController = new AbortController()
+						const articleTimeoutId = setTimeout(() => articleController.abort(), 5000) // 5 second timeout per article
+
+						try {
+							const response = await fetch(`assets/blog/${languagePath}/${meta.markdownFile}`, {
+								signal: articleController.signal,
+							})
+							clearTimeout(articleTimeoutId)
+
+							if (!response.ok) {
+								throw new Error(`Failed to load article: ${meta.slug}`)
+							}
+							const markdown = await response.text()
+							const content = await marked(markdown)
+
+							return {
+								slug: meta.slug,
+								title: meta.title,
+								summary: meta.summary,
+								content,
+								category: meta.category,
+								date: meta.date,
+								similarSlugs: meta.similarSlugs,
+							}
+						} catch (error) {
+							clearTimeout(articleTimeoutId)
+							console.warn(`Failed to load article ${meta.slug}:`, error)
+							// Return a placeholder article instead of failing
+							return {
+								slug: meta.slug,
+								title: meta.title,
+								summary: meta.summary,
+								content: '<p>Content unavailable</p>',
+								category: meta.category,
+								date: meta.date,
+								similarSlugs: meta.similarSlugs,
+							}
+						}
+					}),
+				)
+
+				this._articles.set(articles)
+			} catch (error) {
+				clearTimeout(timeoutId)
+				console.error('Failed to load blog articles:', error)
 			}
-
-			const metadata = (await metadataResponse.json()) as ArticleMetadata[]
-			const articles: BlogArticle[] = await Promise.all(
-				metadata.map(async (meta) => {
-					const response = await fetch(`assets/blog/${languagePath}/${meta.markdownFile}`)
-					if (!response.ok) {
-						throw new Error(`Failed to load article: ${meta.slug}`)
-					}
-					const markdown = await response.text()
-					const content = await marked(markdown)
-
-					return {
-						slug: meta.slug,
-						title: meta.title,
-						summary: meta.summary,
-						content,
-						category: meta.category,
-						date: meta.date,
-						similarSlugs: meta.similarSlugs,
-					}
-				}),
-			)
-
-			// Simulate x second loading delay
-			await new Promise((resolve) => setTimeout(resolve, 300))
-
-			this._articles.set(articles)
 		} catch (error) {
 			console.error('Failed to load blog articles:', error)
 		}
@@ -94,6 +127,10 @@ export class BlogDataService {
 
 	articles = this._articles.asReadonly()
 	loading = this._loading.asReadonly()
+
+	loadArticles() {
+		this.ensureLoaded()
+	}
 
 	getBySlug(slug: string) {
 		return this._articles().find((article) => article.slug === slug)

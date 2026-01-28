@@ -64,7 +64,11 @@ export class App implements OnInit {
 			// Initialize language from localStorage or use default 'fr'
 			const savedLanguage = (localStorage.getItem('language') as 'fr' | 'en') || 'fr'
 			this.currentLanguage.set(savedLanguage)
-			this.translate.use(savedLanguage)
+
+			// Defer translation loading to avoid blocking prerendering
+			Promise.resolve().then(() => {
+				this.translate.use(savedLanguage)
+			})
 		}
 	}
 
