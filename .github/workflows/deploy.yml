@@ -1,0 +1,33 @@
+name: Deploy to o2switch
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # ÉTAPE 1 : Récupérer l'IP du runner GitHub
+      - name: Get Runner IP
+        id: ip
+        run: echo "ipv4=$(curl -s https://api.ipify.org)" >> $GITHUB_OUTPUT
+
+      # ÉTAPE 2 : Autoriser l'IP sur le pare-feu o2switch via leur API
+      - name: Whitelist IP on o2switch
+        run: |
+          curl -u "${{ secrets.O2_USER }}:${{ secrets.O2_PASS }}" \
+          "https://${{ secrets.O2_HOST }}:2083/frontend/o2switch/o2switch-ssh-whitelist/index.live.php?ip=${{ steps.ip.outputs.ipv4 }}&note=GitHubAction"
+
+      # ÉTAPE 3 : Déploiement (Rsync)
+      - name: Deploy via Rsync
+        uses: Burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: dist/votre-projet/
+          remote_path: ~/public_html/
+          remote_host: ${{ secrets.O2_HOST }}
+          remote_user: ${{ secrets.O2_USER }}
+          remote_port: 2222
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
