@@ -1,0 +1,218 @@
+.app-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.content-wrapper {
+	flex: 1;
+}
+
+.app-toolbar {
+	position: sticky;
+	color: var(--mat-sys-on-primary);
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+nav a.active-link {
+	// Exemple de style pour le lien actif
+	text-decoration: underline;
+	text-underline-offset: 6px;
+}
+
+.language-switch {
+	display: flex;
+	gap: 0.5rem;
+	margin-left: 1rem;
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	padding-left: 1rem;
+	align-items: center;
+	height: 100%;
+
+	mat-form-field {
+		width: 120px;
+		font-size: 0.875rem;
+		margin-bottom: 0;
+
+		::ng-deep {
+			.mat-mdc-text-field-wrapper {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.mat-mdc-form-field-flex {
+				height: 40px;
+				align-items: center;
+			}
+
+			.mat-mdc-form-field-infix {
+				padding-top: 8px;
+				padding-bottom: 8px;
+				min-height: auto;
+			}
+
+			.mat-mdc-form-field-subscript-wrapper {
+				display: none;
+			}
+		}
+	}
+}
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+.theme-switch {
+	display: none;
+}
+
+.theme-toggle {
+	margin-right: 1rem;
+	transition: transform 1s ease-in-out;
+	vertical-align: middle !important;
+	align-items: center !important;
+	justify-content: center !important;
+	&:hover {
+		transform: rotate(180deg);
+	}
+}
+
+.app-footer {
+	color: var(--mat-sys-on-primary);
+	padding: 1rem 0.5rem;
+	text-align: center;
+}
+
+.footer-language-select {
+	display: none;
+}
+
+.scroll-top-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: box-shadow 0.5s;
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	z-index: 1000;
+	width: 3rem;
+	height: 3rem;
+	padding: 2rem;
+	border: none;
+	border-radius: 100%;
+	box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+	font-size: 1.5rem;
+}
+
+.scroll-top-btn:focus {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 4px #005fcc;
+}
+
+@media (max-width: 800px) {
+	.app-toolbar {
+		flex-direction: column;
+		height: auto;
+		padding: 1rem 0;
+	}
+	.spacer {
+		display: none;
+	}
+	.language-switch {
+		display: none;
+	}
+	.footer-language-select {
+		display: inline-flex;
+	}
+	nav {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+
+		// Remove persistent effects on mobile
+		a,
+		button {
+			-webkit-tap-highlight-color: transparent;
+
+			&:active,
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--mat-sys-primary);
+				outline-offset: 2px;
+			}
+		}
+	}
+
+	.footer-theme-select {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin: 0 1rem;
+	}
+
+	.footer-links {
+		gap: 1rem;
+		color: black;
+
+		.footer-links-separator {
+			opacity: 0.5;
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+			font-size: 0.9rem;
+			transition: opacity 0.2s ease;
+			padding: 1rem;
+			&:hover {
+				opacity: 0.8;
+				text-decoration: underline;
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--mat-button-filled-container-color);
+				outline-offset: 2px;
+			}
+
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+::view-transition-old(root) {
+	animation: 200ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+	animation: 300ms ease-in 100ms both fade-in;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}

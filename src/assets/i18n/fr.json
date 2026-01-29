@@ -1,0 +1,326 @@
+{
+	"nav": {
+		"home": "Accueil",
+		"services": "Nos Prestations",
+		"blog": "Blog",
+		"about": "À Propos",
+		"contact": "Contact",
+		"language": "Langue"
+	},
+	"common": {
+		"language": "Langue",
+		"languageFr": "Français",
+		"languageEn": "English",
+		"back": "Revenir",
+		"backToBlog": "Revenir au blog",
+		"similarArticles": "Articles similaires",
+		"readMore": "Lire l'article complet",
+		"loading": "Chargement en cours...",
+		"notFound": "Article introuvable",
+		"learnMore": "EN SAVOIR PLUS",
+		"close": "Fermer"
+	},
+	"home": {
+		"heroTitle": "Votre avocate en droit des étrangers",
+		"heroSubtitle": "Accompagnement juridique pour vos démarches de séjour et de nationalité en France",
+		"ctaConsultation": "Demander une consultation",
+		"servicesTitle": "Nos Domaines d'Intervention",
+		"imageAlt": "Image représentant une balance de justice"
+	},
+	"about": {
+		"title": "À Propos de Maître Martinet",
+		"subtitle": "Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France.",
+		"imageAlt": "Image du Maître Martinet",
+		"engagementTitle": "Mon Engagement",
+		"engagementText1": "Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d'installation et de naturalisation en France.",
+		"engagementText2": "Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une chance de réussir son projet de vie en France, et je m'engage à défendre vos droits avec détermination et professionnalisme.",
+		"experienceTitle": "Parcours Professionnel",
+		"formation": {
+			"title": "Formation",
+			"subtitle": "Diplômes et Qualifications",
+			"items": [
+				"Master II en Droit des Étrangers - Université Paris II",
+				"Diplôme d'Avocat - École de Formation du Barreau",
+				"Certificat de spécialisation en Droit des Étrangers",
+				"Formation continue en droit communautaire européen"
+			]
+		},
+		"experience": {
+			"title": "Expérience",
+			"subtitle": "15+ années de pratique",
+			"items": [
+				"Avocate au Barreau de Paris depuis 2008",
+				"Spécialiste en droit des étrangers et de la nationalité",
+				"Consultante pour associations d'aide aux migrants",
+				"Formatrice en droit des étrangers"
+			]
+		},
+		"expertise": {
+			"title": "Domaines d'Expertise",
+			"subtitle": "Areas of Specialization",
+			"items": [
+				"Droit des titres de séjour",
+				"Procédures de naturalisation",
+				"Contentieux administratif",
+				"Droit de la famille internationale"
+			]
+		},
+		"valuesTitle": "Mes Valeurs",
+		"values": {
+			"accessibility": {
+				"title": "Accessibilité",
+				"description": "Je m'engage à rendre le droit accessible à tous, en expliquant les démarches complexes de manière claire et compréhensible."
+			},
+			"integrity": {
+				"title": "Intégrité",
+				"description": "Mon indépendance et mon impartialité garantissent une représentation honnête et transparente de vos intérêts."
+			},
+			"humanity": {
+				"title": "Humanité",
+				"description": "Chaque dossier est unique et mérite une attention particulière. Je traite chaque client avec respect et empathie."
+			},
+			"innovation": {
+				"title": "Innovation",
+				"description": "Je reste constamment informée des évolutions législatives et judiciaires pour vous offrir les meilleures stratégies."
+			}
+		},
+		"languagesTitle": "Langues Parlées",
+		"languages": {
+			"title": "Langues Parlées",
+			"subtitle": "Communication multilingue",
+			"items": ["Français (natif)", "Anglais (courant)", "Espagnol (intermédiaire)", "Arabe (notions)"],
+			"description": "Cette diversité linguistique me permet d'accompagner une clientèle internationale et de faciliter les communications avec les administrations étrangères."
+		},
+		"languagesSubtitle": "Communication multilingue",
+		"languagesList": {
+			"french": "Français (natif)",
+			"english": "Anglais (courant)",
+			"spanish": "Espagnol (intermédiaire)",
+			"arabic": "Arabe (notions)"
+		},
+		"languagesDescription": "Cette diversité linguistique me permet d'accompagner une clientèle internationale et de faciliter les communications avec les administrations étrangères.",
+		"activitiesTitle": "Activités Professionnelles",
+		"activities": {
+			"publications": {
+				"title": "Publications",
+				"items": [
+					"\"Le droit des étrangers à l'ère du numérique\" - Revue Juridique 2023",
+					"\"Naturalisation française : stratégies et perspectives\" - 2022",
+					"Articles réguliers dans la presse spécialisée"
+				]
+			},
+			"training": {
+				"title": "Formation",
+				"items": [
+					"Formatrice pour le Barreau de Paris",
+					"Interventions dans les universités",
+					"Ateliers pour associations d'aide aux migrants"
+				]
+			},
+			"associations": {
+				"title": "Associations",
+				"items": [
+					"Membre de l'Association Française des Avocats en Droit des Étrangers",
+					"Bénévole pour associations d'aide juridique",
+					"Partenaire d'organisations internationales"
+				]
+			}
+		},
+		"publications": {
+			"title": "Publications",
+			"items": [
+				"\"Le droit des étrangers à l'ère du numérique\" - Revue Juridique 2023",
+				"\"Naturalisation française : stratégies et perspectives\" - 2022",
+				"Articles réguliers dans la presse spécialisée"
+			]
+		},
+		"training": {
+			"title": "Formation",
+			"items": [
+				"Formatrice pour le Barreau de Paris",
+				"Interventions dans les universités",
+				"Ateliers pour associations d'aide aux migrants"
+			]
+		},
+		"cta": {
+			"title": "Prêt à commencer votre démarche ?",
+			"description": "Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures stratégies à adopter.",
+			"contactButton": "Me Contacter",
+			"servicesButton": "Mes Services"
+		}
+	},
+	"services": {
+		"title": "Nos domaines d'expertise",
+		"subtitle": "Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit des étrangers et de la nationalité. Nous mettons notre expertise à votre service pour défendre vos droits et concrétiser votre projet de vie en France.",
+		"gridView": "Vue en grille",
+		"ctaTitle": "Besoin d'une assistance juridique ?",
+		"ctaDescription": "Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.",
+		"ctaButton": "Prendre rendez-vous",
+		"viewToggle": "Afficher en grille",
+		"cta.title": "Besoin d'une assistance juridique ?",
+		"cta.description": "Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.",
+		"cta.button": "Prendre rendez-vous",
+		"categories": {
+			"residencePermits": {
+				"title": "Titres de Séjour",
+				"description": "Demande de régularisation, renouvellement, changement de statut et regroupement familial.",
+				"subtitle": "Obtention et renouvellement de votre droit au séjour",
+				"detailedDescription": "Nous vous assistons dans la constitution de votre dossier et vous représentons auprès des préfectures pour sécuriser votre situation administrative en France.",
+				"items": [
+					"Cartes de séjour \"vie privée et familiale\"",
+					"Titres de séjour pour motifs professionnels (salarié, passeport talent)",
+					"Statut \"étudiant\" et \"visiteur\"",
+					"Procédures de regroupement familial",
+					"Demandes d'admission exceptionnelle au séjour",
+					"Changements de statut"
+				]
+			},
+			"nationality": {
+				"title": "Nationalité Française",
+				"description": "Procédures de naturalisation par décret, mariage ou déclaration.",
+				"subtitle": "Devenir citoyen français",
+				"detailedDescription": "L'acquisition de la nationalité française est une étape majeure. Nous vous guidons à travers les différentes procédures pour maximiser vos chances de succès.",
+				"items": [
+					"Constitution des dossiers de naturalisation par décret",
+					"Déclaration de nationalité par mariage",
+					"Déclaration de nationalité à raison de la naissance et de la résidence en France",
+					"Recours contre les décisions d'ajournement ou de rejet",
+					"Demandes de Certificat de Nationalité Française (CNF)"
+				]
+			},
+			"litigation": {
+				"title": "Contentieux & Recours",
+				"description": "Défense contre les OQTF, refus de visa et contentieux devant le tribunal administratif.",
+				"subtitle": "Défense de vos droits devant les juridictions",
+				"detailedDescription": "Face à une décision administrative défavorable, une action rapide et stratégique est essentielle. Nous vous défendons avec pugnacité devant les tribunaux administratifs.",
+				"items": [
+					"Recours contre les Obligations de Quitter le Territoire Français (OQTF)",
+					"Contestation des refus de titre de séjour et des refus de renouvellement",
+					"Recours contre les décisions de transfert \"Dublin\"",
+					"Contentieux du placement en rétention administrative et de l'assignation à résidence"
+				]
+			}
+		}
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Retrouvez nos actualités, analyses juridiques et conseils pratiques en droit des étrangers et de la nationalité.",
+		"noArticles": "Aucun article pour le moment. Revenez bientôt !",
+		"article": "Article introuvable."
+	},
+	"contact": {
+		"title": "Contactez-nous",
+		"subtitle": "Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais.",
+		"submitting": "Envoi en cours...",
+		"copyError": "Impossible de copier. Veuillez copier manuellement.",
+		"phone": {
+			"title": "Téléphone",
+			"number": "01 23 45 67 89",
+			"hours": "Du lundi au vendredi, 9h-18h",
+			"button": "Appeler"
+		},
+		"email": {
+			"title": "Email",
+			"address": "contact@maitre-martinet.fr",
+			"response": "Réponse sous 24h",
+			"button": "Envoyer un e-mail",
+			"copied": "E-mail copié",
+			"aria": "Adresse e-mail du cabinet",
+			"copyLabel": "Copier l'e-mail"
+		},
+		"hours": {
+			"title": "Horaires d'ouverture",
+			"aria": "Horaires d'ouverture du cabinet",
+			"weekdays": {
+				"label": "Lundi – Vendredi",
+				"time": "9h00 – 18h00",
+				"aria": "Ouvert du lundi au vendredi de 9h à 18h"
+			},
+			"saturday": {
+				"label": "Samedi",
+				"note": "Sur rendez-vous",
+				"aria": "Samedi sur rendez-vous"
+			},
+			"sunday": {
+				"label": "Dimanche",
+				"note": "Fermé",
+				"aria": "Dimanche fermé"
+			}
+		},
+		"address": {
+			"title": "Adresse",
+			"line1": "5 Av. de la République",
+			"line2": "33000 Bordeaux",
+			"aria": "Adresse du cabinet",
+			"copyLabel": "Copier l'adresse",
+			"copied": "Adresse copiée",
+			"mapLoading": "Chargement de la carte...",
+			"mapTitle": "Carte de l'adresse du cabinet"
+		},
+		"form": {
+			"title": "Envoyez-nous un message",
+			"subtitle": "Remplissez le formulaire ci-dessous",
+			"name": {
+				"label": "Nom complet",
+				"error": "Le nom est requis"
+			},
+			"email": {
+				"label": "Email",
+				"error": "Email valide requis"
+			},
+			"phone": {
+				"label": "Téléphone",
+				"notProvided": "Non fourni"
+			},
+			"subject": {
+				"label": "Sujet",
+				"error": "Veuillez sélectionner un sujet",
+				"options": {
+					"consultation": "Demande de consultation",
+					"information": "Demande d'information",
+					"urgence": "Urgence juridique",
+					"autre": "Autre"
+				}
+			},
+			"message": {
+				"label": "Message",
+				"placeholder": "Décrivez votre situation juridique, votre demande (titre de séjour, naturalisation, etc.) et vos besoins...",
+				"error": "Le message est requis",
+				"characters": "caractères",
+				"hint": "Soyez précis pour nous aider à mieux comprendre votre situation"
+			},
+			"submit": "Envoyer le message",
+			"submitting": "Envoi en cours..."
+		},
+		"cta": {
+			"title": "Besoin d'une consultation urgente ?",
+			"description": "Contactez-nous directement par téléphone pour une prise en charge rapide.",
+			"button": "Appeler maintenant"
+		},
+		"success": "Message envoyé avec succès !",
+		"error": "Erreur lors de l'envoi du message. Veuillez réessayer.",
+		"voice": {
+			"listening": "🎤 Parlez maintenant...",
+			"dictating": "En cours de dictée...",
+			"error": "Impossible de démarrer le microphone",
+			"micError": "Erreur de reconnaissance vocale",
+			"noPermission": "Autorisation microphone refusée",
+			"noSpeech": "Aucune parole détectée"
+		}
+	},
+	"footer": {
+		"copyright": "© 2026 Cabinet Martinet. Tous droits réservés.",
+		"address": "5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89",
+		"legal": "Mentions Légales",
+		"privacy": "Politique de Confidentialité",
+		"theme": "Thème"
+	},
+	"legal": {
+		"title": "Mentions Légales",
+		"backButton": "Revenir"
+	},
+	"privacy": {
+		"title": "Politique de Confidentialité",
+		"backButton": "Revenir"
+	}
+}

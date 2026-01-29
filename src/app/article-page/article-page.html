@@ -1,0 +1,37 @@
+<div class="container blog-page">
+	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
+		<mat-icon>arrow_back</mat-icon>{{ 'common.backToBlog' | translate }}
+	</button>
+	@if (loading()) {
+	<article class="blog-post article-skeleton" aria-busy="true">
+		@for (i of [1, 2, 3, 4, 5]; track i) {
+		<div class="skeleton-title"></div>
+		<div class="skeleton-summary"></div>
+		<div class="skeleton-line"></div>
+		<div class="skeleton-line"></div>
+		<div class="skeleton-line"></div>
+		<div class="skeleton-line"></div>
+		<div class="skeleton-line"></div>
+		<div class="skeleton-title"></div>
+		<div class="skeleton-line short"></div>
+		}
+	</article>
+	} @else if (article(); as art) {
+	<article class="blog-post">
+		<h1 class="mat-display-2">{{ art.title || ('common.notFound' | translate) }}</h1>
+		<p class="mat-headline-5">{{ art.summary || 'Aucun résumé disponible' }}</p>
+		<div [innerHTML]="art.content" class="blog-content" animateText="fade"></div>
+	</article>
+	@if (similarArticles().length > 0) {
+	<section class="similar-articles" aria-label="Articles similaires">
+		<h2 class="similar-title">{{ 'common.similarArticles' | translate }}</h2>
+		<div class="similar-grid">
+			@for (similar of similarArticles(); track similar.slug) {
+			<app-blog-article-card [article]="similar"></app-blog-article-card>
+			}
+		</div>
+	</section>
+	} } @else {
+	<p class="mat-body-1">{{ 'blog.article' | translate }}</p>
+	}
+</div>

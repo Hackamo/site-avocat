@@ -1,0 +1,55 @@
+<!-- Hero Section (Bannière) -->
+<header class="home-section container">
+	<div class="home-content">
+		<h1 class="mat-display-3">{{ 'home.heroTitle' | translate }}</h1>
+		<p class="mat-headline-5">{{ 'home.heroSubtitle' | translate }}</p>
+		<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button color="neutral" class="cta-button">
+			{{ 'home.ctaConsultation' | translate }}
+		</a>
+	</div>
+	<div class="hero-image-wrapper">
+		@if (!imageLoaded()) {
+		<div class="image-skeleton"></div>
+		}
+		<img
+			class="hero-image"
+			ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
+			priority
+			width="400"
+			height="600"
+			[alt]="'home.imageAlt' | translate"
+			(load)="onImageLoad()"
+			[class.loaded]="imageLoaded()"
+		/>
+	</div>
+</header>
+
+<!-- Section Prestations -->
+<section class="container">
+	<h2 class="mat-display-1 text-center mb-4">{{ 'home.servicesTitle' | translate }}</h2>
+
+	<div class="cards-grid">
+		@for (service of services; track service.titleKey) {
+		<mat-card
+			class="prestation-card"
+			animateText="fade"
+			appearance="outlined"
+			[routerLink]="['/prestations']"
+			[fragment]="service.anchor"
+		>
+			<mat-card-header>
+				<div mat-card-avatar class="service-icon">
+					<mat-icon>{{ service.icon }}</mat-icon>
+				</div>
+				<mat-card-title>{{ getServiceTitle(service) }}</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<p>{{ getServiceDescription(service) }}</p>
+			</mat-card-content>
+			<mat-card-actions align="end">
+				<button mat-button>{{ 'common.learnMore' | translate }}</button>
+			</mat-card-actions>
+		</mat-card>
+		}
+	</div>
+</section>

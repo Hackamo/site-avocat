@@ -1,0 +1,210 @@
+<div class="about-page">
+	<!-- Hero Section -->
+	<header class="hero-section" animateText="fade">
+		<div class="container">
+			<div class="hero-content">
+				<h1 class="mat-display-2">{{ 'about.title' | translate }}</h1>
+				<p class="mat-headline-5 hero-subtitle">{{ 'about.subtitle' | translate }}</p>
+			</div>
+			<div class="hero-image">
+				@if (!imageLoaded()) {
+				<div class="image-skeleton"></div>
+				}
+				<img
+					[ngSrc]="darkMode() ? 'assets/debora_about.JPG' : 'assets/debora_about.JPG'"
+					priority
+					width="400"
+					height="600"
+					[alt]="'about.imageAlt' | translate"
+					(load)="onImageLoad()"
+					[class.loaded]="imageLoaded()"
+				/>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Introduction -->
+		<section class="intro-section">
+			<div class="intro-content">
+				<h2 class="mat-display-1 section-title">{{ 'about.engagementTitle' | translate }}</h2>
+				<p class="mat-body-1" animateText="fade">{{ 'about.engagementText1' | translate }}</p>
+				<p class="mat-body-1" animateText="fade">{{ 'about.engagementText2' | translate }}</p>
+			</div>
+		</section>
+
+		<!-- Experience & Qualifications -->
+		<section class="experience-section">
+			<h2 class="mat-display-1 section-title text-center">{{ 'about.experienceTitle' | translate }}</h2>
+
+			<div class="experience-grid">
+				<mat-card class="experience-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>school</mat-icon>
+						<mat-card-title>{{ 'about.formation.title' | translate }}</mat-card-title>
+						<mat-card-subtitle>{{ 'about.formation.subtitle' | translate }}</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="achievement-list">
+							<li>{{ 'about.formation.items.0' | translate }}</li>
+							<li>{{ 'about.formation.items.1' | translate }}</li>
+							<li>{{ 'about.formation.items.2' | translate }}</li>
+							<li>{{ 'about.formation.items.3' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+
+				<mat-card class="experience-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>work</mat-icon>
+						<mat-card-title>{{ 'about.experience.title' | translate }}</mat-card-title>
+						<mat-card-subtitle>{{ 'about.experience.subtitle' | translate }}</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="achievement-list">
+							<li>{{ 'about.experience.items.0' | translate }}</li>
+							<li>{{ 'about.experience.items.1' | translate }}</li>
+							<li>{{ 'about.experience.items.2' | translate }}</li>
+							<li>{{ 'about.experience.items.3' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+
+				<mat-card class="experience-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>gavel</mat-icon>
+						<mat-card-title>{{ 'about.expertise.title' | translate }}</mat-card-title>
+						<mat-card-subtitle>{{ 'about.expertise.subtitle' | translate }}</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="achievement-list">
+							<li>{{ 'about.expertise.items.0' | translate }}</li>
+							<li>{{ 'about.expertise.items.1' | translate }}</li>
+							<li>{{ 'about.expertise.items.2' | translate }}</li>
+							<li>{{ 'about.expertise.items.3' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</section>
+
+		<!-- Values Section -->
+		<section class="values-section">
+			<h2 class="mat-display-1 section-title text-center">{{ 'about.valuesTitle' | translate }}</h2>
+
+			<div class="values-grid">
+				<div class="value-item" animateText="fade">
+					<mat-icon class="value-icon">accessibility</mat-icon>
+					<h3 class="mat-headline-6">{{ 'about.values.accessibility.title' | translate }}</h3>
+					<p class="mat-body-2">{{ 'about.values.accessibility.description' | translate }}</p>
+				</div>
+
+				<div class="value-item" animateText="fade">
+					<mat-icon class="value-icon">balance</mat-icon>
+					<h3 class="mat-headline-6">{{ 'about.values.integrity.title' | translate }}</h3>
+					<p class="mat-body-2">{{ 'about.values.integrity.description' | translate }}</p>
+				</div>
+
+				<div class="value-item" animateText="fade">
+					<mat-icon class="value-icon">people</mat-icon>
+					<h3 class="mat-headline-6">{{ 'about.values.humanity.title' | translate }}</h3>
+					<p class="mat-body-2">{{ 'about.values.humanity.description' | translate }}</p>
+				</div>
+
+				<div class="value-item" animateText="fade">
+					<mat-icon class="value-icon">lightbulb</mat-icon>
+					<h3 class="mat-headline-6">{{ 'about.values.innovation.title' | translate }}</h3>
+					<p class="mat-body-2">{{ 'about.values.innovation.description' | translate }}</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Languages Section -->
+		<section class="languages-section">
+			<mat-card class="languages-card" animateText="fade">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>language</mat-icon>
+					<mat-card-title>{{ 'about.languages.title' | translate }}</mat-card-title>
+					<mat-card-subtitle>{{ 'about.languages.subtitle' | translate }}</mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-content>
+					<div class="languages-list">
+						<span class="language-tag">{{ 'about.languages.items.0' | translate }}</span>
+						<span class="language-tag">{{ 'about.languages.items.1' | translate }}</span>
+						<span class="language-tag">{{ 'about.languages.items.2' | translate }}</span>
+						<span class="language-tag">{{ 'about.languages.items.3' | translate }}</span>
+					</div>
+					<p class="mat-body-2">{{ 'about.languages.description' | translate }}</p>
+				</mat-card-content>
+			</mat-card>
+		</section>
+
+		<!-- Publications & Activities -->
+		<section class="activities-section">
+			<h2 class="mat-display-1 section-title text-center">{{ 'about.activitiesTitle' | translate }}</h2>
+
+			<div class="activities-grid">
+				<mat-card class="activity-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>article</mat-icon>
+						<mat-card-title>{{ 'about.activities.publications.title' | translate }}</mat-card-title>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="activity-list">
+							<li>{{ 'about.activities.publications.items.0' | translate }}</li>
+							<li>{{ 'about.activities.publications.items.1' | translate }}</li>
+							<li>{{ 'about.activities.publications.items.2' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+
+				<mat-card class="activity-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>school</mat-icon>
+						<mat-card-title>{{ 'about.activities.training.title' | translate }}</mat-card-title>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="activity-list">
+							<li>{{ 'about.activities.training.items.0' | translate }}</li>
+							<li>{{ 'about.activities.training.items.1' | translate }}</li>
+							<li>{{ 'about.activities.training.items.2' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+
+				<mat-card class="activity-card" animateText="fade">
+					<mat-card-header>
+						<mat-icon mat-card-avatar>groups</mat-icon>
+						<mat-card-title>{{ 'about.activities.associations.title' | translate }}</mat-card-title>
+					</mat-card-header>
+					<mat-card-content>
+						<ul class="activity-list">
+							<li>{{ 'about.activities.associations.items.0' | translate }}</li>
+							<li>{{ 'about.activities.associations.items.1' | translate }}</li>
+							<li>{{ 'about.activities.associations.items.2' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</section>
+	</main>
+
+	<!-- Call to Action -->
+	<section class="cta-section" animateText="fade">
+		<div class="container text-center">
+			<h2 class="mat-headline-4">{{ 'about.cta.title' | translate }}</h2>
+			<p class="mat-body-1">{{ 'about.cta.description' | translate }}</p>
+			<div class="cta-buttons">
+				<button mat-flat-button routerLink="/contact">
+					<mat-icon>email</mat-icon>
+					{{ 'about.cta.contactButton' | translate }}
+				</button>
+				<button mat-stroked-button routerLink="/prestations">
+					<mat-icon>info</mat-icon>
+					{{ 'about.cta.servicesButton' | translate }}
+				</button>
+			</div>
+		</div>
+	</section>
+</div>
