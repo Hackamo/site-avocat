@@ -4,6 +4,7 @@ import { Component, inject, OnInit } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { BlogDataService } from '../services/blog-data.service'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
+import { MetaService } from '../services/meta.service'
 
 @Component({
 	selector: 'app-blog',
@@ -15,10 +16,12 @@ import { BlogArticleCard } from '../blog-article-card/blog-article-card'
 })
 export class Blog implements OnInit {
 	private readonly blogData = inject(BlogDataService)
+	private readonly metaService = inject(MetaService)
 	readonly articles = this.blogData.articles
 	readonly loading = this.blogData.loading
 
 	ngOnInit() {
+		this.metaService.updateMetaTags('blog')
 		// Load articles when component initializes
 		this.blogData.loadArticles()
 	}

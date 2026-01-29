@@ -1,4 +1,4 @@
-<div class="container">
+<main class="container">
 	<button
 		mat-button
 		(click)="goBack()"
@@ -13,15 +13,15 @@
 	<section>
 		<h2 i18n="Privacy|Data controller title">1. Responsable du traitement des données</h2>
 		<p i18n="Privacy|Data controller details">
-			<strong>Cabinet Martinet</strong><br />
-			5 Avenue de la République<br />
-			33000 Bordeaux, France<br />
-			Email : contact@cabinet-martinet.fr<br />
-			Téléphone : 01 23 45 67 89
+			<strong>{{ contactConfig.businessName }}</strong><br />
+			{{ contactConfig.address.street }}<br />
+			{{ contactConfig.address.city }}, {{ contactConfig.address.country }}<br />
+			Email : {{ contactConfig.email }}<br />
+			Téléphone : {{ contactConfig.phone }}
 		</p>
 		<p i18n="Privacy|Data controller text">
-			Le Cabinet Martinet est responsable du traitement de vos données personnelles conformément à la Loi
-			Informatique et Libertés et au Règlement Général sur la Protection des Données (RGPD).
+			Le {{ contactConfig.businessName }} est responsable du traitement de vos données personnelles conformément à
+			la Loi Informatique et Libertés et au Règlement Général sur la Protection des Données (RGPD).
 		</p>
 	</section>
 
@@ -179,4 +179,4 @@
 			<a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a>
 		</p>
 	</section>
-</div>
+</main>

@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
+import { CONTACT_CONFIG } from './config/contact.config'
 
 @Component({
 	selector: 'app-root',
@@ -34,6 +35,7 @@ export class App implements OnInit {
 	readonly colorTheme = signal<
 		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
 	>('red')
+	readonly config = CONTACT_CONFIG
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly document = inject(DOCUMENT)
 	private readonly ngZone = inject(NgZone)

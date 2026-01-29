@@ -1,4 +1,4 @@
-<div class="container">
+<main class="container">
 	<button
 		mat-button
 		(click)="goBack()"
@@ -12,16 +12,16 @@
 
 	<section>
 		<h2 i18n="Legal|Legal info section title">Informations légales et d'identification</h2>
-		<p><strong>Cabinet Martinet</strong></p>
+		<p><strong>{{ contactConfig.businessName }}</strong></p>
 		<p i18n="Legal|Contact details">
-			Adresse : 5 Avenue de la République, 33000 Bordeaux<br />
-			Téléphone : 01 23 45 67 89<br />
-			Email : contact@cabinet-martinet.fr
+			Adresse : {{ contactConfig.address.full }}<br />
+			Téléphone : {{ contactConfig.phone }}<br />
+			Email : {{ contactConfig.email }}
 		</p>
 		<p i18n="Legal|Publication details">
-			<strong>Responsable de la publication :</strong> Maître [Nom]<br />
-			<strong>Statut :</strong> Avocat inscrit au Barreau de Bordeaux<br />
-			<strong>Numéro SIRET :</strong> [À compléter]
+			<strong>Responsable de la publication :</strong> {{ contactConfig.lawyer.fullName }}<br />
+			<strong>Statut :</strong> Avocat inscrit au {{ contactConfig.businessInfo.order }}<br />
+			<strong>Numéro SIRET :</strong> {{ contactConfig.businessInfo.siret }}
 		</p>
 	</section>
 
@@ -43,7 +43,7 @@
 			Tous les contenus du site (textes, images, logos, etc.) sont protégés par les droits d'auteur. Toute
 			reproduction, distribution ou utilisation du contenu sans autorisation préalable est interdite.
 		</p>
-		<p i18n="Legal|Copyright notice">© 2026 Cabinet Martinet. Tous droits réservés.</p>
+		<p i18n="Legal|Copyright notice">© 2026 {{ contactConfig.businessName }}. Tous droits réservés.</p>
 	</section>
 
 	<section>
@@ -87,7 +87,7 @@
 		<h2 i18n="Legal|Contact section title">Contact</h2>
 		<p i18n="Legal|Contact text">
 			Pour toute question concernant ces mentions légales, veuillez nous contacter à l'adresse email suivante :
-			<a href="mailto:legal@cabinet-martinet.fr">legal@cabinet-martinet.fr</a>
+			<a [href]="'mailto:' + contactConfig.specialEmails.legal">{{ contactConfig.specialEmails.legal }}</a>
 		</p>
 	</section>
-</div>
+</main>

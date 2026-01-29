@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="fr" target-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="4723807546119801019" datatype="html">
         <source>À Propos de Maître Martinet</source>
-        <target>About Maître Martinet</target>
+        <target>About Attorney Martinet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">6,7</context>
@@ -14,7 +14,7 @@
       </trans-unit>
       <trans-unit id="7490076393202027965" datatype="html">
         <source> Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France. </source>
-        <target> As a lawyer specialized in immigration law, I accompany you with rigor and humanity in all your administrative and legal procedures in France. </target>
+        <target> As an attorney specialized in immigration law, I provide rigorous and compassionate support for all your administrative and legal procedures in France. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">8,12</context>
@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="6334411783619420810" datatype="html">
         <source>Image du Maître Martinet</source>
-        <target>Photo of Maître Martinet</target>
+        <target>Image of Attorney Martinet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">21,22</context>
@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="7617516468050125494" datatype="html">
         <source> Fort d&apos;une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d&apos;installation et de naturalisation en France. </source>
-        <target> With over 5 years of experience in immigration law, I put my expertise at the service of individuals and businesses to support them in their residence, settlement, and naturalization projects in France. </target>
+        <target> With over 5 years of experience in immigration law, I put my expertise at the service of individuals and businesses to support them in their residence, settlement and naturalization projects in France. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">37,41</context>
@@ -54,7 +54,7 @@
       </trans-unit>
       <trans-unit id="1855287315803770557" datatype="html">
         <source> Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une chance de réussir son projet de vie en France, et je m&apos;engage à défendre vos droits avec détermination et professionnalisme. </source>
-        <target> My approach is characterized by attentive listening, rigorous legal analysis, and personalized support adapted to each situation. I firmly believe that everyone deserves a chance to succeed in their life project in France, and I am committed to defending your rights with determination and professionalism. </target>
+        <target> My approach is characterized by attentive listening, rigorous legal analysis and personalized support adapted to each situation. I firmly believe that everyone deserves a chance to succeed in their life project in France, and I am committed to defending your rights with determination and professionalism. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">42,48</context>
@@ -108,7 +108,7 @@
       </trans-unit>
       <trans-unit id="7027406900062827064" datatype="html">
         <source>Diplôme d&apos;Avocat - École de Formation du Barreau</source>
-        <target>Law Degree - Bar Association Training School</target>
+        <target>Law Degree - Bar Training School</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">70,71</context>
@@ -118,7 +118,7 @@
       </trans-unit>
       <trans-unit id="5936749777099160131" datatype="html">
         <source> Certificat de spécialisation en Droit des Étrangers </source>
-        <target> Certificate of Specialization in Immigration Law </target>
+        <target> Specialization Certificate in Immigration Law </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">72,74</context>
@@ -128,7 +128,7 @@
       </trans-unit>
       <trans-unit id="7896990106244013555" datatype="html">
         <source> Formation continue en droit communautaire européen </source>
-        <target> Continuing education in European Community law </target>
+        <target> Continuing Education in European Community Law </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">75,78</context>
@@ -158,7 +158,7 @@
       </trans-unit>
       <trans-unit id="274230046963296918" datatype="html">
         <source>Avocate au Barreau de Paris depuis 2008</source>
-        <target>Attorney at the Paris Bar since 2008</target>
+        <target>Avocate au Barreau de Paris depuis 2008</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">91,92</context>
@@ -168,7 +168,7 @@
       </trans-unit>
       <trans-unit id="4166227974486155843" datatype="html">
         <source> Spécialiste en droit des étrangers et de la nationalité </source>
-        <target> Specialist in immigration and nationality law </target>
+        <target> Specialist in Immigration and Nationality Law </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">93,95</context>
@@ -178,7 +178,7 @@
       </trans-unit>
       <trans-unit id="4946326129144420030" datatype="html">
         <source> Consultante pour associations d&apos;aide aux migrants </source>
-        <target> Consultant for migrant support organizations </target>
+        <target> Consultante pour associations d&apos;aide aux migrants </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">96,98</context>
@@ -188,7 +188,7 @@
       </trans-unit>
       <trans-unit id="8745358054804038690" datatype="html">
         <source>Formatrice en droit des étrangers</source>
-        <target>Immigration law trainer</target>
+        <target>Immigration Law Trainer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">98,100</context>
@@ -198,7 +198,7 @@
       </trans-unit>
       <trans-unit id="3949478713496834311" datatype="html">
         <source>Domaines d&apos;Expertise</source>
-        <target>Areas of Expertise</target>
+        <target>Domaines d&apos;Expertise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">106,107</context>
@@ -208,6 +208,7 @@
       </trans-unit>
       <trans-unit id="7384729325340241741" datatype="html">
         <source>Areas of Specialization</source>
+        <target>Areas of Specialization</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">108,110</context>
@@ -217,7 +218,7 @@
       </trans-unit>
       <trans-unit id="2204740729105947762" datatype="html">
         <source>Droit des titres de séjour</source>
-        <target>Residence permit law</target>
+        <target>Residence Permit Law</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">113,114</context>
@@ -227,7 +228,7 @@
       </trans-unit>
       <trans-unit id="7430915650314810130" datatype="html">
         <source>Procédures de naturalisation</source>
-        <target>Naturalization procedures</target>
+        <target>Naturalization Procedures</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">114,115</context>
@@ -237,7 +238,7 @@
       </trans-unit>
       <trans-unit id="4353181773653963649" datatype="html">
         <source>Contentieux administratif</source>
-        <target>Administrative litigation</target>
+        <target>Contentieux administratif</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">115,116</context>
@@ -247,7 +248,7 @@
       </trans-unit>
       <trans-unit id="1216904454475843925" datatype="html">
         <source>Droit de la famille internationale</source>
-        <target>International family law</target>
+        <target>Droit de la famille internationale</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">116,118</context>
@@ -257,7 +258,7 @@
       </trans-unit>
       <trans-unit id="6531710914277463228" datatype="html">
         <source>Mes Valeurs</source>
-        <target>My Values</target>
+        <target>Mes Valeurs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">125,128</context>
@@ -277,7 +278,7 @@
       </trans-unit>
       <trans-unit id="3471140873061583266" datatype="html">
         <source> Je m&apos;engage à rendre le droit accessible à tous, en expliquant les démarches complexes de manière claire et compréhensible. </source>
-        <target> I am committed to making the law accessible to all, by explaining complex procedures in a clear and understandable manner. </target>
+        <target> I am committed to making the law accessible to everyone, by explaining complex procedures in a clear and understandable way. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">132,137</context>
@@ -297,7 +298,7 @@
       </trans-unit>
       <trans-unit id="3190217553462176754" datatype="html">
         <source> Mon indépendance et mon impartialité garantissent une représentation honnête et transparente de vos intérêts. </source>
-        <target> My independence and impartiality guarantee honest and transparent representation of your interests. </target>
+        <target> My independence and impartiality guarantee an honest and transparent representation of your interests. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">141,146</context>
@@ -337,7 +338,7 @@
       </trans-unit>
       <trans-unit id="2518223567502915184" datatype="html">
         <source> Je reste constamment informée des évolutions législatives et judiciaires pour vous offrir les meilleures stratégies. </source>
-        <target> I remain constantly informed of legislative and judicial developments to offer you the best strategies. </target>
+        <target> I stay constantly informed of legislative and judicial developments to offer you the best strategies. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">159,164</context>
@@ -347,7 +348,7 @@
       </trans-unit>
       <trans-unit id="6720804460611965174" datatype="html">
         <source>Langues Parlées</source>
-        <target>Spoken Languages</target>
+        <target>Languages Spoken</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">171,172</context>
@@ -357,7 +358,7 @@
       </trans-unit>
       <trans-unit id="3825191913048838971" datatype="html">
         <source>Communication multilingue</source>
-        <target>Multilingual communication</target>
+        <target>Communication multilingue</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">173,175</context>
@@ -377,7 +378,7 @@
       </trans-unit>
       <trans-unit id="1306175541042426128" datatype="html">
         <source>Anglais (courant)</source>
-        <target>English (fluent)</target>
+        <target>Anglais (courant)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">179,180</context>
@@ -397,7 +398,7 @@
       </trans-unit>
       <trans-unit id="7060907156091520726" datatype="html">
         <source>Arabe (notions)</source>
-        <target>Arabic (basic)</target>
+        <target>Arabe (notions)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">181,183</context>
@@ -407,7 +408,7 @@
       </trans-unit>
       <trans-unit id="164826215990207251" datatype="html">
         <source> Cette diversité linguistique me permet d&apos;accompagner une clientèle internationale et de faciliter les communications avec les administrations étrangères. </source>
-        <target> This linguistic diversity allows me to support an international clientele and facilitate communications with foreign administrations. </target>
+        <target> This linguistic diversity allows me to serve an international clientele and facilitate communications with foreign administrations. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">184,187</context>
@@ -437,6 +438,7 @@
       </trans-unit>
       <trans-unit id="1218879734575323319" datatype="html">
         <source> &quot;Le droit des étrangers à l&apos;ère du numérique&quot; - Revue Juridique 2023 </source>
+        <target> &quot;Immigration Law in the Digital Age&quot; - Legal Review 2023 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">206,208</context>
@@ -446,6 +448,7 @@
       </trans-unit>
       <trans-unit id="2497838509482659825" datatype="html">
         <source> &quot;Naturalisation française : stratégies et perspectives&quot; - 2022 </source>
+        <target> &quot;French Naturalization: Strategies and Perspectives&quot; - 2022 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">209,211</context>
@@ -465,7 +468,7 @@
       </trans-unit>
       <trans-unit id="6264850201002463240" datatype="html">
         <source>Formatrice pour le Barreau de Paris</source>
-        <target>Trainer for the Paris Bar</target>
+        <target>Trainer for the Paris Bar Association</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">223,224</context>
@@ -475,7 +478,7 @@
       </trans-unit>
       <trans-unit id="7783624714567904666" datatype="html">
         <source>Interventions dans les universités</source>
-        <target>University lectures</target>
+        <target>University guest lectures</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">224,225</context>
@@ -485,7 +488,7 @@
       </trans-unit>
       <trans-unit id="6604243458501763334" datatype="html">
         <source>Ateliers pour associations d&apos;aide aux migrants</source>
-        <target>Workshops for migrant support organizations</target>
+        <target>Ateliers pour associations d&apos;aide aux migrants</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">225,227</context>
@@ -505,7 +508,7 @@
       </trans-unit>
       <trans-unit id="3171281633271897235" datatype="html">
         <source> Membre de l&apos;Association Française des Avocats en Droit des Étrangers </source>
-        <target> Member of the French Association of Immigration Lawyers </target>
+        <target> Member of the French Association of Immigration Law Attorneys </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">238,240</context>
@@ -515,7 +518,7 @@
       </trans-unit>
       <trans-unit id="4845813621580583951" datatype="html">
         <source>Bénévole pour associations d&apos;aide juridique</source>
-        <target>Volunteer for legal aid organizations</target>
+        <target>Volunteer for legal aid associations</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">240,241</context>
@@ -525,7 +528,7 @@
       </trans-unit>
       <trans-unit id="1451685997927383728" datatype="html">
         <source>Partenaire d&apos;organisations internationales</source>
-        <target>Partner of international organizations</target>
+        <target>Partenaire d&apos;organisations internationales</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">241,243</context>
@@ -545,7 +548,7 @@
       </trans-unit>
       <trans-unit id="4575208040269410263" datatype="html">
         <source> Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures stratégies à adopter. </source>
-        <target> Contact me for an initial consultation and let's evaluate your needs and the best strategies to adopt together. </target>
+        <target> Contact me for an initial consultation and let's assess together your needs and the best strategies to adopt. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">254,257</context>
@@ -565,7 +568,7 @@
       </trans-unit>
       <trans-unit id="638904137210411441" datatype="html">
         <source>Mes Services</source>
-        <target>My Services</target>
+        <target>Our Services</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">264,267</context>
@@ -575,7 +578,7 @@
       </trans-unit>
       <trans-unit id="8301941908230819147" datatype="html">
         <source>Accueil</source>
-        <target>Home</target>
+        <target>Accueil</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">13,15</context>
@@ -585,7 +588,7 @@
       </trans-unit>
       <trans-unit id="3579415514480124037" datatype="html">
         <source>Nos Prestations</source>
-        <target>Our Services</target>
+        <target>Services</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">16,18</context>
@@ -625,7 +628,7 @@
       </trans-unit>
       <trans-unit id="8963819387283925260" datatype="html">
         <source>Langue</source>
-        <target>Language</target>
+        <target>Langue</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">41,43</context>
@@ -635,7 +638,7 @@
       </trans-unit>
       <trans-unit id="5229877745009180658" datatype="html">
         <source>Revenir en haut de la page</source>
-        <target>Back to top of page</target>
+        <target>Revenir en haut de la page</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">64,67</context>
@@ -665,7 +668,7 @@
       </trans-unit>
       <trans-unit id="2479594297463427499" datatype="html">
         <source>Rouge</source>
-        <target>Red</target>
+        <target>Rouge</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">82,83</context>
@@ -675,7 +678,7 @@
       </trans-unit>
       <trans-unit id="1690827554555419193" datatype="html">
         <source>Bleu</source>
-        <target>Blue</target>
+        <target>Bleu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">83,84</context>
@@ -685,7 +688,7 @@
       </trans-unit>
       <trans-unit id="2041685451940236577" datatype="html">
         <source>Vert</source>
-        <target>Green</target>
+        <target>Vert</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">84,85</context>
@@ -695,7 +698,7 @@
       </trans-unit>
       <trans-unit id="6105888169729289777" datatype="html">
         <source>Jaune</source>
-        <target>Yellow</target>
+        <target>Jaune</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">85,86</context>
@@ -725,7 +728,7 @@
       </trans-unit>
       <trans-unit id="8754250772096174675" datatype="html">
         <source>Azur</source>
-        <target>Azure</target>
+        <target>Azur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">88,89</context>
@@ -735,7 +738,7 @@
       </trans-unit>
       <trans-unit id="7167122689240774891" datatype="html">
         <source>Violet</source>
-        <target>Purple</target>
+        <target>Violet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">89,90</context>
@@ -745,7 +748,7 @@
       </trans-unit>
       <trans-unit id="4150740598898870983" datatype="html">
         <source>Rose</source>
-        <target>Pink</target>
+        <target>Rose</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">90,91</context>
@@ -755,7 +758,7 @@
       </trans-unit>
       <trans-unit id="3027963873836334929" datatype="html">
         <source>Langue</source>
-        <target>Language</target>
+        <target>Langue</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
           <context context-type="linenumber">94,96</context>
@@ -763,22 +766,22 @@
         <note priority="1" from="description">Language selector label</note>
         <note priority="1" from="meaning">Footer</note>
       </trans-unit>
-      <trans-unit id="3606496780937388674" datatype="html">
-        <source>© 2026 Maître Martinet - Avocate spécialisée en droit des étrangers.</source>
-        <target>© 2026 Maître Martinet - Attorney specialized in immigration law.</target>
+      <trans-unit id="1084368630361723374" datatype="html">
+        <source> © 2026 <x id="INTERPOLATION" equiv-text="{{ config.businessNameShort }}"/> - <x id="INTERPOLATION_1" equiv-text="{{ config.lawyer.specialties[0] }}"/>. </source>
+        <target> © 2026 <x id="INTERPOLATION" equiv-text="{{ config.businessNameShort }}"/> - <x id="INTERPOLATION_1" equiv-text="{{ config.lawyer.specialties[0] }}"/>. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">113,114</context>
+          <context context-type="linenumber">114,116</context>
         </context-group>
         <note priority="1" from="description">Copyright notice</note>
         <note priority="1" from="meaning">Footer</note>
       </trans-unit>
-      <trans-unit id="6900509923660855141" datatype="html">
-        <source>Bureau : 123 Rue de la République, 75001 Paris</source>
-        <target>Office: 123 Rue de la République, 75001 Paris</target>
+      <trans-unit id="7009744819962165820" datatype="html">
+        <source>Bureau : <x id="INTERPOLATION" equiv-text="{{ config.address.full }}"/></source>
+        <target>Office: <x id="INTERPOLATION" equiv-text="{{ config.address.full }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">114,115</context>
+          <context context-type="linenumber">116,117</context>
         </context-group>
         <note priority="1" from="description">Office address</note>
         <note priority="1" from="meaning">Footer</note>
@@ -788,7 +791,7 @@
         <target>Legal Notice</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">121,124</context>
+          <context context-type="linenumber">123,126</context>
         </context-group>
         <note priority="1" from="description">Legal mentions link</note>
         <note priority="1" from="meaning">Footer</note>
@@ -798,14 +801,14 @@
         <target>Privacy Policy</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">128,132</context>
+          <context context-type="linenumber">130,134</context>
         </context-group>
         <note priority="1" from="description">Privacy policy link</note>
         <note priority="1" from="meaning">Footer</note>
       </trans-unit>
       <trans-unit id="4025496131032071052" datatype="html">
         <source>Retour au blog</source>
-        <target>Back to blog</target>
+        <target>Retour au blog</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/article-page/article-page.html</context>
           <context context-type="linenumber">3,6</context>
@@ -825,7 +828,7 @@
       </trans-unit>
       <trans-unit id="5375139652010095616" datatype="html">
         <source>Article introuvable</source>
-        <target>Article not found</target>
+        <target>Article introuvable</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/article-page/article-page.html</context>
           <context context-type="linenumber">35,38</context>
@@ -855,7 +858,7 @@
       </trans-unit>
       <trans-unit id="5672230053996429163" datatype="html">
         <source> Aucun article disponible pour le moment. </source>
-        <target> No articles available at the moment. </target>
+        <target> Aucun article disponible pour le moment. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/blog/blog.html</context>
           <context context-type="linenumber">24,29</context>
@@ -865,21 +868,21 @@
       </trans-unit>
       <trans-unit id="1410135982426698732" datatype="html">
         <source>Envoi en cours...</source>
-        <target>Sending...</target>
+        <target>Envoi en cours...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
           <context context-type="linenumber">5,8</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">225,228</context>
+          <context context-type="linenumber">268,270</context>
         </context-group>
-        <note priority="1" from="description">Submission overlay</note>
+        <note priority="1" from="description">Submission overlay text</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="6198361213157915657" datatype="html">
         <source>Contactez-nous</source>
-        <target>Contact Us</target>
+        <target>Contactez-nous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
           <context context-type="linenumber">9,10</context>
@@ -887,12 +890,12 @@
         <note priority="1" from="description">Page title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="9168499820496600418" datatype="html">
-        <source>Vous avez des questions sur vos droits ou besoin d&apos;une consultation ? N&apos;hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais.</source>
-        <target>Do you have questions about your rights or need a consultation? Don't hesitate to contact us. We will respond to you as soon as possible.</target>
+      <trans-unit id="7715860655376419008" datatype="html">
+        <source> Vous avez des questions sur vos droits ou besoin d&apos;une consultation ? N&apos;hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais. </source>
+        <target> Do you have questions about your rights or need a consultation? Feel free to contact us. We will respond as soon as possible. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">10,13</context>
+          <context context-type="linenumber">11,16</context>
         </context-group>
         <note priority="1" from="description">Page subtitle</note>
         <note priority="1" from="meaning">Contact page</note>
@@ -902,41 +905,47 @@
         <target>Phone</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">19,20</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">166,167</context>
+          <context context-type="linenumber">198,199</context>
         </context-group>
         <note priority="1" from="description">Phone card title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="4863856238356520991" datatype="html">
-        <source>01 23 45 67 89</source>
-        <target>+33 1 23 45 67 89</target>
+      <trans-unit id="5330028591284933380" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ config.phone }}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{ config.phone }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">22,24</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
         <note priority="1" from="description">Phone number</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="79867372107451270" datatype="html">
-        <source>Du lundi au vendredi, 9h-18h</source>
-        <target>Monday to Friday, 9am-6pm</target>
-        <context-group purpose="location">
+      <trans-unit id="6300772216307562470" datatype="html">
+        <source> Du lundi au vendredi, <x id="INTERPOLATION" equiv-text="{{ config.hours.weekday.open.slice(0, 5) }}"/>-<x id="INTERPOLATION_1" equiv-text="{{
+						config.hours.weekday.close.slice(0, 5) }}"/> </source>
+        <target> Monday to Friday, <x id="INTERPOLATION" equiv-text="{{ config.hours.weekday.open.slice(0, 5) }}"/>-<x id="INTERPOLATION_1" equiv-text="{{
+            config.hours.weekday.close.slice(0, 5) }}"/> </target>
+            <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">24,25</context>
+          <context context-type="linenumber">28,31</context>
         </context-group>
         <note priority="1" from="description">Phone hours</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4318240724966891273" datatype="html">
         <source>Appeler</source>
-        <target>Call</target>
+        <target>Appeler</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">27,29</context>
+          <context context-type="linenumber">33,35</context>
         </context-group>
         <note priority="1" from="description">Call button</note>
         <note priority="1" from="meaning">Contact page</note>
@@ -946,81 +955,71 @@
         <target>Email</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">45,46</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">158,159</context>
+          <context context-type="linenumber">190,191</context>
         </context-group>
         <note priority="1" from="description">Email card title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4550325793325566985" datatype="html">
         <source>Adresse e-mail du cabinet</source>
-        <target>Office email address</target>
+        <target>Adresse e-mail du cabinet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">51,53</context>
         </context-group>
-        <note priority="1" from="description">Email section</note>
-        <note priority="1" from="meaning">Contact page</note>
-      </trans-unit>
-      <trans-unit id="1340396961310649156" datatype="html">
-        <source>contact@maitre-martinet.fr</source>
-        <target>contact@maitre-martinet.fr</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">43,45</context>
-        </context-group>
-        <note priority="1" from="description">Email address</note>
+        <note priority="1" from="description">Email address card</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="1128137080810471122" datatype="html">
         <source>Copier l&apos;e-mail</source>
-        <target>Copy email</target>
+        <target>Copier l&apos;e-mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">48,50</context>
+          <context context-type="linenumber">58,60</context>
         </context-group>
         <note priority="1" from="description">Copy email button</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="8620429586748831337" datatype="html">
-        <source>Réponse sous 24h</source>
-        <target>Response within 24 hours</target>
+      <trans-unit id="5200358687538444537" datatype="html">
+        <source> Réponse sous <x id="INTERPOLATION" equiv-text="{{ config.responseTime.email }}"/> </source>
+        <target> Response within <x id="INTERPOLATION" equiv-text="{{ config.responseTime.email }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">53,56</context>
+          <context context-type="linenumber">64,66</context>
         </context-group>
         <note priority="1" from="description">Email response time</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="6767763395253066129" datatype="html">
         <source>Envoyer un e-mail</source>
-        <target>Send an email</target>
+        <target>Envoyer un e-mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">59,61</context>
+          <context context-type="linenumber">71,73</context>
         </context-group>
         <note priority="1" from="description">Send email button</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4798901281331589610" datatype="html">
         <source>Horaires d&apos;ouverture</source>
-        <target>Opening hours</target>
+        <target>Horaires d&apos;ouverture</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">67,68</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
         <note priority="1" from="description">Hours card title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="5671943533073625041" datatype="html">
         <source>Horaires d&apos;ouverture du cabinet</source>
-        <target>Office opening hours</target>
+        <target>Horaires d&apos;ouverture du cabinet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">70,71</context>
+          <context context-type="linenumber">85,88</context>
         </context-group>
         <note priority="1" from="description">Hours list</note>
         <note priority="1" from="meaning">Contact page</note>
@@ -1030,77 +1029,67 @@
         <target>Open Monday to Friday from 9am to 6pm</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">71,72</context>
+          <context context-type="linenumber">90,92</context>
         </context-group>
         <note priority="1" from="description">Weekdays hours</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="6529656176361262706" datatype="html">
         <source>Lundi – Vendredi</source>
-        <target>Monday - Friday</target>
+        <target>Lundi – Vendredi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">73,74</context>
+          <context context-type="linenumber">93,95</context>
         </context-group>
         <note priority="1" from="description">Weekdays label</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="4540974110584101294" datatype="html">
-        <source>9h00 – 18h00</source>
-        <target>9:00am - 6:00pm</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">74,77</context>
-        </context-group>
-        <note priority="1" from="description">Weekdays time</note>
-        <note priority="1" from="meaning">Contact page</note>
-      </trans-unit>
       <trans-unit id="4767466357728139838" datatype="html">
         <source>Samedi sur rendez-vous</source>
-        <target>Saturday by appointment</target>
+        <target>Samedi sur rendez-vous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">79,81</context>
+          <context context-type="linenumber">102,104</context>
         </context-group>
         <note priority="1" from="description">Saturday hours</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="7593681618158130042" datatype="html">
         <source>Samedi</source>
-        <target>Saturday</target>
+        <target>Samedi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">82,83</context>
+          <context context-type="linenumber">105,106</context>
         </context-group>
         <note priority="1" from="description">Saturday label</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="5641217566046407738" datatype="html">
         <source>Sur rendez-vous</source>
-        <target>By appointment</target>
+        <target>Sur rendez-vous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">83,85</context>
+          <context context-type="linenumber">106,109</context>
         </context-group>
         <note priority="1" from="description">Saturday note</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="8141831951344034054" datatype="html">
         <source>Dimanche fermé</source>
-        <target>Sunday closed</target>
+        <target>Closed on Sunday</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">85,86</context>
+          <context context-type="linenumber">111,113</context>
         </context-group>
         <note priority="1" from="description">Sunday hours</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="2309121768464324753" datatype="html">
         <source>Dimanche</source>
-        <target>Sunday</target>
+        <target>Dimanche</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">87,88</context>
+          <context context-type="linenumber">114,115</context>
         </context-group>
         <note priority="1" from="description">Sunday label</note>
         <note priority="1" from="meaning">Contact page</note>
@@ -1110,169 +1099,159 @@
         <target>Closed</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">88,91</context>
+          <context context-type="linenumber">115,118</context>
         </context-group>
         <note priority="1" from="description">Sunday note</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="8586044163431319489" datatype="html">
         <source>Adresse</source>
-        <target>Address</target>
+        <target>Adresse</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">101,103</context>
+          <context context-type="linenumber">128,130</context>
         </context-group>
         <note priority="1" from="description">Address card title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4325450517608877817" datatype="html">
         <source>Adresse du cabinet</source>
-        <target>Office address</target>
+        <target>Adresse du cabinet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">104,105</context>
+          <context context-type="linenumber">131,132</context>
         </context-group>
-        <note priority="1" from="description">Address section</note>
+        <note priority="1" from="description">Address card</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="1295648002711972085" datatype="html">
-        <source>5 Av. de la République,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>33000 Bordeaux</source>
-        <target>5 Av. de la République,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>33000 Bordeaux</target>
+      <trans-unit id="8293397561562557347" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ config.address.street }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="INTERPOLATION_1" equiv-text="{{ config.address.city }}"/> </source>
+        <target> <x id="INTERPOLATION" equiv-text="{{ config.address.street }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="INTERPOLATION_1" equiv-text="{{ config.address.city }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">105,106</context>
+          <context context-type="linenumber">133,135</context>
         </context-group>
         <note priority="1" from="description">Address lines</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4985995874996733755" datatype="html">
         <source>Copier l&apos;adresse</source>
-        <target>Copy address</target>
+        <target>Copier l&apos;adresse</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">110,112</context>
+          <context context-type="linenumber">139,141</context>
         </context-group>
         <note priority="1" from="description">Copy address button</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="385041505447277409" datatype="html">
-        <source>Chargement de la carte...</source>
-        <target>Loading map...</target>
+      <trans-unit id="7512234223305667704" datatype="html">
+        <source>Carte de l&apos;adresse du cabinet</source>
+        <target>Map of the office address</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">119,122</context>
+          <context context-type="linenumber">160,161</context>
         </context-group>
-        <note priority="1" from="description">Map loading</note>
-        <note priority="1" from="meaning">Contact page</note>
-      </trans-unit>
-      <trans-unit id="3095400447578276067" datatype="html">
-        <source>Localisation du cabinet</source>
-        <target>Office location</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">131,133</context>
-        </context-group>
-        <note priority="1" from="description">Map iframe title</note>
+        <note priority="1" from="description">Map title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="7179835705850925181" datatype="html">
         <source>Envoyez-nous un message</source>
-        <target>Send us a message</target>
+        <target>Envoyez-nous un message</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">144,145</context>
+          <context context-type="linenumber">174,175</context>
         </context-group>
         <note priority="1" from="description">Form title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4720104618486824309" datatype="html">
         <source>Remplissez le formulaire ci-dessous</source>
-        <target>Fill out the form below</target>
+        <target>Remplissez le formulaire ci-dessous</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">145,146</context>
+          <context context-type="linenumber">176,178</context>
         </context-group>
         <note priority="1" from="description">Form subtitle</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="5582538960420386244" datatype="html">
         <source>Nom complet</source>
-        <target>Full name</target>
+        <target>Nom complet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">150,151</context>
+          <context context-type="linenumber">182,183</context>
         </context-group>
-        <note priority="1" from="description">Name field label</note>
+        <note priority="1" from="description">Name label</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="4267772633180231714" datatype="html">
         <source>Le nom est requis</source>
-        <target>Name is required</target>
+        <target>Le nom est requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">153,155</context>
+          <context context-type="linenumber">185,187</context>
         </context-group>
-        <note priority="1" from="description">Name field error</note>
+        <note priority="1" from="description">Name error</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="6836096392369524164" datatype="html">
         <source>Email valide requis</source>
-        <target>Valid email required</target>
+        <target>Email valide requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">161,163</context>
+          <context context-type="linenumber">193,195</context>
         </context-group>
-        <note priority="1" from="description">Email field error</note>
+        <note priority="1" from="description">Email error</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="745112090648682934" datatype="html">
         <source>Sujet</source>
-        <target>Subject</target>
+        <target>Sujet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">171,172</context>
+          <context context-type="linenumber">203,204</context>
         </context-group>
-        <note priority="1" from="description">Subject field label</note>
+        <note priority="1" from="description">Subject label</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="8177703889370090100" datatype="html">
-        <source>Consultation juridique</source>
-        <target>Legal consultation</target>
+      <trans-unit id="7049173574019067558" datatype="html">
+        <source>Demande de consultation</source>
+        <target>Consultation Request</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">173,174</context>
+          <context context-type="linenumber">206,208</context>
         </context-group>
-        <note priority="1" from="description">Subject option consultation</note>
+        <note priority="1" from="description">Consultation option</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="2091542707679584045" datatype="html">
         <source>Demande d&apos;information</source>
-        <target>Information request</target>
+        <target>Demande d&apos;information</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">174,175</context>
+          <context context-type="linenumber">209,211</context>
         </context-group>
-        <note priority="1" from="description">Subject option information</note>
+        <note priority="1" from="description">Information option</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="5418366191809690075" datatype="html">
-        <source>Question urgente</source>
-        <target>Urgent question</target>
+      <trans-unit id="7803988101937813659" datatype="html">
+        <source>Urgence juridique</source>
+        <target>Legal Emergency</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">175,176</context>
+          <context context-type="linenumber">212,214</context>
         </context-group>
-        <note priority="1" from="description">Subject option urgency</note>
+        <note priority="1" from="description">Urgency option</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="11793026190860596" datatype="html">
         <source>Autre</source>
-        <target>Other</target>
+        <target>Autre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">176,178</context>
+          <context context-type="linenumber">214,216</context>
         </context-group>
-        <note priority="1" from="description">Subject option other</note>
+        <note priority="1" from="description">Other option</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="3488285814600577155" datatype="html">
@@ -1280,9 +1259,9 @@
         <target>Please select a subject</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">179,181</context>
+          <context context-type="linenumber">217,219</context>
         </context-group>
-        <note priority="1" from="description">Subject field error</note>
+        <note priority="1" from="description">Subject error</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="2642127393080366197" datatype="html">
@@ -1290,29 +1269,19 @@
         <target>Message</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">189,191</context>
+          <context context-type="linenumber">227,229</context>
         </context-group>
-        <note priority="1" from="description">Message field label</note>
+        <note priority="1" from="description">Message label</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="7716479283287438367" datatype="html">
-        <source>Décrivez votre situation juridique...</source>
-        <target>Describe your legal situation...</target>
+      <trans-unit id="4266331769506049979" datatype="html">
+        <source>Décrivez votre situation juridique, votre demande (titre de séjour, naturalisation, etc.) et vos besoins...</source>
+        <target>Describe your legal situation, your request (residence permit, naturalization, etc.) and your needs...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">199,201</context>
+          <context context-type="linenumber">236,237</context>
         </context-group>
-        <note priority="1" from="description">Message field placeholder</note>
-        <note priority="1" from="meaning">Contact page</note>
-      </trans-unit>
-      <trans-unit id="2875192088168457806" datatype="html">
-        <source>Le message est requis</source>
-        <target>Message is required</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">213,215</context>
-        </context-group>
-        <note priority="1" from="description">Message field error</note>
+        <note priority="1" from="description">Message placeholder</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="8185583820592801748" datatype="html">
@@ -1320,67 +1289,67 @@
         <target>characters</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">215,216</context>
+          <context context-type="linenumber">255,257</context>
         </context-group>
-        <note priority="1" from="description">Characters label</note>
+        <note priority="1" from="description">Character count</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="876539478285942791" datatype="html">
-        <source>Décrivez votre situation et vos questions juridiques</source>
-        <target>Describe your situation and legal questions</target>
+      <trans-unit id="1368033819300988805" datatype="html">
+        <source>Soyez précis pour nous aider à mieux comprendre votre situation</source>
+        <target>Be specific to help us better understand your situation</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">217,219</context>
+          <context context-type="linenumber">259,262</context>
         </context-group>
-        <note priority="1" from="description">Message field hint</note>
+        <note priority="1" from="description">Message hint</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="1999442278120516269" datatype="html">
         <source>Envoyer le message</source>
-        <target>Send message</target>
+        <target>Envoyer le message</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">223,225</context>
+          <context context-type="linenumber">266,268</context>
         </context-group>
         <note priority="1" from="description">Submit button</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="1822543228889800571" datatype="html">
         <source>Besoin d&apos;une consultation urgente ?</source>
-        <target>Need an urgent consultation?</target>
+        <target>Besoin d&apos;une consultation urgente ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">237,238</context>
+          <context context-type="linenumber">280,281</context>
         </context-group>
         <note priority="1" from="description">CTA title</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
-      <trans-unit id="5519380138222543252" datatype="html">
-        <source>Nous vous répondrons au plus vite</source>
-        <target>We will respond as soon as possible</target>
+      <trans-unit id="2488035423972596311" datatype="html">
+        <source> Contactez-nous directement par téléphone pour une prise en charge rapide. </source>
+        <target> Contact us directly by phone for quick assistance. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">238,239</context>
+          <context context-type="linenumber">282,284</context>
         </context-group>
         <note priority="1" from="description">CTA description</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="1171137291595926454" datatype="html">
         <source>Appeler maintenant</source>
-        <target>Call now</target>
+        <target>Appeler maintenant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/contact/contact.html</context>
-          <context context-type="linenumber">241,244</context>
+          <context context-type="linenumber">286,289</context>
         </context-group>
         <note priority="1" from="description">CTA button</note>
         <note priority="1" from="meaning">Contact page</note>
       </trans-unit>
       <trans-unit id="5281592956356265553" datatype="html">
         <source>Votre avocate en droit des étrangers</source>
-        <target>Your immigration lawyer</target>
+        <target>Your Immigration Law Attorney</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">4,5</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
         <note priority="1" from="description">Hero title</note>
         <note priority="1" from="meaning">Home page</note>
@@ -1390,7 +1359,7 @@
         <target> Legal support for your residence and nationality procedures in France </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">6,9</context>
+          <context context-type="linenumber">7,10</context>
         </context-group>
         <note priority="1" from="description">Hero subtitle</note>
         <note priority="1" from="meaning">Home page</note>
@@ -1400,7 +1369,7 @@
         <target> Request a consultation </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">16,19</context>
+          <context context-type="linenumber">17,20</context>
         </context-group>
         <note priority="1" from="description">CTA button</note>
         <note priority="1" from="meaning">Home page</note>
@@ -1410,27 +1379,27 @@
         <target>Image representing scales of justice</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">30,32</context>
+          <context context-type="linenumber">31,33</context>
         </context-group>
         <note priority="1" from="description">Hero image alt text</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
-      <trans-unit id="6162632770381179434" datatype="html">
-        <source>Nos Domaines d&apos;Intervention</source>
-        <target>Our Areas of Practice</target>
+      <trans-unit id="3816348583805789185" datatype="html">
+        <source> Nos Domaines d&apos;Intervention </source>
+        <target> Our Areas of Expertise </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">39,42</context>
+          <context context-type="linenumber">41,45</context>
         </context-group>
         <note priority="1" from="description">Services section title</note>
         <note priority="1" from="meaning">Home page</note>
       </trans-unit>
       <trans-unit id="9145770052366268251" datatype="html">
         <source>EN SAVOIR PLUS</source>
-        <target>LEARN MORE</target>
+        <target>EN SAVOIR PLUS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.html</context>
-          <context context-type="linenumber">60,62</context>
+          <context context-type="linenumber">63,65</context>
         </context-group>
         <note priority="1" from="description">Learn more button</note>
         <note priority="1" from="meaning">Common</note>
@@ -1447,7 +1416,7 @@
       </trans-unit>
       <trans-unit id="6429481600162578555" datatype="html">
         <source>Revenir</source>
-        <target>Back</target>
+        <target>Revenir</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">9,11</context>
@@ -1467,7 +1436,7 @@
       </trans-unit>
       <trans-unit id="5429922430492743102" datatype="html">
         <source>Informations légales et d&apos;identification</source>
-        <target>Legal and Identification Information</target>
+        <target>Legal and identification information</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">14,15</context>
@@ -1475,9 +1444,9 @@
         <note priority="1" from="description">Legal info section title</note>
         <note priority="1" from="meaning">Legal</note>
       </trans-unit>
-      <trans-unit id="1200936966652953634" datatype="html">
-        <source> Adresse : 5 Avenue de la République, 33000 Bordeaux<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : 01 23 45 67 89<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : contact@cabinet-martinet.fr </source>
-        <target> Address: 5 Avenue de la République, 33000 Bordeaux<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Phone: 01 23 45 67 89<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email: contact@cabinet-martinet.fr </target>
+      <trans-unit id="42781816720753961" datatype="html">
+        <source> Address: <x id="INTERPOLATION" equiv-text="{{ contactConfig.address.full }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.phone }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.email }}"/> </source>
+        <target> Address: <x id="INTERPOLATION" equiv-text="{{ contactConfig.address.full }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Phone: <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.phone }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email: <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.email }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">17,21</context>
@@ -1485,9 +1454,9 @@
         <note priority="1" from="description">Contact details</note>
         <note priority="1" from="meaning">Legal</note>
       </trans-unit>
-      <trans-unit id="257933108750785317" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Responsable de la publication :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Maître [Nom]<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Statut :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Avocat inscrit au Barreau de Bordeaux<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Numéro SIRET :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> [À compléter] </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Publication Manager:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Maître [Name]<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Status:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Attorney registered with the Bordeaux Bar<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>SIRET Number:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> [To be completed] </target>
+      <trans-unit id="6404066987361652034" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Publication Manager:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ contactConfig.lawyer.fullName }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Status:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Attorney registered with <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.businessInfo.order }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Numéro SIRET :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.businessInfo.siret }}"/> </source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Publication Manager:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION" equiv-text="{{ contactConfig.lawyer.fullName }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Status:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Attorney registered with <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.businessInfo.order }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>SIRET Number:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.businessInfo.siret }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">22,26</context>
@@ -1517,7 +1486,7 @@
       </trans-unit>
       <trans-unit id="7897613963834214108" datatype="html">
         <source> Le Cabinet Martinet s&apos;efforce de fournir des informations exactes et à jour. Cependant, nous déclinons toute responsabilité en cas d&apos;erreurs, omissions ou inexactitudes. </source>
-        <target> Cabinet Martinet strives to provide accurate and up-to-date information. However, we disclaim all liability for any errors, omissions, or inaccuracies. </target>
+        <target> The Martinet Law Firm strives to provide accurate and up-to-date information. However, we disclaim all liability for errors, omissions or inaccuracies. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">35,40</context>
@@ -1537,7 +1506,7 @@
       </trans-unit>
       <trans-unit id="4523332140986154971" datatype="html">
         <source> Tous les contenus du site (textes, images, logos, etc.) sont protégés par les droits d&apos;auteur. Toute reproduction, distribution ou utilisation du contenu sans autorisation préalable est interdite. </source>
-        <target> All site content (text, images, logos, etc.) is protected by copyright. Any reproduction, distribution, or use of content without prior authorization is prohibited. </target>
+        <target> All site content (text, images, logos, etc.) is protected by copyright. Any reproduction, distribution or use of content without prior authorization is prohibited. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">43,46</context>
@@ -1545,12 +1514,12 @@
         <note priority="1" from="description">Copyright paragraph 1</note>
         <note priority="1" from="meaning">Legal</note>
       </trans-unit>
-      <trans-unit id="2092581260324491753" datatype="html">
-        <source>© 2026 Cabinet Martinet. Tous droits réservés.</source>
-        <target>© 2026 Cabinet Martinet. All rights reserved.</target>
+      <trans-unit id="4404469257646018405" datatype="html">
+        <source>© 2026 <x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/>. Tous droits réservés.</source>
+        <target>© 2026 <x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/>. All rights reserved.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
-          <context context-type="linenumber">46,50</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
         <note priority="1" from="description">Copyright notice</note>
         <note priority="1" from="meaning">Legal</note>
@@ -1567,7 +1536,7 @@
       </trans-unit>
       <trans-unit id="8723681087699868809" datatype="html">
         <source> Le Cabinet Martinet décline toute responsabilité quant aux dommages directs ou indirects causés par l&apos;utilisation ou l&apos;impossibilité d&apos;utiliser le site. Les informations fournies sur ce site ne constituent pas un conseil juridique professionnel. </source>
-        <target> Cabinet Martinet disclaims all liability for any direct or indirect damages caused by the use or inability to use the site. The information provided on this site does not constitute professional legal advice. </target>
+        <target> The Martinet Law Firm disclaims all liability for direct or indirect damages caused by the use or inability to use the site. Information provided on this site does not constitute professional legal advice. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">52,56</context>
@@ -1596,7 +1565,7 @@
         <note priority="1" from="meaning">Legal</note>
       </trans-unit>
       <trans-unit id="6642325361977978596" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Hébergeur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> GitHub Pages<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adresse :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA </source>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Hébergeur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> GitHub Pages<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Address:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA </source>
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Host:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> GitHub Pages<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Address:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
@@ -1607,7 +1576,7 @@
       </trans-unit>
       <trans-unit id="6251224601142384411" datatype="html">
         <source>Lois applicables</source>
-        <target>Applicable Laws</target>
+        <target>Applicable Law</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">71,73</context>
@@ -1655,15 +1624,75 @@
         <note priority="1" from="description">Contact section title</note>
         <note priority="1" from="meaning">Legal</note>
       </trans-unit>
-      <trans-unit id="7356284359639945918" datatype="html">
-        <source> Pour toute question concernant ces mentions légales, veuillez nous contacter à l&apos;adresse email suivante : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:legal@cabinet-martinet.fr&quot;&gt;"/>legal@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target> For any questions regarding this legal notice, please contact us at the following email address: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:legal@cabinet-martinet.fr&quot;&gt;"/>legal@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+      <trans-unit id="2442406829404232584" datatype="html">
+        <source> Pour toute question concernant ces mentions légales, veuillez nous contacter à l&apos;adresse email suivante : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;&apos;mailto:&apos; + contactConfig.specialEmails.legal&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ contactConfig.specialEmails.legal }}"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target> For any questions regarding these legal notices, please contact us at the following email address: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;&apos;mailto:&apos; + contactConfig.specialEmails.legal&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ contactConfig.specialEmails.legal }}"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/legal/legal.html</context>
           <context context-type="linenumber">89,92</context>
         </context-group>
         <note priority="1" from="description">Contact text</note>
         <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="7801187689856483148" datatype="html">
+        <source>Nos Prestations</source>
+        <target>Our Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="5330937868070598306" datatype="html">
+        <source>Expertise complète en droit des étrangers</source>
+        <target>Complete expertise in immigration law</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+        <note priority="1" from="description">Page subtitle</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="6218678831852992967" datatype="html">
+        <source> Vue en grille </source>
+        <target> Grid view </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">15,18</context>
+        </context-group>
+        <note priority="1" from="description">View toggle label</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="2264921094700817370" datatype="html">
+        <source>Prêt à commencer votre démarche ?</source>
+        <target>Ready to start your process?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <note priority="1" from="description">CTA title</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="4754237885876659296" datatype="html">
+        <source> Contactez-moi pour une première consultation et évaluons ensemble vos besoins. </source>
+        <target> Contact me for an initial consultation and let us assess your needs together. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">84,86</context>
+        </context-group>
+        <note priority="1" from="description">CTA description</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="3900902564936186344" datatype="html">
+        <source>Me Contacter</source>
+        <target>Contact Me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">86,90</context>
+        </context-group>
+        <note priority="1" from="description">CTA button</note>
+        <note priority="1" from="meaning">Services page</note>
       </trans-unit>
       <trans-unit id="1919653766690261523" datatype="html">
         <source>Revenir à la page précédente</source>
@@ -1677,7 +1706,7 @@
       </trans-unit>
       <trans-unit id="7055541076352585347" datatype="html">
         <source>Revenir</source>
-        <target>Back</target>
+        <target>Revenir</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">9,11</context>
@@ -1705,9 +1734,9 @@
         <note priority="1" from="description">Data controller title</note>
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
-      <trans-unit id="4534485199084287488" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cabinet Martinet<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 5 Avenue de la République<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 33000 Bordeaux, France<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : contact@cabinet-martinet.fr<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : 01 23 45 67 89 </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cabinet Martinet<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 5 Avenue de la République<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 33000 Bordeaux, France<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email: contact@cabinet-martinet.fr<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Phone: 01 23 45 67 89 </target>
+      <trans-unit id="4878345303342847343" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.address.street }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.address.city }}"/>, <x id="INTERPOLATION_3" equiv-text="{{ contactConfig.address.country }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : <x id="INTERPOLATION_4" equiv-text="{{ contactConfig.email }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : <x id="INTERPOLATION_5" equiv-text="{{ contactConfig.phone }}"/> </source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_1" equiv-text="{{ contactConfig.address.street }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ contactConfig.address.city }}"/>, <x id="INTERPOLATION_3" equiv-text="{{ contactConfig.address.country }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email: <x id="INTERPOLATION_4" equiv-text="{{ contactConfig.email }}"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Phone: <x id="INTERPOLATION_5" equiv-text="{{ contactConfig.phone }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">16,22</context>
@@ -1715,12 +1744,12 @@
         <note priority="1" from="description">Data controller details</note>
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
-      <trans-unit id="5126286478634488633" datatype="html">
-        <source> Le Cabinet Martinet est responsable du traitement de vos données personnelles conformément à la Loi Informatique et Libertés et au Règlement Général sur la Protection des Données (RGPD). </source>
-        <target> Cabinet Martinet is responsible for processing your personal data in accordance with the French Data Protection Act (Loi Informatique et Libertés) and the General Data Protection Regulation (GDPR). </target>
+      <trans-unit id="6980393128545764533" datatype="html">
+        <source> The <x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/> est responsable du traitement de vos données personnelles conformément à la Loi Informatique et Libertés et au Règlement Général sur la Protection des Données (RGPD). </source>
+        <target> The <x id="INTERPOLATION" equiv-text="{{ contactConfig.businessName }}"/> is responsible for processing your personal data in accordance with the French Data Protection Act and the General Data Protection Regulation (GDPR). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
-          <context context-type="linenumber">23,28</context>
+          <context context-type="linenumber">23,26</context>
         </context-group>
         <note priority="1" from="description">Data controller text</note>
         <note priority="1" from="meaning">Privacy</note>
@@ -1737,7 +1766,7 @@
       </trans-unit>
       <trans-unit id="8609386927861909125" datatype="html">
         <source>Nous collectons les catégories de données suivantes :</source>
-        <target>We collect the following categories of data:</target>
+        <target>We collect the following data categories:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">30,32</context>
@@ -1746,7 +1775,7 @@
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
       <trans-unit id="6590365576271147961" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via le formulaire de contact :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Nom, Prénom, Email, Numéro de téléphone, Message </source>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via the contact form:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Nom, Prénom, Email, Numéro de téléphone, Message </source>
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via the contact form:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Last name, First name, Email, Phone number, Message </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
@@ -1766,8 +1795,8 @@
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
       <trans-unit id="2786470396219794280" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via les logs du serveur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Données d&apos;accès au site (URLs visitées, horodatage) </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via server logs:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Site access data (URLs visited, timestamps) </target>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via server logs:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Données d&apos;accès au site (URLs visitées, horodatage) </source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via server logs:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Site access data (visited URLs, timestamps) </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">39,42</context>
@@ -1787,7 +1816,7 @@
       </trans-unit>
       <trans-unit id="6995928124455307215" datatype="html">
         <source>Vos données sont traitées pour :</source>
-        <target>Your data is processed for:</target>
+        <target>Your data is processed to:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">46,48</context>
@@ -1797,7 +1826,7 @@
       </trans-unit>
       <trans-unit id="976999297203732718" datatype="html">
         <source>Vous contacter en réponse à votre demande via le formulaire</source>
-        <target>Contacting you in response to your request via the form</target>
+        <target>Contact you in response to your request via the form</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">48,49</context>
@@ -1807,7 +1836,7 @@
       </trans-unit>
       <trans-unit id="4106340011914972853" datatype="html">
         <source>Améliorer votre expérience utilisateur et la performance du site</source>
-        <target>Improving your user experience and site performance</target>
+        <target>Improve your user experience and site performance</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">49,50</context>
@@ -1817,7 +1846,7 @@
       </trans-unit>
       <trans-unit id="7467193777870333179" datatype="html">
         <source>Analyser l&apos;utilisation du site pour des statistiques internes</source>
-        <target>Analyzing site usage for internal statistics</target>
+        <target>Analyze site usage for internal statistics</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">50,51</context>
@@ -1827,7 +1856,7 @@
       </trans-unit>
       <trans-unit id="3885204164378020407" datatype="html">
         <source>Respecter nos obligations légales et réglementaires</source>
-        <target>Complying with our legal and regulatory obligations</target>
+        <target>Comply with our legal and regulatory obligations</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">51,55</context>
@@ -1837,7 +1866,7 @@
       </trans-unit>
       <trans-unit id="9205667532043180676" datatype="html">
         <source>4. Fondement juridique</source>
-        <target>4. Legal Basis</target>
+        <target>4. Legal basis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">56,57</context>
@@ -1847,7 +1876,7 @@
       </trans-unit>
       <trans-unit id="7897658143086675044" datatype="html">
         <source>Le traitement de vos données repose sur :</source>
-        <target>The processing of your data is based on:</target>
+        <target>Processing your data is based on:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">57,59</context>
@@ -1857,7 +1886,7 @@
       </trans-unit>
       <trans-unit id="5425348949502852044" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Votre consentement explicite<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Lorsque vous remplissez un formulaire de contact </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Your explicit consent<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: When you fill out a contact form </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Your explicit consent<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: When you complete a contact form</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">60,62</context>
@@ -1867,7 +1896,7 @@
       </trans-unit>
       <trans-unit id="318907197427419711" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>L&apos;intérêt légitime<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Pour améliorer nos services et analyser le site </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Legitimate interest<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: To improve our services and analyze the site </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Legitimate interest<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: To improve our services and analyze the site</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">63,65</context>
@@ -1877,7 +1906,7 @@
       </trans-unit>
       <trans-unit id="2748038181915015142" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Nos obligations légales<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Conservation des données conformément aux lois applicables </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Our legal obligations<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: Data retention in accordance with applicable laws </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Our legal obligations<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>: Data retention in accordance with applicable laws</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">66,69</context>
@@ -1887,7 +1916,7 @@
       </trans-unit>
       <trans-unit id="6075286679525245757" datatype="html">
         <source>5. Durée de conservation des données</source>
-        <target>5. Data Retention Period</target>
+        <target>5. Data retention period</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">72,74</context>
@@ -1897,7 +1926,7 @@
       </trans-unit>
       <trans-unit id="2425194743777946535" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Données du formulaire de contact :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 3 années civiles (conformément à nos obligations légales) </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Contact form data:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 3 calendar years (in accordance with our legal obligations) </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Contact form data:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 3 calendar years (in accordance with our legal obligations)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">75,78</context>
@@ -1907,7 +1936,7 @@
       </trans-unit>
       <trans-unit id="4166178202016382806" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies de session :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Supprimés à la fermeture du navigateur </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Session cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Deleted when browser is closed </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Session cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Deleted when the browser is closed</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">79,81</context>
@@ -1917,7 +1946,7 @@
       </trans-unit>
       <trans-unit id="484018344428208809" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Logs serveur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Conservés 90 jours maximum</source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Server logs:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Kept for maximum 90 days</target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Server logs:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Retained for up to 90 days</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">81,83</context>
@@ -1927,7 +1956,7 @@
       </trans-unit>
       <trans-unit id="3557373785391544337" datatype="html">
         <source>6. Destinataires des données</source>
-        <target>6. Data Recipients</target>
+        <target>6. Data recipients</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">86,87</context>
@@ -1937,7 +1966,7 @@
       </trans-unit>
       <trans-unit id="2716263851119636949" datatype="html">
         <source>Vos données personnelles ne sont partagées que dans les cas suivants :</source>
-        <target>Your personal data is only shared in the following cases:</target>
+        <target>Your personal data is shared only in the following cases:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">87,89</context>
@@ -1947,7 +1976,7 @@
       </trans-unit>
       <trans-unit id="5955511444752360876" datatype="html">
         <source>Avec les avocats du Cabinet Martinet pour répondre à votre demande</source>
-        <target>With the lawyers of Cabinet Martinet to respond to your request</target>
+        <target>With Martinet Law Firm attorneys to respond to your request</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">89,90</context>
@@ -1967,7 +1996,7 @@
       </trans-unit>
       <trans-unit id="338051042540602205" datatype="html">
         <source>Avec notre hébergeur (GitHub Pages) pour la continuité du service</source>
-        <target>With our host (GitHub Pages) for service continuity</target>
+        <target>With our host (GitHub Pages) to ensure service continuity</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">91,93</context>
@@ -1987,7 +2016,7 @@
       </trans-unit>
       <trans-unit id="6065397378274264850" datatype="html">
         <source>7. Vos droits</source>
-        <target>7. Your Rights</target>
+        <target>7. Your rights</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">99,100</context>
@@ -1997,7 +2026,7 @@
       </trans-unit>
       <trans-unit id="4860253230736966463" datatype="html">
         <source>Conformément au RGPD, vous disposez des droits suivants :</source>
-        <target>In accordance with the GDPR, you have the following rights:</target>
+        <target>Under the GDPR, you have the following rights:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">100,102</context>
@@ -2007,7 +2036,7 @@
       </trans-unit>
       <trans-unit id="6972100610370163609" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit d&apos;accès :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Obtenir une copie de vos données personnelles </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right of access:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Obtain a copy of your personal data </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right of access:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Obtain a copy of your personal data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">103,105</context>
@@ -2017,7 +2046,7 @@
       </trans-unit>
       <trans-unit id="9153112866894044526" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit de rectification :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Corriger vos données inexactes </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to rectification:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Correct your inaccurate data </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to rectification:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Correct inaccurate data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">106,108</context>
@@ -2027,7 +2056,7 @@
       </trans-unit>
       <trans-unit id="452021810939623029" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à l&apos;oubli :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Demander la suppression de vos données </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to erasure:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Request deletion of your data </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to erasure:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Request deletion of your data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">109,111</context>
@@ -2037,7 +2066,7 @@
       </trans-unit>
       <trans-unit id="5001073891835793931" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à la limitation du traitement :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Restreindre l&apos;utilisation de vos données </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to restriction of processing:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Restrict the use of your data </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to restriction of processing:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Restrict the use of your data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">112,114</context>
@@ -2047,7 +2076,7 @@
       </trans-unit>
       <trans-unit id="2117314255116824334" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à la portabilité :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Récupérer vos données dans un format structuré </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to data portability:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Retrieve your data in a structured format </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to data portability:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Receive your data in a structured format</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">115,117</context>
@@ -2057,7 +2086,7 @@
       </trans-unit>
       <trans-unit id="614986677675676575" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit d&apos;opposition :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Vous opposer au traitement de vos données </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to object:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Object to the processing of your data </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Right to object:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Object to the processing of your data</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">118,121</context>
@@ -2077,7 +2106,7 @@
       </trans-unit>
       <trans-unit id="4418380440688614186" datatype="html">
         <source>8. Cookies et technologies de suivi</source>
-        <target>8. Cookies and Tracking Technologies</target>
+        <target>8. Cookies and tracking technologies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">128,129</context>
@@ -2097,7 +2126,7 @@
       </trans-unit>
       <trans-unit id="1674590184189819958" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies essentiels :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Nécessaires au fonctionnement du site (authentification, préférences de thème) </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Essential cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Necessary for site operation (authentication, theme preferences) </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Essential cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Necessary for site operation (authentication, theme preferences)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">132,135</context>
@@ -2107,7 +2136,7 @@
       </trans-unit>
       <trans-unit id="2425361565494964114" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies de performance :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Pour analyser votre utilisation du site afin d&apos;améliorer votre expérience </source>
-        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Performance cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> To analyze your site usage to improve your experience </target>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Performance cookies:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> To analyze your site usage to improve your experience</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">136,139</context>
@@ -2117,7 +2146,7 @@
       </trans-unit>
       <trans-unit id="1748264955445442730" datatype="html">
         <source> Vous pouvez modifier les paramètres de cookies dans les paramètres de votre navigateur. Cependant, certains cookies essentiels ne peuvent pas être désactivés sans altérer le fonctionnement du site. </source>
-        <target> You can modify cookie settings in your browser settings. However, some essential cookies cannot be disabled without affecting site functionality. </target>
+        <target> You can change cookie settings in your browser settings. However, some essential cookies cannot be disabled without affecting site operation. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">141,146</context>
@@ -2127,7 +2156,7 @@
       </trans-unit>
       <trans-unit id="8828751548950467869" datatype="html">
         <source>9. Sécurité des données</source>
-        <target>9. Data Security</target>
+        <target>9. Data security</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">147,148</context>
@@ -2137,7 +2166,7 @@
       </trans-unit>
       <trans-unit id="7331956366894390270" datatype="html">
         <source> Nous prenons les mesures de sécurité appropriées pour protéger vos données personnelles contre tout accès, modification ou destruction non autorisée. Cependant, aucune transmission sur Internet n&apos;est 100% sécurisée. </source>
-        <target> We take appropriate security measures to protect your personal data against any unauthorized access, modification, or destruction. However, no transmission over the Internet is 100% secure. </target>
+        <target> We take appropriate security measures to protect your personal data against unauthorized access, modification or destruction. However, no transmission over the Internet is 100% secure. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">149,152</context>
@@ -2157,7 +2186,7 @@
       </trans-unit>
       <trans-unit id="5077621120896540999" datatype="html">
         <source>10. Modifications de cette politique</source>
-        <target>10. Changes to This Policy</target>
+        <target>10. Changes to this policy</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">159,160</context>
@@ -2167,7 +2196,7 @@
       </trans-unit>
       <trans-unit id="699351012007628805" datatype="html">
         <source> Le Cabinet Martinet se réserve le droit de modifier cette Politique de Confidentialité à tout moment. Les modifications seront publiées sur cette page avec une date de mise à jour. </source>
-        <target> Cabinet Martinet reserves the right to modify this Privacy Policy at any time. Changes will be posted on this page with an update date. </target>
+        <target> The Martinet Law Firm reserves the right to modify this Privacy Policy at any time. Changes will be published on this page with an update date. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">161,164</context>
@@ -2187,7 +2216,7 @@
       </trans-unit>
       <trans-unit id="4187902607990898324" datatype="html">
         <source>11. Contact et réclamations</source>
-        <target>11. Contact and Complaints</target>
+        <target>11. Contact and complaints</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">168,169</context>
@@ -2197,7 +2226,7 @@
       </trans-unit>
       <trans-unit id="2360400423066617695" datatype="html">
         <source> Si vous avez des questions ou préoccupations concernant cette politique, veuillez nous contacter à : </source>
-        <target> If you have any questions or concerns regarding this policy, please contact us at: </target>
+        <target> If you have questions or concerns about this policy, please contact us at: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">170,172</context>
@@ -2206,7 +2235,7 @@
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
       <trans-unit id="7412924217513987275" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:contact@cabinet-martinet.fr&quot;&gt;"/>contact@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adresse :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 5 Avenue de la République, 33000 Bordeaux </source>
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:contact@cabinet-martinet.fr&quot;&gt;"/>contact@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Address:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 5 Avenue de la République, 33000 Bordeaux </source>
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:contact@cabinet-martinet.fr&quot;&gt;"/>contact@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Address:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 5 Avenue de la République, 33000 Bordeaux </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
@@ -2216,74 +2245,14 @@
         <note priority="1" from="meaning">Privacy</note>
       </trans-unit>
       <trans-unit id="4474247005342555356" datatype="html">
-        <source> Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) à l&apos;adresse : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.cnil.fr&quot; target=&quot;_blank&quot;&gt;"/>www.cnil.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target> You also have the right to lodge a complaint with the French Data Protection Authority (Commission Nationale de l&apos;Informatique et des Libertés - CNIL) at: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.cnil.fr&quot; target=&quot;_blank&quot;&gt;"/>www.cnil.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
+        <source> Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) à l&apos;Address: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.cnil.fr&quot; target=&quot;_blank&quot;&gt;"/>www.cnil.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <target> You also have the right to lodge a complaint with the Commission Nationale de l&apos;Informatique et des Libertés (CNIL) at the address: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.cnil.fr&quot; target=&quot;_blank&quot;&gt;"/>www.cnil.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/privacy/privacy.html</context>
           <context context-type="linenumber">177,181</context>
         </context-group>
         <note priority="1" from="description">CNIL complaint</note>
         <note priority="1" from="meaning">Privacy</note>
-      </trans-unit>
-      <trans-unit id="7801187689856483148" datatype="html">
-        <source>Nos Prestations</source>
-        <target>Our Services</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">6,7</context>
-        </context-group>
-        <note priority="1" from="description">Page title</note>
-        <note priority="1" from="meaning">Services page</note>
-      </trans-unit>
-      <trans-unit id="5330937868070598306" datatype="html">
-        <source>Expertise complète en droit des étrangers</source>
-        <target>Complete expertise in immigration law</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">7,9</context>
-        </context-group>
-        <note priority="1" from="description">Page subtitle</note>
-        <note priority="1" from="meaning">Services page</note>
-      </trans-unit>
-      <trans-unit id="6218678831852992967" datatype="html">
-        <source> Vue en grille </source>
-        <target> Grid view </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">14,17</context>
-        </context-group>
-        <note priority="1" from="description">View toggle label</note>
-        <note priority="1" from="meaning">Services page</note>
-      </trans-unit>
-      <trans-unit id="2264921094700817370" datatype="html">
-        <source>Prêt à commencer votre démarche ?</source>
-        <target>Ready to start your process?</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">81,82</context>
-        </context-group>
-        <note priority="1" from="description">CTA title</note>
-        <note priority="1" from="meaning">Services page</note>
-      </trans-unit>
-      <trans-unit id="4754237885876659296" datatype="html">
-        <source> Contactez-moi pour une première consultation et évaluons ensemble vos besoins. </source>
-        <target> Contact me for an initial consultation and let's evaluate your needs together. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">83,85</context>
-        </context-group>
-        <note priority="1" from="description">CTA description</note>
-        <note priority="1" from="meaning">Services page</note>
-      </trans-unit>
-      <trans-unit id="3900902564936186344" datatype="html">
-        <source>Me Contacter</source>
-        <target>Contact Me</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
-          <context context-type="linenumber">85,88</context>
-        </context-group>
-        <note priority="1" from="description">CTA button</note>
-        <note priority="1" from="meaning">Services page</note>
       </trans-unit>
     </body>
   </file>

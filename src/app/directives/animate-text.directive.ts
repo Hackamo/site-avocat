@@ -37,6 +37,8 @@ export class AnimateText implements AfterViewInit {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
 							entry.target.classList.add('visible')
+							// Once visible, we can stop observing
+							observer.unobserve(entry.target)
 						}
 					})
 				},
@@ -44,6 +46,12 @@ export class AnimateText implements AfterViewInit {
 			)
 
 			observer.observe(el)
+
+			// Check if element is already in view and immediately add visible class
+			const rect = el.getBoundingClientRect()
+			if (rect.top < window.innerHeight && rect.bottom > 0 && rect.left < window.innerWidth && rect.right > 0) {
+				el.classList.add('visible')
+			}
 		})
 	}
 }

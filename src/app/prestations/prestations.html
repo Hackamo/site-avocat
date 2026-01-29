@@ -1,87 +1,89 @@
-<div class="container services-page">
-	@if (zoomedCardIndex() !== null) {
-	<div class="overlay" (click)="onCardClick(zoomedCardIndex()!)" role="button" tabindex="0"></div>
-	}
-	<header class="page-header">
-		<h1 class="mat-display-2" i18n="Services page|Page title">Nos Prestations</h1>
-		<p class="mat-headline-5" i18n="Services page|Page subtitle">Expertise complète en droit des étrangers</p>
-		<div class="view-toggle">
-			<mat-slide-toggle
-				[checked]="isGridView()"
-				(change)="isGridView.set($event.checked)"
-				i18n="Services page|View toggle label"
-			>
-				Vue en grille
-			</mat-slide-toggle>
-		</div>
-	</header>
-
-	@if (isGridView()) {
-	<div class="services-grid">
-		@for (service of services; track $index; let i = $index) {
-		<mat-card
-			class="service-category-card"
-			[class.zoomed]="zoomedCardIndex() === i"
-			[attr.aria-label]="'Section ' + service.title"
-			id="{{ service.anchor }}"
-			(click)="onCardClick(i)"
-			role="button"
-			tabindex="0"
-			animateText="fade"
-		>
-			<mat-card-header>
-				<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
-				<mat-card-title>{{ service.title }}</mat-card-title>
-				@if (service.subtitle) {
-				<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
-				}
-			</mat-card-header>
-			<mat-card-content>
-				@if (service.detailedDescription) {
-				<p>{{ service.detailedDescription }}</p>
-				} @if (service.items && service.items.length > 0) {
-				<ul class="list">
-					@for (item of service.items; track item.text) {
-					<li class="list-item">{{ item.text }}</li>
-					}
-				</ul>
-				}
-			</mat-card-content>
-		</mat-card>
+<main>
+	<div class="container services-page">
+		@if (zoomedCardIndex() !== null) {
+		<div class="overlay" (click)="onCardClick(zoomedCardIndex()!)" role="button" tabindex="0"></div>
 		}
-	</div>
-	} @else {
-	<mat-tab-group class="services-tabs">
-		@for (service of services; track $index) {
-		<mat-tab>
-			<ng-template mat-tab-label>
-				<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
-				{{ service.title }}
-			</ng-template>
-			<div class="tab-content">
-				<h2 class="mat-headline-4">{{ service.title }}</h2>
-				@if (service.subtitle) {
-				<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>
-				} @if (service.detailedDescription) {
-				<p class="description">{{ service.detailedDescription }}</p>
-				} @if (service.items && service.items.length > 0) {
-				<ul class="list">
-					@for (item of service.items; track item.text) {
-					<li class="list-item">{{ item.text }}</li>
-					}
-				</ul>
-				}
+		<header class="page-header">
+			<h1 class="mat-display-2" i18n="Services page|Page title">Nos Prestations</h1>
+			<p class="mat-headline-5" i18n="Services page|Page subtitle">Expertise complète en droit des étrangers</p>
+			<div class="view-toggle">
+				<mat-slide-toggle
+					[checked]="isGridView()"
+					(change)="isGridView.set($event.checked)"
+					i18n="Services page|View toggle label"
+				>
+					Vue en grille
+				</mat-slide-toggle>
 			</div>
-		</mat-tab>
-		}
-	</mat-tab-group>
-	}
+		</header>
 
-	<section class="cta-section text-center">
-		<h2 class="mat-headline-4" i18n="Services page|CTA title">Prêt à commencer votre démarche ?</h2>
-		<p i18n="Services page|CTA description">
-			Contactez-moi pour une première consultation et évaluons ensemble vos besoins.
-		</p>
-		<a mat-flat-button routerLink="/contact" class="cta-button" i18n="Services page|CTA button">Me Contacter</a>
-	</section>
-</div>
+		@if (isGridView()) {
+		<div class="services-grid">
+			@for (service of services; track $index; let i = $index) {
+			<mat-card
+				class="service-category-card"
+				[class.zoomed]="zoomedCardIndex() === i"
+				[attr.aria-label]="'Section ' + service.title"
+				id="{{ service.anchor }}"
+				(click)="onCardClick(i)"
+				role="button"
+				tabindex="0"
+				animateText="fade"
+			>
+				<mat-card-header>
+					<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
+					<mat-card-title>{{ service.title }}</mat-card-title>
+					@if (service.subtitle) {
+					<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
+					}
+				</mat-card-header>
+				<mat-card-content>
+					@if (service.detailedDescription) {
+					<p>{{ service.detailedDescription }}</p>
+					} @if (service.items && service.items.length > 0) {
+					<ul class="list">
+						@for (item of service.items; track item.text) {
+						<li class="list-item">{{ item.text }}</li>
+						}
+					</ul>
+					}
+				</mat-card-content>
+			</mat-card>
+			}
+		</div>
+		} @else {
+		<mat-tab-group class="services-tabs">
+			@for (service of services; track $index) {
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
+					{{ service.title }}
+				</ng-template>
+				<div class="tab-content">
+					<h2 class="mat-headline-4">{{ service.title }}</h2>
+					@if (service.subtitle) {
+					<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>
+					} @if (service.detailedDescription) {
+					<p class="description">{{ service.detailedDescription }}</p>
+					} @if (service.items && service.items.length > 0) {
+					<ul class="list">
+						@for (item of service.items; track item.text) {
+						<li class="list-item">{{ item.text }}</li>
+						}
+					</ul>
+					}
+				</div>
+			</mat-tab>
+			}
+		</mat-tab-group>
+		}
+
+		<section class="cta-section text-center">
+			<h2 class="mat-headline-4" i18n="Services page|CTA title">Prêt à commencer votre démarche ?</h2>
+			<p i18n="Services page|CTA description">
+				Contactez-moi pour une première consultation et évaluons ensemble vos besoins.
+			</p>
+			<a mat-flat-button routerLink="/contact" class="cta-button" i18n="Services page|CTA button">Me Contacter</a>
+		</section>
+	</div>
+</main>

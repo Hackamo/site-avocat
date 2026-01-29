@@ -1,7 +1,7 @@
 <div class="app-container">
 	<!-- Navigation -->
 	<mat-toolbar class="app-toolbar">
-		<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
+		<span routerLink="/" routerLinkActive="active-link" class="logo">{{ config.businessNameShort }}</span>
 		<span class="spacer"></span>
 		<nav>
 			<a
@@ -105,8 +105,10 @@
 		>
 			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
 		</button>
-		<p i18n="Footer|Copyright notice">© 2026 Maître Martinet - Avocate spécialisée en droit des étrangers.</p>
-		<p i18n="Footer|Office address">Bureau : 123 Rue de la République, 75001 Paris</p>
+		<p i18n="Footer|Copyright notice">
+			© 2026 {{ config.businessNameShort }} - {{ config.lawyer.specialties[0] }}.
+		</p>
+		<p i18n="Footer|Office address">Bureau : {{ config.address.full }}</p>
 		<div class="footer-links">
 			<a
 				mat-button="link"

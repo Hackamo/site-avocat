@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
+import { MetaService } from '../services/meta.service'
 
 @Component({
 	selector: 'app-about',
@@ -16,11 +17,13 @@ import { AnimateText } from '../directives/animate-text.directive'
 export class About {
 	private readonly document = inject(DOCUMENT)
 	private readonly platformId = inject(PLATFORM_ID)
+	private readonly metaService = inject(MetaService)
 
 	imageLoaded = signal(false)
 	darkMode = signal(this.isDarkMode())
 
 	constructor() {
+		this.metaService.updateMetaTags('about')
 		if (isPlatformBrowser(this.platformId)) {
 			this.darkMode.set(this.isDarkMode())
 			const observer = new MutationObserver(() => {

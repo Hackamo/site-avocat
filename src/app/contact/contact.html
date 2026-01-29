@@ -1,8 +1,8 @@
-<div class="container contact-page">
+<main class="container contact-page">
 	@if (isSubmitting()) {
 	<div class="submission-overlay" role="alert" aria-live="polite">
 		<mat-spinner diameter="64"></mat-spinner>
-		<p class="submission-overlay__text" i18n="Contact page|Submission overlay">Envoi en cours...</p>
+		<p class="submission-overlay__text" i18n="Contact page|Submission overlay text">Envoi en cours...</p>
 	</div>
 	}
 	<header class="page-header">
@@ -22,10 +22,13 @@
 					<mat-card-title i18n="Contact page|Phone card title">Téléphone</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<p i18n="Contact page|Phone number">01 23 45 67 89</p>
+					<p i18n="Contact page|Phone number">{{ config.phone }}</p>
 
-					<p class="subtitle" i18n="Contact page|Phone hours">Du lundi au vendredi, 9h-18h</p>
-					<a mat-flat-button href="tel:+33123456789">
+					<p class="subtitle" i18n="Contact page|Phone hours">
+						Du lundi au vendredi, {{ config.hours.weekday.open.slice(0, 5) }}-{{
+						config.hours.weekday.close.slice(0, 5) }}
+					</p>
+					<a mat-flat-button [href]="'tel:+33' + config.phone.replace(/\\s/g, '')">
 						<mat-icon>phone</mat-icon>
 						<span i18n="Contact page|Call button">Appeler</span>
 					</a>
@@ -35,7 +38,7 @@
 			<mat-card
 				animateText="fade"
 				class="info-card"
-				(click)="copyToClipboard('contact@maitre-martinet.fr', 'contact.email.copied')"
+				(click)="copyToClipboard(config.email, 'contact.email.copied')"
 			>
 				<mat-card-header>
 					<mat-icon mat-card-avatar>email</mat-icon>
@@ -44,10 +47,10 @@
 				<mat-card-content>
 					<div
 						class="copy-row"
-						i18n-aria-label="Contact page|Email section"
+						i18n-aria-label="Contact page|Email address card"
 						aria-label="Adresse e-mail du cabinet"
 					>
-						<p class="copy-text" i18n="Contact page|Email address">contact@maitre-martinet.fr</p>
+						<p class="copy-text" i18n="Contact page|Email address">{{ config.email }}</p>
 						<button
 							mat-icon-button
 							class="copy-btn"
@@ -57,10 +60,12 @@
 							<mat-icon>content_copy</mat-icon>
 						</button>
 					</div>
-					<p class="subtitle" i18n="Contact page|Email response time">Réponse sous 24h</p>
+					<p class="subtitle" i18n="Contact page|Email response time">
+						Réponse sous {{ config.responseTime.email }}
+					</p>
 					<a
 						mat-flat-button
-						href="mailto:contact@maitre-martinet.fr?subject=Demande%20de%20consultation%20juridique&body=Bonjour%20Ma%C3%AEtre%20Martinet%2C%0A%0AJe%20vous%20contacte%20au%20sujet%20de%20%3A%0A%0ANom%20%3A%20%0APr%C3%A9nom%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AObjet%20de%20la%20demande%20%3A%0A%0A%0ACordialement%2C"
+						[href]="'mailto:' + config.email + '?subject=Demande%20de%20consultation%20juridique&body=Bonjour%20Ma%C3%AEtre%20Martinet%2C%0A%0AJe%20vous%20contacte%20au%20sujet%20de%20%3A%0A%0ANom%20%3A%20%0APr%C3%A9nom%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AObjet%20de%20la%20demande%20%3A%0A%0A%0ACordialement%2C'"
 					>
 						<mat-icon>email</mat-icon>
 						<span i18n="Contact page|Send email button">Envoyer un e-mail</span>
@@ -86,7 +91,10 @@
 						>
 							<mat-icon aria-hidden="true">check_circle</mat-icon>
 							<span class="day" i18n="Contact page|Weekdays label">Lundi – Vendredi</span>
-							<span class="time" i18n="Contact page|Weekdays time">9h00 – 18h00</span>
+							<span class="time"
+								>{{ config.hours.weekday.open.slice(0, 5) }} – {{ config.hours.weekday.close.slice(0, 5)
+								}}</span
+							>
 						</li>
 						<li
 							class="hours-item appointment"
@@ -113,20 +121,16 @@
 			<mat-card
 				animateText="fade"
 				class="info-card"
-				(click)="copyToClipboard('5 Avenue de la République, 33000 Bordeaux', 'contact.address.copied')"
+				(click)="copyToClipboard(config.address.full, 'contact.address.copied')"
 			>
 				<mat-card-header>
 					<mat-icon mat-card-avatar>location_on</mat-icon>
 					<mat-card-title i18n="Contact page|Address card title">Adresse</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<div
-						class="copy-row"
-						i18n-aria-label="Contact page|Address section"
-						aria-label="Adresse du cabinet"
-					>
+					<div class="copy-row" i18n-aria-label="Contact page|Address card" aria-label="Adresse du cabinet">
 						<p class="copy-text" i18n="Contact page|Address lines">
-							5 Av. de la République,<br />33000 Bordeaux
+							{{ config.address.street }}<br />{{ config.address.city }}
 						</p>
 						<button
 							mat-icon-button
@@ -141,19 +145,20 @@
 						@if (iframeLoading()) {
 						<div class="iframe-loader">
 							<mat-spinner diameter="60"></mat-spinner>
-							<p i18n="Contact page|Map loading">Chargement de la carte...</p>
+							<p>Chargement de la carte...</p>
 						</div>
 						}
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.078425044478!2d-0.5997146!3d44.840336199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527da20689615%3A0x1a5b7e0cc1d30f05!2sDefis%20avocats!5e0!3m2!1sfr!2sfr!4v1769534638232!5m2!1sfr!2sfr"
+							[src]="safeMapUrl"
 							width="100%"
 							height="200"
 							style="border: 0; border-radius: 8px; margin-top: 1rem"
+							sandbox="allow-scripts allow-same-origin"
 							allowfullscreen="true"
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
-							i18n-title="Contact page|Map iframe title"
-							title="Localisation du cabinet"
+							title="Carte de l'adresse du cabinet"
+							i18n-title="Contact page|Map title"
 							(load)="onIframeLoad()"
 							[style.display]="iframeLoading() ? 'none' : 'block'"
 						></iframe>
@@ -174,44 +179,42 @@
 				<mat-card-content>
 					<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-fields">
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label i18n="Contact page|Name field label">Nom complet</mat-label>
+							<mat-label i18n="Contact page|Name label">Nom complet</mat-label>
 							<input matInput formControlName="name" required />
 							@if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-							<mat-error i18n="Contact page|Name field error">Le nom est requis</mat-error>
+							<mat-error i18n="Contact page|Name error">Le nom est requis</mat-error>
 							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label i18n="Contact page|Email field label">Email</mat-label>
+							<mat-label i18n="Contact page|Email label">Email</mat-label>
 							<input matInput type="email" formControlName="email" required />
 							@if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-							<mat-error i18n="Contact page|Email field error">Email valide requis</mat-error>
+							<mat-error i18n="Contact page|Email error">Email valide requis</mat-error>
 							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label i18n="Contact page|Phone field label">Téléphone</mat-label>
+							<mat-label i18n="Contact page|Phone label">Téléphone</mat-label>
 							<input matInput formControlName="phone" />
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label i18n="Contact page|Subject field label">Sujet</mat-label>
+							<mat-label i18n="Contact page|Subject label">Sujet</mat-label>
 							<mat-select formControlName="subject" required>
-								<mat-option value="consultation" i18n="Contact page|Subject option consultation"
-									>Consultation juridique</mat-option
+								<mat-option value="consultation" i18n="Contact page|Consultation option"
+									>Demande de consultation</mat-option
 								>
-								<mat-option value="information" i18n="Contact page|Subject option information"
+								<mat-option value="information" i18n="Contact page|Information option"
 									>Demande d'information</mat-option
 								>
-								<mat-option value="urgence" i18n="Contact page|Subject option urgency"
-									>Question urgente</mat-option
+								<mat-option value="urgence" i18n="Contact page|Urgency option"
+									>Urgence juridique</mat-option
 								>
-								<mat-option value="autre" i18n="Contact page|Subject option other">Autre</mat-option>
+								<mat-option value="autre" i18n="Contact page|Other option">Autre</mat-option>
 							</mat-select>
 							@if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
-							<mat-error i18n="Contact page|Subject field error"
-								>Veuillez sélectionner un sujet</mat-error
-							>
+							<mat-error i18n="Contact page|Subject error">Veuillez sélectionner un sujet</mat-error>
 							}
 						</mat-form-field>
 
@@ -221,7 +224,7 @@
 							appearance="outline"
 							class="full-width message-field-wrapper"
 						>
-							<mat-label i18n="Contact page|Message field label">Message</mat-label>
+							<mat-label i18n="Contact page|Message label">Message</mat-label>
 							<textarea
 								matInput
 								formControlName="message"
@@ -230,8 +233,8 @@
 								required
 								spellcheck="true"
 								class="message-textarea"
-								i18n-placeholder="Contact page|Message field placeholder"
-								placeholder="Décrivez votre situation juridique..."
+								placeholder="Décrivez votre situation juridique, votre demande (titre de séjour, naturalisation, etc.) et vos besoins..."
+								i18n-placeholder="Contact page|Message placeholder"
 							></textarea>
 							@if (speechSupported()) {
 							<button
@@ -245,15 +248,15 @@
 								<mat-icon>{{ isListening() ? 'mic' : 'mic_none' }}</mat-icon>
 							</button>
 							} @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-							<mat-error i18n="Contact page|Message field error">Le message est requis</mat-error>
+							<mat-error>Le message est requis</mat-error>
 							}
 							<mat-hint
 								>{{ contactForm.get('message')?.value?.length || 0 }}/1000
-								<span i18n="Contact page|Characters label">caractères</span></mat-hint
+								<span i18n="Contact page|Character count">caractères</span></mat-hint
 							>
 						</mat-form-field>
-						<mat-hint i18n="Contact page|Message field hint"
-							>Décrivez votre situation et vos questions juridiques</mat-hint
+						<mat-hint i18n="Contact page|Message hint"
+							>Soyez précis pour nous aider à mieux comprendre votre situation</mat-hint
 						>
 
 						<div class="form-actions">
@@ -262,7 +265,7 @@
 								@if (!isSubmitting()) {
 								<span i18n="Contact page|Submit button">Envoyer le message</span>
 								} @else {
-								<span i18n="Contact page|Submitting state">Envoi en cours...</span>
+								<span i18n="Contact page|Submitting">Envoi en cours...</span>
 								}
 							</button>
 						</div>
@@ -275,10 +278,12 @@
 	<!-- Section CTA -->
 	<section class="cta-section text-center" animateText="fade">
 		<h2 class="mat-headline-4" i18n="Contact page|CTA title">Besoin d'une consultation urgente ?</h2>
-		<p i18n="Contact page|CTA description">Nous vous répondrons au plus vite</p>
-		<a mat-flat-button href="tel:+33123456789">
+		<p i18n="Contact page|CTA description">
+			Contactez-nous directement par téléphone pour une prise en charge rapide.
+		</p>
+		<a mat-flat-button [href]="'tel:+33' + config.phone.replace(/\s/g, '')">
 			<mat-icon>phone</mat-icon>
 			<span i18n="Contact page|CTA button">Appeler maintenant</span>
 		</a>
 	</section>
-</div>
+</main>

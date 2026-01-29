@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
 import { ServicesDataService } from '../services/services-data.service'
+import { MetaService } from '../services/meta.service'
 
 @Component({
 	selector: 'app-home',
@@ -27,9 +28,14 @@ import { ServicesDataService } from '../services/services-data.service'
 export class Home {
 	private servicesDataService = inject(ServicesDataService)
 	private locale = inject(LOCALE_ID)
+	private metaService = inject(MetaService)
 
 	services = this.servicesDataService.services()
 	imageLoaded = signal(false)
+
+	constructor() {
+		this.metaService.updateMetaTags('home')
+	}
 
 	onImageLoad() {
 		this.imageLoaded.set(true)

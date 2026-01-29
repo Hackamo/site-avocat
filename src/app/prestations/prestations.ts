@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs'
 import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
 import { ServicesDataService } from '../services/services-data.service'
+import { MetaService } from '../services/meta.service'
 
 @Component({
 	selector: 'app-services',
@@ -30,10 +31,15 @@ import { ServicesDataService } from '../services/services-data.service'
 export class Services {
 	private servicesDataService = inject(ServicesDataService)
 	private platformId = inject(PLATFORM_ID)
+	private metaService = inject(MetaService)
 
 	services = this.servicesDataService.services()
 	zoomedCardIndex = signal<number | null>(null)
 	isGridView = signal(true)
+
+	constructor() {
+		this.metaService.updateMetaTags('prestations')
+	}
 
 	onCardClick(index: number): void {
 		if (isPlatformBrowser(this.platformId)) {

@@ -30,18 +30,34 @@ export class BlogDataService {
 	}
 
 	private async ensureLoaded(): Promise<void> {
-		// If already loaded or loading, return existing promise
-		if (this._articles().length > 0) return
-		if (this.loadingPromise) return this.loadingPromise
+		// If already loaded, return immediately
+		if (this._articles().length > 0) {
+			return
+		}
+
+		// If already loading, return existing promise
+		if (this.loadingPromise) {
+			return this.loadingPromise
+		}
 
 		this._loading.set(true)
-		this.loadingPromise = this.loadArticlesInternal()
-		await this.loadingPromise
-		this._loading.set(false)
+
+		try {
+			this.loadingPromise = this.loadArticlesInternal()
+			await this.loadingPromise
+		} finally {
+			this._loading.set(false)
+			this.loadingPromise = null
+		}
 	}
 
 	private async loadArticlesInternal() {
 		try {
+			// Skip if not in browser
+			if (!isPlatformBrowser(this.platformId)) {
+				return
+			}
+
 			// Get current locale from LOCALE_ID or document.documentElement.lang
 			const lang = this.locale || this.document.documentElement.lang || 'fr'
 			this.currentLanguage = lang
@@ -49,12 +65,15 @@ export class BlogDataService {
 			// Construct language-specific path
 			const languagePath = lang === 'fr' ? 'fr' : 'en'
 
+			// Get base URL for assets
+			const baseUrl = window.location.origin
+
 			// Create an abort controller with timeout
 			const controller = new AbortController()
 			const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
 
 			try {
-				const metadataResponse = await fetch(`assets/blog/${languagePath}/articles.json`, {
+				const metadataResponse = await fetch(`${baseUrl}/assets/blog/${languagePath}/articles.json`, {
 					signal: controller.signal,
 				})
 				clearTimeout(timeoutId)
@@ -70,9 +89,12 @@ export class BlogDataService {
 						const articleTimeoutId = setTimeout(() => articleController.abort(), 5000) // 5 second timeout per article
 
 						try {
-							const response = await fetch(`assets/blog/${languagePath}/${meta.markdownFile}`, {
-								signal: articleController.signal,
-							})
+							const response = await fetch(
+								`${baseUrl}/assets/blog/${languagePath}/${meta.markdownFile}`,
+								{
+									signal: articleController.signal,
+								},
+							)
 							clearTimeout(articleTimeoutId)
 
 							if (!response.ok) {

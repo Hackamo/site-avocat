@@ -1,4 +1,4 @@
-<div class="container blog-page">
+<main class="container blog-page">
 	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
 		<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour au blog</span>
 	</button>
@@ -20,7 +20,7 @@
 	<article class="blog-post">
 		<h1 class="mat-display-2">{{ art.title || 'Article non trouvé' }}</h1>
 		<p class="mat-headline-5">{{ art.summary || 'Aucun résumé disponible' }}</p>
-		<div [innerHTML]="art.content" class="blog-content" animateText="fade"></div>
+		<div [innerHTML]="art.content" class="blog-content"></div>
 	</article>
 	@if (similarArticles().length > 0) {
 	<section class="similar-articles" aria-label="Articles similaires">
@@ -34,4 +34,4 @@
 	} } @else {
 	<p class="mat-body-1" i18n="Blog page|Article not found error">Article introuvable</p>
 	}
-</div>
+</main>

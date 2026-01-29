@@ -1,5 +1,6 @@
 import { Component, inject, signal, PLATFORM_ID, OnDestroy, AfterViewInit } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 import { MatCardModule } from '@angular/material/card'
 import { MatFormFieldModule } from '@angular/material/form-field'
@@ -13,6 +14,8 @@ import { CommonModule } from '@angular/common'
 import { Router, NavigationStart } from '@angular/router'
 import emailjs from '@emailjs/browser'
 import { AnimateText } from '../directives/animate-text.directive'
+import { CONTACT_CONFIG } from '../config/contact.config'
+import { MetaService } from '../services/meta.service'
 
 declare global {
 	interface Window {
@@ -44,6 +47,13 @@ export class Contact implements OnDestroy, AfterViewInit {
 	private snackBar = inject(MatSnackBar)
 	private platformId = inject(PLATFORM_ID)
 	private router = inject(Router)
+	private metaService = inject(MetaService)
+	private sanitizer = inject(DomSanitizer)
+
+	// Make config accessible in template
+	config = CONTACT_CONFIG
+	// Sanitized map URL for iframe
+	safeMapUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(CONTACT_CONFIG.map.embed)
 
 	isSubmitting = signal(false)
 	isListening = signal(false)
@@ -60,6 +70,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 	})
 
 	constructor() {
+		this.metaService.updateMetaTags('contact')
 		if (isPlatformBrowser(this.platformId)) {
 			const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 			if (SpeechRecognition) {
