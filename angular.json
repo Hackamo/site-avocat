@@ -29,9 +29,10 @@
 				"build": {
 					"builder": "@angular/build:application",
 					"options": {
-						"outputPath": "dist/site-avocat",
+						"outputPath": "dist/",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
+						"baseHref": "/",
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -95,6 +96,9 @@
 						},
 						"development": {
 							"buildTarget": "site-avocat:build:development"
+						},
+						"en": {
+							"buildTarget": "site-avocat:build:en"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -105,8 +109,8 @@
 				"deploy": {
 					"builder": "angular-cli-ghpages:deploy",
 					"options": {
-						"baseHref": "/site-avocat/",
-						"dir": "dist/site-avocat/browser"
+						"baseHref": "/",
+						"dir": "dist/browser"
 					}
 				}
 			}

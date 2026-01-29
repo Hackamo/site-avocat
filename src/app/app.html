@@ -4,15 +4,24 @@
 		<span routerLink="/" routerLinkActive="active-link" class="logo">Maître Martinet</span>
 		<span class="spacer"></span>
 		<nav>
-			<a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
-				>{{ 'nav.home' | translate }}</a
+			<a
+				mat-button
+				routerLink="/"
+				routerLinkActive="active-link"
+				[routerLinkActiveOptions]="{ exact: true }"
+				i18n="Navigation|Home menu item"
+				>Accueil</a
 			>
-			<a mat-button routerLink="/prestations" routerLinkActive="active-link">{{ 'nav.services' | translate }}</a>
-			<a mat-button routerLink="/blog" routerLinkActive="active-link">{{ 'nav.blog' | translate }}</a>
-			<a mat-button routerLink="/a-propos" routerLinkActive="active-link">{{ 'nav.about' | translate }}</a>
-			<button routerLink="/contact" routerLinkActive="active-link" mat-flat-button>
-				{{ 'nav.contact' | translate }}
-			</button>
+			<a mat-button routerLink="/prestations" routerLinkActive="active-link" i18n="Navigation|Services menu item"
+				>Nos Prestations</a
+			>
+			<a mat-button routerLink="/blog" routerLinkActive="active-link" i18n="Navigation|Blog menu item">Blog</a>
+			<a mat-button routerLink="/a-propos" routerLinkActive="active-link" i18n="Navigation|About menu item"
+				>À Propos</a
+			>
+			<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button i18n="Navigation|Contact menu item">
+				Contact
+			</a>
 		</nav>
 		<div class="language-switch">
 			<button
@@ -24,7 +33,7 @@
 				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
 			</button>
 			<mat-form-field appearance="outline">
-				<mat-label>{{ 'nav.language' | translate }}</mat-label>
+				<mat-label i18n="Navigation|Language selector label">Langue</mat-label>
 				<mat-select
 					[value]="currentLanguage()"
 					(selectionChange)="changeLanguage($event.value)"
@@ -43,7 +52,13 @@
 	</div>
 
 	@if (scrolledDown()) {
-	<button mat-fab class="scroll-top-btn" aria-label="Revenir en haut de la page" (click)="scrollToTop()">
+	<button
+		mat-fab
+		class="scroll-top-btn"
+		i18n-aria-label="Scroll to top button|Aria label"
+		aria-label="Revenir en haut de la page"
+		(click)="scrollToTop()"
+	>
 		<mat-icon>north</mat-icon>
 	</button>
 	}
@@ -52,25 +67,26 @@
 	<footer class="app-footer">
 		<div class="footer-theme-select">
 			<mat-form-field appearance="outline">
-				<mat-label>{{ 'footer.theme' | translate }}</mat-label>
+				<mat-label i18n="Footer|Theme selector label">Thème</mat-label>
 				<mat-select
 					[value]="colorTheme()"
 					(selectionChange)="onThemeSelect($event.value)"
+					i18n-aria-label="Footer|Theme selector aria label"
 					aria-label="Choisir le thème"
 				>
-					<mat-option value="red">Rouge</mat-option>
-					<mat-option value="blue">Bleu</mat-option>
-					<mat-option value="green">Vert</mat-option>
-					<mat-option value="yellow">Jaune</mat-option>
-					<mat-option value="magenta">Magenta</mat-option>
-					<mat-option value="orange">Orange</mat-option>
-					<mat-option value="azure">Azur</mat-option>
-					<mat-option value="violet">Violet</mat-option>
-					<mat-option value="rose">Rose</mat-option>
+					<mat-option value="red" i18n="Theme colors|Red">Rouge</mat-option>
+					<mat-option value="blue" i18n="Theme colors|Blue">Bleu</mat-option>
+					<mat-option value="green" i18n="Theme colors|Green">Vert</mat-option>
+					<mat-option value="yellow" i18n="Theme colors|Yellow">Jaune</mat-option>
+					<mat-option value="magenta" i18n="Theme colors|Magenta">Magenta</mat-option>
+					<mat-option value="orange" i18n="Theme colors|Orange">Orange</mat-option>
+					<mat-option value="azure" i18n="Theme colors|Azure">Azur</mat-option>
+					<mat-option value="violet" i18n="Theme colors|Violet">Violet</mat-option>
+					<mat-option value="rose" i18n="Theme colors|Rose">Rose</mat-option>
 				</mat-select>
 			</mat-form-field>
 			<mat-form-field appearance="outline" class="footer-language-select">
-				<mat-label>{{ 'nav.language' | translate }}</mat-label>
+				<mat-label i18n="Footer|Language selector label">Langue</mat-label>
 				<mat-select
 					[value]="currentLanguage()"
 					(selectionChange)="changeLanguage($event.value)"
@@ -89,14 +105,22 @@
 		>
 			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
 		</button>
-		<p>{{ 'footer.copyright' | translate }}</p>
-		<p>{{ 'footer.address' | translate }}</p>
+		<p i18n="Footer|Copyright notice">© 2026 Maître Martinet - Avocate spécialisée en droit des étrangers.</p>
+		<p i18n="Footer|Office address">Bureau : 123 Rue de la République, 75001 Paris</p>
 		<div class="footer-links">
-			<a mat-button="link" [routerLink]="'/mentions-legales'" routerLinkActive="active"
-				>{{ 'footer.legal' | translate }}</a
+			<a
+				mat-button="link"
+				[routerLink]="'/mentions-legales'"
+				routerLinkActive="active"
+				i18n="Footer|Legal mentions link"
+				>Mentions légales</a
 			>
-			<a mat-button="link" [routerLink]="'/politique-confidentialite'" routerLinkActive="active"
-				>{{ 'footer.privacy' | translate }}</a
+			<a
+				mat-button="link"
+				[routerLink]="'/politique-confidentialite'"
+				routerLinkActive="active"
+				i18n="Footer|Privacy policy link"
+				>Politique de confidentialité</a
 			>
 		</div>
 	</footer>

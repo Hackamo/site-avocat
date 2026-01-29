@@ -12,7 +12,8 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"serve:ssr:site-avocat": "node dist/site-avocat/server/server.mjs",
-		"format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\""
+		"format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\"",
+		"deploy:gh": "ng build --configuration=production --base-href=// && npx angular-cli-ghpages --dir=dist/browser/fr"
 	},
 	"private": true,
 	"packageManager": "npm@11.8.0",
@@ -29,8 +30,6 @@
 		"@angular/router": "^21.1.1",
 		"@angular/ssr": "^21.1.2",
 		"@emailjs/browser": "^4.4.1",
-		"@ngx-translate/core": "^17.0.0",
-		"@ngx-translate/http-loader": "^17.0.0",
 		"@types/marked": "^5.0.2",
 		"express": "^5.2.1",
 		"marked": "^17.0.1",

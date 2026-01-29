@@ -1,4 +1,4 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common'
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common'
 import { ChangeDetectionStrategy, Component, inject, NgZone, OnInit, PLATFORM_ID, signal } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
@@ -7,7 +7,6 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
-import { TranslateModule, TranslateService } from '@ngx-translate/core'
 
 @Component({
 	selector: 'app-root',
@@ -23,7 +22,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core'
 		MatFormFieldModule,
 		MatSelectModule,
 		CommonModule,
-		TranslateModule,
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',
@@ -37,9 +35,9 @@ export class App implements OnInit {
 		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
 	>('red')
 	private readonly platformId = inject(PLATFORM_ID)
+	private readonly document = inject(DOCUMENT)
 	private readonly ngZone = inject(NgZone)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
-	private readonly translate = inject(TranslateService)
 
 	constructor(private router: Router) {
 		if (this.isBrowser) {
@@ -61,14 +59,9 @@ export class App implements OnInit {
 			this.applyTheme(isDark)
 			this.applyColorTheme(savedColor)
 
-			// Initialize language from localStorage or use default 'fr'
-			const savedLanguage = (localStorage.getItem('language') as 'fr' | 'en') || 'fr'
-			this.currentLanguage.set(savedLanguage)
-
-			// Defer translation loading to avoid blocking prerendering
-			Promise.resolve().then(() => {
-				this.translate.use(savedLanguage)
-			})
+			// Detect current locale from URL or document
+			const locale = this.document.documentElement.lang || 'fr'
+			this.currentLanguage.set(locale as 'fr' | 'en')
 		}
 	}
 
@@ -161,8 +154,34 @@ export class App implements OnInit {
 	}
 
 	changeLanguage(language: 'fr' | 'en'): void {
-		this.currentLanguage.set(language)
-		this.translate.use(language)
-		localStorage.setItem('language', language)
+		if (!this.isBrowser) return
+
+		const currentLang = this.document.documentElement.lang || 'fr'
+
+		// If already on the correct locale, no need to reload
+		if (currentLang === language) return
+
+		// Get current path and query parameters
+		const currentPath = window.location.pathname
+		const search = window.location.search
+		const hash = window.location.hash
+
+		// Construct new URL based on locale
+		// For production builds with separate locale folders: /fr/ or /en/
+		let newUrl: string
+
+		// Remove current locale prefix if it exists
+		let pathWithoutLocale = currentPath
+		if (currentPath.startsWith('/fr/') || currentPath.startsWith('/fr')) {
+			pathWithoutLocale = currentPath.replace(/^\/fr\/?/, '/')
+		} else if (currentPath.startsWith('/en/') || currentPath.startsWith('/en')) {
+			pathWithoutLocale = currentPath.replace(/^\/en\/?/, '/')
+		}
+
+		// Add new locale prefix
+		newUrl = `/${language}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}${search}${hash}`
+
+		// Reload to switch locale
+		window.location.href = newUrl
 	}
 }

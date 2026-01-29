@@ -3,8 +3,11 @@
 	<header class="hero-section" animateText="fade">
 		<div class="container">
 			<div class="hero-content">
-				<h1 class="mat-display-2">{{ 'about.title' | translate }}</h1>
-				<p class="mat-headline-5 hero-subtitle">{{ 'about.subtitle' | translate }}</p>
+				<h1 class="mat-display-2" i18n="About page|Page title">À Propos de Maître Martinet</h1>
+				<p class="mat-headline-5 hero-subtitle" i18n="About page|Page subtitle">
+					Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes
+					vos démarches administratives et juridiques en France.
+				</p>
 			</div>
 			<div class="hero-image">
 				@if (!imageLoaded()) {
@@ -15,7 +18,8 @@
 					priority
 					width="400"
 					height="600"
-					[alt]="'about.imageAlt' | translate"
+					alt="Image du Maître Martinet"
+					i18n-alt="About page|Profile image"
 					(load)="onImageLoad()"
 					[class.loaded]="imageLoaded()"
 				/>
@@ -28,29 +32,48 @@
 		<!-- Introduction -->
 		<section class="intro-section">
 			<div class="intro-content">
-				<h2 class="mat-display-1 section-title">{{ 'about.engagementTitle' | translate }}</h2>
-				<p class="mat-body-1" animateText="fade">{{ 'about.engagementText1' | translate }}</p>
-				<p class="mat-body-1" animateText="fade">{{ 'about.engagementText2' | translate }}</p>
+				<h2 class="mat-display-1 section-title" i18n="About page|Engagement section title">Mon Engagement</h2>
+				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 1">
+					Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise
+					au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour,
+					d'installation et de naturalisation en France.
+				</p>
+				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 2">
+					Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un
+					accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une
+					chance de réussir son projet de vie en France, et je m'engage à défendre vos droits avec
+					détermination et professionnalisme.
+				</p>
 			</div>
 		</section>
 
 		<!-- Experience & Qualifications -->
 		<section class="experience-section">
-			<h2 class="mat-display-1 section-title text-center">{{ 'about.experienceTitle' | translate }}</h2>
+			<h2 class="mat-display-1 section-title text-center" i18n="About page|Experience section title">
+				Parcours Professionnel
+			</h2>
 
 			<div class="experience-grid">
 				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>school</mat-icon>
-						<mat-card-title>{{ 'about.formation.title' | translate }}</mat-card-title>
-						<mat-card-subtitle>{{ 'about.formation.subtitle' | translate }}</mat-card-subtitle>
+						<mat-card-title i18n="About page|Formation card title">Formation</mat-card-title>
+						<mat-card-subtitle i18n="About page|Formation card subtitle"
+							>Diplômes et Qualifications</mat-card-subtitle
+						>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="achievement-list">
-							<li>{{ 'about.formation.items.0' | translate }}</li>
-							<li>{{ 'about.formation.items.1' | translate }}</li>
-							<li>{{ 'about.formation.items.2' | translate }}</li>
-							<li>{{ 'about.formation.items.3' | translate }}</li>
+							<li i18n="About page|Formation item 1">
+								Master II en Droit des Étrangers - Université Paris II
+							</li>
+							<li i18n="About page|Formation item 2">Diplôme d'Avocat - École de Formation du Barreau</li>
+							<li i18n="About page|Formation item 3">
+								Certificat de spécialisation en Droit des Étrangers
+							</li>
+							<li i18n="About page|Formation item 4">
+								Formation continue en droit communautaire européen
+							</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -58,15 +81,21 @@
 				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>work</mat-icon>
-						<mat-card-title>{{ 'about.experience.title' | translate }}</mat-card-title>
-						<mat-card-subtitle>{{ 'about.experience.subtitle' | translate }}</mat-card-subtitle>
+						<mat-card-title i18n="About page|Experience card title">Expérience</mat-card-title>
+						<mat-card-subtitle i18n="About page|Experience card subtitle"
+							>15+ années de pratique</mat-card-subtitle
+						>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="achievement-list">
-							<li>{{ 'about.experience.items.0' | translate }}</li>
-							<li>{{ 'about.experience.items.1' | translate }}</li>
-							<li>{{ 'about.experience.items.2' | translate }}</li>
-							<li>{{ 'about.experience.items.3' | translate }}</li>
+							<li i18n="About page|Experience item 1">Avocate au Barreau de Paris depuis 2008</li>
+							<li i18n="About page|Experience item 2">
+								Spécialiste en droit des étrangers et de la nationalité
+							</li>
+							<li i18n="About page|Experience item 3">
+								Consultante pour associations d'aide aux migrants
+							</li>
+							<li i18n="About page|Experience item 4">Formatrice en droit des étrangers</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -74,15 +103,17 @@
 				<mat-card class="experience-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>gavel</mat-icon>
-						<mat-card-title>{{ 'about.expertise.title' | translate }}</mat-card-title>
-						<mat-card-subtitle>{{ 'about.expertise.subtitle' | translate }}</mat-card-subtitle>
+						<mat-card-title i18n="About page|Expertise card title">Domaines d'Expertise</mat-card-title>
+						<mat-card-subtitle i18n="About page|Expertise card subtitle"
+							>Areas of Specialization</mat-card-subtitle
+						>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="achievement-list">
-							<li>{{ 'about.expertise.items.0' | translate }}</li>
-							<li>{{ 'about.expertise.items.1' | translate }}</li>
-							<li>{{ 'about.expertise.items.2' | translate }}</li>
-							<li>{{ 'about.expertise.items.3' | translate }}</li>
+							<li i18n="About page|Expertise item 1">Droit des titres de séjour</li>
+							<li i18n="About page|Expertise item 2">Procédures de naturalisation</li>
+							<li i18n="About page|Expertise item 3">Contentieux administratif</li>
+							<li i18n="About page|Expertise item 4">Droit de la famille internationale</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -91,31 +122,43 @@
 
 		<!-- Values Section -->
 		<section class="values-section">
-			<h2 class="mat-display-1 section-title text-center">{{ 'about.valuesTitle' | translate }}</h2>
+			<h2 class="mat-display-1 section-title text-center" i18n="About page|Values section title">Mes Valeurs</h2>
 
 			<div class="values-grid">
 				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">accessibility</mat-icon>
-					<h3 class="mat-headline-6">{{ 'about.values.accessibility.title' | translate }}</h3>
-					<p class="mat-body-2">{{ 'about.values.accessibility.description' | translate }}</p>
+					<h3 class="mat-headline-6" i18n="About page|Accessibility value title">Accessibilité</h3>
+					<p class="mat-body-2" i18n="About page|Accessibility value description">
+						Je m'engage à rendre le droit accessible à tous, en expliquant les démarches complexes de
+						manière claire et compréhensible.
+					</p>
 				</div>
 
 				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">balance</mat-icon>
-					<h3 class="mat-headline-6">{{ 'about.values.integrity.title' | translate }}</h3>
-					<p class="mat-body-2">{{ 'about.values.integrity.description' | translate }}</p>
+					<h3 class="mat-headline-6" i18n="About page|Integrity value title">Intégrité</h3>
+					<p class="mat-body-2" i18n="About page|Integrity value description">
+						Mon indépendance et mon impartialité garantissent une représentation honnête et transparente de
+						vos intérêts.
+					</p>
 				</div>
 
 				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">people</mat-icon>
-					<h3 class="mat-headline-6">{{ 'about.values.humanity.title' | translate }}</h3>
-					<p class="mat-body-2">{{ 'about.values.humanity.description' | translate }}</p>
+					<h3 class="mat-headline-6" i18n="About page|Humanity value title">Humanité</h3>
+					<p class="mat-body-2" i18n="About page|Humanity value description">
+						Chaque dossier est unique et mérite une attention particulière. Je traite chaque client avec
+						respect et empathie.
+					</p>
 				</div>
 
 				<div class="value-item" animateText="fade">
 					<mat-icon class="value-icon">lightbulb</mat-icon>
-					<h3 class="mat-headline-6">{{ 'about.values.innovation.title' | translate }}</h3>
-					<p class="mat-body-2">{{ 'about.values.innovation.description' | translate }}</p>
+					<h3 class="mat-headline-6" i18n="About page|Innovation value title">Innovation</h3>
+					<p class="mat-body-2" i18n="About page|Innovation value description">
+						Je reste constamment informée des évolutions législatives et judiciaires pour vous offrir les
+						meilleures stratégies.
+					</p>
 				</div>
 			</div>
 		</section>
@@ -125,36 +168,47 @@
 			<mat-card class="languages-card" animateText="fade">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>language</mat-icon>
-					<mat-card-title>{{ 'about.languages.title' | translate }}</mat-card-title>
-					<mat-card-subtitle>{{ 'about.languages.subtitle' | translate }}</mat-card-subtitle>
+					<mat-card-title i18n="About page|Languages card title">Langues Parlées</mat-card-title>
+					<mat-card-subtitle i18n="About page|Languages card subtitle"
+						>Communication multilingue</mat-card-subtitle
+					>
 				</mat-card-header>
 				<mat-card-content>
 					<div class="languages-list">
-						<span class="language-tag">{{ 'about.languages.items.0' | translate }}</span>
-						<span class="language-tag">{{ 'about.languages.items.1' | translate }}</span>
-						<span class="language-tag">{{ 'about.languages.items.2' | translate }}</span>
-						<span class="language-tag">{{ 'about.languages.items.3' | translate }}</span>
+						<span class="language-tag" i18n="About page|Language French">Français (natif)</span>
+						<span class="language-tag" i18n="About page|Language English">Anglais (courant)</span>
+						<span class="language-tag" i18n="About page|Language Spanish">Espagnol (intermédiaire)</span>
+						<span class="language-tag" i18n="About page|Language Arabic">Arabe (notions)</span>
 					</div>
-					<p class="mat-body-2">{{ 'about.languages.description' | translate }}</p>
+					<p class="mat-body-2" i18n="About page|Languages description">
+						Cette diversité linguistique me permet d'accompagner une clientèle internationale et de
+						faciliter les communications avec les administrations étrangères.
+					</p>
 				</mat-card-content>
 			</mat-card>
 		</section>
 
 		<!-- Publications & Activities -->
 		<section class="activities-section">
-			<h2 class="mat-display-1 section-title text-center">{{ 'about.activitiesTitle' | translate }}</h2>
+			<h2 class="mat-display-1 section-title text-center" i18n="About page|Activities section title">
+				Activités Professionnelles
+			</h2>
 
 			<div class="activities-grid">
 				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>article</mat-icon>
-						<mat-card-title>{{ 'about.activities.publications.title' | translate }}</mat-card-title>
+						<mat-card-title i18n="About page|Publications card title">Publications</mat-card-title>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="activity-list">
-							<li>{{ 'about.activities.publications.items.0' | translate }}</li>
-							<li>{{ 'about.activities.publications.items.1' | translate }}</li>
-							<li>{{ 'about.activities.publications.items.2' | translate }}</li>
+							<li i18n="About page|Publication item 1">
+								"Le droit des étrangers à l'ère du numérique" - Revue Juridique 2023
+							</li>
+							<li i18n="About page|Publication item 2">
+								"Naturalisation française : stratégies et perspectives" - 2022
+							</li>
+							<li i18n="About page|Publication item 3">Articles réguliers dans la presse spécialisée</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -162,13 +216,13 @@
 				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>school</mat-icon>
-						<mat-card-title>{{ 'about.activities.training.title' | translate }}</mat-card-title>
+						<mat-card-title i18n="About page|Training card title">Formation</mat-card-title>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="activity-list">
-							<li>{{ 'about.activities.training.items.0' | translate }}</li>
-							<li>{{ 'about.activities.training.items.1' | translate }}</li>
-							<li>{{ 'about.activities.training.items.2' | translate }}</li>
+							<li i18n="About page|Training item 1">Formatrice pour le Barreau de Paris</li>
+							<li i18n="About page|Training item 2">Interventions dans les universités</li>
+							<li i18n="About page|Training item 3">Ateliers pour associations d'aide aux migrants</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -176,13 +230,15 @@
 				<mat-card class="activity-card" animateText="fade">
 					<mat-card-header>
 						<mat-icon mat-card-avatar>groups</mat-icon>
-						<mat-card-title>{{ 'about.activities.associations.title' | translate }}</mat-card-title>
+						<mat-card-title i18n="About page|Associations card title">Associations</mat-card-title>
 					</mat-card-header>
 					<mat-card-content>
 						<ul class="activity-list">
-							<li>{{ 'about.activities.associations.items.0' | translate }}</li>
-							<li>{{ 'about.activities.associations.items.1' | translate }}</li>
-							<li>{{ 'about.activities.associations.items.2' | translate }}</li>
+							<li i18n="About page|Association item 1">
+								Membre de l'Association Française des Avocats en Droit des Étrangers
+							</li>
+							<li i18n="About page|Association item 2">Bénévole pour associations d'aide juridique</li>
+							<li i18n="About page|Association item 3">Partenaire d'organisations internationales</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -193,16 +249,19 @@
 	<!-- Call to Action -->
 	<section class="cta-section" animateText="fade">
 		<div class="container text-center">
-			<h2 class="mat-headline-4">{{ 'about.cta.title' | translate }}</h2>
-			<p class="mat-body-1">{{ 'about.cta.description' | translate }}</p>
+			<h2 class="mat-headline-4" i18n="About page|CTA title">Prêt à commencer votre démarche ?</h2>
+			<p class="mat-body-1" i18n="About page|CTA description">
+				Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures
+				stratégies à adopter.
+			</p>
 			<div class="cta-buttons">
 				<button mat-flat-button routerLink="/contact">
 					<mat-icon>email</mat-icon>
-					{{ 'about.cta.contactButton' | translate }}
+					<span i18n="About page|Contact button">Me Contacter</span>
 				</button>
 				<button mat-stroked-button routerLink="/prestations">
 					<mat-icon>info</mat-icon>
-					{{ 'about.cta.servicesButton' | translate }}
+					<span i18n="About page|Services button">Mes Services</span>
 				</button>
 			</div>
 		</div>

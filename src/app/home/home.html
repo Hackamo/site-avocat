@@ -1,10 +1,19 @@
 <!-- Hero Section (Bannière) -->
 <header class="home-section container">
 	<div class="home-content">
-		<h1 class="mat-display-3">{{ 'home.heroTitle' | translate }}</h1>
-		<p class="mat-headline-5">{{ 'home.heroSubtitle' | translate }}</p>
-		<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button color="neutral" class="cta-button">
-			{{ 'home.ctaConsultation' | translate }}
+		<h1 class="mat-display-3" i18n="Home page|Hero title">Votre avocate en droit des étrangers</h1>
+		<p class="mat-headline-5" i18n="Home page|Hero subtitle">
+			Accompagnement juridique pour vos démarches de séjour et de nationalité en France
+		</p>
+		<a
+			routerLink="/contact"
+			routerLinkActive="active-link"
+			mat-flat-button
+			color="neutral"
+			class="cta-button"
+			i18n="Home page|CTA button"
+		>
+			Demander une consultation
 		</a>
 	</div>
 	<div class="hero-image-wrapper">
@@ -17,7 +26,8 @@
 			priority
 			width="400"
 			height="600"
-			[alt]="'home.imageAlt' | translate"
+			i18n-alt="Home page|Hero image alt text"
+			alt="Image représentant une balance de justice"
 			(load)="onImageLoad()"
 			[class.loaded]="imageLoaded()"
 		/>
@@ -26,10 +36,10 @@
 
 <!-- Section Prestations -->
 <section class="container">
-	<h2 class="mat-display-1 text-center mb-4">{{ 'home.servicesTitle' | translate }}</h2>
+	<h2 class="mat-display-1 text-center mb-4" i18n="Home page|Services section title">Nos Domaines d'Intervention</h2>
 
 	<div class="cards-grid">
-		@for (service of services; track service.titleKey) {
+		@for (service of services; track $index) {
 		<mat-card
 			class="prestation-card"
 			animateText="fade"
@@ -41,13 +51,13 @@
 				<div mat-card-avatar class="service-icon">
 					<mat-icon>{{ service.icon }}</mat-icon>
 				</div>
-				<mat-card-title>{{ getServiceTitle(service) }}</mat-card-title>
+				<mat-card-title>{{ service.title }}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<p>{{ getServiceDescription(service) }}</p>
+				<p>{{ service.description }}</p>
 			</mat-card-content>
 			<mat-card-actions align="end">
-				<button mat-button>{{ 'common.learnMore' | translate }}</button>
+				<button mat-button i18n="Common|Learn more button">EN SAVOIR PLUS</button>
 			</mat-card-actions>
 		</mat-card>
 		}

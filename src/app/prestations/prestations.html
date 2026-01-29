@@ -3,22 +3,26 @@
 	<div class="overlay" (click)="onCardClick(zoomedCardIndex()!)" role="button" tabindex="0"></div>
 	}
 	<header class="page-header">
-		<h1 class="mat-display-2">{{ 'services.title' | translate }}</h1>
-		<p class="mat-headline-5">{{ 'services.subtitle' | translate }}</p>
+		<h1 class="mat-display-2" i18n="Services page|Page title">Nos Prestations</h1>
+		<p class="mat-headline-5" i18n="Services page|Page subtitle">Expertise complète en droit des étrangers</p>
 		<div class="view-toggle">
-			<mat-slide-toggle [checked]="isGridView()" (change)="isGridView.set($event.checked)">
-				{{ 'services.viewToggle' | translate }}
+			<mat-slide-toggle
+				[checked]="isGridView()"
+				(change)="isGridView.set($event.checked)"
+				i18n="Services page|View toggle label"
+			>
+				Vue en grille
 			</mat-slide-toggle>
 		</div>
 	</header>
 
 	@if (isGridView()) {
 	<div class="services-grid">
-		@for (service of services; track service.titleKey; let i = $index) {
+		@for (service of services; track $index; let i = $index) {
 		<mat-card
 			class="service-category-card"
 			[class.zoomed]="zoomedCardIndex() === i"
-			[attr.aria-label]="'Section ' + getServiceTitle(service)"
+			[attr.aria-label]="'Section ' + service.title"
 			id="{{ service.anchor }}"
 			(click)="onCardClick(i)"
 			role="button"
@@ -27,18 +31,18 @@
 		>
 			<mat-card-header>
 				<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
-				<mat-card-title>{{ getServiceTitle(service) }}</mat-card-title>
-				@if (getServiceSubtitle(service)) {
-				<mat-card-subtitle>{{ getServiceSubtitle(service) }}</mat-card-subtitle>
+				<mat-card-title>{{ service.title }}</mat-card-title>
+				@if (service.subtitle) {
+				<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
 				}
 			</mat-card-header>
 			<mat-card-content>
-				@if (getServiceDetailedDescription(service)) {
-				<p>{{ getServiceDetailedDescription(service) }}</p>
-				} @if (getServiceItems(service) && getServiceItems(service)!.length > 0) {
+				@if (service.detailedDescription) {
+				<p>{{ service.detailedDescription }}</p>
+				} @if (service.items && service.items.length > 0) {
 				<ul class="list">
-					@for (item of getServiceItems(service); track item) {
-					<li class="list-item">{{ item }}</li>
+					@for (item of service.items; track item.text) {
+					<li class="list-item">{{ item.text }}</li>
 					}
 				</ul>
 				}
@@ -48,22 +52,22 @@
 	</div>
 	} @else {
 	<mat-tab-group class="services-tabs">
-		@for (service of services; track service.titleKey) {
+		@for (service of services; track $index) {
 		<mat-tab>
 			<ng-template mat-tab-label>
 				<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
-				{{ getServiceTitle(service) }}
+				{{ service.title }}
 			</ng-template>
 			<div class="tab-content">
-				<h2 class="mat-headline-4">{{ getServiceTitle(service) }}</h2>
-				@if (getServiceSubtitle(service)) {
-				<p class="mat-headline-6 subtitle">{{ getServiceSubtitle(service) }}</p>
-				} @if (getServiceDetailedDescription(service)) {
-				<p class="description">{{ getServiceDetailedDescription(service) }}</p>
-				} @if (getServiceItems(service) && getServiceItems(service)!.length > 0) {
+				<h2 class="mat-headline-4">{{ service.title }}</h2>
+				@if (service.subtitle) {
+				<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>
+				} @if (service.detailedDescription) {
+				<p class="description">{{ service.detailedDescription }}</p>
+				} @if (service.items && service.items.length > 0) {
 				<ul class="list">
-					@for (item of getServiceItems(service); track item) {
-					<li class="list-item">{{ item }}</li>
+					@for (item of service.items; track item.text) {
+					<li class="list-item">{{ item.text }}</li>
 					}
 				</ul>
 				}
@@ -74,8 +78,10 @@
 	}
 
 	<section class="cta-section text-center">
-		<h2 class="mat-headline-4">{{ 'services.cta.title' | translate }}</h2>
-		<p>{{ 'services.cta.description' | translate }}</p>
-		<a mat-flat-button routerLink="/contact" class="cta-button">{{ 'services.cta.button' | translate }}</a>
+		<h2 class="mat-headline-4" i18n="Services page|CTA title">Prêt à commencer votre démarche ?</h2>
+		<p i18n="Services page|CTA description">
+			Contactez-moi pour une première consultation et évaluons ensemble vos besoins.
+		</p>
+		<a mat-flat-button routerLink="/contact" class="cta-button" i18n="Services page|CTA button">Me Contacter</a>
 	</section>
 </div>

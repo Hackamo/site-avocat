@@ -2,12 +2,15 @@
 	@if (isSubmitting()) {
 	<div class="submission-overlay" role="alert" aria-live="polite">
 		<mat-spinner diameter="64"></mat-spinner>
-		<p class="submission-overlay__text">{{ 'contact.submitting' | translate }}</p>
+		<p class="submission-overlay__text" i18n="Contact page|Submission overlay">Envoi en cours...</p>
 	</div>
 	}
 	<header class="page-header">
-		<h1 class="mat-display-2">{{ 'contact.title' | translate }}</h1>
-		<p class="mat-headline-5">{{ 'contact.subtitle' | translate }}</p>
+		<h1 class="mat-display-2" i18n="Contact page|Page title">Contactez-nous</h1>
+		<p class="mat-headline-5" i18n="Contact page|Page subtitle">
+			Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous
+			vous répondrons dans les plus brefs délais.
+		</p>
 	</header>
 
 	<div class="contact-content">
@@ -16,15 +19,15 @@
 			<mat-card class="info-card" animateText="fade">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>phone</mat-icon>
-					<mat-card-title>{{ 'contact.phone.title' | translate }}</mat-card-title>
+					<mat-card-title i18n="Contact page|Phone card title">Téléphone</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<p>{{ 'contact.phone.number' | translate }}</p>
+					<p i18n="Contact page|Phone number">01 23 45 67 89</p>
 
-					<p class="subtitle">{{ 'contact.phone.hours' | translate }}</p>
+					<p class="subtitle" i18n="Contact page|Phone hours">Du lundi au vendredi, 9h-18h</p>
 					<a mat-flat-button href="tel:+33123456789">
 						<mat-icon>phone</mat-icon>
-						{{ 'contact.phone.button' | translate }}
+						<span i18n="Contact page|Call button">Appeler</span>
 					</a>
 				</mat-card-content>
 			</mat-card>
@@ -36,26 +39,31 @@
 			>
 				<mat-card-header>
 					<mat-icon mat-card-avatar>email</mat-icon>
-					<mat-card-title>{{ 'contact.email.title' | translate }}</mat-card-title>
+					<mat-card-title i18n="Contact page|Email card title">Email</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<div class="copy-row" [attr.aria-label]="'contact.email.aria' | translate">
-						<p class="copy-text">{{ 'contact.email.address' | translate }}</p>
+					<div
+						class="copy-row"
+						i18n-aria-label="Contact page|Email section"
+						aria-label="Adresse e-mail du cabinet"
+					>
+						<p class="copy-text" i18n="Contact page|Email address">contact@maitre-martinet.fr</p>
 						<button
 							mat-icon-button
 							class="copy-btn"
-							[attr.aria-label]="'contact.email.copyLabel' | translate"
+							i18n-aria-label="Contact page|Copy email button"
+							aria-label="Copier l'e-mail"
 						>
 							<mat-icon>content_copy</mat-icon>
 						</button>
 					</div>
-					<p class="subtitle">{{ 'contact.email.response' | translate }}</p>
+					<p class="subtitle" i18n="Contact page|Email response time">Réponse sous 24h</p>
 					<a
 						mat-flat-button
 						href="mailto:contact@maitre-martinet.fr?subject=Demande%20de%20consultation%20juridique&body=Bonjour%20Ma%C3%AEtre%20Martinet%2C%0A%0AJe%20vous%20contacte%20au%20sujet%20de%20%3A%0A%0ANom%20%3A%20%0APr%C3%A9nom%20%3A%20%0AT%C3%A9l%C3%A9phone%20%3A%20%0A%0AObjet%20de%20la%20demande%20%3A%0A%0A%0ACordialement%2C"
 					>
 						<mat-icon>email</mat-icon>
-						{{ 'contact.email.button' | translate }}
+						<span i18n="Contact page|Send email button">Envoyer un e-mail</span>
 					</a>
 				</mat-card-content>
 			</mat-card>
@@ -63,27 +71,40 @@
 			<mat-card class="info-card" animateText="fade">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>schedule</mat-icon>
-					<mat-card-title>{{ 'contact.hours.title' | translate }}</mat-card-title>
+					<mat-card-title i18n="Contact page|Hours card title">Horaires d'ouverture</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<ul class="hours-list" [attr.aria-label]="'contact.hours.aria' | translate">
-						<li class="hours-item open" [attr.aria-label]="'contact.hours.weekdays.aria' | translate">
+					<ul
+						class="hours-list"
+						i18n-aria-label="Contact page|Hours list"
+						aria-label="Horaires d'ouverture du cabinet"
+					>
+						<li
+							class="hours-item open"
+							i18n-aria-label="Contact page|Weekdays hours"
+							aria-label="Ouvert du lundi au vendredi de 9h à 18h"
+						>
 							<mat-icon aria-hidden="true">check_circle</mat-icon>
-							<span class="day">{{ 'contact.hours.weekdays.label' | translate }}</span>
-							<span class="time">{{ 'contact.hours.weekdays.time' | translate }}</span>
+							<span class="day" i18n="Contact page|Weekdays label">Lundi – Vendredi</span>
+							<span class="time" i18n="Contact page|Weekdays time">9h00 – 18h00</span>
 						</li>
 						<li
 							class="hours-item appointment"
-							[attr.aria-label]="'contact.hours.saturday.aria' | translate"
+							i18n-aria-label="Contact page|Saturday hours"
+							aria-label="Samedi sur rendez-vous"
 						>
 							<mat-icon aria-hidden="true">event_available</mat-icon>
-							<span class="day">{{ 'contact.hours.saturday.label' | translate }}</span>
-							<span class="note">{{ 'contact.hours.saturday.note' | translate }}</span>
+							<span class="day" i18n="Contact page|Saturday label">Samedi</span>
+							<span class="note" i18n="Contact page|Saturday note">Sur rendez-vous</span>
 						</li>
-						<li class="hours-item closed" [attr.aria-label]="'contact.hours.sunday.aria' | translate">
+						<li
+							class="hours-item closed"
+							i18n-aria-label="Contact page|Sunday hours"
+							aria-label="Dimanche fermé"
+						>
 							<mat-icon aria-hidden="true">cancel</mat-icon>
-							<span class="day">{{ 'contact.hours.sunday.label' | translate }}</span>
-							<span class="note">{{ 'contact.hours.sunday.note' | translate }}</span>
+							<span class="day" i18n="Contact page|Sunday label">Dimanche</span>
+							<span class="note" i18n="Contact page|Sunday note">Fermé</span>
 						</li>
 					</ul>
 				</mat-card-content>
@@ -96,17 +117,22 @@
 			>
 				<mat-card-header>
 					<mat-icon mat-card-avatar>location_on</mat-icon>
-					<mat-card-title>{{ 'contact.address.title' | translate }}</mat-card-title>
+					<mat-card-title i18n="Contact page|Address card title">Adresse</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<div class="copy-row" [attr.aria-label]="'contact.address.aria' | translate">
-						<p class="copy-text">
-							{{ 'contact.address.line1' | translate }}<br />{{ 'contact.address.line2' | translate }}
+					<div
+						class="copy-row"
+						i18n-aria-label="Contact page|Address section"
+						aria-label="Adresse du cabinet"
+					>
+						<p class="copy-text" i18n="Contact page|Address lines">
+							5 Av. de la République,<br />33000 Bordeaux
 						</p>
 						<button
 							mat-icon-button
 							class="copy-btn"
-							[attr.aria-label]="'contact.address.copyLabel' | translate"
+							i18n-aria-label="Contact page|Copy address button"
+							aria-label="Copier l'adresse"
 						>
 							<mat-icon>content_copy</mat-icon>
 						</button>
@@ -115,7 +141,7 @@
 						@if (iframeLoading()) {
 						<div class="iframe-loader">
 							<mat-spinner diameter="60"></mat-spinner>
-							<p>{{ 'contact.address.mapLoading' | translate }}</p>
+							<p i18n="Contact page|Map loading">Chargement de la carte...</p>
 						</div>
 						}
 						<iframe
@@ -126,7 +152,8 @@
 							allowfullscreen="true"
 							loading="lazy"
 							referrerpolicy="no-referrer-when-downgrade"
-							[attr.title]="'contact.address.mapTitle' | translate"
+							i18n-title="Contact page|Map iframe title"
+							title="Localisation du cabinet"
 							(load)="onIframeLoad()"
 							[style.display]="iframeLoading() ? 'none' : 'block'"
 						></iframe>
@@ -139,50 +166,52 @@
 		<section class="contact-form">
 			<mat-card>
 				<mat-card-header>
-					<mat-card-title>{{ 'contact.form.title' | translate }}</mat-card-title>
-					<mat-card-subtitle>{{ 'contact.form.subtitle' | translate }}</mat-card-subtitle>
+					<mat-card-title i18n="Contact page|Form title">Envoyez-nous un message</mat-card-title>
+					<mat-card-subtitle i18n="Contact page|Form subtitle"
+						>Remplissez le formulaire ci-dessous</mat-card-subtitle
+					>
 				</mat-card-header>
 				<mat-card-content>
 					<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-fields">
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label>{{ 'contact.form.name.label' | translate }}</mat-label>
+							<mat-label i18n="Contact page|Name field label">Nom complet</mat-label>
 							<input matInput formControlName="name" required />
 							@if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-							<mat-error>{{ 'contact.form.name.error' | translate }}</mat-error>
+							<mat-error i18n="Contact page|Name field error">Le nom est requis</mat-error>
 							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label>{{ 'contact.form.email.label' | translate }}</mat-label>
+							<mat-label i18n="Contact page|Email field label">Email</mat-label>
 							<input matInput type="email" formControlName="email" required />
 							@if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-							<mat-error>{{ 'contact.form.email.error' | translate }}</mat-error>
+							<mat-error i18n="Contact page|Email field error">Email valide requis</mat-error>
 							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label>{{ 'contact.form.phone.label' | translate }}</mat-label>
+							<mat-label i18n="Contact page|Phone field label">Téléphone</mat-label>
 							<input matInput formControlName="phone" />
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
-							<mat-label>{{ 'contact.form.subject.label' | translate }}</mat-label>
+							<mat-label i18n="Contact page|Subject field label">Sujet</mat-label>
 							<mat-select formControlName="subject" required>
-								<mat-option value="consultation"
-									>{{ 'contact.form.subject.options.consultation' | translate }}</mat-option
+								<mat-option value="consultation" i18n="Contact page|Subject option consultation"
+									>Consultation juridique</mat-option
 								>
-								<mat-option value="information"
-									>{{ 'contact.form.subject.options.information' | translate }}</mat-option
+								<mat-option value="information" i18n="Contact page|Subject option information"
+									>Demande d'information</mat-option
 								>
-								<mat-option value="urgence"
-									>{{ 'contact.form.subject.options.urgence' | translate }}</mat-option
+								<mat-option value="urgence" i18n="Contact page|Subject option urgency"
+									>Question urgente</mat-option
 								>
-								<mat-option value="autre"
-									>{{ 'contact.form.subject.options.autre' | translate }}</mat-option
-								>
+								<mat-option value="autre" i18n="Contact page|Subject option other">Autre</mat-option>
 							</mat-select>
 							@if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
-							<mat-error>{{ 'contact.form.subject.error' | translate }}</mat-error>
+							<mat-error i18n="Contact page|Subject field error"
+								>Veuillez sélectionner un sujet</mat-error
+							>
 							}
 						</mat-form-field>
 
@@ -192,7 +221,7 @@
 							appearance="outline"
 							class="full-width message-field-wrapper"
 						>
-							<mat-label>{{ 'contact.form.message.label' | translate }}</mat-label>
+							<mat-label i18n="Contact page|Message field label">Message</mat-label>
 							<textarea
 								matInput
 								formControlName="message"
@@ -201,7 +230,8 @@
 								required
 								spellcheck="true"
 								class="message-textarea"
-								[attr.placeholder]="'contact.form.message.placeholder' | translate"
+								i18n-placeholder="Contact page|Message field placeholder"
+								placeholder="Décrivez votre situation juridique..."
 							></textarea>
 							@if (speechSupported()) {
 							<button
@@ -215,22 +245,24 @@
 								<mat-icon>{{ isListening() ? 'mic' : 'mic_none' }}</mat-icon>
 							</button>
 							} @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-							<mat-error>{{ 'contact.form.message.error' | translate }}</mat-error>
+							<mat-error i18n="Contact page|Message field error">Le message est requis</mat-error>
 							}
 							<mat-hint
-								>{{ contactForm.get('message')?.value?.length || 0 }}/1000 {{
-								'contact.form.message.characters' | translate }}</mat-hint
+								>{{ contactForm.get('message')?.value?.length || 0 }}/1000
+								<span i18n="Contact page|Characters label">caractères</span></mat-hint
 							>
 						</mat-form-field>
-						<mat-hint>{{ 'contact.form.message.hint' | translate }}</mat-hint>
+						<mat-hint i18n="Contact page|Message field hint"
+							>Décrivez votre situation et vos questions juridiques</mat-hint
+						>
 
 						<div class="form-actions">
 							<button matFab extended type="submit" [disabled]="contactForm.invalid || isSubmitting()">
 								<mat-icon>send</mat-icon>
 								@if (!isSubmitting()) {
-								<span>{{ 'contact.form.submit' | translate }}</span>
+								<span i18n="Contact page|Submit button">Envoyer le message</span>
 								} @else {
-								<span>{{ 'contact.form.submitting' | translate }}</span>
+								<span i18n="Contact page|Submitting state">Envoi en cours...</span>
 								}
 							</button>
 						</div>
@@ -242,11 +274,11 @@
 
 	<!-- Section CTA -->
 	<section class="cta-section text-center" animateText="fade">
-		<h2 class="mat-headline-4">{{ 'contact.cta.title' | translate }}</h2>
-		<p>{{ 'contact.cta.description' | translate }}</p>
+		<h2 class="mat-headline-4" i18n="Contact page|CTA title">Besoin d'une consultation urgente ?</h2>
+		<p i18n="Contact page|CTA description">Nous vous répondrons au plus vite</p>
 		<a mat-flat-button href="tel:+33123456789">
 			<mat-icon>phone</mat-icon>
-			{{ 'contact.cta.button' | translate }}
+			<span i18n="Contact page|CTA button">Appeler maintenant</span>
 		</a>
 	</section>
 </div>

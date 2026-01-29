@@ -1,0 +1,2066 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4723807546119801019" datatype="html">
+        <source>À Propos de Maître Martinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7490076393202027965" datatype="html">
+        <source> Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">8,12</context>
+        </context-group>
+        <note priority="1" from="description">Page subtitle</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6334411783619420810" datatype="html">
+        <source>Image du Maître Martinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <note priority="1" from="description">Profile image</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1253851892429750407" datatype="html">
+        <source>Mon Engagement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+        <note priority="1" from="description">Engagement section title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7617516468050125494" datatype="html">
+        <source> Fort d&apos;une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d&apos;installation et de naturalisation en France. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">37,41</context>
+        </context-group>
+        <note priority="1" from="description">Engagement paragraph 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1855287315803770557" datatype="html">
+        <source> Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une chance de réussir son projet de vie en France, et je m&apos;engage à défendre vos droits avec détermination et professionnalisme. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">42,48</context>
+        </context-group>
+        <note priority="1" from="description">Engagement paragraph 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2205643118231653936" datatype="html">
+        <source> Parcours Professionnel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">53,57</context>
+        </context-group>
+        <note priority="1" from="description">Experience section title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6272133055972867536" datatype="html">
+        <source>Formation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">219,221</context>
+        </context-group>
+        <note priority="1" from="description">Formation card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1899465384279611925" datatype="html">
+        <source>Diplômes et Qualifications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+        <note priority="1" from="description">Formation card subtitle</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8966969586733692143" datatype="html">
+        <source> Master II en Droit des Étrangers - Université Paris II </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+        <note priority="1" from="description">Formation item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7027406900062827064" datatype="html">
+        <source>Diplôme d&apos;Avocat - École de Formation du Barreau</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <note priority="1" from="description">Formation item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="5936749777099160131" datatype="html">
+        <source> Certificat de spécialisation en Droit des Étrangers </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+        <note priority="1" from="description">Formation item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7896990106244013555" datatype="html">
+        <source> Formation continue en droit communautaire européen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">75,78</context>
+        </context-group>
+        <note priority="1" from="description">Formation item 4</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2232163361734291912" datatype="html">
+        <source>Expérience</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <note priority="1" from="description">Experience card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6747150359658662485" datatype="html">
+        <source>15+ années de pratique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">86,88</context>
+        </context-group>
+        <note priority="1" from="description">Experience card subtitle</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="274230046963296918" datatype="html">
+        <source>Avocate au Barreau de Paris depuis 2008</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+        <note priority="1" from="description">Experience item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4166227974486155843" datatype="html">
+        <source> Spécialiste en droit des étrangers et de la nationalité </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">93,95</context>
+        </context-group>
+        <note priority="1" from="description">Experience item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4946326129144420030" datatype="html">
+        <source> Consultante pour associations d&apos;aide aux migrants </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">96,98</context>
+        </context-group>
+        <note priority="1" from="description">Experience item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8745358054804038690" datatype="html">
+        <source>Formatrice en droit des étrangers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">98,100</context>
+        </context-group>
+        <note priority="1" from="description">Experience item 4</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="3949478713496834311" datatype="html">
+        <source>Domaines d&apos;Expertise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+        <note priority="1" from="description">Expertise card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7384729325340241741" datatype="html">
+        <source>Areas of Specialization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">108,110</context>
+        </context-group>
+        <note priority="1" from="description">Expertise card subtitle</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2204740729105947762" datatype="html">
+        <source>Droit des titres de séjour</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <note priority="1" from="description">Expertise item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7430915650314810130" datatype="html">
+        <source>Procédures de naturalisation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">Expertise item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4353181773653963649" datatype="html">
+        <source>Contentieux administratif</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+        <note priority="1" from="description">Expertise item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1216904454475843925" datatype="html">
+        <source>Droit de la famille internationale</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+        <note priority="1" from="description">Expertise item 4</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6531710914277463228" datatype="html">
+        <source>Mes Valeurs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">125,128</context>
+        </context-group>
+        <note priority="1" from="description">Values section title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4505718491533728685" datatype="html">
+        <source>Accessibilité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+        <note priority="1" from="description">Accessibility value title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="3471140873061583266" datatype="html">
+        <source> Je m&apos;engage à rendre le droit accessible à tous, en expliquant les démarches complexes de manière claire et compréhensible. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">132,137</context>
+        </context-group>
+        <note priority="1" from="description">Accessibility value description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="5141496415854707488" datatype="html">
+        <source>Intégrité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+        <note priority="1" from="description">Integrity value title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="3190217553462176754" datatype="html">
+        <source> Mon indépendance et mon impartialité garantissent une représentation honnête et transparente de vos intérêts. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">141,146</context>
+        </context-group>
+        <note priority="1" from="description">Integrity value description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8844768739159018162" datatype="html">
+        <source>Humanité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <note priority="1" from="description">Humanity value title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="5748253589901409858" datatype="html">
+        <source> Chaque dossier est unique et mérite une attention particulière. Je traite chaque client avec respect et empathie. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">150,155</context>
+        </context-group>
+        <note priority="1" from="description">Humanity value description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="612130358139858803" datatype="html">
+        <source>Innovation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+        <note priority="1" from="description">Innovation value title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2518223567502915184" datatype="html">
+        <source> Je reste constamment informée des évolutions législatives et judiciaires pour vous offrir les meilleures stratégies. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">159,164</context>
+        </context-group>
+        <note priority="1" from="description">Innovation value description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6720804460611965174" datatype="html">
+        <source>Langues Parlées</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">171,172</context>
+        </context-group>
+        <note priority="1" from="description">Languages card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="3825191913048838971" datatype="html">
+        <source>Communication multilingue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">173,175</context>
+        </context-group>
+        <note priority="1" from="description">Languages card subtitle</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8011447441288675974" datatype="html">
+        <source>Français (natif)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">178,179</context>
+        </context-group>
+        <note priority="1" from="description">Language French</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1306175541042426128" datatype="html">
+        <source>Anglais (courant)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">179,180</context>
+        </context-group>
+        <note priority="1" from="description">Language English</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8362450609635427347" datatype="html">
+        <source>Espagnol (intermédiaire)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">180,181</context>
+        </context-group>
+        <note priority="1" from="description">Language Spanish</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7060907156091520726" datatype="html">
+        <source>Arabe (notions)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">181,183</context>
+        </context-group>
+        <note priority="1" from="description">Language Arabic</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="164826215990207251" datatype="html">
+        <source> Cette diversité linguistique me permet d&apos;accompagner une clientèle internationale et de faciliter les communications avec les administrations étrangères. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">184,187</context>
+        </context-group>
+        <note priority="1" from="description">Languages description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1884515806198605750" datatype="html">
+        <source> Activités Professionnelles </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">194,198</context>
+        </context-group>
+        <note priority="1" from="description">Activities section title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="673726546147275317" datatype="html">
+        <source>Publications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">201,203</context>
+        </context-group>
+        <note priority="1" from="description">Publications card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1218879734575323319" datatype="html">
+        <source> &quot;Le droit des étrangers à l&apos;ère du numérique&quot; - Revue Juridique 2023 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">206,208</context>
+        </context-group>
+        <note priority="1" from="description">Publication item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2497838509482659825" datatype="html">
+        <source> &quot;Naturalisation française : stratégies et perspectives&quot; - 2022 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">209,211</context>
+        </context-group>
+        <note priority="1" from="description">Publication item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="2211277773286083778" datatype="html">
+        <source>Articles réguliers dans la presse spécialisée</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">211,213</context>
+        </context-group>
+        <note priority="1" from="description">Publication item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6264850201002463240" datatype="html">
+        <source>Formatrice pour le Barreau de Paris</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">223,224</context>
+        </context-group>
+        <note priority="1" from="description">Training item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="7783624714567904666" datatype="html">
+        <source>Interventions dans les universités</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">224,225</context>
+        </context-group>
+        <note priority="1" from="description">Training item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="6604243458501763334" datatype="html">
+        <source>Ateliers pour associations d&apos;aide aux migrants</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">225,227</context>
+        </context-group>
+        <note priority="1" from="description">Training item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1328899981597548837" datatype="html">
+        <source>Associations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">233,235</context>
+        </context-group>
+        <note priority="1" from="description">Associations card title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="3171281633271897235" datatype="html">
+        <source> Membre de l&apos;Association Française des Avocats en Droit des Étrangers </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">238,240</context>
+        </context-group>
+        <note priority="1" from="description">Association item 1</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4845813621580583951" datatype="html">
+        <source>Bénévole pour associations d&apos;aide juridique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">240,241</context>
+        </context-group>
+        <note priority="1" from="description">Association item 2</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1451685997927383728" datatype="html">
+        <source>Partenaire d&apos;organisations internationales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">241,243</context>
+        </context-group>
+        <note priority="1" from="description">Association item 3</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="289546102863955692" datatype="html">
+        <source>Prêt à commencer votre démarche ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">252,253</context>
+        </context-group>
+        <note priority="1" from="description">CTA title</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="4575208040269410263" datatype="html">
+        <source> Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures stratégies à adopter. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">254,257</context>
+        </context-group>
+        <note priority="1" from="description">CTA description</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="1925527573099324666" datatype="html">
+        <source>Me Contacter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">260,262</context>
+        </context-group>
+        <note priority="1" from="description">Contact button</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="638904137210411441" datatype="html">
+        <source>Mes Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.html</context>
+          <context context-type="linenumber">264,267</context>
+        </context-group>
+        <note priority="1" from="description">Services button</note>
+        <note priority="1" from="meaning">About page</note>
+      </trans-unit>
+      <trans-unit id="8301941908230819147" datatype="html">
+        <source>Accueil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <note priority="1" from="description">Home menu item</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="3579415514480124037" datatype="html">
+        <source>Nos Prestations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+        <note priority="1" from="description">Services menu item</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="7627424496262931947" datatype="html">
+        <source>Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Blog menu item</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="2084061170433309481" datatype="html">
+        <source>À Propos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">20,23</context>
+        </context-group>
+        <note priority="1" from="description">About menu item</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="9082836579291749578" datatype="html">
+        <source> Contact </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">28,31</context>
+        </context-group>
+        <note priority="1" from="description">Contact menu item</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="8963819387283925260" datatype="html">
+        <source>Langue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+        <note priority="1" from="description">Language selector label</note>
+        <note priority="1" from="meaning">Navigation</note>
+      </trans-unit>
+      <trans-unit id="5229877745009180658" datatype="html">
+        <source>Revenir en haut de la page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">64,67</context>
+        </context-group>
+        <note priority="1" from="description">Aria label</note>
+        <note priority="1" from="meaning">Scroll to top button</note>
+      </trans-unit>
+      <trans-unit id="3962819297418309638" datatype="html">
+        <source>Thème</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+        <note priority="1" from="description">Theme selector label</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="4309255120924029128" datatype="html">
+        <source>Choisir le thème</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">80,82</context>
+        </context-group>
+        <note priority="1" from="description">Theme selector aria label</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="2479594297463427499" datatype="html">
+        <source>Rouge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <note priority="1" from="description">Red</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="1690827554555419193" datatype="html">
+        <source>Bleu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+        <note priority="1" from="description">Blue</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="2041685451940236577" datatype="html">
+        <source>Vert</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+        <note priority="1" from="description">Green</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="6105888169729289777" datatype="html">
+        <source>Jaune</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <note priority="1" from="description">Yellow</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="6642059297277586633" datatype="html">
+        <source>Magenta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">Magenta</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="552479624446128990" datatype="html">
+        <source>Orange</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+        <note priority="1" from="description">Orange</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="8754250772096174675" datatype="html">
+        <source>Azur</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <note priority="1" from="description">Azure</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="7167122689240774891" datatype="html">
+        <source>Violet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+        <note priority="1" from="description">Violet</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="4150740598898870983" datatype="html">
+        <source>Rose</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+        <note priority="1" from="description">Rose</note>
+        <note priority="1" from="meaning">Theme colors</note>
+      </trans-unit>
+      <trans-unit id="3027963873836334929" datatype="html">
+        <source>Langue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+        <note priority="1" from="description">Language selector label</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="3606496780937388674" datatype="html">
+        <source>© 2026 Maître Martinet - Avocate spécialisée en droit des étrangers.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">113,114</context>
+        </context-group>
+        <note priority="1" from="description">Copyright notice</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6900509923660855141" datatype="html">
+        <source>Bureau : 123 Rue de la République, 75001 Paris</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <note priority="1" from="description">Office address</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="518627358411505408" datatype="html">
+        <source>Mentions légales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">121,124</context>
+        </context-group>
+        <note priority="1" from="description">Legal mentions link</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6396249681340095355" datatype="html">
+        <source>Politique de confidentialité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">128,132</context>
+        </context-group>
+        <note priority="1" from="description">Privacy policy link</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="4025496131032071052" datatype="html">
+        <source>Retour au blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/article-page/article-page.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+        <note priority="1" from="description">Back to blog link</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="2783290544410951202" datatype="html">
+        <source>Articles similaires</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/article-page/article-page.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+        <note priority="1" from="description">Similar articles heading</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="5375139652010095616" datatype="html">
+        <source>Article introuvable</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/article-page/article-page.html</context>
+          <context context-type="linenumber">35,38</context>
+        </context-group>
+        <note priority="1" from="description">Article not found error</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="1489187878081178814" datatype="html">
+        <source>Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/blog/blog.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="7389747804786460606" datatype="html">
+        <source> Actualités et conseils en droit des étrangers </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/blog/blog.html</context>
+          <context context-type="linenumber">5,9</context>
+        </context-group>
+        <note priority="1" from="description">Page subtitle</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="5672230053996429163" datatype="html">
+        <source> Aucun article disponible pour le moment. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/blog/blog.html</context>
+          <context context-type="linenumber">24,29</context>
+        </context-group>
+        <note priority="1" from="description">No articles message</note>
+        <note priority="1" from="meaning">Blog page</note>
+      </trans-unit>
+      <trans-unit id="1410135982426698732" datatype="html">
+        <source>Envoi en cours...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">265,268</context>
+        </context-group>
+        <note priority="1" from="description">Submission overlay</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="6198361213157915657" datatype="html">
+        <source>Contactez-nous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="7715860655376419008" datatype="html">
+        <source> Vous avez des questions sur vos droits ou besoin d&apos;une consultation ? N&apos;hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">11,16</context>
+        </context-group>
+        <note priority="1" from="description">Page subtitle</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8988994064782721746" datatype="html">
+        <source>Téléphone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">193,194</context>
+        </context-group>
+        <note priority="1" from="description">Phone card title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4863856238356520991" datatype="html">
+        <source>01 23 45 67 89</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <note priority="1" from="description">Phone number</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="79867372107451270" datatype="html">
+        <source>Du lundi au vendredi, 9h-18h</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <note priority="1" from="description">Phone hours</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4318240724966891273" datatype="html">
+        <source>Appeler</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+        <note priority="1" from="description">Call button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5269781084078434236" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">185,186</context>
+        </context-group>
+        <note priority="1" from="description">Email card title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4550325793325566985" datatype="html">
+        <source>Adresse e-mail du cabinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+        <note priority="1" from="description">Email section</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="1340396961310649156" datatype="html">
+        <source>contact@maitre-martinet.fr</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+        <note priority="1" from="description">Email address</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="1128137080810471122" datatype="html">
+        <source>Copier l&apos;e-mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+        <note priority="1" from="description">Copy email button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8620429586748831337" datatype="html">
+        <source>Réponse sous 24h</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">60,63</context>
+        </context-group>
+        <note priority="1" from="description">Email response time</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="6767763395253066129" datatype="html">
+        <source>Envoyer un e-mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+        <note priority="1" from="description">Send email button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4798901281331589610" datatype="html">
+        <source>Horaires d&apos;ouverture</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+        <note priority="1" from="description">Hours card title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5671943533073625041" datatype="html">
+        <source>Horaires d&apos;ouverture du cabinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">80,83</context>
+        </context-group>
+        <note priority="1" from="description">Hours list</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8635981197129198879" datatype="html">
+        <source>Ouvert du lundi au vendredi de 9h à 18h</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+        <note priority="1" from="description">Weekdays hours</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="6529656176361262706" datatype="html">
+        <source>Lundi – Vendredi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+        <note priority="1" from="description">Weekdays label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4540974110584101294" datatype="html">
+        <source>9h00 – 18h00</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">89,92</context>
+        </context-group>
+        <note priority="1" from="description">Weekdays time</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4767466357728139838" datatype="html">
+        <source>Samedi sur rendez-vous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+        <note priority="1" from="description">Saturday hours</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="7593681618158130042" datatype="html">
+        <source>Samedi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">97,98</context>
+        </context-group>
+        <note priority="1" from="description">Saturday label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5641217566046407738" datatype="html">
+        <source>Sur rendez-vous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">98,101</context>
+        </context-group>
+        <note priority="1" from="description">Saturday note</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8141831951344034054" datatype="html">
+        <source>Dimanche fermé</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">103,105</context>
+        </context-group>
+        <note priority="1" from="description">Sunday hours</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="2309121768464324753" datatype="html">
+        <source>Dimanche</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+        <note priority="1" from="description">Sunday label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="675117916459890733" datatype="html">
+        <source>Fermé</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">107,110</context>
+        </context-group>
+        <note priority="1" from="description">Sunday note</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8586044163431319489" datatype="html">
+        <source>Adresse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">120,122</context>
+        </context-group>
+        <note priority="1" from="description">Address card title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4325450517608877817" datatype="html">
+        <source>Adresse du cabinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">126,128</context>
+        </context-group>
+        <note priority="1" from="description">Address section</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="2288062071723810631" datatype="html">
+        <source> 5 Av. de la République,<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>33000 Bordeaux </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">129,131</context>
+        </context-group>
+        <note priority="1" from="description">Address lines</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4985995874996733755" datatype="html">
+        <source>Copier l&apos;adresse</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">135,137</context>
+        </context-group>
+        <note priority="1" from="description">Copy address button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="385041505447277409" datatype="html">
+        <source>Chargement de la carte...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">144,147</context>
+        </context-group>
+        <note priority="1" from="description">Map loading</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="3095400447578276067" datatype="html">
+        <source>Localisation du cabinet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">156,158</context>
+        </context-group>
+        <note priority="1" from="description">Map iframe title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="7179835705850925181" datatype="html">
+        <source>Envoyez-nous un message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">169,170</context>
+        </context-group>
+        <note priority="1" from="description">Form title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4720104618486824309" datatype="html">
+        <source>Remplissez le formulaire ci-dessous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">171,173</context>
+        </context-group>
+        <note priority="1" from="description">Form subtitle</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5582538960420386244" datatype="html">
+        <source>Nom complet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">177,178</context>
+        </context-group>
+        <note priority="1" from="description">Name field label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="4267772633180231714" datatype="html">
+        <source>Le nom est requis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">180,182</context>
+        </context-group>
+        <note priority="1" from="description">Name field error</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="6836096392369524164" datatype="html">
+        <source>Email valide requis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">188,190</context>
+        </context-group>
+        <note priority="1" from="description">Email field error</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="745112090648682934" datatype="html">
+        <source>Sujet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">198,199</context>
+        </context-group>
+        <note priority="1" from="description">Subject field label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8177703889370090100" datatype="html">
+        <source>Consultation juridique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">201,203</context>
+        </context-group>
+        <note priority="1" from="description">Subject option consultation</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="2091542707679584045" datatype="html">
+        <source>Demande d&apos;information</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">204,206</context>
+        </context-group>
+        <note priority="1" from="description">Subject option information</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5418366191809690075" datatype="html">
+        <source>Question urgente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">207,209</context>
+        </context-group>
+        <note priority="1" from="description">Subject option urgency</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="11793026190860596" datatype="html">
+        <source>Autre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">209,211</context>
+        </context-group>
+        <note priority="1" from="description">Subject option other</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="3488285814600577155" datatype="html">
+        <source>Veuillez sélectionner un sujet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">213,216</context>
+        </context-group>
+        <note priority="1" from="description">Subject field error</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="2642127393080366197" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">224,226</context>
+        </context-group>
+        <note priority="1" from="description">Message field label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="7716479283287438367" datatype="html">
+        <source>Décrivez votre situation juridique...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">234,236</context>
+        </context-group>
+        <note priority="1" from="description">Message field placeholder</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="2875192088168457806" datatype="html">
+        <source>Le message est requis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">248,251</context>
+        </context-group>
+        <note priority="1" from="description">Message field error</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="8185583820592801748" datatype="html">
+        <source>caractères</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">252,254</context>
+        </context-group>
+        <note priority="1" from="description">Characters label</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="876539478285942791" datatype="html">
+        <source>Décrivez votre situation et vos questions juridiques</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">256,259</context>
+        </context-group>
+        <note priority="1" from="description">Message field hint</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="1999442278120516269" datatype="html">
+        <source>Envoyer le message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">263,265</context>
+        </context-group>
+        <note priority="1" from="description">Submit button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="1822543228889800571" datatype="html">
+        <source>Besoin d&apos;une consultation urgente ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+        <note priority="1" from="description">CTA title</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5519380138222543252" datatype="html">
+        <source>Nous vous répondrons au plus vite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">278,279</context>
+        </context-group>
+        <note priority="1" from="description">CTA description</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="1171137291595926454" datatype="html">
+        <source>Appeler maintenant</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contact/contact.html</context>
+          <context context-type="linenumber">281,284</context>
+        </context-group>
+        <note priority="1" from="description">CTA button</note>
+        <note priority="1" from="meaning">Contact page</note>
+      </trans-unit>
+      <trans-unit id="5281592956356265553" datatype="html">
+        <source>Votre avocate en droit des étrangers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Hero title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="625099546090651246" datatype="html">
+        <source> Accompagnement juridique pour vos démarches de séjour et de nationalité en France </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+        <note priority="1" from="description">Hero subtitle</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="5209100813084509915" datatype="html">
+        <source> Demander une consultation </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+        <note priority="1" from="description">CTA button</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="7561653500364551041" datatype="html">
+        <source>Image représentant une balance de justice</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+        <note priority="1" from="description">Hero image alt text</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="6162632770381179434" datatype="html">
+        <source>Nos Domaines d&apos;Intervention</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+        <note priority="1" from="description">Services section title</note>
+        <note priority="1" from="meaning">Home page</note>
+      </trans-unit>
+      <trans-unit id="9145770052366268251" datatype="html">
+        <source>EN SAVOIR PLUS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+        <note priority="1" from="description">Learn more button</note>
+        <note priority="1" from="meaning">Common</note>
+      </trans-unit>
+      <trans-unit id="1293594290500254731" datatype="html">
+        <source>Revenir à la page précédente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+        <note priority="1" from="description">Back button aria label</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="6429481600162578555" datatype="html">
+        <source>Revenir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <note priority="1" from="description">Back button</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="4148002105267966017" datatype="html">
+        <source>Mentions Légales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="5429922430492743102" datatype="html">
+        <source>Informations légales et d&apos;identification</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <note priority="1" from="description">Legal info section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="1200936966652953634" datatype="html">
+        <source> Adresse : 5 Avenue de la République, 33000 Bordeaux<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : 01 23 45 67 89<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : contact@cabinet-martinet.fr </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">17,21</context>
+        </context-group>
+        <note priority="1" from="description">Contact details</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="257933108750785317" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Responsable de la publication :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Maître [Nom]<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Statut :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Avocat inscrit au Barreau de Bordeaux<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Numéro SIRET :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> [À compléter] </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">22,26</context>
+        </context-group>
+        <note priority="1" from="description">Publication details</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="4384152391109070869" datatype="html">
+        <source>Conditions d&apos;utilisation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <note priority="1" from="description">Terms section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="8454429767818228337" datatype="html">
+        <source> L&apos;accès et l&apos;utilisation de ce site web sont soumis aux présentes conditions d&apos;utilisation. En accédant à ce site, vous acceptez ces conditions. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">31,34</context>
+        </context-group>
+        <note priority="1" from="description">Terms paragraph 1</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="7897613963834214108" datatype="html">
+        <source> Le Cabinet Martinet s&apos;efforce de fournir des informations exactes et à jour. Cependant, nous déclinons toute responsabilité en cas d&apos;erreurs, omissions ou inexactitudes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">35,40</context>
+        </context-group>
+        <note priority="1" from="description">Terms paragraph 2</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="1477897382720101667" datatype="html">
+        <source>Droits d&apos;auteur et propriété intellectuelle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+        <note priority="1" from="description">Copyright section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="4523332140986154971" datatype="html">
+        <source> Tous les contenus du site (textes, images, logos, etc.) sont protégés par les droits d&apos;auteur. Toute reproduction, distribution ou utilisation du contenu sans autorisation préalable est interdite. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">43,46</context>
+        </context-group>
+        <note priority="1" from="description">Copyright paragraph 1</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="2092581260324491753" datatype="html">
+        <source>© 2026 Cabinet Martinet. Tous droits réservés.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">46,50</context>
+        </context-group>
+        <note priority="1" from="description">Copyright notice</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="5093905873726403455" datatype="html">
+        <source>Responsabilité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <note priority="1" from="description">Liability section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="8723681087699868809" datatype="html">
+        <source> Le Cabinet Martinet décline toute responsabilité quant aux dommages directs ou indirects causés par l&apos;utilisation ou l&apos;impossibilité d&apos;utiliser le site. Les informations fournies sur ce site ne constituent pas un conseil juridique professionnel. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">52,56</context>
+        </context-group>
+        <note priority="1" from="description">Liability paragraph 1</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="2780859368905297138" datatype="html">
+        <source> Pour obtenir un conseil juridique, veuillez contacter directement le cabinet via le formulaire de contact ou par téléphone. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">57,62</context>
+        </context-group>
+        <note priority="1" from="description">Liability paragraph 2</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="261711360849920272" datatype="html">
+        <source>Hébergement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+        <note priority="1" from="description">Hosting section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="6642325361977978596" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Hébergeur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> GitHub Pages<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adresse :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">65,68</context>
+        </context-group>
+        <note priority="1" from="description">Hosting details</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="6251224601142384411" datatype="html">
+        <source>Lois applicables</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+        <note priority="1" from="description">Applicable law section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="1017360800607004237" datatype="html">
+        <source> Ce site est soumis aux lois françaises et à la juridiction des tribunaux compétents de Bordeaux. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">73,77</context>
+        </context-group>
+        <note priority="1" from="description">Applicable law text</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="7622946750322204409" datatype="html">
+        <source>Cookies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+        <note priority="1" from="description">Cookies section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="8573759659590013393" datatype="html">
+        <source> Ce site utilise des cookies pour améliorer votre expérience utilisateur. En continuant à utiliser ce site, vous acceptez notre utilisation de cookies. Consultez notre <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;/politique-confidentialite&quot;&gt;"/>Politique de Confidentialité<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> pour plus de détails. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">80,84</context>
+        </context-group>
+        <note priority="1" from="description">Cookies text</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="5213303475422666705" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">87,89</context>
+        </context-group>
+        <note priority="1" from="description">Contact section title</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="7356284359639945918" datatype="html">
+        <source> Pour toute question concernant ces mentions légales, veuillez nous contacter à l&apos;adresse email suivante : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:legal@cabinet-martinet.fr&quot;&gt;"/>legal@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/legal/legal.html</context>
+          <context context-type="linenumber">89,92</context>
+        </context-group>
+        <note priority="1" from="description">Contact text</note>
+        <note priority="1" from="meaning">Legal</note>
+      </trans-unit>
+      <trans-unit id="7801187689856483148" datatype="html">
+        <source>Nos Prestations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="5330937868070598306" datatype="html">
+        <source>Expertise complète en droit des étrangers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description">Page subtitle</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="6218678831852992967" datatype="html">
+        <source> Vue en grille </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">14,17</context>
+        </context-group>
+        <note priority="1" from="description">View toggle label</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="2264921094700817370" datatype="html">
+        <source>Prêt à commencer votre démarche ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <note priority="1" from="description">CTA title</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="4754237885876659296" datatype="html">
+        <source> Contactez-moi pour une première consultation et évaluons ensemble vos besoins. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">83,85</context>
+        </context-group>
+        <note priority="1" from="description">CTA description</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="3900902564936186344" datatype="html">
+        <source>Me Contacter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prestations/prestations.html</context>
+          <context context-type="linenumber">85,88</context>
+        </context-group>
+        <note priority="1" from="description">CTA button</note>
+        <note priority="1" from="meaning">Services page</note>
+      </trans-unit>
+      <trans-unit id="1919653766690261523" datatype="html">
+        <source>Revenir à la page précédente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+        <note priority="1" from="description">Back button aria label</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7055541076352585347" datatype="html">
+        <source>Revenir</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <note priority="1" from="description">Back button</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5202003848797829597" datatype="html">
+        <source>Politique de Confidentialité</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+        <note priority="1" from="description">Page title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6589654487059377901" datatype="html">
+        <source>1. Responsable du traitement des données</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+        <note priority="1" from="description">Data controller title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4534485199084287488" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cabinet Martinet<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 5 Avenue de la République<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 33000 Bordeaux, France<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Email : contact@cabinet-martinet.fr<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Téléphone : 01 23 45 67 89 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">16,22</context>
+        </context-group>
+        <note priority="1" from="description">Data controller details</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5126286478634488633" datatype="html">
+        <source> Le Cabinet Martinet est responsable du traitement de vos données personnelles conformément à la Loi Informatique et Libertés et au Règlement Général sur la Protection des Données (RGPD). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">23,28</context>
+        </context-group>
+        <note priority="1" from="description">Data controller text</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="3117691389097588180" datatype="html">
+        <source>2. Données collectées</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <note priority="1" from="description">Collected data title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="8609386927861909125" datatype="html">
+        <source>Nous collectons les catégories de données suivantes :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+        <note priority="1" from="description">Collected data intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6590365576271147961" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via le formulaire de contact :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Nom, Prénom, Email, Numéro de téléphone, Message </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+        <note priority="1" from="description">Contact form data</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="8114481096642476640" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via les cookies :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Adresse IP, Type de navigateur, Informations de session </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+        <note priority="1" from="description">Cookies data</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2786470396219794280" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Via les logs du serveur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Données d&apos;accès au site (URLs visitées, horodatage) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+        <note priority="1" from="description">Server logs data</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5309138031748711853" datatype="html">
+        <source>3. Finalités du traitement</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+        <note priority="1" from="description">Processing purposes title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6995928124455307215" datatype="html">
+        <source>Vos données sont traitées pour :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+        <note priority="1" from="description">Processing purposes intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="976999297203732718" datatype="html">
+        <source>Vous contacter en réponse à votre demande via le formulaire</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+        <note priority="1" from="description">Purpose contact</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4106340011914972853" datatype="html">
+        <source>Améliorer votre expérience utilisateur et la performance du site</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+        <note priority="1" from="description">Purpose experience</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7467193777870333179" datatype="html">
+        <source>Analyser l&apos;utilisation du site pour des statistiques internes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <note priority="1" from="description">Purpose statistics</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="3885204164378020407" datatype="html">
+        <source>Respecter nos obligations légales et réglementaires</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">51,55</context>
+        </context-group>
+        <note priority="1" from="description">Purpose legal</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="9205667532043180676" datatype="html">
+        <source>4. Fondement juridique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <note priority="1" from="description">Legal basis title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7897658143086675044" datatype="html">
+        <source>Le traitement de vos données repose sur :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+        <note priority="1" from="description">Legal basis intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5425348949502852044" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Votre consentement explicite<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Lorsque vous remplissez un formulaire de contact </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+        <note priority="1" from="description">Basis consent</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="318907197427419711" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>L&apos;intérêt légitime<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Pour améliorer nos services et analyser le site </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+        <note priority="1" from="description">Basis interest</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2748038181915015142" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Nos obligations légales<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> : Conservation des données conformément aux lois applicables </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+        <note priority="1" from="description">Basis obligation</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6075286679525245757" datatype="html">
+        <source>5. Durée de conservation des données</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+        <note priority="1" from="description">Retention title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2425194743777946535" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Données du formulaire de contact :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 3 années civiles (conformément à nos obligations légales) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">75,78</context>
+        </context-group>
+        <note priority="1" from="description">Retention contact</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4166178202016382806" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies de session :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Supprimés à la fermeture du navigateur </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">79,81</context>
+        </context-group>
+        <note priority="1" from="description">Retention cookies</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="484018344428208809" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Logs serveur :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Conservés 90 jours maximum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">81,83</context>
+        </context-group>
+        <note priority="1" from="description">Retention logs</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="3557373785391544337" datatype="html">
+        <source>6. Destinataires des données</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+        <note priority="1" from="description">Recipients title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2716263851119636949" datatype="html">
+        <source>Vos données personnelles ne sont partagées que dans les cas suivants :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">87,89</context>
+        </context-group>
+        <note priority="1" from="description">Recipients intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5955511444752360876" datatype="html">
+        <source>Avec les avocats du Cabinet Martinet pour répondre à votre demande</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+        <note priority="1" from="description">Recipient lawyers</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7502851052951829998" datatype="html">
+        <source>Avec les autorités compétentes si requis par la loi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+        <note priority="1" from="description">Recipient authorities</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="338051042540602205" datatype="html">
+        <source>Avec notre hébergeur (GitHub Pages) pour la continuité du service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+        <note priority="1" from="description">Recipient hosting</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6315270155531979652" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Pas de transfert hors de l&apos;Union Européenne sans garanties appropriées.<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+        <note priority="1" from="description">No transfer outside EU</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6065397378274264850" datatype="html">
+        <source>7. Vos droits</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">99,100</context>
+        </context-group>
+        <note priority="1" from="description">Rights title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4860253230736966463" datatype="html">
+        <source>Conformément au RGPD, vous disposez des droits suivants :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">100,102</context>
+        </context-group>
+        <note priority="1" from="description">Rights intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6972100610370163609" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit d&apos;accès :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Obtenir une copie de vos données personnelles </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">103,105</context>
+        </context-group>
+        <note priority="1" from="description">Right access</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="9153112866894044526" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit de rectification :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Corriger vos données inexactes </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">106,108</context>
+        </context-group>
+        <note priority="1" from="description">Right rectification</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="452021810939623029" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à l&apos;oubli :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Demander la suppression de vos données </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">109,111</context>
+        </context-group>
+        <note priority="1" from="description">Right erasure</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5001073891835793931" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à la limitation du traitement :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Restreindre l&apos;utilisation de vos données </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">112,114</context>
+        </context-group>
+        <note priority="1" from="description">Right restriction</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2117314255116824334" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit à la portabilité :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Récupérer vos données dans un format structuré </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">115,117</context>
+        </context-group>
+        <note priority="1" from="description">Right portability</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="614986677675676575" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Droit d&apos;opposition :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Vous opposer au traitement de vos données </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">118,121</context>
+        </context-group>
+        <note priority="1" from="description">Right objection</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2429739788675601517" datatype="html">
+        <source> Pour exercer ces droits, contactez-nous à : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:privacy@cabinet-martinet.fr&quot;&gt;"/>privacy@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">122,125</context>
+        </context-group>
+        <note priority="1" from="description">Rights contact</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4418380440688614186" datatype="html">
+        <source>8. Cookies et technologies de suivi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">128,129</context>
+        </context-group>
+        <note priority="1" from="description">Cookies title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="6424152370902287863" datatype="html">
+        <source>Ce site utilise les types de cookies suivants :</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">129,131</context>
+        </context-group>
+        <note priority="1" from="description">Cookies intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="1674590184189819958" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies essentiels :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Nécessaires au fonctionnement du site (authentification, préférences de thème) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">132,135</context>
+        </context-group>
+        <note priority="1" from="description">Essential cookies</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2425361565494964114" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Cookies de performance :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Pour analyser votre utilisation du site afin d&apos;améliorer votre expérience </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">136,139</context>
+        </context-group>
+        <note priority="1" from="description">Performance cookies</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="1748264955445442730" datatype="html">
+        <source> Vous pouvez modifier les paramètres de cookies dans les paramètres de votre navigateur. Cependant, certains cookies essentiels ne peuvent pas être désactivés sans altérer le fonctionnement du site. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">141,146</context>
+        </context-group>
+        <note priority="1" from="description">Cookies settings</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="8828751548950467869" datatype="html">
+        <source>9. Sécurité des données</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+        <note priority="1" from="description">Security title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7331956366894390270" datatype="html">
+        <source> Nous prenons les mesures de sécurité appropriées pour protéger vos données personnelles contre tout accès, modification ou destruction non autorisée. Cependant, aucune transmission sur Internet n&apos;est 100% sécurisée. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">149,152</context>
+        </context-group>
+        <note priority="1" from="description">Security paragraph 1</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="582422380796232598" datatype="html">
+        <source> Si vous découvrez une violation de sécurité, veuillez nous contacter immédiatement à : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:security@cabinet-martinet.fr&quot;&gt;"/>security@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">153,156</context>
+        </context-group>
+        <note priority="1" from="description">Security paragraph 2</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="5077621120896540999" datatype="html">
+        <source>10. Modifications de cette politique</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">159,160</context>
+        </context-group>
+        <note priority="1" from="description">Modifications title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="699351012007628805" datatype="html">
+        <source> Le Cabinet Martinet se réserve le droit de modifier cette Politique de Confidentialité à tout moment. Les modifications seront publiées sur cette page avec une date de mise à jour. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">161,164</context>
+        </context-group>
+        <note priority="1" from="description">Modifications paragraph 1</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7010250341360517470" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Dernière mise à jour : 2026<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">164,166</context>
+        </context-group>
+        <note priority="1" from="description">Last update</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4187902607990898324" datatype="html">
+        <source>11. Contact et réclamations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">168,169</context>
+        </context-group>
+        <note priority="1" from="description">Contact complaints title</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="2360400423066617695" datatype="html">
+        <source> Si vous avez des questions ou préoccupations concernant cette politique, veuillez nous contacter à : </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">170,172</context>
+        </context-group>
+        <note priority="1" from="description">Contact complaints intro</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="7412924217513987275" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Email :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:contact@cabinet-martinet.fr&quot;&gt;"/>contact@cabinet-martinet.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Adresse :<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> 5 Avenue de la République, 33000 Bordeaux </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">173,176</context>
+        </context-group>
+        <note priority="1" from="description">Contact details</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+      <trans-unit id="4474247005342555356" datatype="html">
+        <source> Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL) à l&apos;adresse : <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://www.cnil.fr&quot; target=&quot;_blank&quot;&gt;"/>www.cnil.fr<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/privacy/privacy.html</context>
+          <context context-type="linenumber">177,181</context>
+        </context-group>
+        <note priority="1" from="description">CNIL complaint</note>
+        <note priority="1" from="meaning">Privacy</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

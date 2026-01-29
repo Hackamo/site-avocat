@@ -1,6 +1,5 @@
-import { Injectable, signal, inject, PLATFORM_ID } from '@angular/core'
-import { isPlatformBrowser } from '@angular/common'
-import { TranslateService } from '@ngx-translate/core'
+import { Injectable, signal, inject, PLATFORM_ID, LOCALE_ID } from '@angular/core'
+import { isPlatformBrowser, DOCUMENT } from '@angular/common'
 import { BlogArticle } from '../models/blog-article.model'
 import { marked } from 'marked'
 
@@ -18,23 +17,16 @@ interface ArticleMetadata {
 @Injectable({ providedIn: 'root' })
 export class BlogDataService {
 	private readonly platformId = inject(PLATFORM_ID)
-	private readonly translate = inject(TranslateService)
+	private readonly locale = inject(LOCALE_ID)
+	private readonly document = inject(DOCUMENT)
 	private readonly _articles = signal<BlogArticle[]>([])
 	private readonly _loading = signal(false)
 	private loadingPromise: Promise<void> | null = null
 	private currentLanguage: string | null = null
 
 	constructor() {
-		if (isPlatformBrowser(this.platformId)) {
-			this.translate.onLangChange.subscribe(() => {
-				// Reset articles on language change to force reload
-				this._articles.set([])
-				this.loadingPromise = null
-				this.ensureLoaded()
-			})
-			// Don't load during prerendering - wait for explicit user interaction
-			// Load will happen on first access via ensureLoaded
-		}
+		// No language change subscription needed with Angular i18n
+		// Each locale build is separate
 	}
 
 	private async ensureLoaded(): Promise<void> {
@@ -50,8 +42,8 @@ export class BlogDataService {
 
 	private async loadArticlesInternal() {
 		try {
-			// Get current language
-			const lang = this.translate.getCurrentLang() || this.translate.getFallbackLang() || 'en'
+			// Get current locale from LOCALE_ID or document.documentElement.lang
+			const lang = this.locale || this.document.documentElement.lang || 'fr'
 			this.currentLanguage = lang
 
 			// Construct language-specific path

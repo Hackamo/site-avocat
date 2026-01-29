@@ -1,18 +1,24 @@
 <div class="container">
-	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
-		<mat-icon>arrow_back</mat-icon>Revenir
+	<button
+		mat-button
+		(click)="goBack()"
+		i18n-aria-label="Legal|Back button aria label"
+		aria-label="Revenir à la page précédente"
+		class="back-button"
+	>
+		<mat-icon>arrow_back</mat-icon><span i18n="Legal|Back button">Revenir</span>
 	</button>
-	<h1>Mentions Légales</h1>
+	<h1 i18n="Legal|Page title">Mentions Légales</h1>
 
 	<section>
-		<h2>Informations légales et d'identification</h2>
+		<h2 i18n="Legal|Legal info section title">Informations légales et d'identification</h2>
 		<p><strong>Cabinet Martinet</strong></p>
-		<p>
+		<p i18n="Legal|Contact details">
 			Adresse : 5 Avenue de la République, 33000 Bordeaux<br />
 			Téléphone : 01 23 45 67 89<br />
 			Email : contact@cabinet-martinet.fr
 		</p>
-		<p>
+		<p i18n="Legal|Publication details">
 			<strong>Responsable de la publication :</strong> Maître [Nom]<br />
 			<strong>Statut :</strong> Avocat inscrit au Barreau de Bordeaux<br />
 			<strong>Numéro SIRET :</strong> [À compléter]
@@ -20,55 +26,57 @@
 	</section>
 
 	<section>
-		<h2>Conditions d'utilisation</h2>
-		<p>
+		<h2 i18n="Legal|Terms section title">Conditions d'utilisation</h2>
+		<p i18n="Legal|Terms paragraph 1">
 			L'accès et l'utilisation de ce site web sont soumis aux présentes conditions d'utilisation. En accédant à ce
 			site, vous acceptez ces conditions.
 		</p>
-		<p>
+		<p i18n="Legal|Terms paragraph 2">
 			Le Cabinet Martinet s'efforce de fournir des informations exactes et à jour. Cependant, nous déclinons toute
 			responsabilité en cas d'erreurs, omissions ou inexactitudes.
 		</p>
 	</section>
 
 	<section>
-		<h2>Droits d'auteur et propriété intellectuelle</h2>
-		<p>
+		<h2 i18n="Legal|Copyright section title">Droits d'auteur et propriété intellectuelle</h2>
+		<p i18n="Legal|Copyright paragraph 1">
 			Tous les contenus du site (textes, images, logos, etc.) sont protégés par les droits d'auteur. Toute
 			reproduction, distribution ou utilisation du contenu sans autorisation préalable est interdite.
 		</p>
-		<p>© 2026 Cabinet Martinet. Tous droits réservés.</p>
+		<p i18n="Legal|Copyright notice">© 2026 Cabinet Martinet. Tous droits réservés.</p>
 	</section>
 
 	<section>
-		<h2>Responsabilité</h2>
-		<p>
+		<h2 i18n="Legal|Liability section title">Responsabilité</h2>
+		<p i18n="Legal|Liability paragraph 1">
 			Le Cabinet Martinet décline toute responsabilité quant aux dommages directs ou indirects causés par
 			l'utilisation ou l'impossibilité d'utiliser le site. Les informations fournies sur ce site ne constituent
 			pas un conseil juridique professionnel.
 		</p>
-		<p>
+		<p i18n="Legal|Liability paragraph 2">
 			Pour obtenir un conseil juridique, veuillez contacter directement le cabinet via le formulaire de contact ou
 			par téléphone.
 		</p>
 	</section>
 
 	<section>
-		<h2>Hébergement</h2>
-		<p>
+		<h2 i18n="Legal|Hosting section title">Hébergement</h2>
+		<p i18n="Legal|Hosting details">
 			<strong>Hébergeur :</strong> GitHub Pages<br />
 			<strong>Adresse :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA
 		</p>
 	</section>
 
 	<section>
-		<h2>Lois applicables</h2>
-		<p>Ce site est soumis aux lois françaises et à la juridiction des tribunaux compétents de Bordeaux.</p>
+		<h2 i18n="Legal|Applicable law section title">Lois applicables</h2>
+		<p i18n="Legal|Applicable law text">
+			Ce site est soumis aux lois françaises et à la juridiction des tribunaux compétents de Bordeaux.
+		</p>
 	</section>
 
 	<section>
-		<h2>Cookies</h2>
-		<p>
+		<h2 i18n="Legal|Cookies section title">Cookies</h2>
+		<p i18n="Legal|Cookies text">
 			Ce site utilise des cookies pour améliorer votre expérience utilisateur. En continuant à utiliser ce site,
 			vous acceptez notre utilisation de cookies. Consultez notre
 			<a href="/politique-confidentialite">Politique de Confidentialité</a> pour plus de détails.
@@ -76,8 +84,8 @@
 	</section>
 
 	<section>
-		<h2>Contact</h2>
-		<p>
+		<h2 i18n="Legal|Contact section title">Contact</h2>
+		<p i18n="Legal|Contact text">
 			Pour toute question concernant ces mentions légales, veuillez nous contacter à l'adresse email suivante :
 			<a href="mailto:legal@cabinet-martinet.fr">legal@cabinet-martinet.fr</a>
 		</p>
