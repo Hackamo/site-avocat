@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<!-- Main Pages - French -->
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/prestations</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/prestations" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/prestations" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/a-propos</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/a-propos" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/a-propos" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/contact</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/contact" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/contact" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/mentions-legales</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.3</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/mentions-legales" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/mentions-legales" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/politique-confidentialite</loc>
+		<lastmod>2026-01-30</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.3</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/politique-confidentialite" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/politique-confidentialite" />
+	</url>
+
+	<!-- Blog Articles - French -->
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/victoires-juridiques-decembre-2025</loc>
+		<lastmod>2026-01-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/victoires-juridiques-decembre-2025" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/victoires-juridiques-decembre-2025" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/oqtf-5-erreurs-eviter-contester-bordeaux</loc>
+		<lastmod>2026-01-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/oqtf-5-erreurs-eviter-contester-bordeaux" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/oqtf-5-erreurs-eviter-contester-bordeaux" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux</loc>
+		<lastmod>2026-01-04</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/naturalisation-refusee-erreur-administrative-coute-2-ans</loc>
+		<lastmod>2026-01-03</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/naturalisation-refusee-erreur-administrative-coute-2-ans" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/naturalisation-refusee-erreur-administrative-coute-2-ans" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/carte-resident-10-ans-criteres-2026</loc>
+		<lastmod>2026-01-28</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/carte-resident-10-ans-criteres-2026" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/carte-resident-10-ans-criteres-2026" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/titre-sejour-etudiant-changement-salarie</loc>
+		<lastmod>2026-01-27</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/titre-sejour-etudiant-changement-salarie" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/titre-sejour-etudiant-changement-salarie" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/vie-privee-familiale-article-8-cedh</loc>
+		<lastmod>2026-01-26</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/vie-privee-familiale-article-8-cedh" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/vie-privee-familiale-article-8-cedh" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/refus-titre-sejour-que-faire</loc>
+		<lastmod>2026-01-25</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/refus-titre-sejour-que-faire" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/refus-titre-sejour-que-faire" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/regroupement-familial-guide-complet-2026</loc>
+		<lastmod>2026-01-24</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/regroupement-familial-guide-complet-2026" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/regroupement-familial-guide-complet-2026" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/retention-administrative-droits-recours</loc>
+		<lastmod>2026-01-23</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/retention-administrative-droits-recours" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/retention-administrative-droits-recours" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/conjoint-francais-droits-sejour</loc>
+		<lastmod>2026-01-22</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/conjoint-francais-droits-sejour" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/conjoint-francais-droits-sejour" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/creer-entreprise-france-etranger</loc>
+		<lastmod>2026-01-21</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/creer-entreprise-france-etranger" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/creer-entreprise-france-etranger" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/assignation-residence-droits-obligations</loc>
+		<lastmod>2026-01-20</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/assignation-residence-droits-obligations" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/assignation-residence-droits-obligations" />
+	</url>
+	<url>
+		<loc>https://www.dmartinet-avocat.fr/fr/blog/passeport-talent-guide-complet</loc>
+		<lastmod>2026-01-19</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.dmartinet-avocat.fr/en/blog/passeport-talent-guide-complet" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://www.dmartinet-avocat.fr/fr/blog/passeport-talent-guide-complet" />
+	</url>
+</urlset>
