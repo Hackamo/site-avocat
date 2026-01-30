@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/site-avocat": {},
+    "/site-avocat/a-propos": {},
+    "/site-avocat/blog": {},
+    "/site-avocat/contact": {},
+    "/site-avocat/mentions-legales": {},
+    "/site-avocat/politique-confidentialite": {},
+    "/site-avocat/prestations": {}
+  }
+}

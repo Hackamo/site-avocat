@@ -1,0 +1,43 @@
+export default `<!doctype html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Cabinet Martinet - Avocat Droit des Étrangers à Bordeaux</title>
+		<meta name="description" content="Cabinet d'avocat spécialisé en droit des étrangers à Bordeaux. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée."/>
+		<meta name="keywords" content="avocat droit des étrangers, titre de séjour, naturalisation française, OQTF, contentieux étrangers, Bordeaux, cabinet martinet"/>
+		<meta name="author" content="Cabinet Martinet"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="language" content="French, English"/>
+		<!-- Open Graph Tags -->
+		<meta property="og:title" content="Cabinet Martinet - Avocat Droit des Étrangers à Bordeaux"/>
+		<meta property="og:description" content="Cabinet d'avocat spécialisé en droit des étrangers à Bordeaux. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux."/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="https://hackamo.github.io/site-avocat/"/>
+		<meta property="og:image" content="https://hackamo.github.io/site-avocat/assets/debora_about.webp"/>
+		<meta property="og:locale" content="fr_FR"/>
+		<meta property="og:locale:alternate" content="en_US"/>
+		<!-- Twitter Card Tags -->
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:title" content="Cabinet Martinet - Avocat Droit des Étrangers"/>
+		<meta name="twitter:description" content="Cabinet d'avocat spécialisé en droit des étrangers à Bordeaux. Accompagnement juridique pour vos démarches."/>
+		<meta name="twitter:image" content="https://hackamo.github.io/site-avocat/assets/debora_about.webp"/>
+		<!-- Base href and viewport -->
+		<base href="/site-avocat/"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+		<link rel="canonical" href="https://hackamo.github.io/site-avocat/"/>
+		<!-- Language Alternate Links -->
+		<link rel="alternate" hreflang="fr" href="https://hackamo.github.io/site-avocat/"/>
+		<link rel="alternate" hreflang="en" href="https://hackamo.github.io/site-avocat/en/"/>
+		<link rel="alternate" hreflang="x-default" href="https://hackamo.github.io/site-avocat/"/>
+		<!-- Preload critical fonts -->
+		<link rel="preload" href="/assets/fonts/Lato/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin=""/>
+		<link rel="preload" href="/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin=""/>
+		<link rel="preload" href="/assets/fonts/material-icons/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin=""/>
+	<link rel="stylesheet" href="styles-5OVNWNVX.css"></head>
+	<body><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script>
+		<app-root></app-root>
+	<link rel="modulepreload" href="chunk-MLMGL4QO.js"><link rel="modulepreload" href="chunk-PFQGTMYW.js"><link rel="modulepreload" href="chunk-QQGHX6WI.js"><link rel="modulepreload" href="chunk-VZJX4HZ2.js"><link rel="modulepreload" href="chunk-O4SFVIUG.js"><link rel="modulepreload" href="chunk-AF6SQYY4.js"><link rel="modulepreload" href="chunk-T27FJX67.js"><link rel="modulepreload" href="chunk-UEN74SAI.js"><link rel="modulepreload" href="chunk-WGOP6L4K.js"><link rel="modulepreload" href="chunk-ZMH4YJYF.js"><script src="polyfills-HPOAVXFL.js" type="module"></script><script src="main-447OEPZI.js" type="module"></script></body>
+</html>
+`;
