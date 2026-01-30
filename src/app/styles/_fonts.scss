@@ -3,8 +3,8 @@
 	font-family: 'Material Symbols Outlined';
 	font-style: normal;
 	font-weight: 400;
-	font-display: optional;
-	src: url('/assets/fonts/material-icons/material-symbols-outlined.woff2') format('woff2');
+	font-display: swap;
+	src: url('../../assets/fonts/material-icons/material-symbols-outlined.woff2') format('woff2');
 }
 
 .material-icons,
@@ -34,7 +34,7 @@
 // Lato Font Family
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-LightItalic.ttf') format('truetype');
 	font-weight: 300;
 	font-style: italic;
 	font-display: swap;
@@ -50,7 +50,7 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -58,7 +58,7 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-Italic.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-Italic.ttf') format('truetype');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -66,7 +66,7 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -74,7 +74,7 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: url('/assets/fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+	src: url('../../assets/fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
 	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
@@ -83,7 +83,7 @@
 // Playfair Display Font Family
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -91,7 +91,7 @@
 
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -99,7 +99,7 @@
 
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -107,7 +107,7 @@
 
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype');
 	font-weight: 600;
 	font-style: italic;
 	font-display: swap;
@@ -115,7 +115,7 @@
 
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -123,7 +123,7 @@
 
 @font-face {
 	font-family: 'Playfair Display';
-	src: url('/assets/fonts/Playfair_Display/static/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-BoldItalic.ttf') format('truetype');
 	font-weight: 700;
 	font-style: italic;
 	font-display: swap;

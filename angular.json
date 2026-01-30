@@ -39,7 +39,7 @@
 							{
 								"glob": "**/*",
 								"input": "public",
-								"output": "browser"
+								"output": "/"
 							},
 							{
 								"glob": "**/*",
@@ -103,29 +103,6 @@
 							"prerender": true,
 							"localize": false
 						},
-						"o2switch": {
-							"budgets": [
-								{
-									"type": "initial",
-									"maximumWarning": "1.5MB",
-									"maximumError": "2MB"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "8kB",
-									"maximumError": "12kB"
-								}
-							],
-							"outputPath": "dist/o2switch",
-							"baseHref": "/",
-							"optimization": true,
-							"outputHashing": "all",
-							"sourceMap": false,
-							"namedChunks": false,
-							"aot": true,
-							"extractLicenses": true,
-							"localize": false
-						},
 						"development": {
 							"optimization": false,
 							"extractLicenses": false,
@@ -163,9 +140,6 @@
 							"buildTarget": "site-avocat:build:github-pages",
 							"baseHref": "/site-avocat/",
 							"dir": "dist/site-avocat/browser"
-						},
-						"o2switch": {
-							"dir": "dist/o2switch"
 						}
 					},
 					"defaultConfiguration": "github-pages"
