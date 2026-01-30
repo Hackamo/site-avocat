@@ -74,10 +74,55 @@
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
-							"outputMode": "static",
-							"server": true,
-							"ssr": true,
+							"ssr": false,
 							"prerender": true,
+							"localize": false
+						},
+						"github-pages": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "1.5MB",
+									"maximumError": "2MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "8kB",
+									"maximumError": "12kB"
+								}
+							],
+							"outputPath": "dist/site-avocat/browser",
+							"baseHref": "/site-avocat/",
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"prerender": true,
+							"localize": true
+						},
+						"o2switch": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "1.5MB",
+									"maximumError": "2MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "8kB",
+									"maximumError": "12kB"
+								}
+							],
+							"outputPath": "dist/o2switch",
+							"baseHref": "/",
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
 							"localize": false
 						},
 						"development": {
@@ -112,10 +157,16 @@
 				},
 				"deploy": {
 					"builder": "angular-cli-ghpages:deploy",
-					"options": {
-						"baseHref": "/",
-						"dir": "dist/browser"
-					}
+					"configurations": {
+						"github-pages": {
+							"baseHref": "/site-avocat/",
+							"dir": "dist/site-avocat/browser/fr"
+						},
+						"o2switch": {
+							"dir": "dist/o2switch"
+						}
+					},
+					"defaultConfiguration": "github-pages"
 				}
 			}
 		}
