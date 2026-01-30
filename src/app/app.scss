@@ -141,24 +141,38 @@ nav a.active-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: box-shadow 0.5s;
 	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
 	z-index: 1000;
 	width: 60px;
 	height: 60px;
-	padding: 2rem;
 	border: none;
-	border-radius: 100%;
-	box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	font-size: 1.5rem;
-}
+	transition: all 0.3s ease;
+	opacity: 0.9;
 
-.scroll-top-btn:focus {
-	outline: 2px solid #fff;
-	outline-offset: 2px;
-	box-shadow: 0 0 0 4px #005fcc;
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+		opacity: 1;
+	}
+
+	&:active {
+		transform: scale(0.95);
+		opacity: 1;
+	}
+
+	&:focus {
+		outline: 2px solid var(--mat-sys-primary);
+		outline-offset: 2px;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--mat-sys-primary);
+		outline-offset: 2px;
+	}
 }
 
 @media (max-width: 900px) {
@@ -235,6 +249,15 @@ nav a.active-link {
 				font-weight: bold;
 			}
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	.scroll-top-btn {
+		right: 1rem;
+		width: 56px;
+		height: 56px;
+		font-size: 1.2rem;
 	}
 }
 
