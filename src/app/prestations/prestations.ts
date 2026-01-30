@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
 import { ServicesDataService } from '../services/services-data.service'
 import { MetaService } from '../services/meta.service'
+import { MatTooltip } from '@angular/material/tooltip'
 
 @Component({
 	selector: 'app-services',
@@ -23,6 +24,7 @@ import { MetaService } from '../services/meta.service'
 		MatTabsModule,
 		RouterLink,
 		AnimateText,
+		MatTooltip,
 	],
 	templateUrl: './prestations.html',
 	styleUrl: './prestations.scss',

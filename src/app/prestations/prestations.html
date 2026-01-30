@@ -6,13 +6,12 @@
 		<header class="page-header">
 			<h1 class="mat-display-2" i18n="Services page|Page title">Nos Prestations</h1>
 			<p class="mat-headline-5" i18n="Services page|Page subtitle">Expertise complète en droit des étrangers</p>
-			<div class="view-toggle">
+			<div class="view-toggle" [matTooltip]="'Vue en grille'">
 				<mat-slide-toggle
 					[checked]="isGridView()"
 					(change)="isGridView.set($event.checked)"
 					i18n="Services page|View toggle label"
 				>
-					Vue en grille
 				</mat-slide-toggle>
 			</div>
 		</header>

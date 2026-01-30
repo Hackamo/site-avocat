@@ -1,6 +1,5 @@
 .blog-page {
 	padding-bottom: clamp(1rem, 3vw, 2.5rem);
-
 	.back-button {
 		margin-bottom: 1.5rem;
 	}
@@ -12,7 +11,8 @@
 	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 	padding: clamp(1rem, 4vw, 2.5rem);
 	margin: 0 auto clamp(1rem, 3vw, 2.5rem) auto;
-	max-width: 800px;
+	max-width: 1200px;
+	font-size: 1.1rem;
 	::ng-deep h1 {
 		color: var(--mat-button-filled-container-color);
 		margin-top: 2rem;
@@ -22,25 +22,32 @@
 }
 
 .blog-content {
+	text-align: justify;
 	::ng-deep h2 {
 		color: var(--mat-button-filled-container-color);
 		margin-top: 2rem;
 		margin-bottom: 1rem;
-		font-size: 1.5rem;
+		font-size: 1.85rem;
 		font-weight: 600;
+	}
+
+	::ng-deep p,
+	::ng-deep li {
+		line-height: 1.5;
+		margin-bottom: 1rem;
 	}
 }
 
 .mat-display-2 {
 	color: var(--mat-primary-color);
 	margin-bottom: clamp(1rem, 2vw, 1.5rem);
-	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-size: clamp(1.6rem, 4.2vw, 2.7rem);
 }
 
 .mat-headline-5 {
 	color: var(--mat-text-secondary-color);
 	margin-bottom: clamp(0.75rem, 2vw, 1.5rem);
-	font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+	font-size: clamp(1.15rem, 2.7vw, 1.35rem);
 }
 
 .article-meta {
@@ -199,9 +206,8 @@
 }
 
 .similar-articles {
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 clamp(1rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2.5rem);
 }
 
 .similar-title {
@@ -228,7 +234,7 @@
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 	.similar-grid {
 		display: flex;
 		flex-direction: column;
@@ -238,6 +244,9 @@
 }
 
 @media (max-width: 400px) {
+	.container {
+		padding: 0.5rem !important;
+	}
 	.blog-post {
 		padding: 0.5rem 0.5rem;
 		margin: 0 auto 0.5rem auto;

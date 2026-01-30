@@ -64,9 +64,8 @@ export class ChatWidgetComponent implements OnInit {
 		this.addUserMessage(userMessage)
 		this.userInput = ''
 
-		setTimeout(() => {
-			this.isTyping.set(true)
-		}, 300)
+		// Set typing immediately
+		this.isTyping.set(true)
 
 		setTimeout(
 			() => {
@@ -80,10 +79,10 @@ export class ChatWidgetComponent implements OnInit {
 					setTimeout(() => {
 						this.router.navigate([redirectUrl])
 						this.closeChat()
-					}, 2500)
+					}, 2000)
 				}
 			},
-			1000 + Math.random() * 1000,
+			500 + Math.random() * 1000,
 		)
 	}
 

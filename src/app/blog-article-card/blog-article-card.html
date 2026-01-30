@@ -1,16 +1,21 @@
-<a class="blog-card" [routerLink]="['/blog', article.slug]">
-	<mat-card class="blog-article-card">
-		<mat-card-header>
-			<mat-card-title>{{ article.title }}</mat-card-title>
-			@if (readingTimeText()) {
-			<div class="reading-time">
-				<mat-icon>schedule</mat-icon>
-				<span>{{ readingTimeText() }}</span>
-			</div>
-			}
-		</mat-card-header>
-		<mat-card-content>
-			<p>{{ article.summary }}</p>
-		</mat-card-content>
-	</mat-card>
-</a>
+<article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+	<a [routerLink]="['/blog', article.slug]" itemprop="url">
+		<mat-card class="blog-article-card">
+			<mat-card-header>
+				<mat-card-title itemprop="headline">{{ article.title }}</mat-card-title>
+				@if (readingTimeText()) {
+				<div class="reading-time">
+					<mat-icon>schedule</mat-icon>
+					<span>{{ readingTimeText() }}</span>
+				</div>
+				}
+			</mat-card-header>
+			<mat-card-content>
+				<p itemprop="description">{{ article.summary }}</p>
+				@if (article.date) {
+				<meta itemprop="datePublished" [content]="article.date" />
+				}
+			</mat-card-content>
+		</mat-card>
+	</a>
+</article>

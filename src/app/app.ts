@@ -2,20 +2,22 @@ import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common'
 import {
 	ChangeDetectionStrategy,
 	Component,
+	computed,
 	inject,
 	NgZone,
 	OnInit,
 	PLATFORM_ID,
 	signal,
-	computed,
 } from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
-import { MatIconModule } from '@angular/material/icon'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatIconModule } from '@angular/material/icon'
 import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatTooltipModule } from '@angular/material/tooltip'
 import {
+	ChildrenOutletContexts,
 	NavigationEnd,
 	NavigationStart,
 	Router,
@@ -23,12 +25,11 @@ import {
 	RouterLinkActive,
 	RouterModule,
 	RouterOutlet,
-	ChildrenOutletContexts,
 } from '@angular/router'
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
+import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
 import { CONTACT_CONFIG } from './config/contact.config'
 import { routeAnimations } from './route-animations'
-import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
-import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 
 @Component({
 	selector: 'app-root',
@@ -43,6 +44,7 @@ import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 		MatIconModule,
 		MatFormFieldModule,
 		MatSelectModule,
+		MatTooltipModule,
 		CommonModule,
 		SkeletonLoaderComponent,
 		ChatWidgetComponent,
@@ -111,6 +113,12 @@ export class App implements OnInit {
 
 	private updateLanguageFromUrl(): void {
 		if (!this.isBrowser) return
+		const hostname = window.location.hostname
+		const currentPort = window.location.port
+		if (hostname === 'localhost' && (currentPort === '4200' || currentPort === '4201')) {
+			this.currentLanguage.set(currentPort === '4201' ? 'en' : 'fr')
+			return
+		}
 		const path = window.location.pathname
 		const lang = path.startsWith('/en') ? 'en' : 'fr'
 		this.currentLanguage.set(lang)
@@ -171,6 +179,17 @@ export class App implements OnInit {
 		localStorage.setItem('theme', isDark ? 'dark' : 'light')
 	}
 
+	resetPreferences(): void {
+		if (!this.isBrowser) return
+		const defaultTheme = 'red'
+		this.darkMode.set(false)
+		this.colorTheme.set(defaultTheme)
+		this.applyTheme(false)
+		this.applyColorTheme(defaultTheme)
+		localStorage.removeItem('theme')
+		localStorage.removeItem('colorTheme')
+	}
+
 	getLoadingMessage(): string {
 		return this.loadingMessage()
 	}
@@ -222,19 +241,30 @@ export class App implements OnInit {
 		const hash = window.location.hash
 
 		// Construct new URL based on locale
-		// For production builds with separate locale folders: /fr/ or /en/
 		let newUrl: string
 
-		// Remove current locale prefix if it exists
-		let pathWithoutLocale = currentPath
-		if (currentPath.startsWith('/fr/') || currentPath.startsWith('/fr')) {
-			pathWithoutLocale = currentPath.replace(/^\/fr\/?/, '/')
-		} else if (currentPath.startsWith('/en/') || currentPath.startsWith('/en')) {
-			pathWithoutLocale = currentPath.replace(/^\/en\/?/, '/')
-		}
+		// In development mode (localhost with ports 4200 or 4201), redirect to specific ports
+		const hostname = window.location.hostname
+		const currentPort = window.location.port
+		const isDevelopment = hostname === 'localhost' && (currentPort === '4200' || currentPort === '4201')
 
-		// Add new locale prefix
-		newUrl = `/${language}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}${search}${hash}`
+		if (isDevelopment) {
+			// Development: redirect to the appropriate port
+			const port = language === 'fr' ? '4200' : '4201'
+			newUrl = `http://localhost:${port}${currentPath}${search}${hash}`
+		} else {
+			// For production builds with separate locale folders: /fr/ or /en/
+			// Remove current locale prefix if it exists
+			let pathWithoutLocale = currentPath
+			if (currentPath.startsWith('/fr/') || currentPath.startsWith('/fr')) {
+				pathWithoutLocale = currentPath.replace(/^\/fr\/?/, '/')
+			} else if (currentPath.startsWith('/en/') || currentPath.startsWith('/en')) {
+				pathWithoutLocale = currentPath.replace(/^\/en\/?/, '/')
+			}
+
+			// Add new locale prefix
+			newUrl = `/${language}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}${search}${hash}`
+		}
 
 		// Reload to switch locale
 		window.location.href = newUrl

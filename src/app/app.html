@@ -32,10 +32,25 @@
 				(click)="toggleDarkMode()"
 				[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
 				class="theme-toggle"
+				[matTooltip]="darkMode() ? 'Mode clair' : 'Mode sombre'"
 			>
 				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
 			</button>
-			<mat-form-field appearance="outline">
+			<button
+				mat-icon-button
+				(click)="resetPreferences()"
+				aria-label="Réinitialiser les préférences"
+				class="reset-preferences"
+				[matTooltip]="'Réinitialiser les préférences'"
+				i18n-aria-label="Navigation|Reset preferences button"
+			>
+				<mat-icon>restart_alt</mat-icon>
+			</button>
+			<mat-form-field
+				appearance="outline"
+				[matTooltip]="'Choisir la langue'"
+				aria-label="Select language tooltip"
+			>
 				<mat-label i18n="Navigation|Language selector label">Langue</mat-label>
 				<mat-select
 					[value]="currentLanguage()"
@@ -67,6 +82,8 @@
 		class="scroll-top-btn"
 		i18n-aria-label="Scroll to top button|Aria label"
 		aria-label="Revenir en haut de la page"
+		matTooltip="Revenir en haut"
+		i18n-matTooltip="Scroll to top button|Tooltip"
 		(click)="scrollToTop()"
 	>
 		<mat-icon>north</mat-icon>
@@ -81,6 +98,7 @@
 				<mat-select
 					[value]="colorTheme()"
 					(selectionChange)="onThemeSelect($event.value)"
+					[matTooltip]="'Choisir le thème'"
 					i18n-aria-label="Footer|Theme selector aria label"
 					aria-label="Choisir le thème"
 				>
@@ -95,7 +113,12 @@
 					<mat-option value="rose" i18n="Theme colors|Rose">Rose</mat-option>
 				</mat-select>
 			</mat-form-field>
-			<mat-form-field appearance="outline" class="footer-language-select">
+			<mat-form-field
+				appearance="outline"
+				class="footer-language-select"
+				[matTooltip]="'Choisir la langue'"
+				aria-label="Select language tooltip"
+			>
 				<mat-label i18n="Footer|Language selector label">Langue</mat-label>
 				<mat-select
 					[value]="currentLanguage()"
@@ -111,9 +134,22 @@
 			mat-icon-button
 			(click)="toggleDarkMode()"
 			[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
+			[matTooltip]="darkMode() ? 'Mode clair' : 'Mode sombre'"
 			class="theme-toggle theme-switch"
+			i18n-matTooltip="Navigation|Theme toggle tooltip"
 		>
 			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+		</button>
+		<button
+			mat-icon-button
+			(click)="resetPreferences()"
+			aria-label="Réinitialiser les préférences"
+			[matTooltip]="'Réinitialiser les préférences'"
+			class="reset-preferences theme-switch"
+			i18n-aria-label="Footer|Reset preferences button"
+			i18n-matTooltip="Footer|Reset preferences tooltip"
+		>
+			<mat-icon>restart_alt</mat-icon>
 		</button>
 		<p i18n="Footer|Copyright notice">
 			© 2026 {{ config.businessNameShort }} - {{ config.lawyer.specialties[0] }}.

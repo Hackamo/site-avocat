@@ -72,8 +72,6 @@ nav a.active-link {
 
 .language-switch {
 	display: flex;
-	gap: 0.5rem;
-	margin-left: 1rem;
 	border-left: 1px solid rgba(255, 255, 255, 0.2);
 	padding-left: 1rem;
 	align-items: center;
@@ -112,7 +110,7 @@ nav a.active-link {
 	flex: 1 1 auto;
 }
 
-.theme-switch {
+.app-footer .theme-switch {
 	display: none;
 }
 
@@ -124,6 +122,18 @@ nav a.active-link {
 	justify-content: center !important;
 	&:hover {
 		transform: rotate(180deg);
+	}
+}
+
+.reset-preferences {
+	margin-right: 1rem;
+	vertical-align: middle !important;
+	align-items: center !important;
+	justify-content: center !important;
+	transition: transform 0.2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.08);
 	}
 }
 
@@ -176,6 +186,9 @@ nav a.active-link {
 }
 
 @media (max-width: 900px) {
+	.app-footer .theme-switch {
+		display: inline-flex;
+	}
 	.app-toolbar {
 		flex-direction: column;
 		height: auto;

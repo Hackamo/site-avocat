@@ -107,7 +107,7 @@
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
-							"localize": false
+							"localize": true
 						},
 						"en": {
 							"localize": ["en"]
@@ -123,6 +123,14 @@
 						},
 						"development": {
 							"buildTarget": "site-avocat:build:development"
+						},
+						"development-fr": {
+							"buildTarget": "site-avocat:build:development-fr",
+							"port": 4200
+						},
+						"development-en": {
+							"buildTarget": "site-avocat:build:development-en",
+							"port": 4201
 						},
 						"en": {
 							"buildTarget": "site-avocat:build:en"
