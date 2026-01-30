@@ -21,17 +21,20 @@
 			@if (!imageLoaded()) {
 			<div class="image-skeleton"></div>
 			}
-			<img
-				class="hero-image"
-				ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
-				priority
-				width="400"
-				height="600"
-				i18n-alt="Home page|Hero image alt text"
-				alt="Image représentant une balance de justice"
-				(load)="onImageLoad()"
-				[class.loaded]="imageLoaded()"
-			/>
+			<picture>
+				<source srcset="assets/pexels-ekaterina-bolovtsova-6077099.webp" type="image/webp" />
+				<img
+					class="hero-image"
+					ngSrc="assets/pexels-ekaterina-bolovtsova-6077099.jpg"
+					priority
+					width="400"
+					height="600"
+					alt="Image représentant une balance de justice"
+					i18n-alt="Home page|Hero image alt text"
+					(load)="onImageLoad()"
+					[class.loaded]="imageLoaded()"
+				/>
+			</picture>
 		</div>
 	</header>
 

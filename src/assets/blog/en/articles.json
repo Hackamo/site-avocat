@@ -5,7 +5,11 @@
 		"summary": "December 2025 was particularly fruitful for Martinet Law Firm. Discover our 9 victories in foreign nationals law and criminal law in Bordeaux.",
 		"category": "News",
 		"date": "2026-01-06",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "legal-victories-december-2025.md",
 		"similarSlugs": [
 			"oqtf-5-erreurs-eviter-contester-bordeaux",
@@ -19,7 +23,11 @@
 		"summary": "Expert advice for effectively contesting an obligation to leave France (OQTF).",
 		"category": "Advice",
 		"date": "2026-01-05",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "oqtf-5-mistakes-to-avoid.md",
 		"similarSlugs": [
 			"refus-titre-sejour-que-faire",
@@ -33,7 +41,11 @@
 		"summary": "The complete guide to avoid mistakes in your residence permit procedures.",
 		"category": "Guides",
 		"date": "2026-01-04",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "regularization-renewal-status-change.md",
 		"similarSlugs": [
 			"titre-sejour-etudiant-changement-salarie",
@@ -47,7 +59,11 @@
 		"summary": "Understanding pitfalls to avoid when applying for naturalization.",
 		"category": "News",
 		"date": "2026-01-03",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "naturalization-denied-administrative-error.md",
 		"similarSlugs": [
 			"carte-resident-10-ans-criteres-2026",
@@ -61,7 +77,11 @@
 		"summary": "Everything you need to know about obtaining a resident card in 2026.",
 		"category": "Guides",
 		"date": "2026-01-28",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "10-year-resident-card-criteria-2026.md",
 		"similarSlugs": [
 			"conjoint-francais-droits-sejour",
@@ -75,7 +95,11 @@
 		"summary": "How to successfully transition from student status to employee status in France.",
 		"category": "Guides",
 		"date": "2026-01-27",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "student-to-employee-residence-permit.md",
 		"similarSlugs": [
 			"passeport-talent-guide-complet",
@@ -89,7 +113,11 @@
 		"summary": "How to effectively invoke Article 8 of the ECHR to defend your right to stay.",
 		"category": "Advice",
 		"date": "2026-01-26",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "private-family-life-article-8-echr.md",
 		"similarSlugs": [
 			"refus-titre-sejour-que-faire",
@@ -103,7 +131,11 @@
 		"summary": "Complete guide to gracious and contentious recourse after a residence permit refusal.",
 		"category": "Guides",
 		"date": "2026-01-25",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "residence-permit-refusal-what-to-do.md",
 		"similarSlugs": [
 			"oqtf-5-erreurs-eviter-contester-bordeaux",
@@ -117,7 +149,11 @@
 		"summary": "All conditions and procedures to bring your family to France.",
 		"category": "Guides",
 		"date": "2026-01-24",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "family-reunification-complete-guide-2026.md",
 		"similarSlugs": [
 			"conjoint-francais-droits-sejour",
@@ -131,7 +167,11 @@
 		"summary": "Practical guide to defending your rights in an administrative detention center.",
 		"category": "Advice",
 		"date": "2026-01-23",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "administrative-detention-rights-recourse.md",
 		"similarSlugs": [
 			"assignation-residence-droits-obligations",
@@ -145,7 +185,11 @@
 		"summary": "Marriage, civil partnership or cohabitation: what are your rights as spouse of a French national?",
 		"category": "Guides",
 		"date": "2026-01-22",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "french-spouse-residence-rights.md",
 		"similarSlugs": [
 			"regroupement-familial-guide-complet-2026",
@@ -159,7 +203,11 @@
 		"summary": "Procedures, conditions and residence permits to create your business in France.",
 		"category": "Guides",
 		"date": "2026-01-21",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "starting-business-france-foreigner.md",
 		"similarSlugs": [
 			"passeport-talent-guide-complet",
@@ -173,7 +221,11 @@
 		"summary": "Rights, obligations and recourse in case of administrative house arrest.",
 		"category": "Advice",
 		"date": "2026-01-20",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "residence-assignment-rights-obligations.md",
 		"similarSlugs": [
 			"retention-administrative-droits-recours",
@@ -187,7 +239,11 @@
 		"summary": "Everything you need to know about the multi-year 'talent passport' residence card in 2026.",
 		"category": "Guides",
 		"date": "2026-01-19",
-		"author": "Master Martinet",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Attorney specializing in immigration law",
+			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
+		},
 		"markdownFile": "talent-passport-complete-guide.md",
 		"similarSlugs": [
 			"creer-entreprise-france-etranger",

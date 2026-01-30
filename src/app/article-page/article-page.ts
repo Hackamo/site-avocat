@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { BlogDataService } from '../services/blog-data.service'
+import { ReadingTimeService } from '../services/reading-time.service'
 import { BlogArticle } from '../models/blog-article.model'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
 import { AnimateText } from '../directives/animate-text.directive'
@@ -23,6 +24,7 @@ export class ArticlePage {
 	private readonly route = inject(ActivatedRoute)
 	private readonly location = inject(Location)
 	private readonly metaService = inject(MetaService)
+	private readonly readingTimeService = inject(ReadingTimeService)
 	private readonly slug = toSignal(this.route.paramMap.pipe(map((params) => params.get('slug'))), {
 		initialValue: this.route.snapshot.paramMap.get('slug'),
 	})
@@ -72,5 +74,9 @@ export class ArticlePage {
 
 	goBack() {
 		this.location.back()
+	}
+
+	getReadingTimeText(minutes: number): string {
+		return this.readingTimeService.formatReadingTime(minutes)
 	}
 }

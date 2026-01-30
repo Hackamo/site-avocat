@@ -1,7 +1,15 @@
 import { Injectable, signal, inject, PLATFORM_ID, LOCALE_ID } from '@angular/core'
 import { isPlatformBrowser, DOCUMENT } from '@angular/common'
-import { BlogArticle } from '../models/blog-article.model'
+import { BlogArticle, AuthorBio } from '../models/blog-article.model'
+import { ReadingTimeService } from './reading-time.service'
 import { marked } from 'marked'
+
+interface AuthorMetadata {
+	name: string
+	title: string
+	bio: string
+	image?: string
+}
 
 interface ArticleMetadata {
 	slug: string
@@ -9,7 +17,7 @@ interface ArticleMetadata {
 	summary: string
 	category: string
 	date: string
-	author?: string
+	author?: AuthorMetadata
 	markdownFile: string
 	similarSlugs: string[]
 }
@@ -19,6 +27,7 @@ export class BlogDataService {
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly locale = inject(LOCALE_ID)
 	private readonly document = inject(DOCUMENT)
+	private readonly readingTimeService = inject(ReadingTimeService)
 	private readonly _articles = signal<BlogArticle[]>([])
 	private readonly _loading = signal(false)
 	private loadingPromise: Promise<void> | null = null
@@ -65,15 +74,15 @@ export class BlogDataService {
 			// Construct language-specific path
 			const languagePath = lang === 'fr' ? 'fr' : 'en'
 
-			// Get base URL for assets
-			const baseUrl = window.location.origin
+			// Use relative path to respect locale base href
+			const basePath = '/assets/blog'
 
 			// Create an abort controller with timeout
 			const controller = new AbortController()
 			const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
 
 			try {
-				const metadataResponse = await fetch(`${baseUrl}/assets/blog/${languagePath}/articles.json`, {
+				const metadataResponse = await fetch(`${basePath}/${languagePath}/articles.json`, {
 					signal: controller.signal,
 				})
 				clearTimeout(timeoutId)
@@ -89,12 +98,9 @@ export class BlogDataService {
 						const articleTimeoutId = setTimeout(() => articleController.abort(), 5000) // 5 second timeout per article
 
 						try {
-							const response = await fetch(
-								`${baseUrl}/assets/blog/${languagePath}/${meta.markdownFile}`,
-								{
-									signal: articleController.signal,
-								},
-							)
+							const response = await fetch(`${basePath}/${languagePath}/${meta.markdownFile}`, {
+								signal: articleController.signal,
+							})
 							clearTimeout(articleTimeoutId)
 
 							if (!response.ok) {
@@ -102,6 +108,7 @@ export class BlogDataService {
 							}
 							const markdown = await response.text()
 							const content = await marked(markdown)
+							const readingTime = this.readingTimeService.calculateReadingTime(content)
 
 							return {
 								slug: meta.slug,
@@ -111,6 +118,8 @@ export class BlogDataService {
 								category: meta.category,
 								date: meta.date,
 								similarSlugs: meta.similarSlugs,
+								readingTime,
+								author: meta.author,
 							}
 						} catch (error) {
 							clearTimeout(articleTimeoutId)
@@ -124,6 +133,8 @@ export class BlogDataService {
 								category: meta.category,
 								date: meta.date,
 								similarSlugs: meta.similarSlugs,
+								readingTime: 0,
+								author: meta.author,
 							}
 						}
 					}),

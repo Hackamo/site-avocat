@@ -13,16 +13,22 @@
 				@if (!imageLoaded()) {
 				<div class="image-skeleton"></div>
 				}
-				<img
-					[ngSrc]="darkMode() ? 'assets/debora_about.JPG' : 'assets/debora_about.JPG'"
-					priority
-					width="400"
-					height="600"
-					alt="Image du Maître Martinet"
-					i18n-alt="About page|Profile image"
-					(load)="onImageLoad()"
-					[class.loaded]="imageLoaded()"
-				/>
+				<picture>
+					<source
+						[srcset]="darkMode() ? 'assets/debora_about.webp' : 'assets/debora_about.webp'"
+						type="image/webp"
+					/>
+					<img
+						[ngSrc]="darkMode() ? 'assets/debora_about.JPG' : 'assets/debora_about.JPG'"
+						priority
+						width="400"
+						height="600"
+						alt="Image du Maître Martinet"
+						i18n-alt="About page|Profile image"
+						(load)="onImageLoad()"
+						[class.loaded]="imageLoaded()"
+					/>
+				</picture>
 			</div>
 		</div>
 	</header>

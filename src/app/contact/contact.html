@@ -180,28 +180,79 @@
 					<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-fields">
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
 							<mat-label i18n="Contact page|Name label">Nom complet</mat-label>
-							<input matInput formControlName="name" required />
-							@if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-							<mat-error i18n="Contact page|Name error">Le nom est requis</mat-error>
+							<input
+								matInput
+								formControlName="name"
+								required
+								aria-label="Nom complet - Champ obligatoire"
+								aria-required="true"
+								minlength="2"
+								maxlength="100"
+							/>
+							@if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) { @if
+							(contactForm.get('name')?.errors?.['required']) {
+							<mat-error i18n="Contact page|Name error required">Le nom est requis</mat-error>
+							} @if (contactForm.get('name')?.errors?.['minlength']) {
+							<mat-error i18n="Contact page|Name error minlength"
+								>Le nom doit contenir au moins 2 caractères</mat-error
+							>
+							} @if (contactForm.get('name')?.errors?.['maxlength']) {
+							<mat-error i18n="Contact page|Name error maxlength"
+								>Le nom ne peut pas dépasser 100 caractères</mat-error
+							>
+							} } @if (contactForm.get('name')?.valid && contactForm.get('name')?.touched) {
+							<mat-hint class="success-hint" i18n="Contact page|Name success">✓ Nom valide</mat-hint>
 							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
 							<mat-label i18n="Contact page|Email label">Email</mat-label>
-							<input matInput type="email" formControlName="email" required />
-							@if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-							<mat-error i18n="Contact page|Email error">Email valide requis</mat-error>
+							<input
+								matInput
+								type="email"
+								formControlName="email"
+								required
+								aria-label="Adresse email - Champ obligatoire"
+								aria-required="true"
+							/>
+							@if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) { @if
+							(contactForm.get('email')?.errors?.['required']) {
+							<mat-error i18n="Contact page|Email error required">L'email est requis</mat-error>
+							} @if (contactForm.get('email')?.errors?.['email']) {
+							<mat-error i18n="Contact page|Email error format"
+								>Veuillez entrer un email valide</mat-error
+							>
+							} } @if (contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
+							<mat-hint class="success-hint" i18n="Contact page|Email success">✓ Email valide</mat-hint>
 							}
+							<mat-hint i18n="Contact page|Email hint">Exemple: contact@example.com</mat-hint>
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
 							<mat-label i18n="Contact page|Phone label">Téléphone</mat-label>
-							<input matInput formControlName="phone" />
+							<input
+								matInput
+								formControlName="phone"
+								aria-label="Numéro de téléphone - Champ facultatif"
+								placeholder="+33 X XX XX XX XX"
+								i18n-placeholder="Contact page|Phone placeholder"
+							/>
+							@if (contactForm.get('phone')?.valid && contactForm.get('phone')?.touched &&
+							contactForm.get('phone')?.value) {
+							<mat-hint class="success-hint" i18n="Contact page|Phone success"
+								>✓ Téléphone reconnu</mat-hint
+							>
+							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
 							<mat-label i18n="Contact page|Subject label">Sujet</mat-label>
-							<mat-select formControlName="subject" required>
+							<mat-select
+								formControlName="subject"
+								required
+								aria-label="Sujet du message - Champ obligatoire"
+								aria-required="true"
+							>
 								<mat-option value="consultation" i18n="Contact page|Consultation option"
 									>Demande de consultation</mat-option
 								>
@@ -215,6 +266,10 @@
 							</mat-select>
 							@if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
 							<mat-error i18n="Contact page|Subject error">Veuillez sélectionner un sujet</mat-error>
+							} @if (contactForm.get('subject')?.valid && contactForm.get('subject')?.touched) {
+							<mat-hint class="success-hint" i18n="Contact page|Subject success"
+								>✓ Sujet sélectionné</mat-hint
+							>
 							}
 						</mat-form-field>
 
@@ -231,10 +286,14 @@
 								rows="7"
 								maxlength="1000"
 								required
+								minlength="20"
 								spellcheck="true"
 								class="message-textarea"
 								placeholder="Décrivez votre situation juridique, votre demande (titre de séjour, naturalisation, etc.) et vos besoins..."
 								i18n-placeholder="Contact page|Message placeholder"
+								aria-label="Message du formulaire de contact - Champ obligatoire (1000 caractères maximum)"
+								aria-required="true"
+								aria-describedby="message-hint message-count"
 							></textarea>
 							@if (speechSupported()) {
 							<button
@@ -244,24 +303,52 @@
 								[class.listening]="isListening()"
 								(click)="startVoiceInput()"
 								matSuffix
+								i18n-title="Contact page|Voice input button"
+								title="Utiliser la reconnaissance vocale"
 							>
 								<mat-icon>{{ isListening() ? 'mic' : 'mic_none' }}</mat-icon>
 							</button>
-							} @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-							<mat-error>Le message est requis</mat-error>
+							} @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) { @if
+							(contactForm.get('message')?.errors?.['required']) {
+							<mat-error i18n="Contact page|Message error required">Le message est requis</mat-error>
+							} @if (contactForm.get('message')?.errors?.['minlength']) {
+							<mat-error i18n="Contact page|Message error minlength"
+								>Le message doit contenir au moins 20 caractères</mat-error
+							>
+							} } @if (contactForm.get('message')?.valid && contactForm.get('message')?.touched) {
+							<mat-hint class="success-hint" i18n="Contact page|Message success"
+								>✓ Message complet</mat-hint
+							>
 							}
 							<mat-hint
-								>{{ contactForm.get('message')?.value?.length || 0 }}/1000
-								<span i18n="Contact page|Character count">caractères</span></mat-hint
+								id="message-count"
+								[class.warning]="(contactForm.get('message')?.value?.length || 0) > 900"
 							>
+								{{ contactForm.get('message')?.value?.length || 0 }}/1000
+								<span i18n="Contact page|Character count">caractères</span>
+								@if ((contactForm.get('message')?.value?.length || 0) > 900) {
+								<span class="warning-text" i18n="Contact page|Character limit warning">
+									- Approche de la limite</span
+								>
+								}
+							</mat-hint>
 						</mat-form-field>
-						<mat-hint i18n="Contact page|Message hint"
-							>Soyez précis pour nous aider à mieux comprendre votre situation</mat-hint
-						>
+						<mat-hint id="message-hint" i18n="Contact page|Message hint">
+							Soyez précis pour nous aider à mieux comprendre votre situation
+						</mat-hint>
 
 						<div class="form-actions">
-							<button matFab extended type="submit" [disabled]="contactForm.invalid || isSubmitting()">
-								<mat-icon>send</mat-icon>
+							<button
+								matFab
+								extended
+								type="submit"
+								[disabled]="contactForm.invalid || isSubmitting()"
+								[attr.aria-busy]="isSubmitting()"
+								[attr.aria-label]="isSubmitting()
+									? 'Message en cours d\'envoi'
+									: 'Envoyer le message du formulaire de contact'"
+							>
+								<mat-icon>{{ isSubmitting() ? 'hourglass_empty' : 'send' }}</mat-icon>
 								@if (!isSubmitting()) {
 								<span i18n="Contact page|Submit button">Envoyer le message</span>
 								} @else {

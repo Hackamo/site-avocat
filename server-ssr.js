@@ -9,6 +9,20 @@ const browserDistFolder = resolve(serverDistFolder, 'browser')
 const app = express()
 const PORT = process.env.PORT || 4000
 
+// Security headers middleware
+app.use((req, res, next) => {
+	res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+	res.setHeader('X-Content-Type-Options', 'nosniff')
+	res.setHeader('X-XSS-Protection', '1; mode=block')
+	res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
+	res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
+	res.setHeader(
+		'Content-Security-Policy',
+		"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests",
+	)
+	next()
+})
+
 // Create separate Angular engines for each locale
 const frAngularApp = new AngularNodeAppEngine()
 const enAngularApp = new AngularNodeAppEngine()

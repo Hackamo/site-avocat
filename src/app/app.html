@@ -1,4 +1,7 @@
 <div class="app-container">
+	<!-- Skip-to-content link for keyboard users -->
+	<a href="#main-content" class="skip-link" i18n="Accessibility|Skip to main content"> Aller au contenu principal </a>
+
 	<!-- Navigation -->
 	<mat-toolbar class="app-toolbar">
 		<span routerLink="/" routerLinkActive="active-link" class="logo">{{ config.businessNameShort }}</span>
@@ -46,10 +49,17 @@
 		</div>
 	</mat-toolbar>
 
+	<!-- ARIA live region for page loading announcements -->
+	<div class="sr-only" aria-live="polite" aria-atomic="true" role="status">{{ getLoadingMessage() }}</div>
+
 	<!-- Main Content -->
-	<div class="content-wrapper">
+	<main id="main-content" class="content-wrapper" [@routeAnimations]="getRouteAnimationData()">
+		@if (isLoading()) {
+		<app-skeleton-loader></app-skeleton-loader>
+		} @else {
 		<router-outlet></router-outlet>
-	</div>
+		}
+	</main>
 
 	@if (scrolledDown()) {
 	<button
@@ -126,4 +136,9 @@
 			>
 		</div>
 	</footer>
+
+	<!-- Chat Widget (French only) -->
+	@if (currentLanguage() === 'fr') {
+	<app-chat-widget></app-chat-widget>
+	}
 </div>

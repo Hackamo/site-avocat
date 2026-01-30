@@ -5,7 +5,7 @@ body.dark-theme {
 	@include mat.all-component-colors(themes.$avocat-dark-theme);
 	background: #1a1a1a;
 	color: #e8e8e8;
-
+	--mat-sys-primary: #1a1a1a;
 	--mat-card-background: #404040;
 	--mat-sys-surface: #1a1a1a;
 	--mat-sys-surface-container: #1e1919;

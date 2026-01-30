@@ -1,42 +1,34 @@
 import { Routes } from '@angular/router'
-import { Home } from './home/home'
-import { Services } from './prestations/prestations'
-import { About } from './about/about'
-import { Contact } from './contact/contact'
-import { Blog } from './blog/blog'
-import { BlogArticleCard } from './blog-article-card/blog-article-card'
-import { LegalComponent } from './legal/legal'
-import { PrivacyComponent } from './privacy/privacy'
 
 export const routes: Routes = [
 	{
 		path: '',
-		component: Home,
+		loadComponent: () => import('./home/home').then((m) => m.Home),
 		title: 'Accueil',
 	},
 	{
 		path: 'prestations',
-		component: Services,
+		loadComponent: () => import('./prestations/prestations').then((m) => m.Services),
 		title: 'Nos Prestations',
 	},
 	{
 		path: 'a-propos',
-		component: About,
+		loadComponent: () => import('./about/about').then((m) => m.About),
 		title: 'À Propos',
 	},
 	{
 		path: 'contact',
-		component: Contact,
+		loadComponent: () => import('./contact/contact').then((m) => m.Contact),
 		title: 'Contact',
 	},
 	{
 		path: 'mentions-legales',
-		component: LegalComponent,
+		loadComponent: () => import('./legal/legal').then((m) => m.LegalComponent),
 		title: 'Mentions Légales',
 	},
 	{
 		path: 'politique-confidentialite',
-		component: PrivacyComponent,
+		loadComponent: () => import('./privacy/privacy').then((m) => m.PrivacyComponent),
 		title: 'Politique de Confidentialité',
 	},
 	{
@@ -44,7 +36,7 @@ export const routes: Routes = [
 		children: [
 			{
 				path: '',
-				component: Blog,
+				loadComponent: () => import('./blog/blog').then((m) => m.Blog),
 				title: 'Blog',
 			},
 			{
@@ -56,7 +48,7 @@ export const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: '',
-		pathMatch: 'full',
+		loadComponent: () => import('./not-found/not-found').then((m) => m.NotFoundComponent),
+		title: 'Page non trouvée',
 	},
 ]

@@ -58,27 +58,12 @@
 .service-category-card {
 	display: flex;
 	flex-direction: column;
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	cursor: pointer;
-	transition-duration: 400ms !important;
+	transition: transform 0.2s ease;
+	cursor: normal;
+	transition-duration: 200ms !important;
 	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-		transition-duration: 400ms !important;
-	}
-
-	&.zoomed {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) scale(1.2);
-		transition-duration: 400ms !important;
-		z-index: 1000;
-		max-width: 800px;
-		width: 90vw;
-		max-height: 85vh;
-		overflow-y: auto;
-		box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+		transform: scale(1.02);
+		transition-duration: 200ms !important;
 	}
 
 	.mat-card-header .mat-icon {
@@ -182,16 +167,6 @@
 
 		&:hover {
 			transform: none;
-			box-shadow: none;
-		}
-
-		&.zoomed {
-			position: static;
-			transform: none;
-			z-index: auto;
-			max-width: none;
-			width: 100%;
-			max-height: none;
 			box-shadow: none;
 		}
 	}

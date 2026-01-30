@@ -37,7 +37,7 @@
 .theme-blue {
 	@include mat.all-component-themes(themes.$avocat-blue-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #f5f9ff !important;
+	--mat-sys-primary: #f5f9ff;
 	--mat-card-elevated-container-color: var(--mat-sys-primary) !important;
 	--mat-card-container-color: #fafcff !important;
 	--mat-divider-color: #d0e4ff !important;
@@ -63,7 +63,7 @@
 .theme-green {
 	@include mat.all-component-themes(themes.$avocat-green-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #e8fef5 !important;
+	--mat-sys-primary: #e8fef5;
 	--mat-card-elevated-container-color: #e8fef5 !important;
 	--mat-card-container-color: #f4fffb !important;
 	--mat-divider-color: #a0f5da !important;
@@ -88,7 +88,7 @@
 .theme-yellow {
 	@include mat.all-component-themes(themes.$avocat-yellow-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #fffae5 !important;
+	--mat-sys-primary: #fffae5;
 	--mat-card-elevated-container-color: #fffae5 !important;
 	--mat-card-container-color: #fffbff !important;
 	--mat-divider-color: #ffe77f !important;
@@ -113,7 +113,7 @@
 .theme-magenta {
 	@include mat.all-component-themes(themes.$avocat-magenta-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #ffebf5 !important;
+	--mat-sys-primary: #ffebf5;
 	--mat-card-elevated-container-color: #ffebf5 !important;
 	--mat-card-container-color: #fff7fb !important;
 	--mat-divider-color: #ffb3dd !important;
@@ -138,7 +138,7 @@
 .theme-orange {
 	@include mat.all-component-themes(themes.$avocat-orange-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #fff0db !important;
+	--mat-sys-primary: #fff0db;
 	--mat-card-elevated-container-color: #fff0db !important;
 	--mat-card-container-color: #fffbf5 !important;
 	--mat-divider-color: #ffc97a !important;
@@ -163,7 +163,7 @@
 .theme-azure {
 	@include mat.all-component-themes(themes.$avocat-azure-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #e7f0ff !important;
+	--mat-sys-primary: #e7f0ff;
 	--mat-card-elevated-container-color: #e7f0ff !important;
 	--mat-card-container-color: #fbfdff !important;
 	--mat-divider-color: #9ab4ff !important;
@@ -188,7 +188,7 @@
 .theme-violet {
 	@include mat.all-component-themes(themes.$avocat-violet-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #faf0ff !important;
+	--mat-sys-primary: #faf0ff;
 	--mat-card-elevated-container-color: #faf0ff !important;
 	--mat-card-container-color: #fef7ff !important;
 	--mat-divider-color: #e8c9ff !important;
@@ -213,7 +213,7 @@
 .theme-rose {
 	@include mat.all-component-themes(themes.$avocat-rose-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #fff7f9 !important;
+	--mat-sys-primary: #fff7f9;
 	--mat-card-elevated-container-color: #fff7f9 !important;
 	--mat-card-container-color: #fffbfd !important;
 	--mat-divider-color: #ffd9e3 !important;
@@ -238,7 +238,7 @@
 .theme-red {
 	@include mat.all-component-themes(themes.$avocat-red-theme);
 	@include theme-component-base;
-	--mat-sys-primary: #ffe6e6 !important;
+	--mat-sys-primary: #ffe6e6;
 	--mat-card-elevated-container-color: #ffe6e6 !important;
 	--mat-card-container-color: #fff5f5 !important;
 	--mat-divider-color: #ffb3b3 !important;

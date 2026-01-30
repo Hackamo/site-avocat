@@ -8,6 +8,20 @@ const serverDistFolder = dirname(fileURLToPath(import.meta.url))
 const app = express()
 const PORT = process.env.PORT || 4000
 
+// Security headers middleware
+app.use((req, res, next) => {
+	res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+	res.setHeader('X-Content-Type-Options', 'nosniff')
+	res.setHeader('X-XSS-Protection', '1; mode=block')
+	res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
+	res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
+	res.setHeader(
+		'Content-Security-Policy',
+		"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests",
+	)
+	next()
+})
+
 // Detect locale from URL path or use default (French)
 const getLocale = (url) => {
 	if (url.startsWith('/en')) return 'en'

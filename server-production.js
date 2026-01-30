@@ -8,6 +8,20 @@ const browserDistFolder = resolve(serverDistFolder, 'browser')
 const app = express()
 const PORT = process.env.PORT || 3000
 
+// Security headers middleware
+app.use((req, res, next) => {
+	res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+	res.setHeader('X-Content-Type-Options', 'nosniff')
+	res.setHeader('X-XSS-Protection', '1; mode=block')
+	res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
+	res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()')
+	res.setHeader(
+		'Content-Security-Policy',
+		"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; upgrade-insecure-requests",
+	)
+	next()
+})
+
 // Import locale-specific server bundles
 const frServer = await import('./server/fr/server.mjs')
 const enServer = await import('./server/en/server.mjs')

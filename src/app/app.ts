@@ -1,13 +1,34 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common'
-import { ChangeDetectionStrategy, Component, inject, NgZone, OnInit, PLATFORM_ID, signal } from '@angular/core'
+import {
+	ChangeDetectionStrategy,
+	Component,
+	inject,
+	NgZone,
+	OnInit,
+	PLATFORM_ID,
+	signal,
+	computed,
+} from '@angular/core'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
 import { MatToolbarModule } from '@angular/material/toolbar'
-import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router'
+import {
+	NavigationEnd,
+	NavigationStart,
+	Router,
+	RouterLink,
+	RouterLinkActive,
+	RouterModule,
+	RouterOutlet,
+	ChildrenOutletContexts,
+} from '@angular/router'
 import { CONTACT_CONFIG } from './config/contact.config'
+import { routeAnimations } from './route-animations'
+import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 
 @Component({
 	selector: 'app-root',
@@ -23,10 +44,13 @@ import { CONTACT_CONFIG } from './config/contact.config'
 		MatFormFieldModule,
 		MatSelectModule,
 		CommonModule,
+		SkeletonLoaderComponent,
+		ChatWidgetComponent,
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',
 	styleUrl: './app.scss',
+	animations: [routeAnimations],
 })
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
@@ -35,10 +59,19 @@ export class App implements OnInit {
 	readonly colorTheme = signal<
 		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
 	>('red')
+	readonly isLoading = signal(false)
+	readonly loadingMessage = computed(() => {
+		return this.isLoading()
+			? this.currentLanguage() === 'en'
+				? 'Page loading...'
+				: 'Chargement de la page...'
+			: ''
+	})
 	readonly config = CONTACT_CONFIG
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly document = inject(DOCUMENT)
 	private readonly ngZone = inject(NgZone)
+	private readonly contexts = inject(ChildrenOutletContexts)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
 	constructor(private router: Router) {
@@ -61,10 +94,26 @@ export class App implements OnInit {
 			this.applyTheme(isDark)
 			this.applyColorTheme(savedColor)
 
-			// Detect current locale from URL or document
-			const locale = this.document.documentElement.lang || 'fr'
-			this.currentLanguage.set(locale as 'fr' | 'en')
+			// Extract language from URL path
+			this.updateLanguageFromUrl()
+
+			// Update language and loading state when route changes
+			this.router.events.subscribe((event) => {
+				if (event instanceof NavigationStart) {
+					this.isLoading.set(true)
+				} else if (event instanceof NavigationEnd) {
+					this.isLoading.set(false)
+					this.updateLanguageFromUrl()
+				}
+			})
 		}
+	}
+
+	private updateLanguageFromUrl(): void {
+		if (!this.isBrowser) return
+		const path = window.location.pathname
+		const lang = path.startsWith('/en') ? 'en' : 'fr'
+		this.currentLanguage.set(lang)
 	}
 
 	ngOnInit(): void {
@@ -120,6 +169,10 @@ export class App implements OnInit {
 		this.darkMode.set(isDark)
 		this.applyTheme(isDark)
 		localStorage.setItem('theme', isDark ? 'dark' : 'light')
+	}
+
+	getLoadingMessage(): string {
+		return this.loadingMessage()
 	}
 
 	private applyTheme(isDark: boolean): void {
@@ -185,5 +238,9 @@ export class App implements OnInit {
 
 		// Reload to switch locale
 		window.location.href = newUrl
+	}
+
+	getRouteAnimationData() {
+		return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation']
 	}
 }

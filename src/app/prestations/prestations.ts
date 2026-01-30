@@ -43,9 +43,6 @@ export class Services {
 
 	onCardClick(index: number): void {
 		if (isPlatformBrowser(this.platformId)) {
-			if (window.innerWidth >= 960) {
-				this.zoomedCardIndex.set(this.zoomedCardIndex() === index ? null : index)
-			}
 			// Scroll to the card on any device
 			this.scrollToCard(index)
 		}

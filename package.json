@@ -11,9 +11,11 @@
 		"extract-i18n": "ng extract-i18n --output-path src/locale",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
+		"serve:static": "cd dist && node ../server-static.js",
 		"serve:ssr:site-avocat": "node dist/site-avocat/server/server.mjs",
 		"format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\"",
-		"deploy:gh": "ng build --configuration=production --base-href=// && npx angular-cli-ghpages --dir=dist/browser/fr"
+		"deploy:gh": "ng build --configuration=production --base-href=// && npx angular-cli-ghpages --dir=dist/browser/fr",
+		"convert:webp": "node scripts/convert-webp.js"
 	},
 	"private": true,
 	"packageManager": "npm@11.8.0",
@@ -45,8 +47,10 @@
 		"@types/express": "^5.0.6",
 		"@types/node": "^25.0.10",
 		"angular-cli-ghpages": "^3.0.2",
+		"glob": "^13.0.0",
 		"jsdom": "^27.4.0",
 		"prettier": "^3.8.1",
+		"sharp": "^0.34.5",
 		"typescript": "~5.9.3",
 		"vitest": "^4.0.18"
 	}

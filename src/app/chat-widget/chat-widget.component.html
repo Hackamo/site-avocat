@@ -1,0 +1,102 @@
+<div class="chat-widget" [class.open]="isOpen()">
+	<!-- Chat Toggle Button -->
+	<button
+		mat-fab
+		class="chat-toggle"
+		(click)="toggleChat()"
+		[attr.aria-label]="isOpen() ? 'Fermer le chat' : 'Ouvrir le chat'"
+		[matTooltip]="isOpen() ? 'Fermer' : 'Cliquez pour discuter avec notre assistant juridique.'"
+	>
+		<mat-icon>{{ isOpen() ? 'close' : 'chat' }}</mat-icon>
+	</button>
+
+	<!-- Chat Window -->
+	@if (isOpen()) {
+		<div class="chat-backdrop" (click)="closeChat()" aria-hidden="true"></div>
+		<div class="chat-window" role="dialog" aria-labelledby="chat-title">
+			<div class="chat-header">
+				<h3 id="chat-title" class="mat-headline-6">Assistant Juridique</h3>
+				<p class="chat-subtitle">Questions fréquentes</p>
+			</div>
+
+			<div class="chat-messages" #messagesContainer>
+				@for (message of messages(); track message.id) {
+					<div
+						class="message"
+						[class.user-message]="message.type === 'user'"
+						[class.bot-message]="message.type === 'bot'"
+					>
+						<div class="message-content">
+							{{ message.text }}
+						</div>
+						<div class="message-time">{{ message.timestamp | date: 'short' }}</div>
+					</div>
+				}
+
+				@if (isTyping()) {
+					<div class="message bot-message">
+						<div class="message-content">
+							<div class="typing-indicator">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+
+			<!-- FAQ Suggestions -->
+			@if (messages().length === 0) {
+				<div class="faq-suggestions">
+					<p class="mat-caption" i18n="Chat widget|Quick questions">Questions fréquentes :</p>
+					<div class="suggestions-grid">
+						<button mat-stroked-button size="small" (click)="sendMessage('titre de séjour')">
+							Titre de séjour
+						</button>
+						<button mat-stroked-button size="small" (click)="sendMessage('naturalisation')">
+							Naturalisation
+						</button>
+						<button mat-stroked-button size="small" (click)="sendMessage('OQTF')">OQTF</button>
+						<button mat-stroked-button size="small" (click)="sendMessage('rendez-vous')">
+							Rendez-vous
+						</button>
+					</div>
+				</div>
+			}
+
+			<!-- Input Area -->
+			<div class="chat-input-area">
+				<form (ngSubmit)="onSubmitMessage()" class="input-form">
+					<mat-form-field appearance="outline" class="full-width">
+						<input
+							matInput
+							[(ngModel)]="userInput"
+							name="message"
+							placeholder="Posez votre question..."
+							i18n-placeholder="Chat widget|Message placeholder"
+							[disabled]="isTyping()"
+							aria-label="Votre message"
+						/>
+						<button
+							matSuffix
+							mat-icon-button
+							type="submit"
+							[disabled]="!userInput.trim() || isTyping()"
+							aria-label="Envoyer le message"
+						>
+							<mat-icon>send</mat-icon>
+						</button>
+					</mat-form-field>
+				</form>
+			</div>
+
+			<div class="chat-footer">
+				<p class="mat-caption" i18n="Chat widget|Footer text">
+					Pour les cas complexes,
+					<a routerLink="/contact" (click)="closeChat()">contactez-nous directement</a>
+				</p>
+			</div>
+		</div>
+	}
+</div>

@@ -410,3 +410,101 @@ select:-webkit-autofill {
 		}
 	}
 }
+
+// Form validation feedback styles
+.contact-form-fields {
+	mat-form-field {
+		// Success state styling
+		.success-hint {
+			color: var(--mat-sys-primary) !important;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+
+			&::before {
+				content: '✓';
+				font-weight: bold;
+			}
+		}
+
+		// Warning state for character count
+		.warning {
+			color: var(--mat-sys-error) !important;
+		}
+
+		.warning-text {
+			color: var(--mat-sys-error);
+			font-weight: 500;
+		}
+	}
+
+	// Enhanced error message styling
+	mat-error {
+		font-size: 0.875rem;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		&::before {
+			content: '✕';
+			font-weight: bold;
+			font-size: 1rem;
+		}
+	}
+
+	// Enhanced hint styling
+	mat-hint {
+		font-size: 0.8125rem;
+		opacity: 0.9;
+		transition: color 0.2s ease;
+	}
+
+	// Valid field styling (optional - adds visual feedback)
+	.mdc-text-field--invalid {
+		--mdc-theme-primary: var(--mat-sys-error);
+	}
+
+	// Field transition for smoother validation feedback
+	input,
+	textarea,
+	mat-select {
+		transition:
+			border-color 0.2s ease,
+			background-color 0.2s ease;
+	}
+
+	// Required field indicator
+	mat-label {
+		&::after {
+			content: '';
+		}
+	}
+
+	// Add spacing around validation messages
+	.mat-mdc-form-field-error-wrapper,
+	.mat-mdc-form-field-hint-wrapper {
+		padding-top: 0.5rem;
+	}
+}
+
+// Voice input button enhanced feedback
+.voice-input-button {
+	transition: all 0.3s ease;
+
+	&.listening {
+		color: var(--mat-sys-error);
+		animation: pulse-mic 1s infinite;
+	}
+
+	@keyframes pulse-mic {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.6;
+		}
+	}
+}

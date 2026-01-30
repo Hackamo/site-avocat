@@ -1,6 +1,6 @@
 <main class="container blog-page">
 	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
-		<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour au blog</span>
+		<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour</span>
 	</button>
 	@if (loading()) {
 	<article class="blog-post article-skeleton" aria-busy="true">
@@ -20,7 +20,37 @@
 	<article class="blog-post">
 		<h1 class="mat-display-2">{{ art.title || 'Article non trouvé' }}</h1>
 		<p class="mat-headline-5">{{ art.summary || 'Aucun résumé disponible' }}</p>
+		@if (art.readingTime) {
+		<div class="article-meta">
+			<span class="reading-time-badge">
+				<mat-icon>schedule</mat-icon>
+				{{ getReadingTimeText(art.readingTime) }}
+			</span>
+			@if (art.date) {
+			<span class="article-date">{{ art.date }}</span>
+			}
+		</div>
+		}
 		<div [innerHTML]="art.content" class="blog-content"></div>
+
+		@if (art.author) {
+		<aside class="author-bio-section">
+			<div class="author-bio-container">
+				@if (art.author.image) {
+				<img [src]="art.author.image" [alt]="art.author.name" class="author-image" />
+				} @else {
+				<div class="author-avatar">
+					<mat-icon>account_circle</mat-icon>
+				</div>
+				}
+				<div class="author-info">
+					<h3 class="author-name">{{ art.author.name }}</h3>
+					<p class="author-title">{{ art.author.title }}</p>
+					<p class="author-bio">{{ art.author.bio }}</p>
+				</div>
+			</div>
+		</aside>
+		}
 	</article>
 	@if (similarArticles().length > 0) {
 	<section class="similar-articles" aria-label="Articles similaires">
