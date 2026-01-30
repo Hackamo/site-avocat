@@ -38,7 +38,8 @@
 						"assets": [
 							{
 								"glob": "**/*",
-								"input": "public"
+								"input": "public",
+								"output": "browser"
 							},
 							{
 								"glob": "**/*",
@@ -91,7 +92,7 @@
 									"maximumError": "12kB"
 								}
 							],
-							"outputPath": "dist/site-avocat/browser",
+							"outputPath": "dist/site-avocat",
 							"baseHref": "/site-avocat/",
 							"optimization": true,
 							"outputHashing": "all",
@@ -100,7 +101,7 @@
 							"aot": true,
 							"extractLicenses": true,
 							"prerender": true,
-							"localize": true
+							"localize": false
 						},
 						"o2switch": {
 							"budgets": [
@@ -159,8 +160,9 @@
 					"builder": "angular-cli-ghpages:deploy",
 					"configurations": {
 						"github-pages": {
+							"buildTarget": "site-avocat:build:github-pages",
 							"baseHref": "/site-avocat/",
-							"dir": "dist/site-avocat/browser/fr"
+							"dir": "dist/site-avocat/browser"
 						},
 						"o2switch": {
 							"dir": "dist/o2switch"
