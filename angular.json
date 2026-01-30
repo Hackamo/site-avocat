@@ -75,8 +75,8 @@
 							"aot": true,
 							"extractLicenses": true,
 							"outputMode": "static",
-							"server": false,
-							"ssr": false,
+							"server": true,
+							"ssr": true,
 							"prerender": true,
 							"localize": false
 						},
