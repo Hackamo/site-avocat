@@ -74,8 +74,8 @@ export class BlogDataService {
 			// Construct language-specific path
 			const languagePath = lang === 'fr' ? 'fr' : 'en'
 
-			// Use relative path to respect locale base href
-			const basePath = '/assets/blog'
+			// Use relative path from current location - works with any base href
+			const basePath = 'assets/blog'
 
 			// Create an abort controller with timeout
 			const controller = new AbortController()

@@ -222,6 +222,11 @@
 	.full-width {
 		width: 100%;
 	}
+
+	// Prevent iOS zoom on input focus
+	input {
+		font-size: 16px !important;
+	}
 }
 
 .chat-footer {
@@ -249,7 +254,7 @@
 
 @media (max-width: 768px) {
 	.chat-widget {
-		bottom: 1rem;
+		bottom: 2rem;
 		left: 1rem;
 	}
 
@@ -285,7 +290,7 @@
 
 @media (max-width: 480px) {
 	.chat-widget {
-		bottom: 0.75rem;
+		bottom: 2rem;
 		left: 0.75rem;
 	}
 
