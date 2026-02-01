@@ -1,6 +1,6 @@
 <main class="container blog-page">
 	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
-		<mat-icon>arrow_back</mat-icon><span style="font-size: larger" i18n="Blog page|Back to blog link">Retour</span>
+		<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour</span>
 	</button>
 	@if (loading()) {
 	<article class="blog-post article-skeleton" aria-busy="true">

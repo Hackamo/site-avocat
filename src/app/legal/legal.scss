@@ -1,12 +1,10 @@
 .container {
 	max-width: 900px;
-	margin: 2rem auto;
-	padding: 2rem;
 }
 
 h1 {
 	font-size: 2.5rem;
-	margin-bottom: 2rem;
+	margin-top: 0px;
 	color: var(--mat-button-filled-container-color);
 }
 
@@ -33,8 +31,4 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
-}
-
-.back-button {
-	margin-bottom: 2rem;
 }
