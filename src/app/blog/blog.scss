@@ -3,6 +3,19 @@
 }
 
 .blog-page {
+	.blog-filters {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+		padding-left: 1.5rem;
+
+		.filter-field {
+			flex: 1;
+			min-width: 200px;
+		}
+	}
+
 	.blog-cards {
 		display: flex;
 		flex-direction: column;

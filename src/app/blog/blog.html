@@ -8,6 +8,18 @@
 
 	<section class="blog-filters">
 		<mat-form-field appearance="outline" class="filter-field">
+			<mat-label i18n="Blog page|Search label">Rechercher</mat-label>
+			<input
+				matInput
+				type="text"
+				[value]="searchText()"
+				(input)="onSearchChange($event)"
+				placeholder="Titre, résumé, catégorie..."
+				i18n-placeholder="Blog page|Search placeholder"
+			/>
+		</mat-form-field>
+
+		<mat-form-field appearance="outline" class="filter-field">
 			<mat-label i18n="Blog page|Category filter label">Filtrer par catégorie</mat-label>
 			<mat-select [value]="selectedCategory()" (selectionChange)="onCategoryChange($event.value)">
 				<mat-option value="all" i18n="Blog page|All categories option">Toutes</mat-option>
@@ -36,9 +48,7 @@
 			} }
 		</div>
 		@if (!articles().length && !loading()) {
-		<p class="mat-body-1" animateText="fade" i18n="Blog page|No articles message">
-			Aucun article disponible pour le moment.
-		</p>
+		<p class="mat-body-1" animateText="fade" i18n="Blog page|No articles message">Aucun article disponible.</p>
 		}
 	</section>
 </main>

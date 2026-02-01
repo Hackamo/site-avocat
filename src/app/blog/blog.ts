@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, computed, inject, OnInit, signal } from '@angular/core'
 import { MatFormField, MatLabel } from '@angular/material/form-field'
+import { MatInput } from '@angular/material/input'
 import { MatOption, MatSelect } from '@angular/material/select'
 import { RouterModule } from '@angular/router'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
@@ -10,7 +11,17 @@ import { AnimateText } from './../directives/animate-text.directive'
 
 @Component({
 	selector: 'app-blog',
-	imports: [CommonModule, RouterModule, BlogArticleCard, AnimateText, MatFormField, MatLabel, MatSelect, MatOption],
+	imports: [
+		CommonModule,
+		RouterModule,
+		BlogArticleCard,
+		AnimateText,
+		MatFormField,
+		MatLabel,
+		MatSelect,
+		MatOption,
+		MatInput,
+	],
 	templateUrl: './blog.html',
 	styleUrl: './blog.scss',
 	standalone: true,
@@ -21,6 +32,7 @@ export class Blog implements OnInit {
 	private readonly metaService = inject(MetaService)
 	readonly loading = this.blogData.loading
 	readonly selectedCategory = signal<string>('all')
+	readonly searchText = signal<string>('')
 
 	readonly allArticles = this.blogData.articles
 	readonly categories = computed(() => {
@@ -31,15 +43,32 @@ export class Blog implements OnInit {
 
 	readonly articles = computed(() => {
 		const selected = this.selectedCategory()
-		const all = this.allArticles()
-		if (selected === 'all') {
-			return all
+		const search = this.searchText().toLowerCase()
+		let filtered = this.allArticles()
+
+		if (selected !== 'all') {
+			filtered = filtered.filter((article) => article.category === selected)
 		}
-		return all.filter((article) => article.category === selected)
+
+		if (search) {
+			filtered = filtered.filter(
+				(article) =>
+					article.title.toLowerCase().includes(search) ||
+					article.summary.toLowerCase().includes(search) ||
+					article.category.toLowerCase().includes(search),
+			)
+		}
+
+		return filtered
 	})
 
 	onCategoryChange(category: string): void {
 		this.selectedCategory.set(category)
+	}
+
+	onSearchChange(event: Event): void {
+		const value = (event.target as HTMLInputElement).value
+		this.searchText.set(value)
 	}
 
 	ngOnInit() {
