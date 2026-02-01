@@ -73,15 +73,13 @@ export class ArticlePage {
 			const blogArticle = slug ? this.blogData.getBySlug(slug) : undefined
 
 			this.loading.set(true)
-			setTimeout(() => {
-				this.article.set(blogArticle)
-				this.loading.set(false)
+			this.article.set(blogArticle)
+			this.loading.set(false)
 
-				// Update meta tags for the article
-				if (blogArticle) {
-					this.metaService.updateArticleMeta(blogArticle.title, blogArticle.summary)
-				}
-			}, 500)
+			// Update meta tags for the article
+			if (blogArticle) {
+				this.metaService.updateArticleMeta(blogArticle.title, blogArticle.summary)
+			}
 		})
 
 		effect(() => {

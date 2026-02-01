@@ -3,12 +3,6 @@
 		<mat-card class="blog-article-card">
 			<mat-card-header>
 				<mat-card-title itemprop="headline">{{ article.title }}</mat-card-title>
-				@if (readingTimeText()) {
-				<div class="reading-time">
-					<mat-icon>schedule</mat-icon>
-					<span>{{ readingTimeText() }}</span>
-				</div>
-				}
 			</mat-card-header>
 			<mat-card-content>
 				<p itemprop="description">{{ article.summary }}</p>
@@ -16,6 +10,19 @@
 				<meta itemprop="datePublished" [content]="article.date" />
 				}
 			</mat-card-content>
+			<div class="card-footer">
+				@if (article.date) {
+				<div class="card-date">
+					<mat-icon>date_range</mat-icon>
+					<span>{{ article.date | date: 'dd/MM/yyyy'}}</span>
+				</div>
+				} @if (readingTimeText()) {
+				<div class="card-reading-time">
+					<mat-icon>schedule</mat-icon>
+					<span>{{ readingTimeText() }}</span>
+				</div>
+				}
+			</div>
 		</mat-card>
 	</a>
 </article>

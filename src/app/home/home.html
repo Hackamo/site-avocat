@@ -70,4 +70,23 @@
 			}
 		</div>
 	</section>
+
+	<!-- Latest Articles Section -->
+	<section class="container">
+		<h2 animateText="fade" class="mat-display-1 text-center mb-4" i18n="Home page|Latest articles section title">
+			Nos Derniers Articles
+		</h2>
+
+		<div class="articles-grid">
+			@for (article of latestArticles(); track article.slug) {
+			<app-blog-article-card animateOnEnter="fade" [article]="article" />
+			}
+		</div>
+
+		<div class="text-center mt-4">
+			<a routerLink="/blog" mat-flat-button color="primary" i18n="Home page|View all articles link">
+				Voir tous les articles
+			</a>
+		</div>
+	</section>
 </main>
