@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common'
-import { Component, computed, inject, OnInit, signal } from '@angular/core'
+import { CommonModule, isPlatformBrowser } from '@angular/common'
+import { Component, computed, inject, OnInit, signal, PLATFORM_ID, ElementRef, viewChild } from '@angular/core'
 import { MatFormField, MatLabel } from '@angular/material/form-field'
 import { MatInput } from '@angular/material/input'
 import { MatOption, MatSelect } from '@angular/material/select'
@@ -30,9 +30,11 @@ import { AnimateText } from './../directives/animate-text.directive'
 export class Blog implements OnInit {
 	private readonly blogData = inject(BlogDataService)
 	private readonly metaService = inject(MetaService)
+	private readonly platformId = inject(PLATFORM_ID)
 	readonly loading = this.blogData.loading
 	readonly selectedCategory = signal<string>('all')
 	readonly searchText = signal<string>('')
+	readonly filtersSection = viewChild<ElementRef<HTMLElement>>('filtersSection')
 
 	readonly allArticles = this.blogData.articles
 	readonly categories = computed(() => {
@@ -69,6 +71,15 @@ export class Blog implements OnInit {
 	onSearchChange(event: Event): void {
 		const value = (event.target as HTMLInputElement).value
 		this.searchText.set(value)
+
+		if (isPlatformBrowser(this.platformId)) {
+			const filters = this.filtersSection()
+			if (filters) {
+				requestAnimationFrame(() => {
+					filters.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+				})
+			}
+		}
 	}
 
 	ngOnInit() {
