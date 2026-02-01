@@ -18,7 +18,7 @@
 	</article>
 	} @else if (article(); as art) {
 	<article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
-		<h1 class="mat-display-2" itemprop="headline">{{ art.title || 'Article non trouvé' }}</h1>
+		<h1 #headline class="mat-display-2" itemprop="headline">{{ art.title || 'Article non trouvé' }}</h1>
 		<p class="mat-headline-5" itemprop="description">{{ art.summary || 'Aucun résumé disponible' }}</p>
 		@if (art.readingTime) {
 		<div class="article-meta">
@@ -33,7 +33,12 @@
 			}
 		</div>
 		}
-		<div [innerHTML]="art.content" class="blog-content" itemprop="articleBody"></div>
+		<div
+			animate.enter="enter-slide-fade-animation"
+			[innerHTML]="art.content"
+			class="blog-content"
+			itemprop="articleBody"
+		></div>
 
 		@if (art.author) {
 		<aside class="author-bio-section" itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -57,7 +62,7 @@
 	@if (similarArticles().length > 0) {
 	<section class="similar-articles" aria-label="Articles similaires">
 		<h2 class="similar-title" i18n="Blog page|Similar articles heading">Articles similaires</h2>
-		<div class="similar-grid">
+		<div class="similar-grid" animateText="fade">
 			@for (similar of similarArticles(); track similar.slug) {
 			<app-blog-article-card [article]="similar"></app-blog-article-card>
 			}

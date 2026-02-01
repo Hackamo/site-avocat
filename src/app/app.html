@@ -27,8 +27,14 @@
 			</a>
 			<!-- Desktop: Menu with settings -->
 			<span class="spacer"></span>
-			<button class="theme-toggle" matIconButton [matMenuTriggerFor]="settingsMenu" aria-label="Settings menu">
-				<mat-icon>more_vert</mat-icon>
+			<button
+				[matTooltip]="'Réglages'"
+				class="theme-toggle"
+				matIconButton
+				[matMenuTriggerFor]="settingsMenu"
+				aria-label="Settings menu"
+			>
+				<mat-icon>settings_heart</mat-icon>
 			</button>
 			<mat-menu #settingsMenu="matMenu">
 				<button mat-menu-item (click)="toggleDarkMode()">

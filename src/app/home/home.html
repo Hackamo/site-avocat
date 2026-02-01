@@ -1,23 +1,25 @@
 <!-- Hero Section (Bannière) -->
-<main>
+<main animate.enter="enter-fade-animation">
 	<header class="home-section container">
-		<div class="home-content" animateText="fade">
+		<div class="home-content">
 			<h1 class="mat-display-3" i18n="Home page|Hero title">Votre avocate en droit des étrangers</h1>
 			<p class="mat-headline-5" i18n="Home page|Hero subtitle">
 				Accompagnement juridique pour vos démarches de séjour et de nationalité en France
 			</p>
-			<a
-				routerLink="/contact"
-				routerLinkActive="active-link"
-				mat-flat-button
-				color="neutral"
-				class="cta-button"
-				i18n="Home page|CTA button"
-			>
-				Demander une consultation
-			</a>
+			<div animate.enter="enter-scale-fade-animation">
+				<a
+					routerLink="/contact"
+					routerLinkActive="active-link"
+					mat-flat-button
+					color="neutral"
+					class="cta-button"
+					i18n="Home page|CTA button"
+				>
+					Demander une consultation
+				</a>
+			</div>
 		</div>
-		<div class="hero-image-wrapper" animateText="fade">
+		<div class="hero-image-wrapper">
 			@if (!imageLoaded()) {
 			<div class="image-skeleton"></div>
 			}
@@ -52,13 +54,13 @@
 				[routerLink]="['/prestations']"
 				[fragment]="service.anchor"
 			>
-				<mat-card-header animateText="fade">
+				<mat-card-header>
 					<div mat-card-avatar class="service-icon">
 						<mat-icon>{{ service.icon }}</mat-icon>
 					</div>
 					<mat-card-title>{{ service.title }}</mat-card-title>
 				</mat-card-header>
-				<mat-card-content animateText="fade">
+				<mat-card-content>
 					<p>{{ service.description }}</p>
 				</mat-card-content>
 				<mat-card-actions align="end">

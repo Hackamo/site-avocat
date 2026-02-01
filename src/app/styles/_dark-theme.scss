@@ -26,6 +26,9 @@ body.dark-theme {
 	--mat-button-filled-label-text-color: rgb(255, 243, 207) !important;
 	--mat-button-outlined-label-text-color: #ffd740 !important;
 	--mat-button-outlined-outline-color: #ffd740 !important;
+	--mat-button-text-label-text-color: #ffd740 !important;
+	--mat-button-outlined-label-text-color-hover: #ffc400 !important;
+	--mat-menu-item-icon-color: #ffd740 !important;
 	// Slide toggle
 	--mat-slide-toggle-selected-track-color: #666666 !important;
 	--mat-slide-toggle-selected-handle-color: #666666 !important;
@@ -290,6 +293,6 @@ body.dark-theme {
 
 	// Override mat-icon arrow_up color to red
 	.scroll-top-btn mat-icon {
-		color: white !important;
+		color: black !important;
 	}
 }

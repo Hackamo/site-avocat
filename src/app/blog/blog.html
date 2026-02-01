@@ -6,6 +6,18 @@
 		</p>
 	</header>
 
+	<section class="blog-filters">
+		<mat-form-field appearance="outline" class="filter-field">
+			<mat-label i18n="Blog page|Category filter label">Filtrer par catégorie</mat-label>
+			<mat-select [value]="selectedCategory()" (selectionChange)="onCategoryChange($event.value)">
+				<mat-option value="all" i18n="Blog page|All categories option">Toutes</mat-option>
+				@for (category of categories(); track category) {
+				<mat-option [value]="category">{{ category }}</mat-option>
+				}
+			</mat-select>
+		</mat-form-field>
+	</section>
+
 	<section class="blog-list">
 		<div class="blog-cards">
 			@if (loading()) { @for (item of [1, 2, 3]; track item) {
@@ -16,7 +28,11 @@
 				<div class="skeleton-text short"></div>
 			</div>
 			} } @else { @for (article of articles(); track article.slug) {
-			<app-blog-article-card [article]="article" animateText="fade" />
+			<app-blog-article-card
+				animateOnEnter="fade"
+				animate.enter="enter-slide-fade-animation"
+				[article]="article"
+			/>
 			} }
 		</div>
 		@if (!articles().length && !loading()) {

@@ -34,6 +34,9 @@
 	--mat-slide-toggle-track-outline-color: var(--mat-sys-primary) !important;
 	--mat-menu-container-color: var(--mat-sys-primary) !important;
 	--mat-menu-divider-color: transparent !important;
+	--mat-tooltip-container-color: var(--mat-button-filled-container-color) !important;
+	--mat-tooltip-supporting-text-size: 14px;
+	--mat-tooltip-supporting-text-weight: 400;
 }
 
 .theme-blue {

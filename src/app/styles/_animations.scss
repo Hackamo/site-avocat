@@ -103,6 +103,42 @@ button,
 	}
 }
 
+// Enter animations (triggered on scroll into view)
+.animate-on-enter {
+	transition:
+		opacity 1s ease-out,
+		transform 1s ease-out;
+
+	&.animate-on-enter-fade {
+		opacity: 0;
+	}
+
+	&.animate-on-enter-slide-up {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	&.animate-on-enter-slide-left {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+
+	&.animate-on-enter-slide-right {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+
+	&.animate-on-enter-zoom {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	&.entered {
+		opacity: 1;
+		transform: translateY(0) translateX(0) scale(1);
+	}
+}
+
 @media (max-width: 768px) {
 	.service-category-card {
 		scroll-margin-top: initial;

@@ -105,3 +105,55 @@ h3 {
 		font-size: 1.1rem;
 	}
 }
+
+.enter-fade-animation {
+	animation: fade-enter 0.5s ease-in forwards;
+}
+
+.enter-scale-fade-animation {
+	animation: scale-fade 1s;
+	animation-duration: 400ms;
+}
+
+.enter-slide-fade-animation {
+	animation: slide-fade 1s;
+}
+
+@keyframes scale-fade {
+	from {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slide-fade {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-enter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-leave {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

@@ -109,6 +109,14 @@ export class App implements OnInit {
 				} else if (event instanceof NavigationEnd) {
 					this.isLoading.set(false)
 					this.updateLanguageFromUrl()
+
+					const url = this.router.url
+					const hasFragment = url.includes('#')
+					const isArticlePage = /\/blog\/[^/]+/.test(url)
+
+					if (!hasFragment && !isArticlePage) {
+						window.scrollTo({ top: 0, behavior: 'auto' })
+					}
 				}
 			})
 		}

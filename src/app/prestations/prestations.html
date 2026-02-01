@@ -1,4 +1,4 @@
-<main>
+<main animate.enter="enter-fade-animation">
 	<div class="container services-page">
 		@if (zoomedCardIndex() !== null) {
 		<div class="overlay" (click)="onCardClick(zoomedCardIndex()!)" role="button" tabindex="0"></div>
@@ -27,15 +27,16 @@
 				(click)="onCardClick(i)"
 				role="button"
 				tabindex="0"
+				animate.enter="enter-slide-fade-animation"
 			>
-				<mat-card-header animateText="fade">
+				<mat-card-header>
 					<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
 					<mat-card-title>{{ service.title }}</mat-card-title>
 					@if (service.subtitle) {
 					<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
 					}
 				</mat-card-header>
-				<mat-card-content animateText="fade">
+				<mat-card-content>
 					@if (service.detailedDescription) {
 					<p>{{ service.detailedDescription }}</p>
 					} @if (service.items && service.items.length > 0) {
