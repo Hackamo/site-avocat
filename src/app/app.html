@@ -25,43 +25,29 @@
 			<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button i18n="Navigation|Contact menu item">
 				Contact
 			</a>
+			<!-- Desktop: Menu with settings -->
+			<span class="spacer"></span>
+			<button class="theme-toggle" matIconButton [matMenuTriggerFor]="settingsMenu" aria-label="Settings menu">
+				<mat-icon>more_vert</mat-icon>
+			</button>
+			<mat-menu #settingsMenu="matMenu">
+				<button mat-menu-item (click)="toggleDarkMode()">
+					<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+					<span>{{ darkMode() ? 'Mode clair' : 'Mode sombre' }}</span>
+				</button>
+				<button mat-menu-item (click)="resetPreferences()">
+					<mat-icon>restart_alt</mat-icon>
+					<span i18n="Navigation|Reset preferences">Réinitialiser les préférences</span>
+				</button>
+				<mat-divider></mat-divider>
+				<button mat-menu-item (click)="changeLanguage('fr')" [class.active]="currentLanguage() === 'fr'">
+					<span>Français</span>
+				</button>
+				<button mat-menu-item (click)="changeLanguage('en')" [class.active]="currentLanguage() === 'en'">
+					<span>English</span>
+				</button>
+			</mat-menu>
 		</nav>
-		<div class="language-switch">
-			<button
-				mat-icon-button
-				(click)="toggleDarkMode()"
-				[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
-				class="theme-toggle"
-				[matTooltip]="darkMode() ? 'Mode clair' : 'Mode sombre'"
-			>
-				<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-			</button>
-			<button
-				mat-icon-button
-				(click)="resetPreferences()"
-				aria-label="Réinitialiser les préférences"
-				class="reset-preferences"
-				[matTooltip]="'Réinitialiser les préférences'"
-				i18n-aria-label="Navigation|Reset preferences button"
-			>
-				<mat-icon>restart_alt</mat-icon>
-			</button>
-			<mat-form-field
-				appearance="outline"
-				[matTooltip]="'Choisir la langue'"
-				aria-label="Select language tooltip"
-			>
-				<mat-label i18n="Navigation|Language selector label">Langue</mat-label>
-				<mat-select
-					[value]="currentLanguage()"
-					(selectionChange)="changeLanguage($event.value)"
-					aria-label="Select language"
-				>
-					<mat-option value="fr">Français</mat-option>
-					<mat-option value="en">English</mat-option>
-				</mat-select>
-			</mat-form-field>
-		</div>
 	</mat-toolbar>
 
 	<!-- ARIA live region for page loading announcements -->
@@ -94,7 +80,8 @@
 	<footer class="app-footer">
 		<div class="footer-theme-select">
 			<mat-form-field appearance="outline">
-				<mat-label i18n="Footer|Theme selector label">Thème</mat-label>
+				<mat-label i18n="Footer|Language selector label">Thème</mat-label>
+
 				<mat-select
 					[value]="colorTheme()"
 					(selectionChange)="onThemeSelect($event.value)"
@@ -130,31 +117,12 @@
 				</mat-select>
 			</mat-form-field>
 		</div>
-		<button
-			mat-icon-button
-			(click)="toggleDarkMode()"
-			[attr.aria-label]="darkMode() ? 'Activer le mode clair' : 'Activer le mode sombre'"
-			[matTooltip]="darkMode() ? 'Mode clair' : 'Mode sombre'"
-			class="theme-toggle theme-switch"
-			i18n-matTooltip="Navigation|Theme toggle tooltip"
-		>
-			<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-		</button>
-		<button
-			mat-icon-button
-			(click)="resetPreferences()"
-			aria-label="Réinitialiser les préférences"
-			[matTooltip]="'Réinitialiser les préférences'"
-			class="reset-preferences theme-switch"
-			i18n-aria-label="Footer|Reset preferences button"
-			i18n-matTooltip="Footer|Reset preferences tooltip"
-		>
-			<mat-icon>restart_alt</mat-icon>
-		</button>
+
 		<p i18n="Footer|Copyright notice">
 			© 2026 {{ config.businessNameShort }} - {{ config.lawyer.specialties[0] }}.
 		</p>
 		<p i18n="Footer|Office address">Bureau : {{ config.address.full }}</p>
+		<mat-label i18n="Footer|Theme selector label">Thème</mat-label>
 		<div class="footer-links">
 			<a
 				mat-button="link"

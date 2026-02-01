@@ -57,17 +57,21 @@
 }
 
 .logo {
-	font-family: 'Playfair Display', serif;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 1.5rem;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	cursor: pointer;
+}
+
+nav a {
+	font-size: 1.05rem;
 }
 
 nav a.active-link {
 	// Exemple de style pour le lien actif
 	text-decoration: underline;
 	text-underline-offset: 6px;
+	font-size: 1.1rem;
 }
 
 .language-switch {
@@ -76,6 +80,20 @@ nav a.active-link {
 	padding-left: 1rem;
 	align-items: center;
 	height: 100%;
+
+	&.desktop-only {
+		display: flex;
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&.mobile-only {
+		display: none;
+		@media (max-width: 768px) {
+			display: flex;
+		}
+	}
 
 	mat-form-field {
 		width: 120px;
@@ -115,13 +133,12 @@ nav a.active-link {
 }
 
 .theme-toggle {
-	margin-right: 1rem;
+	margin-left: 0.5rem;
 	transition: transform 1s ease-in-out;
 	vertical-align: middle !important;
-	align-items: center !important;
-	justify-content: center !important;
+
 	&:hover {
-		transform: rotate(180deg);
+		transform: scale(1.2);
 	}
 }
 
@@ -197,12 +214,11 @@ nav a.active-link {
 	.spacer {
 		display: none;
 	}
-	.language-switch {
-		display: none;
-	}
+
 	.footer-language-select {
 		display: inline-flex;
 	}
+
 	nav {
 		margin-top: 0.5rem;
 		display: flex;

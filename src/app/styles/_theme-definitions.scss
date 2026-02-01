@@ -11,8 +11,10 @@
 				tertiary: theme.$tertiary-palette,
 			),
 			typography: (
-				brand-family: "'Playfair Display', Lato",
-				plain-family: "'Playfair Display', Lato",
+				brand-family: "'Playfair Display', serif",
+				// For titles/headings
+				plain-family: "'Playfair Display', sans-serif",
+				// For body text
 				bold-weight: 800,
 				medium-weight: 500,
 				regular-weight: 300,

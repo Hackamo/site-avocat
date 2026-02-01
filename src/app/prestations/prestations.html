@@ -27,16 +27,15 @@
 				(click)="onCardClick(i)"
 				role="button"
 				tabindex="0"
-				animateText="fade"
 			>
-				<mat-card-header>
+				<mat-card-header animateText="fade">
 					<mat-icon mat-card-avatar>{{ service.icon }}</mat-icon>
 					<mat-card-title>{{ service.title }}</mat-card-title>
 					@if (service.subtitle) {
 					<mat-card-subtitle>{{ service.subtitle }}</mat-card-subtitle>
 					}
 				</mat-card-header>
-				<mat-card-content>
+				<mat-card-content animateText="fade">
 					@if (service.detailedDescription) {
 					<p>{{ service.detailedDescription }}</p>
 					} @if (service.items && service.items.length > 0) {
@@ -58,7 +57,7 @@
 					<mat-icon class="mat-tab-icon">{{ service.icon }}</mat-icon>
 					{{ service.title }}
 				</ng-template>
-				<div class="tab-content">
+				<div class="tab-content" animateText="fade">
 					<h2 class="mat-headline-4">{{ service.title }}</h2>
 					@if (service.subtitle) {
 					<p class="mat-headline-6 subtitle">{{ service.subtitle }}</p>

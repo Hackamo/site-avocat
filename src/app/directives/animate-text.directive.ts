@@ -10,7 +10,7 @@ export class AnimateText implements AfterViewInit {
 	animateText = input<'fade' | 'slide-up' | 'slide-left' | 'slide-right'>('fade')
 	threshold = input<number>(0.3)
 	delay = input<number>(0)
-	duration = input<number>(1400)
+	duration = input<number>(750)
 
 	ngAfterViewInit() {
 		// Only run in browser environment

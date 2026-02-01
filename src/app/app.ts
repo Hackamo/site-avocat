@@ -30,7 +30,8 @@ import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
 import { CONTACT_CONFIG } from './config/contact.config'
 import { routeAnimations } from './route-animations'
-
+import { MatDividerModule } from '@angular/material/divider'
+import { MatMenuModule } from '@angular/material/menu'
 @Component({
 	selector: 'app-root',
 	imports: [
@@ -48,6 +49,8 @@ import { routeAnimations } from './route-animations'
 		CommonModule,
 		SkeletonLoaderComponent,
 		ChatWidgetComponent,
+		MatDividerModule,
+		MatMenuModule,
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',

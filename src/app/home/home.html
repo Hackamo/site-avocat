@@ -1,7 +1,7 @@
 <!-- Hero Section (Bannière) -->
 <main>
 	<header class="home-section container">
-		<div class="home-content">
+		<div class="home-content" animateText="fade">
 			<h1 class="mat-display-3" i18n="Home page|Hero title">Votre avocate en droit des étrangers</h1>
 			<p class="mat-headline-5" i18n="Home page|Hero subtitle">
 				Accompagnement juridique pour vos démarches de séjour et de nationalité en France
@@ -17,7 +17,7 @@
 				Demander une consultation
 			</a>
 		</div>
-		<div class="hero-image-wrapper">
+		<div class="hero-image-wrapper" animateText="fade">
 			@if (!imageLoaded()) {
 			<div class="image-skeleton"></div>
 			}
@@ -40,7 +40,7 @@
 
 	<!-- Section Prestations -->
 	<section class="container">
-		<h2 class="mat-display-1 text-center mb-4" i18n="Home page|Services section title">
+		<h2 animateText="fade" class="mat-display-1 text-center mb-4" i18n="Home page|Services section title">
 			Nos Domaines d'Intervention
 		</h2>
 
@@ -48,18 +48,17 @@
 			@for (service of services; track $index) {
 			<mat-card
 				class="prestation-card"
-				animateText="fade"
 				appearance="outlined"
 				[routerLink]="['/prestations']"
 				[fragment]="service.anchor"
 			>
-				<mat-card-header>
+				<mat-card-header animateText="fade">
 					<div mat-card-avatar class="service-icon">
 						<mat-icon>{{ service.icon }}</mat-icon>
 					</div>
 					<mat-card-title>{{ service.title }}</mat-card-title>
 				</mat-card-header>
-				<mat-card-content>
+				<mat-card-content animateText="fade">
 					<p>{{ service.description }}</p>
 				</mat-card-content>
 				<mat-card-actions align="end">
