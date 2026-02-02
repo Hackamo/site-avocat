@@ -1,20 +1,20 @@
 <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
-	<a [routerLink]="['/blog', article.slug]" itemprop="url">
+	<a [routerLink]="['/blog', article().slug]" itemprop="url">
 		<mat-card class="blog-article-card">
 			<mat-card-header>
-				<mat-card-title itemprop="headline">{{ article.title }}</mat-card-title>
+				<mat-card-title itemprop="headline">{{ article().title }}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<p itemprop="description">{{ article.summary }}</p>
-				@if (article.date) {
-				<meta itemprop="datePublished" [content]="article.date" />
+				<p itemprop="description">{{ article().summary }}</p>
+				@if (article().date) {
+				<meta itemprop="datePublished" [content]="article().date" />
 				}
 			</mat-card-content>
 			<div class="card-footer">
-				@if (article.date) {
+				@if (article().date) {
 				<div class="card-date">
 					<mat-icon>date_range</mat-icon>
-					<span>{{ article.date | date: 'dd/MM/yyyy'}}</span>
+					<span>{{ article().date | date: 'dd/MM/yyyy'}}</span>
 				</div>
 				} @if (readingTimeText()) {
 				<div class="card-reading-time">

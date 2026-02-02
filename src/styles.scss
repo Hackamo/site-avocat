@@ -164,18 +164,27 @@ h3 {
 }
 
 /* Bottom sheet width constraint for article actions (panelClass: article-actions-sheet-panel) */
-.cdk-overlay-pane.article-actions-sheet-panel {
-	max-width: 520px;
-	width: calc(100% - 32px);
-	margin: 0 auto;
-	border-radius: 12px;
+
+.article-actions-sheet-panel .mat-bottom-sheet-container {
+	max-width: 80vw !important;
+	width: 80vw !important;
+	padding: 2rem;
+	border-radius: 2rem 2rem 0rem 0rem;
 }
 
-@media (max-width: 420px) {
-	.cdk-overlay-pane.article-actions-sheet-panel {
-		max-width: 100%;
-		width: 100%;
-		margin: 0;
-		border-radius: 0;
+/* Snack bar animation for favorite toggle */
+
+.favorite-snack-animation {
+	animation: snack-slide-fade 260ms ease-out;
+}
+
+@keyframes snack-slide-fade {
+	from {
+		opacity: 0;
+		transform: translateY(12px) scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
 	}
 }

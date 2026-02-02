@@ -127,6 +127,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 					}
 					this.snackBar.open(errorMessages[errorMessage] || 'Erreur', 'Fermer', {
 						duration: 3000,
+						panelClass: ['favorite-snack-animation'],
 					})
 				}
 
@@ -157,10 +158,16 @@ export class Contact implements OnDestroy, AfterViewInit {
 			try {
 				this.recognition.start()
 				this.isListening.set(true)
-				this.snackBar.open('Écoute activée...', 'Fermer', { duration: 3000 })
+				this.snackBar.open('Écoute activée...', 'Fermer', {
+					duration: 3000,
+					panelClass: ['favorite-snack-animation'],
+				})
 			} catch (error) {
 				console.error('Failed to start recognition:', error)
-				this.snackBar.open('Erreur lors du démarrage', 'Fermer', { duration: 3000 })
+				this.snackBar.open('Erreur lors du démarrage', 'Fermer', {
+					duration: 3000,
+					panelClass: ['favorite-snack-animation'],
+				})
 			}
 		}
 	}
@@ -177,6 +184,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 					duration: 1500,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',
+					panelClass: ['favorite-snack-animation'],
 				})
 				return
 			}
@@ -198,12 +206,14 @@ export class Contact implements OnDestroy, AfterViewInit {
 				duration: 1500,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
+				panelClass: ['favorite-snack-animation'],
 			})
 		} catch (e) {
 			this.snackBar.open('Erreur lors de la copie', 'Fermer', {
 				duration: 2000,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
+				panelClass: ['favorite-snack-animation'],
 			})
 		}
 	}

@@ -168,14 +168,17 @@ export class ArticlePage {
 		try {
 			if ((navigator as any).share) {
 				await (navigator as any).share({ title: article.title, url })
-				this.snack.open('Partage lancé', 'Fermer', { duration: 2000 })
+				this.snack.open('Partage lancé', 'Fermer', { duration: 2000, panelClass: ['favorite-snack-animation'] })
 			} else {
 				await navigator.clipboard.writeText(url)
-				this.snack.open('Lien copié', 'Fermer', { duration: 2000 })
+				this.snack.open('Lien copié', 'Fermer', { duration: 2000, panelClass: ['favorite-snack-animation'] })
 			}
 		} catch (e) {
 			console.error('Share failed', e)
-			this.snack.open('Impossible de partager', 'Fermer', { duration: 2000 })
+			this.snack.open('Impossible de partager', 'Fermer', {
+				duration: 2000,
+				panelClass: ['favorite-snack-animation'],
+			})
 		}
 	}
 
@@ -185,18 +188,24 @@ export class ArticlePage {
 		const url = `${this.getBaseUrl()}/blog/${article.slug}`
 		try {
 			await navigator.clipboard.writeText(url)
-			this.snack.open('Lien copié', 'Fermer', { duration: 2000 })
+			this.snack.open('Lien copié', 'Fermer', { duration: 2000, panelClass: ['favorite-snack-animation'] })
 		} catch (e) {
 			console.error('Copy failed', e)
-			this.snack.open('Erreur lors de la copie', 'Fermer', { duration: 2000 })
+			this.snack.open('Erreur lors de la copie', 'Fermer', {
+				duration: 2000,
+				panelClass: ['favorite-snack-animation'],
+			})
 		}
 	}
 
-	saveArticle() {
+	saveFav() {
 		const article = this.article()
 		if (!article) return
 		const added = this.savedService.toggle(article.slug)
-		this.snack.open(added ? 'Article enregistré' : 'Article supprimé', 'Fermer', { duration: 2000 })
+		this.snack.open(added ? 'Article enregistré' : 'Article supprimé', 'Fermer', {
+			duration: 2000,
+			panelClass: ['favorite-snack-animation'],
+		})
 	}
 
 	isSaved(): boolean {
