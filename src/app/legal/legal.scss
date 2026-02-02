@@ -1,5 +1,6 @@
 .container {
-	max-width: 900px;
+	text-wrap: pretty;
+	hyphens: auto;
 }
 
 h1 {
@@ -26,7 +27,8 @@ p {
 
 a {
 	color: var(--mat-sys-primary);
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 
 	&:hover {
 		text-decoration: underline;

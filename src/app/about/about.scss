@@ -86,13 +86,14 @@
 	margin-bottom: 4rem;
 
 	.intro-content {
-		max-width: 800px;
 		margin: 0 auto;
 		text-align: center;
+		text-wrap: pretty;
+		hyphens: auto;
 
 		p {
 			margin-bottom: 1.5rem;
-			line-height: 1.7;
+			line-height: 1.75;
 			font-size: 1.1rem;
 		}
 	}

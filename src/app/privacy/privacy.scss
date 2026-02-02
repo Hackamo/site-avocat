@@ -1,5 +1,7 @@
 .container {
-	max-width: 900px;
+	max-width: min(100%, 70ch);
+	text-wrap: pretty;
+	hyphens: auto;
 }
 
 h1 {
@@ -17,7 +19,7 @@ h2 {
 
 section {
 	margin-bottom: 2rem;
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 p {
@@ -35,7 +37,8 @@ li {
 
 a {
 	color: var(--mat-sys-primary);
-	text-decoration: none;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 
 	&:hover {
 		text-decoration: underline;
