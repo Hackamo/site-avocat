@@ -11,7 +11,7 @@ export const CONTACT_CONFIG = {
 	// Lawyer information
 	lawyer: {
 		title: 'Maître',
-		firstName: 'Martinet',
+		firstName: 'Déborah',
 		lastName: 'Martinet',
 		fullName: 'Maître Martinet',
 		specialties: ["Droit de l'immigration", 'Droit de la famille', 'Droit du contentieux'],
@@ -20,8 +20,6 @@ export const CONTACT_CONFIG = {
 	// Contact details
 	email: 'contact@maitre-martinet.fr',
 	phone: '01 23 45 67 89',
-	phoneSecondary: '06 12 34 56 78',
-	fax: '01 23 45 67 90',
 
 	// Address
 	address: {

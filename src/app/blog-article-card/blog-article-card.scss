@@ -103,6 +103,45 @@
 		border-color: rgba(86, 32, 32, 0.16);
 		transform: translateY(-6px) scale(1.035);
 	}
+
+	/* Favorite star styles */
+	.card-favorite {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+		button {
+			width: 40px;
+			height: 40px;
+			padding: 4px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 6px;
+			transition:
+				background-color 120ms ease,
+				transform 120ms ease;
+		}
+
+		button:hover {
+			background: rgba(0, 0, 0, 0.04);
+			transform: translateY(-1px);
+		}
+
+		mat-icon {
+			font-size: 20px;
+			line-height: 20px;
+			color: var(--mat-text-secondary-color);
+			transition:
+				color 150ms ease,
+				transform 150ms ease;
+		}
+
+		mat-icon.favorited {
+			color: var(--mat-button-filled-container-color); /* gold */
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+		}
+	}
 }
 
 :host-context(.similar-grid) .blog-card mat-card-header {

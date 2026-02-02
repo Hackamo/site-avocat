@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { RouterLink } from '@angular/router'
 import { AnimateText } from '../directives/animate-text.directive'
 import { MetaService } from '../services/meta.service'
+import { CONTACT_CONFIG } from '../config/contact.config'
 
 @Component({
 	selector: 'app-about',
@@ -21,6 +22,9 @@ export class About {
 
 	imageLoaded = signal(false)
 	darkMode = signal(this.isDarkMode())
+
+	// Expose centralized config for template usage
+	readonly config = CONTACT_CONFIG
 
 	constructor() {
 		this.metaService.updateMetaTags('about')

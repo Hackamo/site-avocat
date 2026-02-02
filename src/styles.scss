@@ -162,3 +162,20 @@ h3 {
 		opacity: 0;
 	}
 }
+
+/* Bottom sheet width constraint for article actions (panelClass: article-actions-sheet-panel) */
+.cdk-overlay-pane.article-actions-sheet-panel {
+	max-width: 520px;
+	width: calc(100% - 32px);
+	margin: 0 auto;
+	border-radius: 12px;
+}
+
+@media (max-width: 420px) {
+	.cdk-overlay-pane.article-actions-sheet-panel {
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+	}
+}

@@ -20,6 +20,42 @@
 	<article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
 		<h1 #headline class="mat-display-2" itemprop="headline">{{ art.title || 'Article non trouvé' }}</h1>
 		<p class="mat-headline-5" itemprop="description">{{ art.summary || 'Aucun résumé disponible' }}</p>
+
+		<div class="article-actions-row">
+			<!-- Mobile: simple icon opens bottom sheet -->
+			<button mat-icon-button aria-label="Actions mobile" (click)="openArticleActions()" class="mobile-only">
+				<mat-icon>more_vert</mat-icon>
+			</button>
+
+			<!-- Desktop: menu with actions -->
+			<div class="desktop-only">
+				<button
+					mat-icon-button
+					[matMenuTriggerFor]="actionsMenu"
+					aria-label="Actions"
+					(click)="onActionsClick($event)"
+				>
+					<mat-icon>more_vert</mat-icon>
+				</button>
+				<mat-menu #actionsMenu="matMenu">
+					<button mat-menu-item (click)="shareArticle()">
+						<mat-icon>share</mat-icon><span>Partager</span>
+					</button>
+					<button mat-menu-item (click)="copyArticleLink()">
+						<mat-icon>link</mat-icon><span>Copier le lien</span>
+					</button>
+					<button mat-menu-item (click)="saveArticle()">
+						<mat-icon>{{ isSaved() ? 'bookmark' : 'bookmark_border' }}</mat-icon
+						><span>{{ isSaved() ? 'Supprimer' : 'Enregistrer' }}</span>
+					</button>
+					<mat-divider></mat-divider>
+					<button mat-menu-item disabled *ngIf="art.readingTime">
+						<mat-icon>schedule</mat-icon><span>{{ getReadingTimeText(art.readingTime) }}</span>
+					</button>
+				</mat-menu>
+			</div>
+		</div>
+
 		@if (art.readingTime) {
 		<div class="article-meta">
 			<span class="reading-time-badge">
@@ -33,6 +69,7 @@
 			}
 		</div>
 		}
+
 		<div
 			animate.enter="enter-slide-fade-animation"
 			[innerHTML]="art.content"

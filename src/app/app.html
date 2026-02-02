@@ -60,7 +60,7 @@
 	<div class="sr-only" aria-live="polite" aria-atomic="true" role="status">{{ getLoadingMessage() }}</div>
 
 	<!-- Main Content -->
-	<main id="main-content" class="content-wrapper" [@routeAnimations]="getRouteAnimationData()">
+	<main id="main-content" class="content-wrapper">
 		@if (isLoading()) {
 		<app-skeleton-loader></app-skeleton-loader>
 		} @else {

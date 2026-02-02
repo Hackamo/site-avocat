@@ -64,6 +64,11 @@ export class Blog implements OnInit {
 		return filtered
 	})
 
+	ngOnInit() {
+		this.metaService.updateMetaTags('blog')
+		this.blogData.loadArticles()
+	}
+
 	onCategoryChange(category: string): void {
 		this.selectedCategory.set(category)
 	}
@@ -80,11 +85,5 @@ export class Blog implements OnInit {
 				})
 			}
 		}
-	}
-
-	ngOnInit() {
-		this.metaService.updateMetaTags('blog')
-		// Load articles when component initializes
-		this.blogData.loadArticles()
 	}
 }

@@ -21,11 +21,28 @@ import { AnimateText } from '../directives/animate-text.directive'
 import { toSignal } from '@angular/core/rxjs-interop'
 import { map } from 'rxjs/operators'
 import { MetaService } from '../services/meta.service'
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet'
+import { MatMenuModule } from '@angular/material/menu'
+import { SavedArticlesService } from '../services/saved-articles.service'
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatDividerModule } from '@angular/material/divider'
+import { ArticleActionsSheet } from '../article-actions-sheet/article-actions-sheet'
 
 @Component({
 	selector: 'app-article-page',
 	standalone: true,
-	imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule, BlogArticleCard, AnimateText],
+	imports: [
+		CommonModule,
+		RouterModule,
+		MatButtonModule,
+		MatIconModule,
+		BlogArticleCard,
+		AnimateText,
+		MatBottomSheetModule,
+		MatMenuModule,
+		MatDividerModule,
+		MatSnackBarModule,
+	],
 	templateUrl: './article-page.html',
 	styleUrl: './article-page.scss',
 })
@@ -53,6 +70,11 @@ export class ArticlePage {
 			.filter((article) => (current.similarSlugs ?? []).includes(article.slug))
 			.slice(0, 3)
 	})
+
+	private readonly bottomSheet = inject(MatBottomSheet)
+
+	private readonly savedService = inject(SavedArticlesService)
+	private readonly snack = inject(MatSnackBar)
 
 	constructor() {
 		// Ensure articles are loaded
@@ -109,5 +131,82 @@ export class ArticlePage {
 
 	getReadingTimeText(minutes: number): string {
 		return this.readingTimeService.formatReadingTime(minutes)
+	}
+
+	openArticleActions() {
+		const article = this.article()
+		if (!article || !isPlatformBrowser(this.platformId)) return
+
+		// Only open bottom sheet on small screens (mobile)
+		const isMobile = window.matchMedia('(max-width: 768px)').matches
+		if (!isMobile) {
+			// On desktop we keep the default behaviour: no bottom sheet opened.
+			return
+		}
+
+		const url = `${this.getBaseUrl()}/blog/${article.slug}`
+		this.bottomSheet.open(ArticleActionsSheet, {
+			data: { slug: article.slug, title: article.title, url, readingTime: article.readingTime },
+			panelClass: 'article-actions-sheet-panel',
+		})
+	}
+
+	onActionsClick(event: MouseEvent) {
+		// If mobile, open bottom sheet and prevent menu opening
+		if (!isPlatformBrowser(this.platformId)) return
+		const isMobile = window.matchMedia('(max-width: 768px)').matches
+		if (isMobile) {
+			event.stopPropagation()
+			this.openArticleActions()
+		}
+	}
+
+	async shareArticle() {
+		const article = this.article()
+		if (!article) return
+		const url = `${this.getBaseUrl()}/blog/${article.slug}`
+		try {
+			if ((navigator as any).share) {
+				await (navigator as any).share({ title: article.title, url })
+				this.snack.open('Partage lancé', 'Fermer', { duration: 2000 })
+			} else {
+				await navigator.clipboard.writeText(url)
+				this.snack.open('Lien copié', 'Fermer', { duration: 2000 })
+			}
+		} catch (e) {
+			console.error('Share failed', e)
+			this.snack.open('Impossible de partager', 'Fermer', { duration: 2000 })
+		}
+	}
+
+	async copyArticleLink() {
+		const article = this.article()
+		if (!article) return
+		const url = `${this.getBaseUrl()}/blog/${article.slug}`
+		try {
+			await navigator.clipboard.writeText(url)
+			this.snack.open('Lien copié', 'Fermer', { duration: 2000 })
+		} catch (e) {
+			console.error('Copy failed', e)
+			this.snack.open('Erreur lors de la copie', 'Fermer', { duration: 2000 })
+		}
+	}
+
+	saveArticle() {
+		const article = this.article()
+		if (!article) return
+		const added = this.savedService.toggle(article.slug)
+		this.snack.open(added ? 'Article enregistré' : 'Article supprimé', 'Fermer', { duration: 2000 })
+	}
+
+	isSaved(): boolean {
+		const article = this.article()
+		if (!article) return false
+		return this.savedService.isSaved(article.slug)
+	}
+
+	private getBaseUrl(): string {
+		if (!isPlatformBrowser(this.platformId)) return ''
+		return `${window.location.protocol}//${window.location.host}`
 	}
 }

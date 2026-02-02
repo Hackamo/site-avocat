@@ -1,6 +1,7 @@
 import { Injectable, inject, PLATFORM_ID } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
-import { DOCUMENT, isPlatformBrowser } from '@angular/common'
+import { DOCUMENT, isPlatformBrowser, LowerCasePipe } from '@angular/common'
+import { CONTACT_CONFIG } from '../config/contact.config'
 
 interface PageMeta {
 	title: string
@@ -20,47 +21,40 @@ export class MetaService {
 
 	private readonly pagesMeta: Record<string, PageMeta> = {
 		home: {
-			title: 'Cabinet Martinet - Avocat Droit des Étrangers à Bordeaux',
-			description:
-				"Cabinet d'avocat spécialisé en droit des étrangers à Bordeaux. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée.",
-			keywords:
-				'avocat droit des étrangers, titre de séjour, naturalisation française, OQTF, contentieux étrangers, Bordeaux',
+			title: `${CONTACT_CONFIG.businessName} - Avocat Droit des Étrangers à ${CONTACT_CONFIG.address.city}`,
+			description: `Cabinet d'avocat spécialisé en droit des étrangers à ${CONTACT_CONFIG.address.city}. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée.`,
+			keywords: `avocat droit des étrangers, titre de séjour, naturalisation française, OQTF, contentieux étrangers, ${CONTACT_CONFIG.address.city}`,
 		},
 		prestations: {
-			title: 'Nos Prestations - Droit des Étrangers | Cabinet Martinet',
-			description:
-				"Découvrez nos domaines d'intervention en droit des étrangers : titres de séjour, naturalisation française, contentieux et recours. Expertise juridique à Bordeaux.",
+			title: `Nos Prestations - Droit des Étrangers | ${CONTACT_CONFIG.businessName}`,
+			description: `Découvrez nos domaines d'intervention en droit des étrangers : titres de séjour, naturalisation française, contentieux et recours. Expertise juridique à ${CONTACT_CONFIG.address.city}.`,
 			keywords: 'prestations avocat, droit immigration, carte de résident, naturalisation, recours OQTF',
 		},
 		blog: {
-			title: 'Blog Juridique - Actualités Droit des Étrangers | Cabinet Martinet',
+			title: `Blog Juridique - Actualités Droit des Étrangers | ${CONTACT_CONFIG.businessName}`,
 			description:
 				'Actualités, conseils et analyses en droit des étrangers. Articles juridiques sur les titres de séjour, naturalisation, OQTF et contentieux des étrangers.',
-			keywords: 'blog juridique, actualités droit étrangers, conseils immigration, OQTF',
+			keywords: `blog juridique, actualités droit étrangers, conseils immigration, OQTF, ${CONTACT_CONFIG.address.city}`,
 		},
 		about: {
-			title: 'À Propos - Maître Martinet, Avocat Droit des Étrangers',
-			description:
-				'Découvrez le parcours de Maître Martinet, avocate spécialisée en droit des étrangers à Bordeaux. Expertise, engagement et accompagnement personnalisé pour vos démarches.',
-			keywords: 'avocat bordeaux, maître martinet, droit des étrangers, avocat immigration',
+			title: `À Propos - ${CONTACT_CONFIG.lawyer.fullName}, Avocat Droit des Étrangers`,
+			description: `Découvrez le parcours de ${CONTACT_CONFIG.lawyer.fullName}, avocate spécialisée en droit des étrangers à ${CONTACT_CONFIG.address.city}. Expertise, engagement et accompagnement personnalisé pour vos démarches.`,
+			keywords: `avocat ${CONTACT_CONFIG.address.city.toLowerCase()}, maître ${CONTACT_CONFIG.lawyer.lastName}, droit des étrangers, avocat immigration`,
 		},
 		contact: {
-			title: 'Contact - Cabinet Martinet Bordeaux | Avocat Droit des Étrangers',
-			description:
-				'Contactez le Cabinet Martinet à Bordeaux pour une consultation en droit des étrangers. Prenez rendez-vous pour vos démarches de titre de séjour, naturalisation ou contentieux.',
-			keywords: 'contact avocat bordeaux, rendez-vous avocat, consultation droit étrangers',
+			title: `Contact - ${CONTACT_CONFIG.businessName} ${CONTACT_CONFIG.address.city} | Avocat Droit des Étrangers`,
+			description: `Contactez le ${CONTACT_CONFIG.businessName} à ${CONTACT_CONFIG.address.city} pour une consultation en droit des étrangers. Prenez rendez-vous pour vos démarches de titre de séjour, naturalisation ou contentieux.`,
+			keywords: `contact avocat ${CONTACT_CONFIG.address.city.toLowerCase()}, rendez-vous avocat, consultation droit étrangers`,
 		},
 		legal: {
-			title: 'Mentions Légales | Cabinet Martinet',
-			description:
-				"Mentions légales du Cabinet Martinet, avocat en droit des étrangers à Bordeaux. Informations légales, RGPD et conditions d'utilisation du site.",
-			keywords: 'mentions légales, cabinet avocat, bordeaux',
+			title: `Mentions Légales | ${CONTACT_CONFIG.businessName}`,
+			description: `Mentions légales du ${CONTACT_CONFIG.businessName}, avocat en droit des étrangers à ${CONTACT_CONFIG.address.city}. Informations légales, RGPD et conditions d'utilisation du site.`,
+			keywords: `mentions légales, cabinet avocat, ${CONTACT_CONFIG.address.city.toLowerCase()}`,
 		},
 		privacy: {
-			title: 'Politique de Confidentialité | Cabinet Martinet',
-			description:
-				'Politique de confidentialité et protection des données personnelles du Cabinet Martinet. Informations sur le traitement de vos données conformément au RGPD.',
-			keywords: 'politique confidentialité, RGPD, protection données, cabinet avocat',
+			title: `Politique de Confidentialité | ${CONTACT_CONFIG.businessName}`,
+			description: `Politique de confidentialité et protection des données personnelles du ${CONTACT_CONFIG.businessName}. Informations sur le traitement de vos données conformément au RGPD.`,
+			keywords: `politique confidentialité, RGPD, protection données, cabinet avocat`,
 		},
 	}
 

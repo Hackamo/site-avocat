@@ -24,6 +24,10 @@ export class ServicesDataService {
 		this.locale === 'en' ? this.getEnglishServices() : this.getFrenchServices(),
 	)
 
+	get services() {
+		return this._services.asReadonly()
+	}
+
 	private getFrenchServices(): ServiceItem[] {
 		return [
 			{
@@ -182,9 +186,5 @@ export class ServicesDataService {
 				],
 			},
 		]
-	}
-
-	get services() {
-		return this._services.asReadonly()
 	}
 }

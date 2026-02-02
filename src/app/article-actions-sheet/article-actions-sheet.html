@@ -1,0 +1,23 @@
+<div class="article-actions-sheet">
+	<h3 class="sheet-title">Options</h3>
+	<p class="sheet-subtitle">{{ data.title }}</p>
+
+	<div class="sheet-actions">
+		<button mat-button (click)="share()">
+			<mat-icon>share</mat-icon>
+			<span>Partager</span>
+		</button>
+
+		<button mat-button (click)="copyLink()">
+			<mat-icon>link</mat-icon>
+			<span>Copier le lien</span>
+		</button>
+
+		<button mat-button (click)="saveFav()">
+			<mat-icon>star_shine</mat-icon>
+			<span>Favoris</span>
+		</button>
+
+		<button mat-button (click)="close()"><mat-icon>close</mat-icon>Fermer</button>
+	</div>
+</div>

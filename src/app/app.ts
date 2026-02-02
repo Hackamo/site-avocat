@@ -29,7 +29,6 @@ import {
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
 import { CONTACT_CONFIG } from './config/contact.config'
-import { routeAnimations } from './route-animations'
 import { MatDividerModule } from '@angular/material/divider'
 import { MatMenuModule } from '@angular/material/menu'
 @Component({
@@ -55,7 +54,6 @@ import { MatMenuModule } from '@angular/material/menu'
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	templateUrl: './app.html',
 	styleUrl: './app.scss',
-	animations: [routeAnimations],
 })
 export class App implements OnInit {
 	readonly scrolledDown = signal(false)
@@ -120,19 +118,6 @@ export class App implements OnInit {
 				}
 			})
 		}
-	}
-
-	private updateLanguageFromUrl(): void {
-		if (!this.isBrowser) return
-		const hostname = window.location.hostname
-		const currentPort = window.location.port
-		if (hostname === 'localhost' && (currentPort === '4200' || currentPort === '4201')) {
-			this.currentLanguage.set(currentPort === '4201' ? 'en' : 'fr')
-			return
-		}
-		const path = window.location.pathname
-		const lang = path.startsWith('/en') ? 'en' : 'fr'
-		this.currentLanguage.set(lang)
 	}
 
 	ngOnInit(): void {
@@ -205,31 +190,17 @@ export class App implements OnInit {
 		return this.loadingMessage()
 	}
 
-	private applyTheme(isDark: boolean): void {
+	private updateLanguageFromUrl(): void {
 		if (!this.isBrowser) return
-		if (isDark) {
-			document.body.classList.add('dark-theme')
-		} else {
-			document.body.classList.remove('dark-theme')
+		const hostname = window.location.hostname
+		const currentPort = window.location.port
+		if (hostname === 'localhost' && (currentPort === '4200' || currentPort === '4201')) {
+			this.currentLanguage.set(currentPort === '4201' ? 'en' : 'fr')
+			return
 		}
-	}
-
-	private applyColorTheme(
-		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose',
-	): void {
-		if (!this.isBrowser) return
-		document.body.classList.remove(
-			'theme-blue',
-			'theme-red',
-			'theme-green',
-			'theme-yellow',
-			'theme-magenta',
-			'theme-orange',
-			'theme-azure',
-			'theme-violet',
-			'theme-rose',
-		)
-		document.body.classList.add(`theme-${theme}`)
+		const path = window.location.pathname
+		const lang = path.startsWith('/en') ? 'en' : 'fr'
+		this.currentLanguage.set(lang)
 	}
 
 	onThemeSelect(theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose') {
@@ -281,7 +252,30 @@ export class App implements OnInit {
 		window.location.href = newUrl
 	}
 
-	getRouteAnimationData() {
-		return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation']
+	private applyTheme(isDark: boolean): void {
+		if (!this.isBrowser) return
+		if (isDark) {
+			document.body.classList.add('dark-theme')
+		} else {
+			document.body.classList.remove('dark-theme')
+		}
+	}
+
+	private applyColorTheme(
+		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose',
+	): void {
+		if (!this.isBrowser) return
+		document.body.classList.remove(
+			'theme-blue',
+			'theme-red',
+			'theme-green',
+			'theme-yellow',
+			'theme-magenta',
+			'theme-orange',
+			'theme-azure',
+			'theme-violet',
+			'theme-rose',
+		)
+		document.body.classList.add(`theme-${theme}`)
 	}
 }

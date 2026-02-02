@@ -3,7 +3,7 @@
 	<header class="hero-section" animateText="fade">
 		<div class="container">
 			<div class="hero-content">
-				<h1 class="mat-display-2" i18n="About page|Page title">À Propos de Maître Martinet</h1>
+				<h1 class="mat-display-2" i18n="About page|Page title">À Propos de {{ config.lawyer.fullName }}</h1>
 				<p class="mat-headline-5 hero-subtitle" i18n="About page|Page subtitle">
 					Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes
 					vos démarches administratives et juridiques en France.
@@ -15,15 +15,15 @@
 				}
 				<picture>
 					<source
-						[srcset]="darkMode() ? 'assets/debora_about.webp' : 'assets/debora_about.webp'"
+						[srcset]="darkMode() ? 'assets/images/debora_about.webp' : 'assets/images/debora_about.webp'"
 						type="image/webp"
 					/>
 					<img
-						[ngSrc]="darkMode() ? 'assets/debora_about.JPG' : 'assets/debora_about.JPG'"
+						[ngSrc]="darkMode() ? 'assets/images/debora_about.JPG' : 'assets/images/debora_about.JPG'"
 						priority
 						width="400"
 						height="600"
-						alt="Image du Maître Martinet"
+						alt="Image de {{ config.lawyer.fullName }}"
 						i18n-alt="About page|Profile image"
 						(load)="onImageLoad()"
 						[class.loaded]="imageLoaded()"
@@ -40,15 +40,16 @@
 			<div class="intro-content">
 				<h2 class="mat-display-1 section-title" i18n="About page|Engagement section title">Mon Engagement</h2>
 				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 1">
-					Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise
-					au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour,
-					d'installation et de naturalisation en France.
+					Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, {{
+					config.lawyer.title }} {{ config.lawyer.lastName }} met son expertise au service des particuliers et
+					des entreprises pour les accompagner dans leurs projets de séjour, d'installation et de
+					naturalisation en France.
 				</p>
 				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 2">
 					Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un
-					accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une
-					chance de réussir son projet de vie en France, et je m'engage à défendre vos droits avec
-					détermination et professionnalisme.
+					accompagnement personnalisé adapté à chaque situation. {{ config.lawyer.title }} {{
+					config.lawyer.lastName }} croit fermement que chacun mérite une chance de réussir son projet de vie
+					en France, et s'engage à défendre vos droits avec détermination et professionnalisme.
 				</p>
 			</div>
 		</section>
@@ -250,26 +251,26 @@
 				</mat-card>
 			</div>
 		</section>
-	</main>
 
-	<!-- Call to Action -->
-	<section class="cta-section" animateText="fade">
-		<div class="container text-center">
-			<h2 class="mat-headline-4" i18n="About page|CTA title">Prêt à commencer votre démarche ?</h2>
-			<p class="mat-body-1" i18n="About page|CTA description">
-				Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures
-				stratégies à adopter.
-			</p>
-			<div class="cta-buttons">
-				<button mat-flat-button routerLink="/contact">
-					<mat-icon>email</mat-icon>
-					<span i18n="About page|Contact button">Me Contacter</span>
-				</button>
-				<button mat-stroked-button routerLink="/prestations">
-					<mat-icon>info</mat-icon>
-					<span i18n="About page|Services button">Mes Services</span>
-				</button>
+		<!-- Call to Action -->
+		<section class="cta-section" animateText="fade">
+			<div class="container text-center">
+				<h2 class="mat-headline-4" i18n="About page|CTA title">Prêt à commencer votre démarche ?</h2>
+				<p class="mat-body-1" i18n="About page|CTA description">
+					Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures
+					stratégies à adopter.
+				</p>
+				<div class="cta-buttons">
+					<button mat-flat-button routerLink="/contact">
+						<mat-icon>email</mat-icon>
+						<span i18n="About page|Contact button">Me Contacter</span>
+					</button>
+					<button mat-stroked-button routerLink="/prestations">
+						<mat-icon>info</mat-icon>
+						<span i18n="About page|Services button">Mes Services</span>
+					</button>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
 </div>

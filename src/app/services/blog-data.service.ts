@@ -32,17 +32,43 @@ export class BlogDataService {
 	private readonly _loading = signal(false)
 	private loadingPromise: Promise<void> | null = null
 	private currentLanguage: string | null = null
+
+	articles = computed(() => this.getSortedByDate())
+	loading = this._loading.asReadonly()
 	private readonly CACHE_NAME = 'blog-articles-cache-v1'
+
+	constructor() {
+		// No language change subscription needed with Angular i18n
+		// Each locale build is separate
+	}
+
+	getSortedByDate() {
+		return [...this._articles()].sort((a, b) => this.compareDates(b.date, a.date))
+	}
+
+	loadArticles() {
+		this.ensureLoaded()
+	}
+
+	getBySlug(slug: string) {
+		const article = this._articles().find((article) => article.slug === slug)
+		if (!article) return undefined
+
+		// If content is already loaded, return immediately
+		if (article.content) {
+			return article
+		}
+
+		// Load content asynchronously (fire and forget)
+		this.loadArticleContent(slug)
+
+		return article
+	}
 
 	private compareDates(dateA: string | undefined, dateB: string | undefined): number {
 		const timeA = new Date(dateA || '1970-01-01').getTime()
 		const timeB = new Date(dateB || '1970-01-01').getTime()
 		return timeA - timeB // Ascending order for comparison (will be reversed in sort)
-	}
-
-	constructor() {
-		// No language change subscription needed with Angular i18n
-		// Each locale build is separate
 	}
 
 	private async ensureLoaded(): Promise<void> {
@@ -130,32 +156,6 @@ export class BlogDataService {
 		} catch (error) {
 			console.error('Failed to load blog articles:', error)
 		}
-	}
-
-	articles = computed(() => this.getSortedByDate())
-	loading = this._loading.asReadonly()
-
-	getSortedByDate() {
-		return [...this._articles()].sort((a, b) => this.compareDates(b.date, a.date))
-	}
-
-	loadArticles() {
-		this.ensureLoaded()
-	}
-
-	getBySlug(slug: string) {
-		const article = this._articles().find((article) => article.slug === slug)
-		if (!article) return undefined
-
-		// If content is already loaded, return immediately
-		if (article.content) {
-			return article
-		}
-
-		// Load content asynchronously (fire and forget)
-		this.loadArticleContent(slug)
-
-		return article
 	}
 
 	private async loadArticleContent(slug: string): Promise<void> {

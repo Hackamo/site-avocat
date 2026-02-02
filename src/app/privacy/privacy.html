@@ -80,7 +80,9 @@
 		<h2 i18n="Privacy|Recipients title">6. Destinataires des données</h2>
 		<p i18n="Privacy|Recipients intro">Vos données personnelles ne sont partagées que dans les cas suivants :</p>
 		<ul>
-			<li i18n="Privacy|Recipient lawyers">Avec les avocats du Cabinet Martinet pour répondre à votre demande</li>
+			<li i18n="Privacy|Recipient lawyers">
+				Avec les avocats du {{ contactConfig.businessName }} pour répondre à votre demande
+			</li>
 			<li i18n="Privacy|Recipient authorities">Avec les autorités compétentes si requis par la loi</li>
 			<li i18n="Privacy|Recipient hosting">Avec notre hébergeur (GitHub Pages) pour la continuité du service</li>
 		</ul>
@@ -114,7 +116,7 @@
 		</ul>
 		<p i18n="Privacy|Rights contact">
 			Pour exercer ces droits, contactez-nous à :
-			<a href="mailto:privacy@cabinet-martinet.fr">privacy@cabinet-martinet.fr</a>
+			<a [href]="'mailto:' + contactConfig.specialEmails.privacy">{{ contactConfig.specialEmails.privacy }}</a>
 		</p>
 	</section>
 
@@ -145,15 +147,16 @@
 		</p>
 		<p i18n="Privacy|Security paragraph 2">
 			Si vous découvrez une violation de sécurité, veuillez nous contacter immédiatement à :
-			<a href="mailto:security@cabinet-martinet.fr">security@cabinet-martinet.fr</a>
+			<a [href]="'mailto:' + contactConfig.specialEmails.security">{{ contactConfig.specialEmails.security }}</a>
 		</p>
 	</section>
 
 	<section>
 		<h2 i18n="Privacy|Modifications title">10. Modifications de cette politique</h2>
 		<p i18n="Privacy|Modifications paragraph 1">
-			Le Cabinet Martinet se réserve le droit de modifier cette Politique de Confidentialité à tout moment. Les
-			modifications seront publiées sur cette page avec une date de mise à jour.
+			- Le Cabinet Martinet se réserve le droit de modifier cette Politique de Confidentialité à tout moment. Les
+			+ Le {{ contactConfig.businessName }} se réserve le droit de modifier cette Politique de Confidentialité à
+			tout moment. Les modifications seront publiées sur cette page avec une date de mise à jour.
 		</p>
 		<p i18n="Privacy|Last update"><strong>Dernière mise à jour : 2026</strong></p>
 	</section>
@@ -164,8 +167,8 @@
 			Si vous avez des questions ou préoccupations concernant cette politique, veuillez nous contacter à :
 		</p>
 		<p i18n="Privacy|Contact details">
-			<strong>Email :</strong> <a href="mailto:contact@cabinet-martinet.fr">contact@cabinet-martinet.fr</a><br />
-			<strong>Adresse :</strong> 5 Avenue de la République, 33000 Bordeaux
+			<strong>Email :</strong> <a [href]="'mailto:' + contactConfig.email">{{ contactConfig.email }}</a><br />
+			<strong>Adresse :</strong> {{ contactConfig.address.full }}
 		</p>
 		<p i18n="Privacy|CNIL complaint">
 			Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l'Informatique et

@@ -148,13 +148,6 @@ export class Contact implements OnDestroy, AfterViewInit {
 		this.stopVoiceInput()
 	}
 
-	private stopVoiceInput(): void {
-		if (this.recognition && this.isListening()) {
-			this.recognition.stop()
-			this.isListening.set(false)
-		}
-	}
-
 	startVoiceInput() {
 		if (!this.recognition || !this.speechSupported()) return
 
@@ -235,10 +228,10 @@ export class Contact implements OnDestroy, AfterViewInit {
 					from_name: this.contactForm.value.name,
 					from_email: this.contactForm.value.email,
 					phone: this.contactForm.value.phone || 'Non fourni',
-					// to_email: 'contact@maitre-martinet.fr', // Your email address
+					to_email: this.config.email,
 				}
 
-				// await emailjs.send(serviceId, templateId, templateParams, publicKey)
+				await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
 				this.snackBar.open('Message envoyé avec succès !', 'Fermer', {
 					duration: 5000,
@@ -269,5 +262,12 @@ export class Contact implements OnDestroy, AfterViewInit {
 		setTimeout(() => {
 			this.iframeLoading.set(false)
 		}, 500)
+	}
+
+	private stopVoiceInput(): void {
+		if (this.recognition && this.isListening()) {
+			this.recognition.stop()
+			this.isListening.set(false)
+		}
 	}
 }
