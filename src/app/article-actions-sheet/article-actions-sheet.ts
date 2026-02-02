@@ -37,8 +37,9 @@ export class ArticleActionsSheet {
 			}
 		} catch (e) {
 			console.error('Share failed', e)
-			this.snack.open('Impossible de partager', 'Fermer', {
+			this.snack.open('Impossible de partager', '', {
 				duration: 2000,
+				verticalPosition: 'top',
 				panelClass: ['favorite-snack-animation'],
 			})
 		}
@@ -47,12 +48,17 @@ export class ArticleActionsSheet {
 	async copyLink() {
 		try {
 			await navigator.clipboard.writeText(this.data.url)
-			this.snack.open('Lien copié', 'Fermer', { duration: 2000, panelClass: ['favorite-snack-animation'] })
+			this.snack.open('Lien copié', '', {
+				duration: 2000,
+				verticalPosition: 'top',
+				panelClass: ['favorite-snack-animation'],
+			})
 			this.close()
 		} catch (e) {
 			console.error('Copy failed', e)
-			this.snack.open('Erreur lors de la copie', 'Fermer', {
+			this.snack.open('Erreur lors de la copie', '', {
 				duration: 2000,
+				verticalPosition: 'top',
 				panelClass: ['favorite-snack-animation'],
 			})
 		}
@@ -66,21 +72,24 @@ export class ArticleActionsSheet {
 			if (!list.includes(this.data.slug)) {
 				list.push(this.data.slug)
 				localStorage.setItem(key, JSON.stringify(list))
-				this.snack.open('Article ajouté aux favoris', 'Fermer', {
+				this.snack.open('Article ajouté aux favoris', '', {
 					duration: 2000,
+					verticalPosition: 'top',
 					panelClass: ['favorite-snack-animation'],
 				})
 			} else {
-				this.snack.open('Article déjà en favori', 'Fermer', {
+				this.snack.open('Article déjà en favori', '', {
 					duration: 2000,
+					verticalPosition: 'top',
 					panelClass: ['favorite-snack-animation'],
 				})
 			}
 			this.close()
 		} catch (e) {
 			console.error('Save failed', e)
-			this.snack.open("Erreur pour ajouter l'article aux favoris", 'Fermer', {
+			this.snack.open("Erreur pour ajouter l'article aux favoris", '', {
 				duration: 2000,
+				verticalPosition: 'top',
 				panelClass: ['favorite-snack-animation'],
 			})
 		}

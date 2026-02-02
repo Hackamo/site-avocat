@@ -46,8 +46,9 @@ export class BlogArticleCard {
 		const article = this.article()
 		if (!article) return
 		const added = this.savedService.toggle(article.slug)
-		this.snack.open(added ? 'Article ajouté aux favoris' : 'Article retiré des favoris', 'Fermer', {
+		this.snack.open(added ? 'Article ajouté aux favoris' : 'Article retiré des favoris', '', {
 			duration: 2000,
+			verticalPosition: 'top',
 			panelClass: ['favorite-snack-animation'],
 		})
 	}

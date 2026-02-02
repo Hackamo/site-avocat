@@ -177,6 +177,7 @@ h3 {
 .favorite-snack-animation {
 	animation: snack-slide-fade 300ms ease-out;
 	margin-bottom: 1rem !important;
+	text-align: center;
 }
 
 @keyframes snack-slide-fade {

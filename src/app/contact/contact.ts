@@ -125,7 +125,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 						'contact.voice.noPermission': 'Permission de microphone refusée',
 						'contact.voice.noSpeech': 'Aucune parole détectée',
 					}
-					this.snackBar.open(errorMessages[errorMessage] || 'Erreur', 'Fermer', {
+					this.snackBar.open(errorMessages[errorMessage] || 'Erreur', '', {
 						duration: 3000,
 						panelClass: ['favorite-snack-animation'],
 					})
@@ -158,14 +158,16 @@ export class Contact implements OnDestroy, AfterViewInit {
 			try {
 				this.recognition.start()
 				this.isListening.set(true)
-				this.snackBar.open('Écoute activée...', 'Fermer', {
+				this.snackBar.open('Écoute activée...', '', {
 					duration: 3000,
+					verticalPosition: 'top',
 					panelClass: ['favorite-snack-animation'],
 				})
 			} catch (error) {
 				console.error('Failed to start recognition:', error)
-				this.snackBar.open('Erreur lors du démarrage', 'Fermer', {
+				this.snackBar.open('Erreur lors du démarrage', '', {
 					duration: 3000,
+					verticalPosition: 'top',
 					panelClass: ['favorite-snack-animation'],
 				})
 			}
@@ -180,7 +182,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 					'contact.copyPhone': 'Numéro copié !',
 					'contact.copyEmail': 'Email copié !',
 				}
-				this.snackBar.open(copyMessages[messageKey] || 'Copié !', 'Fermer', {
+				this.snackBar.open(copyMessages[messageKey] || 'Copié !', '', {
 					duration: 1500,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',
@@ -202,14 +204,14 @@ export class Contact implements OnDestroy, AfterViewInit {
 				'contact.copyPhone': 'Numéro copié !',
 				'contact.copyEmail': 'Email copié !',
 			}
-			this.snackBar.open(copyMessages2[messageKey] || 'Copié !', 'Fermer', {
+			this.snackBar.open(copyMessages2[messageKey] || 'Copié !', '', {
 				duration: 1500,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
 				panelClass: ['favorite-snack-animation'],
 			})
 		} catch (e) {
-			this.snackBar.open('Erreur lors de la copie', 'Fermer', {
+			this.snackBar.open('Erreur lors de la copie', '', {
 				duration: 2000,
 				horizontalPosition: 'center',
 				verticalPosition: 'top',
@@ -243,7 +245,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 
 				await emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-				this.snackBar.open('Message envoyé avec succès !', 'Fermer', {
+				this.snackBar.open('Message envoyé avec succès !', '', {
 					duration: 5000,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',
@@ -252,7 +254,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 				this.contactForm.reset()
 			} catch (error) {
 				console.error("Erreur lors de l'envoi:", error)
-				this.snackBar.open("Erreur lors de l'envoi du message", 'Fermer', {
+				this.snackBar.open("Erreur lors de l'envoi du message", '', {
 					duration: 5000,
 					horizontalPosition: 'center',
 					verticalPosition: 'top',

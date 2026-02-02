@@ -76,7 +76,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #1e8e76,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -101,7 +101,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #c2a800,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -126,7 +126,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #c35a91,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -151,7 +151,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #fb9505,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -176,7 +176,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #1a7ad4,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -201,7 +201,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #9168e5,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -226,7 +226,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #be7b96,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);
@@ -251,7 +251,7 @@
 
 	@include mat.snack-bar-overrides(
 		(
-			container-color: #c62828,
+			container-color: var(--mat-button-filled-container-color),
 			supporting-text-color: #ffffff,
 		)
 	);

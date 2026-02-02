@@ -15,19 +15,22 @@ body.dark-theme {
 	--mat-sys-on-surface-variant: #d0d0d0;
 	--mat-sys-outline: #666666;
 	--mat-sys-outline-variant: #444444;
+
 	--mat-tab-divider-color: #ffd740 !important;
 	--mat-tab-active-indicator-color: #ffd740 !important;
-
 	--mat-fab-container-color: #ffca28 !important;
 	--mat-icon-button-icon-color: #ffca28 !important;
-
 	--mat-divider-color: #ffd740 !important;
+	--mat-snack-bar-container-color: #ffd740 !important;
+	--mat-snack-bar-button-color: black !important;
+
 	--mat-button-filled-container-color: #c59f16 !important;
 	--mat-button-filled-label-text-color: rgb(255, 243, 207) !important;
 	--mat-button-outlined-label-text-color: #ffd740 !important;
 	--mat-button-outlined-outline-color: #ffd740 !important;
 	--mat-button-text-label-text-color: #ffd740 !important;
 	--mat-button-outlined-label-text-color-hover: #ffc400 !important;
+
 	--mat-menu-item-icon-color: #ffd740 !important;
 	// Slide toggle
 	--mat-slide-toggle-selected-track-color: #666666 !important;
