@@ -109,6 +109,6 @@ Martinet Law Firm remains at your disposal to assist you in your legal proceedin
 Martinet Law Firm assists you in immigration law and criminal law in Bordeaux.
 
 <figure>
- <img src="/assets/pexels-ekaterina-bolovtsova-6077099.jpg" width="400" alt="Judge's gavel on an courtroom desk" loading="lazy" decoding="async" />
+ <img src="/assets/images/pexels-ekaterina-bolovtsova-6077099.jpg" width="400" alt="Judge's gavel on an courtroom desk" loading="lazy" decoding="async" />
  <figcaption>Photo Credit: Ekaterina Bolovtsova (Pexels)</figcaption>
 </figure>
