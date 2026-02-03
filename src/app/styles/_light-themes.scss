@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @use './theme-definitions' as themes;
+@use './theme-colors' as theme;
 
 // Shared mixin for all slide toggle styles (identical across themes)
 @mixin slide-toggle-common {
@@ -27,6 +28,7 @@
 	.mat-mdc-card {
 		border: 1px solid var(--mat-sys-primary) !important;
 	}
+	--mat-button-filled-container-color: var(--mat-sys-on-primary-container) !important;
 	--mat-tab-divider-color: var(--mat-sys-primary) !important;
 	--mat-card-outlined-container-color: var(--mat-sys-primary) !important;
 	--mat-toolbar-container-background-color: var(--mat-sys-primary) !important;
@@ -38,15 +40,20 @@
 	--mat-tooltip-supporting-text-size: 14px;
 	--mat-tooltip-supporting-text-weight: 400;
 	--mat-bottom-sheet-container-background-color: var(--mat-sys-primary) !important;
+	--mat-button-outlined-label-text-color: var(--mat-button-filled-container-color) !important;
+	--mat-button-text-label-text-color: var(--mat-button-filled-container-color) !important;
+	--mat-form-field-outlined-label-text-color: var(--mat-button-filled-container-color) !important;
+	--mat-form-field-outlined-focus-outline-color: var(--mat-button-filled-container-color) !important;
+	--mat-form-field-outlined-focus-label-text-color: var(--mat-button-filled-container-color) !important;
+	--mat-divider-color: var(--mat-button-filled-container-color) !important;
 }
 
 .theme-blue {
-	@include mat.all-component-themes(themes.$avocat-blue-theme);
+	@include themes.base-theme(theme.$blue-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #f5f9ff;
 	--mat-card-elevated-container-color: var(--mat-sys-primary) !important;
 	--mat-card-container-color: #fafcff !important;
-	--mat-divider-color: #d0e4ff !important;
 	--mat-tab-divider-color: var(--mat-sys-primary) !important;
 
 	@include mat.snack-bar-overrides(
@@ -67,12 +74,11 @@
 }
 
 .theme-green {
-	@include mat.all-component-themes(themes.$avocat-green-theme);
+	@include themes.base-theme(theme.$green-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #e8fef5;
 	--mat-card-elevated-container-color: #e8fef5 !important;
 	--mat-card-container-color: #f4fffb !important;
-	--mat-divider-color: #a0f5da !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -92,12 +98,11 @@
 }
 
 .theme-yellow {
-	@include mat.all-component-themes(themes.$avocat-yellow-theme);
+	@include themes.base-theme(theme.$yellow-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #fffae5;
 	--mat-card-elevated-container-color: #fffae5 !important;
 	--mat-card-container-color: #fffbff !important;
-	--mat-divider-color: #ffe77f !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -117,12 +122,11 @@
 }
 
 .theme-magenta {
-	@include mat.all-component-themes(themes.$avocat-magenta-theme);
+	@include themes.base-theme(theme.$magenta-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #ffebf5;
 	--mat-card-elevated-container-color: #ffebf5 !important;
 	--mat-card-container-color: #fff7fb !important;
-	--mat-divider-color: #ffb3dd !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -142,12 +146,11 @@
 }
 
 .theme-orange {
-	@include mat.all-component-themes(themes.$avocat-orange-theme);
+	@include themes.base-theme(theme.$orange-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #fff0db;
 	--mat-card-elevated-container-color: #fff0db !important;
 	--mat-card-container-color: #fffbf5 !important;
-	--mat-divider-color: #ffc97a !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -167,12 +170,11 @@
 }
 
 .theme-azure {
-	@include mat.all-component-themes(themes.$avocat-azure-theme);
+	@include themes.base-theme(theme.$azure-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #e7f0ff;
 	--mat-card-elevated-container-color: #e7f0ff !important;
 	--mat-card-container-color: #fbfdff !important;
-	--mat-divider-color: #9ab4ff !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -192,12 +194,11 @@
 }
 
 .theme-violet {
-	@include mat.all-component-themes(themes.$avocat-violet-theme);
+	@include themes.base-theme(theme.$violet-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #faf0ff;
 	--mat-card-elevated-container-color: #faf0ff !important;
 	--mat-card-container-color: #fef7ff !important;
-	--mat-divider-color: #e8c9ff !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -217,12 +218,11 @@
 }
 
 .theme-rose {
-	@include mat.all-component-themes(themes.$avocat-rose-theme);
+	@include themes.base-theme(theme.$rose-primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #fff7f9;
 	--mat-card-elevated-container-color: #fff7f9 !important;
 	--mat-card-container-color: #fffbfd !important;
-	--mat-divider-color: #ffd9e3 !important;
 
 	@include mat.snack-bar-overrides(
 		(
@@ -242,12 +242,11 @@
 }
 
 .theme-red {
-	@include mat.all-component-themes(themes.$avocat-red-theme);
+	@include themes.base-theme(theme.$primary-palette);
 	@include theme-component-base;
 	--mat-sys-primary: #ffe6e6;
 	--mat-card-elevated-container-color: #ffe6e6 !important;
 	--mat-card-container-color: #fff5f5 !important;
-	--mat-divider-color: #ffb3b3 !important;
 
 	@include mat.snack-bar-overrides(
 		(

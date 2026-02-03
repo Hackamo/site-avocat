@@ -50,7 +50,6 @@
 
 .app-toolbar {
 	position: sticky;
-	color: var(--mat-sys-on-primary);
 	top: 0;
 	z-index: 1000;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -154,7 +153,6 @@ nav a.active-link {
 }
 
 .app-footer {
-	color: var(--mat-sys-on-primary);
 	margin: 1rem 0.5rem;
 	text-align: center;
 }

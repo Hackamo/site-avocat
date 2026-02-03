@@ -116,7 +116,6 @@
 			}
 
 			mat-card-avatar {
-				background-color: var(--mat-primary-color);
 				color: white;
 			}
 
@@ -185,7 +184,6 @@
 
 	.languages-card {
 		mat-card-avatar {
-			background-color: var(--mat-primary-color);
 			color: white;
 		}
 
@@ -196,7 +194,6 @@
 			margin-bottom: 1rem;
 
 			.language-tag {
-				background-color: var(--mat-surface-container-color);
 				color: var(--mat-primary-color);
 				padding: 0.25rem 0.75rem;
 				border-radius: 16px;
@@ -218,7 +215,6 @@
 
 		.activity-card {
 			mat-card-avatar {
-				background-color: var(--mat-primary-color);
 				color: white;
 			}
 
@@ -242,7 +238,6 @@
 }
 
 .cta-section {
-	background-color: var(--mat-surface-container-color);
 	padding: 3rem 0;
 	margin-top: 2rem;
 
