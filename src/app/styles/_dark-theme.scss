@@ -1,8 +1,10 @@
 @use '@angular/material' as mat;
-@use './theme-definitions' as themes;
 
+// Dark theme uses color-scheme to trigger light-dark() CSS function
 body.dark-theme {
-	@include mat.all-component-colors(themes.$avocat-dark-theme);
+	color-scheme: dark;
+
+	// Base colors
 	background: #1a1a1a;
 	color: #e8e8e8;
 	--mat-sys-primary: #1a1a1a;
@@ -150,6 +152,7 @@ body.dark-theme {
 		}
 	}
 
+	// Navigation
 	.app-toolbar {
 		background: #242424;
 		border-bottom: 1px solid #383838;
@@ -160,12 +163,14 @@ body.dark-theme {
 		border-top: 1px solid #383838;
 	}
 
+	// Blog
 	.blog-card {
 		background: #2e2e2e !important;
 		mat-card {
 			background: #2e2e2e !important;
 		}
 	}
+
 	.blog-post {
 		background-color: #2e2e2e;
 	}

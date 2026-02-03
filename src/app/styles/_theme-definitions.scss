@@ -1,57 +1,24 @@
 @use '@angular/material' as mat;
 @use './theme-colors' as theme;
 
-// Function for light themes with shared typography and density
-@function light-theme($primary-palette) {
-	@return mat.define-theme(
+// Mixin for themes with shared typography and density using new v19+ API
+@mixin base-theme($primary-palette) {
+	@include mat.theme(
 		(
 			color: (
-				theme-type: light,
 				primary: $primary-palette,
 				tertiary: theme.$tertiary-palette,
+				theme-type: color-scheme,
+				// Uses light-dark() CSS function
 			),
 			typography: (
-				brand-family: "'Playfair Display', serif",
-				// For titles/headings
-				plain-family: "'Playfair Display', sans-serif",
-				// For body text
+				brand-family: 'Playfair Display',
+				plain-family: 'Playfair Display',
 				bold-weight: 800,
 				medium-weight: 500,
 				regular-weight: 300,
 			),
-			density: (
-				scale: 0,
-			),
+			density: 0,
 		)
 	);
 }
-
-$avocat-red-theme: light-theme(theme.$primary-palette);
-$avocat-blue-theme: light-theme(theme.$blue-primary-palette);
-$avocat-green-theme: light-theme(theme.$green-primary-palette);
-$avocat-yellow-theme: light-theme(theme.$yellow-primary-palette);
-$avocat-magenta-theme: light-theme(theme.$magenta-primary-palette);
-$avocat-orange-theme: light-theme(theme.$orange-primary-palette);
-$avocat-azure-theme: light-theme(theme.$azure-primary-palette);
-$avocat-violet-theme: light-theme(theme.$violet-primary-palette);
-$avocat-rose-theme: light-theme(theme.$rose-primary-palette);
-
-$avocat-dark-theme: mat.define-theme(
-	(
-		color: (
-			theme-type: dark,
-			primary: theme.$primary-palette,
-			tertiary: theme.$tertiary-palette,
-		),
-		typography: (
-			brand-family: "'Playfair Display', serif",
-			plain-family: "'Lato', sans-serif",
-			bold-weight: 800,
-			medium-weight: 500,
-			regular-weight: 300,
-		),
-		density: (
-			scale: 0,
-		),
-	)
-);

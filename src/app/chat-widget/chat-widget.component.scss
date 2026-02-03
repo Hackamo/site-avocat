@@ -34,7 +34,6 @@
 	width: 400px;
 	height: 600px;
 	max-height: calc(100vh - 120px);
-	background: var(--mat-sys-surface);
 	border-radius: 12px;
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
 	display: flex;
@@ -58,7 +57,7 @@
 }
 
 .chat-header {
-	background: var(--mat-sys-primary);
+	background: var(--mat-sys-on-primary-container);
 	color: var(--mat-sys-on-primary);
 	padding: 1rem;
 	text-align: center;
@@ -113,7 +112,6 @@
 
 		.message-content {
 			background: var(--mat-sys-primary);
-			color: var(--mat-sys-on-primary);
 			border-radius: 12px 12px 2px 12px;
 		}
 	}
@@ -145,11 +143,12 @@
 	word-wrap: break-word;
 	max-width: 100%;
 	line-height: 1.4;
+	background: var(--mat-sys-primary) !important;
 }
 
 .message-time {
 	font-size: 0.7rem;
-	color: var(--mat-sys-outline-variant);
+	color: var(--mat-sys-on-surface-variant);
 	padding: 0 0.5rem;
 }
 
@@ -231,8 +230,7 @@
 
 .chat-footer {
 	padding: 0.75rem 1rem;
-	background: var(--mat-sys-surface-dim);
-	border-top: 1px solid var(--mat-sys-outline-variant);
+	background: var(--mat-sys-primary);
 	text-align: center;
 
 	p {
