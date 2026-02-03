@@ -60,7 +60,7 @@ export class App implements OnInit {
 	readonly darkMode = signal(false)
 	readonly currentLanguage = signal<'fr' | 'en'>('fr')
 	readonly colorTheme = signal<
-		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose'
+		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose'
 	>('red')
 	readonly isLoading = signal(false)
 	readonly loadingMessage = computed(() => {
@@ -90,8 +90,6 @@ export class App implements OnInit {
 					| 'yellow'
 					| 'magenta'
 					| 'orange'
-					| 'azure'
-					| 'violet'
 					| 'rose') || 'red'
 			this.colorTheme.set(savedColor)
 			this.applyTheme(isDark)
@@ -203,7 +201,7 @@ export class App implements OnInit {
 		this.currentLanguage.set(lang)
 	}
 
-	onThemeSelect(theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose') {
+	onThemeSelect(theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose') {
 		this.colorTheme.set(theme)
 		this.applyColorTheme(theme)
 		localStorage.setItem('colorTheme', theme)
@@ -262,7 +260,7 @@ export class App implements OnInit {
 	}
 
 	private applyColorTheme(
-		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'azure' | 'violet' | 'rose',
+		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose',
 	): void {
 		if (!this.isBrowser) return
 		document.body.classList.remove(
@@ -272,8 +270,6 @@ export class App implements OnInit {
 			'theme-yellow',
 			'theme-magenta',
 			'theme-orange',
-			'theme-azure',
-			'theme-violet',
 			'theme-rose',
 		)
 		document.body.classList.add(`theme-${theme}`)

@@ -169,54 +169,6 @@
 	);
 }
 
-.theme-azure {
-	@include themes.base-theme(theme.$azure-primary-palette);
-	@include theme-component-base;
-	--mat-sys-primary: #e7f0ff;
-	--mat-card-elevated-container-color: #e7f0ff !important;
-	--mat-card-container-color: #fbfdff !important;
-
-	@include mat.snack-bar-overrides(
-		(
-			container-color: var(--mat-button-filled-container-color),
-			supporting-text-color: #ffffff,
-		)
-	);
-
-	@include slide-toggle-common;
-	@include mat.slide-toggle-overrides(
-		(
-			unselected-handle-color: white,
-			unselected-icon-color: var(--mat-button-filled-container-color),
-			unselected-pressed-handle-color: var(--mat-sys-primary),
-		)
-	);
-}
-
-.theme-violet {
-	@include themes.base-theme(theme.$violet-primary-palette);
-	@include theme-component-base;
-	--mat-sys-primary: #faf0ff;
-	--mat-card-elevated-container-color: #faf0ff !important;
-	--mat-card-container-color: #fef7ff !important;
-
-	@include mat.snack-bar-overrides(
-		(
-			container-color: var(--mat-button-filled-container-color),
-			supporting-text-color: #ffffff,
-		)
-	);
-
-	@include slide-toggle-common;
-	@include mat.slide-toggle-overrides(
-		(
-			unselected-handle-color: white,
-			unselected-icon-color: var(--mat-button-filled-container-color),
-			unselected-pressed-handle-color: var(--mat-sys-primary),
-		)
-	);
-}
-
 .theme-rose {
 	@include themes.base-theme(theme.$rose-primary-palette);
 	@include theme-component-base;

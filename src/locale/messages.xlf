@@ -654,15 +654,6 @@
         <note priority="1" from="description">Orange</note>
         <note priority="1" from="meaning">Theme colors</note>
       </trans-unit>
-      <trans-unit id="8754250772096174675" datatype="html">
-        <source>Azur</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.html</context>
-          <context context-type="linenumber">88,89</context>
-        </context-group>
-        <note priority="1" from="description">Azure</note>
-        <note priority="1" from="meaning">Theme colors</note>
-      </trans-unit>
       <trans-unit id="7167122689240774891" datatype="html">
         <source>Violet</source>
         <context-group purpose="location">

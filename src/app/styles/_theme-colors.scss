@@ -245,48 +245,6 @@ $_orange_primary: (
 );
 $orange-primary-palette: map.merge($_orange_primary, $_rest);
 
-// Azure primary tonal palette
-$_azure_primary: (
-	0: #000000,
-	10: #001939,
-	20: #003259,
-	25: #00408f,
-	30: #004d87,
-	35: #005a9f,
-	40: #0068b7,
-	50: #1a7ad4,
-	60: #4894f4,
-	70: #6ba4ff,
-	80: #9ab4ff,
-	90: #c8d9ff,
-	95: #e7f0ff,
-	98: #f5f8ff,
-	99: #fbfdff,
-	100: #ffffff,
-);
-$azure-primary-palette: map.merge($_azure_primary, $_rest);
-
-// Violet primary tonal palette
-$_violet_primary: (
-	0: #000000,
-	10: #2b0d52,
-	20: #431c74,
-	25: #502a88,
-	30: #5d389c,
-	35: #6a46b0,
-	40: #7654c4,
-	50: #9168e5,
-	60: #ae87ff,
-	70: #cba8ff,
-	80: #e8c9ff,
-	90: #f5e4ff,
-	95: #faf0ff,
-	98: #fef7ff,
-	99: #fffbff,
-	100: #ffffff,
-);
-$violet-primary-palette: map.merge($_violet_primary, $_rest);
-
 // Rose primary tonal palette
 $_rose_primary: (
 	0: #000000,
