@@ -24,7 +24,6 @@ import { MatTooltip } from '@angular/material/tooltip'
 		MatTabsModule,
 		RouterLink,
 		AnimateText,
-		MatTooltip,
 	],
 	templateUrl: './prestations.html',
 	styleUrl: './prestations.scss',
