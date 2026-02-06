@@ -145,8 +145,8 @@
 		"cta": {
 			"title": "Prêt à commencer votre démarche ?",
 			"description": "Contactez-moi pour une première consultation et évaluons ensemble vos besoins et les meilleures stratégies à adopter.",
-			"contactButton": "Me Contacter",
-			"servicesButton": "Mes Services"
+			"contactButton": "Me contacter",
+			"servicesButton": "Mes services"
 		}
 	},
 	"services": {
