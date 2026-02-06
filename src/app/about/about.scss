@@ -2,6 +2,11 @@
 	padding-bottom: 2rem;
 }
 
+h2 {
+	margin-bottom: 1.5rem !important;
+	font-weight: 500 !important;
+}
+
 .hero-section {
 	background: linear-gradient(135deg, var(--mat-primary-color) 0%, var(--mat-primary-container-color) 100%);
 	padding: 1rem 0;
@@ -26,7 +31,7 @@
 		padding: 1rem;
 		h1 {
 			margin-bottom: 1.5rem;
-			font-weight: 300;
+			font-weight: 500 !important;
 		}
 
 		.hero-subtitle {
@@ -55,7 +60,7 @@
 		img {
 			border-radius: 0.5rem;
 			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-			max-width: 100%;
+			max-width: 85%;
 			height: auto;
 			opacity: 0;
 			transition: opacity 0.5s ease-in;
@@ -158,11 +163,11 @@
 			text-align: center;
 			padding: 2rem 1rem;
 
-			.value-icon {
+			.mat-icon {
 				font-size: 3rem;
 				width: 3rem;
 				height: 3rem;
-				color: var(--mat-primary-color);
+				color: var(--mat-sys-on-primary-container);
 				margin-bottom: 1rem;
 			}
 

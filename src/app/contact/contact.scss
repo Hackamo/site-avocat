@@ -30,6 +30,15 @@
 	}
 }
 
+.mat-mdc-card-avatar {
+	border-radius: 0%;
+	vertical-align: middle !important;
+	margin-bottom: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .contact-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -317,6 +326,10 @@ mat-hint {
 		display: flex;
 	}
 
+	mat-icon {
+		color: black !important;
+	}
+
 	&:hover {
 		background-color: var(--mat-sys-primary-container);
 	}
@@ -326,7 +339,7 @@ mat-hint {
 		animation: pulse 1.5s infinite;
 
 		mat-icon {
-			font-weight: bold;
+			animation: pulse-icon 1s infinite;
 		}
 	}
 }
@@ -343,6 +356,15 @@ mat-hint {
 	}
 }
 
+@keyframes pulse-icon {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+}
 .message-field-wrapper {
 	position: relative;
 }

@@ -12,6 +12,22 @@
 		.filter-field {
 			flex: 1;
 			min-width: 200px;
+
+			font-size: 1.1rem !important;
+			font-weight: 500 !important;
+		}
+
+		.filter-checkbox {
+			display: flex;
+			align-items: center;
+
+			mat-checkbox {
+				::ng-deep .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background {
+					border-color: var(--mat-button-filled-container-color);
+					background-color: var(--mat-button-filled-container-color);
+					padding: 8px;
+				}
+			}
 		}
 	}
 
@@ -20,6 +36,11 @@
 		flex-direction: column;
 		justify-content: center;
 		margin-top: 2rem;
+	}
+
+	.mat-mdc-select {
+		font-size: 1.1rem;
+		font-weight: 500 !important;
 	}
 
 	.blog-card {

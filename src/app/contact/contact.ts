@@ -94,10 +94,9 @@ export class Contact implements OnDestroy, AfterViewInit {
 					}
 
 					const currentMessage = this.contactForm.get('message')?.value || ''
-					const dictatingText = `[Écoute en cours...]`
 					// Si on a un résultat final, on l'ajoute au message
 					if (finalTranscript) {
-						const baseMessage = currentMessage.replace(new RegExp(`\\[Écoute en cours...\\]$`), '').trim()
+						const baseMessage = currentMessage.replace(new RegExp(`\\s*\\(.*?\\)\\s*$`), '').trim()
 						const newMessage = baseMessage
 							? `${baseMessage} ${finalTranscript.trim()}`
 							: finalTranscript.trim()
@@ -105,8 +104,10 @@ export class Contact implements OnDestroy, AfterViewInit {
 					}
 					// Sinon, on affiche le résultat intermédiaire
 					else if (interimTranscript) {
-						const baseMessage = currentMessage.replace(new RegExp(`\\[Écoute en cours...\\]$`), '').trim()
-						const newMessage = baseMessage ? `${baseMessage} ${dictatingText}` : dictatingText
+						const baseMessage = currentMessage.replace(new RegExp(`\\s*\\(.*?\\)\\s*$`), '').trim()
+						const newMessage = baseMessage
+							? `${baseMessage} (${interimTranscript})`
+							: `(${interimTranscript})`
 						this.contactForm.patchValue({ message: newMessage })
 					}
 				}

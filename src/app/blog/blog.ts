@@ -3,10 +3,12 @@ import { Component, computed, inject, OnInit, signal, PLATFORM_ID, ElementRef, v
 import { MatFormField, MatLabel } from '@angular/material/form-field'
 import { MatInput } from '@angular/material/input'
 import { MatOption, MatSelect } from '@angular/material/select'
+import { MatCheckbox } from '@angular/material/checkbox'
 import { RouterModule } from '@angular/router'
 import { BlogArticleCard } from '../blog-article-card/blog-article-card'
 import { BlogDataService } from '../services/blog-data.service'
 import { MetaService } from '../services/meta.service'
+import { SavedArticlesService } from '../services/saved-articles.service'
 import { AnimateText } from './../directives/animate-text.directive'
 
 @Component({
@@ -21,6 +23,7 @@ import { AnimateText } from './../directives/animate-text.directive'
 		MatSelect,
 		MatOption,
 		MatInput,
+		MatCheckbox,
 	],
 	templateUrl: './blog.html',
 	styleUrl: './blog.scss',
@@ -31,9 +34,11 @@ export class Blog implements OnInit {
 	private readonly blogData = inject(BlogDataService)
 	private readonly metaService = inject(MetaService)
 	private readonly platformId = inject(PLATFORM_ID)
+	private readonly savedArticles = inject(SavedArticlesService)
 	readonly loading = this.blogData.loading
 	readonly selectedCategory = signal<string>('all')
 	readonly searchText = signal<string>('')
+	readonly showFavoritesOnly = signal<boolean>(false)
 	readonly filtersSection = viewChild<ElementRef<HTMLElement>>('filtersSection')
 
 	readonly allArticles = this.blogData.articles
@@ -46,6 +51,7 @@ export class Blog implements OnInit {
 	readonly articles = computed(() => {
 		const selected = this.selectedCategory()
 		const search = this.searchText().toLowerCase()
+		const favoritesOnly = this.showFavoritesOnly()
 		let filtered = this.allArticles()
 
 		if (selected !== 'all') {
@@ -59,6 +65,10 @@ export class Blog implements OnInit {
 					article.summary.toLowerCase().includes(search) ||
 					article.category.toLowerCase().includes(search),
 			)
+		}
+
+		if (favoritesOnly) {
+			filtered = filtered.filter((article) => this.savedArticles.isSaved(article.slug))
 		}
 
 		return filtered
@@ -85,5 +95,9 @@ export class Blog implements OnInit {
 				})
 			}
 		}
+	}
+
+	onFavoritesToggle(checked: boolean): void {
+		this.showFavoritesOnly.set(checked)
 	}
 }

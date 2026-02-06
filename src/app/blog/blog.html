@@ -29,6 +29,16 @@
 				}
 			</mat-select>
 		</mat-form-field>
+
+		<div class="filter-checkbox">
+			<mat-checkbox
+				[checked]="showFavoritesOnly()"
+				(change)="onFavoritesToggle($event.checked)"
+				i18n="Blog page|Favorites filter label"
+			>
+				Afficher uniquement les favoris
+			</mat-checkbox>
+		</div>
 	</section>
 
 	<section class="blog-list">

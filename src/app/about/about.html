@@ -3,7 +3,10 @@
 	<header class="hero-section" animateText="fade">
 		<div class="container">
 			<div class="hero-content">
-				<h1 class="mat-display-2" i18n="About page|Page title">À Propos de {{ config.lawyer.fullName }}</h1>
+				<h1 class="mat-display-2" i18n="About page|Page title">
+					À Propos de
+					<div>{{ config.lawyer.fullName }}</div>
+				</h1>
 				<p class="mat-headline-5 hero-subtitle" i18n="About page|Page subtitle">
 					Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes
 					vos démarches administratives et juridiques en France.
@@ -263,11 +266,11 @@
 				<div class="cta-buttons">
 					<button mat-flat-button routerLink="/contact">
 						<mat-icon>email</mat-icon>
-						<span i18n="About page|Contact button">Me Contacter</span>
+						<span i18n="About page|Contact button">Me contacter</span>
 					</button>
 					<button mat-stroked-button routerLink="/prestations">
 						<mat-icon>info</mat-icon>
-						<span i18n="About page|Services button">Mes Services</span>
+						<span i18n="About page|Services button">Mes services</span>
 					</button>
 				</div>
 			</div>

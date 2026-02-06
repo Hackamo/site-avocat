@@ -16,6 +16,11 @@
 	cursor: pointer;
 }
 
+.mat-mdc-card-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
