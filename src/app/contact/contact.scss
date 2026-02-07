@@ -436,7 +436,7 @@ select:-webkit-autofill {
 	mat-form-field {
 		// Success state styling
 		.success-hint {
-			color: var(--mat-sys-primary) !important;
+			color: var(--mat-button-filled-container-color);
 			font-weight: 500;
 			display: flex;
 			align-items: center;

@@ -139,6 +139,29 @@ body.dark-theme {
 		color: #ffc400;
 	}
 
+	.values-section .values-grid .value-item .mat-icon {
+		color: #ffca28 !important;
+	}
+
+	.contact-page mat-hint {
+		color: #ffffff !important;
+	}
+
+	.contact-page input:-webkit-autofill,
+	.contact-page textarea:-webkit-autofill,
+	.contact-page select:-webkit-autofill {
+		box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+		-webkit-text-fill-color: #ffffff !important;
+		caret-color: #ffffff !important;
+	}
+
+	.contact-page input:-webkit-autofill:focus,
+	.contact-page textarea:-webkit-autofill:focus,
+	.contact-page select:-webkit-autofill:focus {
+		box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+		-webkit-text-fill-color: #ffffff !important;
+	}
+
 	p,
 	span,
 	li {
@@ -157,11 +180,6 @@ body.dark-theme {
 	.app-toolbar {
 		background: #242424;
 		border-bottom: 1px solid #383838;
-	}
-
-	.app-footer {
-		background: #242424;
-		border-top: 1px solid #383838;
 	}
 
 	// Blog

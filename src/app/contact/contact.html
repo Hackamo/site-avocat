@@ -200,7 +200,7 @@
 								>Le nom ne peut pas dépasser 100 caractères</mat-error
 							>
 							} } @if (contactForm.get('name')?.valid && contactForm.get('name')?.touched) {
-							<mat-hint class="success-hint" i18n="Contact page|Name success">✓ Nom valide</mat-hint>
+							<mat-hint class="success-hint" i18n="Contact page|Name success">Nom valide</mat-hint>
 							}
 						</mat-form-field>
 
@@ -222,7 +222,7 @@
 								>Veuillez entrer un email valide</mat-error
 							>
 							} } @if (contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
-							<mat-hint class="success-hint" i18n="Contact page|Email success">✓ Email valide</mat-hint>
+							<mat-hint class="success-hint" i18n="Contact page|Email success">Email valide</mat-hint>
 							} @if (!contactForm.get('email')?.valid || !contactForm.get('email')?.touched) {
 							<mat-hint i18n="Contact page|Email hint">Exemple: contact@example.com</mat-hint>
 							}
@@ -240,7 +240,7 @@
 							@if (contactForm.get('phone')?.valid && contactForm.get('phone')?.touched &&
 							contactForm.get('phone')?.value) {
 							<mat-hint class="success-hint" i18n="Contact page|Phone success"
-								>✓ Téléphone reconnu</mat-hint
+								>Téléphone reconnu</mat-hint
 							>
 							}
 						</mat-form-field>
@@ -268,7 +268,7 @@
 							<mat-error i18n="Contact page|Subject error">Veuillez sélectionner un sujet</mat-error>
 							} @if (contactForm.get('subject')?.valid && contactForm.get('subject')?.touched) {
 							<mat-hint class="success-hint" i18n="Contact page|Subject success"
-								>✓ Sujet sélectionné</mat-hint
+								>Sujet sélectionné</mat-hint
 							>
 							}
 						</mat-form-field>
@@ -317,7 +317,7 @@
 							>
 							} } @if (contactForm.get('message')?.valid && contactForm.get('message')?.touched) {
 							<mat-hint class="success-hint" i18n="Contact page|Message success"
-								>✓ Message complet</mat-hint
+								>Message complet</mat-hint
 							>
 							}
 							<mat-hint
