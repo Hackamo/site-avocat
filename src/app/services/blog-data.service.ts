@@ -18,6 +18,7 @@ interface ArticleMetadata {
 	category: string
 	date: string
 	author?: AuthorMetadata
+	image?: string
 	markdownFile: string
 	similarSlugs: string[]
 }
@@ -119,6 +120,13 @@ export class BlogDataService {
 				const cachedResponse = await cache.match(metadataUrl)
 				if (cachedResponse) {
 					metadata = await cachedResponse.json()
+					if (metadata.some((item) => !item.image)) {
+						const response = await fetch(metadataUrl)
+						if (response.ok) {
+							metadata = await response.clone().json()
+							await cache.put(metadataUrl, response)
+						}
+					}
 				} else {
 					// Fetch with timeout if not cached
 					const controller = new AbortController()
@@ -147,6 +155,7 @@ export class BlogDataService {
 					similarSlugs: meta.similarSlugs,
 					readingTime: 0, // Will be calculated when content is loaded
 					author: meta.author,
+					image: meta.image,
 				}))
 
 				this._articles.set(articles)
@@ -195,6 +204,13 @@ export class BlogDataService {
 			const cachedMetadata = await cache.match(metadataUrl)
 			if (cachedMetadata) {
 				metadata = await cachedMetadata.json()
+				if (metadata.some((item) => !item.image)) {
+					const metadataResponse = await fetch(metadataUrl)
+					if (metadataResponse.ok) {
+						metadata = await metadataResponse.clone().json()
+						cache.put(metadataUrl, metadataResponse)
+					}
+				}
 			} else {
 				const metadataResponse = await fetch(metadataUrl)
 				metadata = await metadataResponse.clone().json()

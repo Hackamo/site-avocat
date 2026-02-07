@@ -1,6 +1,13 @@
-import { CommonModule } from '@angular/common'
+import { CommonModule, NgOptimizedImage } from '@angular/common'
 import { Component, ChangeDetectionStrategy, inject, computed, input } from '@angular/core'
-import { MatCardHeader, MatCardTitle, MatCardContent, MatCard } from '@angular/material/card'
+import {
+	MatCardHeader,
+	MatCardTitle,
+	MatCardContent,
+	MatCard,
+	MatCardTitleGroup,
+	MatCardSubtitle,
+} from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { RouterModule } from '@angular/router'
 import { BlogArticle } from '../models/blog-article.model'
@@ -16,6 +23,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar'
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [
 		CommonModule,
+		NgOptimizedImage,
 		RouterModule,
 		MatCardHeader,
 		MatCardTitle,
@@ -24,6 +32,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar'
 		MatIconModule,
 		MatButtonModule,
 		MatSnackBarModule,
+		MatCardTitleGroup,
+		MatCardSubtitle,
 	],
 })
 export class BlogArticleCard {

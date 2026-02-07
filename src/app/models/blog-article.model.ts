@@ -15,4 +15,5 @@ export interface BlogArticle {
 	similarSlugs?: string[]
 	readingTime?: number
 	author?: AuthorBio
+	image?: string
 }

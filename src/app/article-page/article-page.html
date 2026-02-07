@@ -1,7 +1,12 @@
 <main class="container blog-page">
-	<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
-		<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour</span>
-	</button>
+	<div class="blog-header">
+		<button mat-button (click)="goBack()" aria-label="Revenir à la page précédente" class="back-button">
+			<mat-icon>arrow_back</mat-icon><span i18n="Blog page|Back to blog link">Retour</span>
+		</button>
+		<a routerLink="/blog" mat-flat-button color="primary" i18n="Home page|View all articles link">
+			Voir tous les articles
+		</a>
+	</div>
 	@if (loading()) {
 	<article class="blog-post article-skeleton" aria-busy="true">
 		@for (i of [1, 2, 3, 4, 5]; track i) {

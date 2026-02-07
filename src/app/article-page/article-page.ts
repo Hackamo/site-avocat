@@ -120,7 +120,7 @@ export class ArticlePage {
 			queueMicrotask(() => {
 				requestAnimationFrame(() => {
 					const element = headline.nativeElement
-					element.style.scrollMarginTop = '110px'
+					element.style.scrollMarginTop = '90px'
 					element.scrollIntoView({ behavior: 'smooth', block: 'start' })
 				})
 			})

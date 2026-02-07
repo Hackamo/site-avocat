@@ -2,10 +2,20 @@
 	<a [routerLink]="['/blog', article().slug]" itemprop="url">
 		<mat-card class="blog-article-card">
 			<mat-card-header>
-				<mat-card-title itemprop="headline">{{ article().title }}</mat-card-title>
+				<mat-card-title-group>
+					<mat-card-title itemprop="headline">{{ article().title }}</mat-card-title>
+					<mat-card-subtitle itemprop="description">{{ article().summary }}</mat-card-subtitle>
+					<img
+						mat-card-sm-image
+						[ngSrc]="article().image ?? 'assets/blog/images/andy-barbour.jpg'"
+						[alt]="article().title"
+						width="320"
+						height="180"
+						loading="lazy"
+					/>
+				</mat-card-title-group>
 			</mat-card-header>
 			<mat-card-content>
-				<p itemprop="description">{{ article().summary }}</p>
 				@if (article().date) {
 				<meta itemprop="datePublished" [content]="article().date" />
 				}

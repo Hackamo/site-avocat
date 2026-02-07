@@ -59,9 +59,7 @@ export class App implements OnInit {
 	readonly scrolledDown = signal(false)
 	readonly darkMode = signal(false)
 	readonly currentLanguage = signal<'fr' | 'en'>('fr')
-	readonly colorTheme = signal<
-		'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose'
-	>('red')
+	readonly colorTheme = signal<'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose'>('red')
 	readonly isLoading = signal(false)
 	readonly loadingMessage = computed(() => {
 		return this.isLoading()
@@ -259,9 +257,7 @@ export class App implements OnInit {
 		}
 	}
 
-	private applyColorTheme(
-		theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose',
-	): void {
+	private applyColorTheme(theme: 'blue' | 'red' | 'green' | 'yellow' | 'magenta' | 'orange' | 'rose'): void {
 		if (!this.isBrowser) return
 		document.body.classList.remove(
 			'theme-blue',
