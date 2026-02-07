@@ -52,4 +52,8 @@ export class Home implements OnInit {
 	onImageLoad() {
 		this.imageLoaded.set(true)
 	}
+
+	onImageError() {
+		this.imageLoaded.set(true)
+	}
 }

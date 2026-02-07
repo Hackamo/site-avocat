@@ -33,20 +33,38 @@
 			border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 			transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-		img[mat-card-sm-image] {
+		.card-image-wrapper {
+			position: relative;
 			margin-top: 1rem;
-			max-height: clamp(200px, 20vw, 180px);
-			object-fit: cover;
-			object-position: center;
-			border-radius: 0.5rem;
-			display: block;
 			align-self: center;
-			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+			img[mat-card-sm-image] {
+				max-height: clamp(200px, 20vw, 180px);
+				object-fit: cover;
+				object-position: center;
+				border-radius: 0.5rem;
+				display: block;
+				transition:
+					transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+					opacity 200ms ease-in-out;
+
+				&.is-loading {
+					opacity: 0;
+				}
+			}
 		}
 	}
-
 	&:hover mat-card img[mat-card-sm-image] {
 		transform: scale(1.05);
+	}
+
+	.image-loader {
+		position: absolute;
+		inset: 0;
+		border-radius: 0.5rem;
+		background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+		background-size: 200% 100%;
+		animation: shimmer 1.5s infinite;
 	}
 
 	.card-image {
@@ -175,6 +193,15 @@
 	}
 }
 
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
 :host-context(.similar-grid) .blog-card mat-card-header {
 	flex-direction: column;
 	align-items: flex-start;
@@ -210,6 +237,18 @@
 
 		mat-card-title-group {
 			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.blog-card {
+		mat-card {
+			.card-image-wrapper {
+				img[mat-card-sm-image] {
+					max-width: 250px;
+				}
+			}
 		}
 	}
 }

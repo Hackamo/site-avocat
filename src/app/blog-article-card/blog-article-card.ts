@@ -1,5 +1,5 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common'
-import { Component, ChangeDetectionStrategy, inject, computed, input } from '@angular/core'
+import { Component, ChangeDetectionStrategy, inject, computed, input, signal, effect } from '@angular/core'
 import {
 	MatCardHeader,
 	MatCardTitle,
@@ -38,6 +38,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar'
 })
 export class BlogArticleCard {
 	readonly article = input.required<BlogArticle>()
+	readonly imageLoaded = signal(false)
 
 	private readonly readingTimeService = inject(ReadingTimeService)
 	private readonly savedService = inject(SavedArticlesService)
@@ -49,6 +50,21 @@ export class BlogArticleCard {
 		const article = this.article()
 		return article?.readingTime ? this.readingTimeService.formatReadingTime(article.readingTime) : ''
 	})
+
+	constructor() {
+		effect(() => {
+			this.article()
+			this.imageLoaded.set(false)
+		})
+	}
+
+	onImageLoad() {
+		this.imageLoaded.set(true)
+	}
+
+	onImageError() {
+		this.imageLoaded.set(true)
+	}
 
 	toggleFavorite(event: Event) {
 		event.preventDefault()

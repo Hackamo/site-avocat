@@ -61,6 +61,8 @@ export class ArticlePage {
 
 	readonly loading = signal(true)
 	readonly article = signal<BlogArticle | undefined>(undefined)
+	readonly imageLoaded = signal(false)
+	readonly authorImageLoaded = signal(true)
 	readonly lastScrolledSlug = signal<string | null>(null)
 	readonly similarArticles = computed(() => {
 		const current = this.article()
@@ -97,6 +99,7 @@ export class ArticlePage {
 
 			this.loading.set(true)
 			this.article.set(blogArticle)
+			this.imageLoaded.set(false)
 			this.loading.set(false)
 
 			// Update meta tags for the article
@@ -126,6 +129,22 @@ export class ArticlePage {
 				})
 			})
 		})
+	}
+
+	onCoverLoaded() {
+		this.imageLoaded.set(true)
+	}
+
+	onCoverError() {
+		this.imageLoaded.set(true)
+	}
+
+	onAuthorImageLoad() {
+		this.authorImageLoaded.set(true)
+	}
+
+	onAuthorImageError() {
+		this.authorImageLoaded.set(true)
 	}
 
 	goBack() {

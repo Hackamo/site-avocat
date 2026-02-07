@@ -5,14 +5,22 @@
 				<mat-card-title-group>
 					<mat-card-title itemprop="headline">{{ article().title }}</mat-card-title>
 					<mat-card-subtitle itemprop="description">{{ article().summary }}</mat-card-subtitle>
-					<img
-						mat-card-sm-image
-						[ngSrc]="article().image ?? 'assets/blog/images/andy-barbour.webp'"
-						[alt]="article().title"
-						width="320"
-						height="180"
-						loading="lazy"
-					/>
+					<div class="card-image-wrapper" [attr.aria-busy]="!imageLoaded()">
+						@if (!imageLoaded()) {
+						<div class="image-loader" aria-hidden="true"></div>
+						}
+						<img
+							mat-card-sm-image
+							[class.is-loading]="!imageLoaded()"
+							[ngSrc]="article().image ?? 'assets/blog/images/andy-barbour.webp'"
+							[alt]="article().title"
+							width="320"
+							height="180"
+							loading="lazy"
+							(load)="onImageLoad()"
+							(error)="onImageError()"
+						/>
+					</div>
 				</mat-card-title-group>
 			</mat-card-header>
 			<mat-card-content>

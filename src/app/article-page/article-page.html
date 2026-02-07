@@ -66,14 +66,22 @@
 			</button>
 		</div>
 		}
-		<img
-			class="article-cover-desktop"
-			[ngSrc]="art.image ?? 'assets/blog/images/ekaterina-bolovtsova.webp'"
-			[alt]="art.title"
-			width="640"
-			height="480"
-			loading="lazy"
-		/>
+		<div class="article-cover-wrapper" [attr.aria-busy]="!imageLoaded()">
+			@if (!imageLoaded()) {
+			<div class="image-loader" aria-hidden="true"></div>
+			}
+			<img
+				class="article-cover-desktop"
+				[class.is-loading]="!imageLoaded()"
+				[ngSrc]="art.image ?? 'assets/blog/images/ekaterina-bolovtsova.webp'"
+				[alt]="art.title"
+				width="640"
+				height="480"
+				loading="lazy"
+				(load)="onCoverLoaded()"
+				(error)="onCoverError()"
+			/>
+		</div>
 		<div
 			animate.enter="enter-slide-fade-animation"
 			[innerHTML]="art.content"
@@ -85,7 +93,20 @@
 		<aside class="author-bio-section" itemprop="author" itemscope itemtype="https://schema.org/Person">
 			<div class="author-bio-container">
 				@if (art.author.image) {
-				<img [src]="art.author.image" [alt]="art.author.name" class="author-image" itemprop="image" />
+				<div class="author-image-wrapper" [attr.aria-busy]="!authorImageLoaded()">
+					@if (!authorImageLoaded()) {
+					<div class="author-image-loader" aria-hidden="true"></div>
+					}
+					<img
+						[src]="art.author.image"
+						[alt]="art.author.name"
+						class="author-image"
+						[class.is-loading]="!authorImageLoaded()"
+						itemprop="image"
+						(load)="onAuthorImageLoad()"
+						(error)="onAuthorImageError()"
+					/>
+				</div>
 				} @else {
 				<div class="author-avatar">
 					<mat-icon>account_circle</mat-icon>

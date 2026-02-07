@@ -2,6 +2,10 @@
 	padding-left: 1.5rem;
 }
 
+app-blog-article-card {
+	width: 80%;
+}
+
 .blog-page {
 	.blog-filters {
 		display: flex;
@@ -35,6 +39,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		margin-top: 2rem;
 	}
 
@@ -193,5 +198,11 @@
 	}
 	100% {
 		background-position: 200% 0;
+	}
+}
+
+@media (max-width: 920px) {
+	app-blog-article-card {
+		width: 100%;
 	}
 }

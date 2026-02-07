@@ -19,9 +19,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="hero-image-wrapper">
+		<div class="hero-image-wrapper" [attr.aria-busy]="!imageLoaded()">
 			@if (!imageLoaded()) {
-			<div class="image-skeleton"></div>
+			<div class="image-loader" aria-hidden="true"></div>
 			}
 			<picture>
 				<source srcset="assets/blog/images/ekaterina-bolovtsova.webp" type="image/webp" />
@@ -34,6 +34,7 @@
 					alt="Image représentant une balance de justice"
 					i18n-alt="Home page|Hero image alt text"
 					(load)="onImageLoad()"
+					(error)="onImageError()"
 					[class.loaded]="imageLoaded()"
 				/>
 			</picture>

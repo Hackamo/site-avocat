@@ -9,16 +9,16 @@
 	position: relative;
 	width: clamp(240px, 40vw, 500px);
 	max-width: 35%;
+}
 
-	.image-skeleton {
-		position: absolute;
-		width: 100%;
-		height: 600px;
-		border-radius: 0.5rem;
-		background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-		background-size: 200% 100%;
-		animation: shimmer 1.5s infinite;
-	}
+.image-loader {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+	border-radius: 0.5rem;
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
 }
 
 .hero-image {
@@ -102,7 +102,7 @@
 	.home-section {
 		flex-direction: column;
 		text-align: center;
-		padding: 2rem 1rem;
+		padding: 0rem 1rem;
 	}
 	.home-content {
 		max-width: 100%;
@@ -124,6 +124,9 @@
 }
 
 @media (max-width: 600px) {
+	.container {
+		padding-top: 0px;
+	}
 	.cards-grid {
 		grid-template-columns: 1fr;
 		gap: 1rem;

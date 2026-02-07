@@ -105,16 +105,34 @@
 	flex-wrap: wrap;
 }
 
+.article-cover-wrapper {
+	position: relative;
+	margin-top: 0.5rem;
+}
+
 .article-cover-desktop {
 	width: 100%;
 	height: clamp(400px, 12vw, 480px);
 	object-fit: cover;
 	object-position: center;
 	border-radius: 0.5rem;
-	margin-top: 0.5rem;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	transition: opacity 200ms ease-in-out;
+
+	&.is-loading {
+		opacity: 0;
+	}
+}
+
+.image-loader {
+	position: absolute;
+	inset: 0;
+	border-radius: 0.5rem;
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
 }
 
 .reading-time-badge {
@@ -152,6 +170,13 @@
 	align-items: flex-start;
 }
 
+.author-image-wrapper {
+	position: relative;
+	flex-shrink: 0;
+	width: clamp(80px, 15vw, 120px);
+	height: clamp(80px, 15vw, 120px);
+}
+
 .author-image,
 .author-avatar {
 	flex-shrink: 0;
@@ -163,10 +188,24 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: opacity 200ms ease-in-out;
 
 	&.author-image {
 		border: 2px solid var(--mat-primary-color);
+
+		&.is-loading {
+			opacity: 0;
+		}
 	}
+}
+
+.author-image-loader {
+	position: absolute;
+	inset: 0;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
 }
 
 .author-avatar {
@@ -228,17 +267,17 @@
 		::ng-deep h1 {
 			text-align: left;
 			margin-top: 1rem;
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 		}
 		::ng-deep h2 {
 			text-align: left;
 			margin-top: 1rem;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 		::ng-deep h3 {
 			text-align: left;
 			margin-top: 1rem;
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 
 		::ng-deep h4 {

@@ -28,6 +28,7 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "oqtf-5-mistakes-to-avoid.md",
@@ -47,13 +48,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "regularization-renewal-status-change.md",
-		"similarSlugs": [
-			"titre-sejour-etudiant-changement-salarie",
-			"carte-resident-10-ans-criteres-2026"
-		]
+		"similarSlugs": ["titre-sejour-etudiant-changement-salarie", "carte-resident-10-ans-criteres-2026"]
 	},
 	{
 		"slug": "naturalisation-refusee-erreur-administrative-coute-2-ans",
@@ -65,13 +64,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "naturalization-denied-administrative-error.md",
-		"similarSlugs": [
-			"carte-resident-10-ans-criteres-2026",
-			"vie-privee-familiale-article-8-cedh"
-		]
+		"similarSlugs": ["carte-resident-10-ans-criteres-2026", "vie-privee-familiale-article-8-cedh"]
 	},
 	{
 		"slug": "carte-resident-10-ans-criteres-2026",
@@ -83,13 +80,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "10-year-resident-card-criteria-2026.md",
-		"similarSlugs": [
-			"conjoint-francais-droits-sejour",
-			"naturalisation-refusee-erreur-administrative-coute-2-ans"
-		]
+		"similarSlugs": ["conjoint-francais-droits-sejour", "naturalisation-refusee-erreur-administrative-coute-2-ans"]
 	},
 	{
 		"slug": "titre-sejour-etudiant-changement-salarie",
@@ -101,6 +96,7 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "student-to-employee-residence-permit.md",
@@ -119,13 +115,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "private-family-life-article-8-echr.md",
-		"similarSlugs": [
-			"refus-titre-sejour-que-faire",
-			"conjoint-francais-droits-sejour"
-		]
+		"similarSlugs": ["refus-titre-sejour-que-faire", "conjoint-francais-droits-sejour"]
 	},
 	{
 		"slug": "refus-titre-sejour-que-faire",
@@ -137,13 +131,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "residence-permit-refusal-what-to-do.md",
-		"similarSlugs": [
-			"oqtf-5-erreurs-eviter-contester-bordeaux",
-			"carte-resident-10-ans-criteres-2026"
-		]
+		"similarSlugs": ["oqtf-5-erreurs-eviter-contester-bordeaux", "carte-resident-10-ans-criteres-2026"]
 	},
 	{
 		"slug": "regroupement-familial-guide-complet-2026",
@@ -154,13 +146,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "family-reunification-complete-guide-2026.md",
-		"similarSlugs": [
-			"conjoint-francais-droits-sejour",
-			"refus-titre-sejour-que-faire"
-		]
+		"similarSlugs": ["conjoint-francais-droits-sejour", "refus-titre-sejour-que-faire"]
 	},
 	{
 		"slug": "retention-administrative-droits-recours",
@@ -171,13 +161,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "administrative-detention-rights-recourse.md",
-		"similarSlugs": [
-			"assignation-residence-droits-obligations",
-			"vie-privee-familiale-article-8-cedh"
-		]
+		"similarSlugs": ["assignation-residence-droits-obligations", "vie-privee-familiale-article-8-cedh"]
 	},
 	{
 		"slug": "conjoint-francais-droits-sejour",
@@ -188,13 +176,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "french-spouse-residence-rights.md",
-		"similarSlugs": [
-			"regroupement-familial-guide-complet-2026",
-			"vie-privee-familiale-article-8-cedh"
-		]
+		"similarSlugs": ["regroupement-familial-guide-complet-2026", "vie-privee-familiale-article-8-cedh"]
 	},
 	{
 		"slug": "creer-entreprise-france-etranger",
@@ -205,13 +191,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "starting-business-france-foreigner.md",
-		"similarSlugs": [
-			"passeport-talent-guide-complet",
-			"carte-resident-10-ans-criteres-2026"
-		]
+		"similarSlugs": ["passeport-talent-guide-complet", "carte-resident-10-ans-criteres-2026"]
 	},
 	{
 		"slug": "assignation-residence-droits-obligations",
@@ -222,13 +206,11 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "residence-assignment-rights-obligations.md",
-		"similarSlugs": [
-			"retention-administrative-droits-recours",
-			"refus-titre-sejour-que-faire"
-		]
+		"similarSlugs": ["retention-administrative-droits-recours", "refus-titre-sejour-que-faire"]
 	},
 	{
 		"slug": "passeport-talent-guide-complet",
@@ -239,6 +221,7 @@
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Attorney specializing in immigration law",
+			"image": "assets/images/debora_blog.JPG",
 			"bio": "Attorney at the Bordeaux Bar, specialized in immigration law and criminal law. Over 10 years of experience defending the rights of foreign nationals."
 		},
 		"markdownFile": "talent-passport-complete-guide.md",
