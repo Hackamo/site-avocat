@@ -3,7 +3,7 @@
 		"slug": "victoires-juridiques-decembre-2025",
 		"title": "Our Legal Victories – December 2025",
 		"summary": "December 2025 was particularly fruitful for Martinet Law Firm. Discover our 9 victories in foreign nationals law and criminal law in Bordeaux.",
-		"image": "assets/blog/images/andy-barbour.jpg",
+		"image": "assets/blog/images/andy-barbour.webp",
 		"category": "Litigation and Appeals",
 		"date": "2026-01-06",
 		"author": {
@@ -22,7 +22,7 @@
 		"slug": "oqtf-5-erreurs-eviter-contester-bordeaux",
 		"title": "OQTF: 5 Critical Mistakes to Avoid",
 		"summary": "Expert advice for effectively contesting an obligation to leave France (OQTF).",
-		"image": "assets/blog/images/cottonbro.jpg",
+		"image": "assets/blog/images/cottonbro.webp",
 		"category": "Litigation and Appeals",
 		"date": "2026-01-05",
 		"author": {
@@ -41,7 +41,7 @@
 		"slug": "post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux",
 		"title": "Regularization, Renewal or Status Change?",
 		"summary": "The complete guide to avoid mistakes in your residence permit procedures.",
-		"image": "assets/blog/images/dom-seven.jpg",
+		"image": "assets/blog/images/dom-seven.webp",
 		"category": "Residence Permits",
 		"date": "2026-01-04",
 		"author": {
@@ -52,14 +52,13 @@
 		"markdownFile": "regularization-renewal-status-change.md",
 		"similarSlugs": [
 			"titre-sejour-etudiant-changement-salarie",
-			"refus-titre-sejour-que-faire",
 			"carte-resident-10-ans-criteres-2026"
 		]
 	},
 	{
 		"slug": "naturalisation-refusee-erreur-administrative-coute-2-ans",
 		"title": "Naturalization Denied: This Administrative Error Costs You 2 Years",
-		"image": "assets/blog/images/ekaterina-bolovtsova-alt.jpg",
+		"image": "assets/blog/images/ekaterina-bolovtsova-alt.webp",
 		"summary": "Understanding pitfalls to avoid when applying for naturalization.",
 		"category": "French Nationality",
 		"date": "2026-01-03",
@@ -71,14 +70,13 @@
 		"markdownFile": "naturalization-denied-administrative-error.md",
 		"similarSlugs": [
 			"carte-resident-10-ans-criteres-2026",
-			"conjoint-francais-droits-sejour",
 			"vie-privee-familiale-article-8-cedh"
 		]
 	},
 	{
 		"slug": "carte-resident-10-ans-criteres-2026",
 		"title": "10-Year Resident Card: The New 2026 Criteria",
-		"image": "assets/blog/images/karola-g.jpg",
+		"image": "assets/blog/images/karola-g.webp",
 		"summary": "Everything you need to know about obtaining a resident card in 2026.",
 		"category": "Residence Permits",
 		"date": "2026-01-28",
@@ -90,14 +88,13 @@
 		"markdownFile": "10-year-resident-card-criteria-2026.md",
 		"similarSlugs": [
 			"conjoint-francais-droits-sejour",
-			"passeport-talent-guide-complet",
 			"naturalisation-refusee-erreur-administrative-coute-2-ans"
 		]
 	},
 	{
 		"slug": "titre-sejour-etudiant-changement-salarie",
 		"title": "From Student Status to Employee: The 2026 Guide",
-		"image": "assets/blog/images/pixabay.jpg",
+		"image": "assets/blog/images/pixabay.webp",
 		"summary": "How to successfully transition from student status to employee status in France.",
 		"category": "Residence Permits",
 		"date": "2026-01-27",
@@ -109,14 +106,13 @@
 		"markdownFile": "student-to-employee-residence-permit.md",
 		"similarSlugs": [
 			"passeport-talent-guide-complet",
-			"creer-entreprise-france-etranger",
 			"post-regularisation-renouvellement-changement-statut-titre-sejour-bordeaux"
 		]
 	},
 	{
 		"slug": "vie-privee-familiale-article-8-cedh",
 		"title": "Article 8 ECHR: Your Best Weapon Against Removal",
-		"image": "assets/blog/images/sora-shimazaki.jpg",
+		"image": "assets/blog/images/sora-shimazaki.webp",
 		"summary": "How to effectively invoke Article 8 of the ECHR to defend your right to stay.",
 		"category": "Litigation and Appeals",
 		"date": "2026-01-26",
@@ -128,14 +124,13 @@
 		"markdownFile": "private-family-life-article-8-echr.md",
 		"similarSlugs": [
 			"refus-titre-sejour-que-faire",
-			"oqtf-5-erreurs-eviter-contester-bordeaux",
 			"conjoint-francais-droits-sejour"
 		]
 	},
 	{
 		"slug": "refus-titre-sejour-que-faire",
 		"title": "Residence Permit Refusal: Recourse That Works",
-		"image": "assets/blog/images/sora-shimazaki-altb.jpg",
+		"image": "assets/blog/images/sora-shimazaki-altb.webp",
 		"summary": "Complete guide to gracious and contentious recourse after a residence permit refusal.",
 		"category": "Litigation and Appeals",
 		"date": "2026-01-25",
@@ -147,7 +142,6 @@
 		"markdownFile": "residence-permit-refusal-what-to-do.md",
 		"similarSlugs": [
 			"oqtf-5-erreurs-eviter-contester-bordeaux",
-			"vie-privee-familiale-article-8-cedh",
 			"carte-resident-10-ans-criteres-2026"
 		]
 	},
@@ -165,7 +159,6 @@
 		"markdownFile": "family-reunification-complete-guide-2026.md",
 		"similarSlugs": [
 			"conjoint-francais-droits-sejour",
-			"carte-resident-10-ans-criteres-2026",
 			"refus-titre-sejour-que-faire"
 		]
 	},
@@ -183,7 +176,6 @@
 		"markdownFile": "administrative-detention-rights-recourse.md",
 		"similarSlugs": [
 			"assignation-residence-droits-obligations",
-			"oqtf-5-erreurs-eviter-contester-bordeaux",
 			"vie-privee-familiale-article-8-cedh"
 		]
 	},
@@ -201,7 +193,6 @@
 		"markdownFile": "french-spouse-residence-rights.md",
 		"similarSlugs": [
 			"regroupement-familial-guide-complet-2026",
-			"carte-resident-10-ans-criteres-2026",
 			"vie-privee-familiale-article-8-cedh"
 		]
 	},
@@ -219,7 +210,6 @@
 		"markdownFile": "starting-business-france-foreigner.md",
 		"similarSlugs": [
 			"passeport-talent-guide-complet",
-			"titre-sejour-etudiant-changement-salarie",
 			"carte-resident-10-ans-criteres-2026"
 		]
 	},
@@ -237,7 +227,6 @@
 		"markdownFile": "residence-assignment-rights-obligations.md",
 		"similarSlugs": [
 			"retention-administrative-droits-recours",
-			"oqtf-5-erreurs-eviter-contester-bordeaux",
 			"refus-titre-sejour-que-faire"
 		]
 	},
