@@ -9,7 +9,7 @@ import {
 	afterNextRender,
 	PLATFORM_ID,
 } from '@angular/core'
-import { CommonModule, Location, isPlatformBrowser } from '@angular/common'
+import { CommonModule, Location, isPlatformBrowser, NgOptimizedImage } from '@angular/common'
 import { ActivatedRoute, RouterModule } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
@@ -33,6 +33,7 @@ import { ArticleActionsSheet } from '../article-actions-sheet/article-actions-sh
 	standalone: true,
 	imports: [
 		CommonModule,
+		NgOptimizedImage,
 		RouterModule,
 		MatButtonModule,
 		MatIconModule,

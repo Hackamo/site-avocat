@@ -34,11 +34,13 @@
 			transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 		img[mat-card-sm-image] {
+			margin-top: 1rem;
 			max-height: clamp(200px, 20vw, 180px);
 			object-fit: cover;
 			object-position: center;
 			border-radius: 0.5rem;
 			display: block;
+			align-self: center;
 			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
