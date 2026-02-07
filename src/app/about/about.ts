@@ -22,6 +22,7 @@ export class About {
 
 	imageLoaded = signal(false)
 	darkMode = signal(this.isDarkMode())
+	isMobile = signal(this.checkIsMobile())
 
 	// Expose centralized config for template usage
 	readonly config = CONTACT_CONFIG
@@ -30,10 +31,16 @@ export class About {
 		this.metaService.updateMetaTags('about')
 		if (isPlatformBrowser(this.platformId)) {
 			this.darkMode.set(this.isDarkMode())
+			this.isMobile.set(this.checkIsMobile())
 			const observer = new MutationObserver(() => {
 				this.darkMode.set(this.isDarkMode())
 			})
 			observer.observe(this.document.body, { attributes: true, attributeFilter: ['class'] })
+
+			// Listen for window resize to update isMobile
+			window.addEventListener('resize', () => {
+				this.isMobile.set(this.checkIsMobile())
+			})
 		}
 	}
 
@@ -46,5 +53,11 @@ export class About {
 
 	onImageLoad() {
 		this.imageLoaded.set(true)
+	}
+	checkIsMobile(): boolean {
+		if (!isPlatformBrowser(this.platformId)) {
+			return false
+		}
+		return window.innerWidth < 480
 	}
 }

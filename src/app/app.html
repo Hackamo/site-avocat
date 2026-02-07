@@ -26,8 +26,7 @@
 				Contact
 			</a>
 			<!-- Desktop: Menu with settings -->
-			<span class="spacer"></span>
-			<button
+			<a
 				[matTooltip]="'Réglages'"
 				class="theme-toggle"
 				matIconButton
@@ -35,7 +34,7 @@
 				aria-label="Settings menu"
 			>
 				<mat-icon>settings_heart</mat-icon>
-			</button>
+			</a>
 			<mat-menu #settingsMenu="matMenu">
 				<button mat-menu-item (click)="toggleDarkMode()">
 					<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>

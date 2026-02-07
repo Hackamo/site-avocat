@@ -96,6 +96,11 @@ h3 {
 	scroll-margin-top: initial;
 }
 
+// Remove border-left from notched outline
+.mdc-notched-outline__notch {
+	border-left: none !important;
+}
+
 @media (max-width: 768px) {
 	html {
 		font-size: 1.05rem;

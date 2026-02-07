@@ -4,8 +4,7 @@
 		<div class="container">
 			<div class="hero-content">
 				<h1 class="mat-display-2" i18n="About page|Page title">
-					À Propos de
-					<div>{{ config.lawyer.fullName }}</div>
+					À Propos de @if (isMobile()) { <br />} {{ config.lawyer.fullName }}
 				</h1>
 				<p class="mat-headline-5 hero-subtitle" i18n="About page|Page subtitle">
 					Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes

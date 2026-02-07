@@ -223,8 +223,9 @@
 							>
 							} } @if (contactForm.get('email')?.valid && contactForm.get('email')?.touched) {
 							<mat-hint class="success-hint" i18n="Contact page|Email success">✓ Email valide</mat-hint>
-							}
+							} @if (!contactForm.get('email')?.valid || !contactForm.get('email')?.touched) {
 							<mat-hint i18n="Contact page|Email hint">Exemple: contact@example.com</mat-hint>
+							}
 						</mat-form-field>
 
 						<mat-form-field animateText="fade" appearance="outline" class="full-width">
