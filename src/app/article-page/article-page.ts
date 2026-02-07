@@ -99,7 +99,6 @@ export class ArticlePage {
 
 			this.loading.set(true)
 			this.article.set(blogArticle)
-			this.imageLoaded.set(false)
 			this.loading.set(false)
 
 			// Update meta tags for the article
