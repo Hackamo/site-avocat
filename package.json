@@ -17,7 +17,8 @@
 		"format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\"",
 		"deploy": "npm run build:github-pages && ng deploy",
 		"deploy:gh": "ng build --configuration=production --base-href=// && npx angular-cli-ghpages --dir=dist/browser/fr",
-		"convert:webp": "node scripts/convert-webp.js"
+		"convert:webp": "node scripts/convert-webp.js",
+		"resize:blog-images": "node scripts/resize-blog-images.js"
 	},
 	"private": true,
 	"packageManager": "npm@11.8.0",
