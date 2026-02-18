@@ -6,6 +6,8 @@ export interface ServiceItem {
 	icon: string
 	description: string
 	descriptionContext: string
+	bottomDescription?: string
+	bottomDescriptionContext?: string
 	subtitle?: string
 	subtitleContext?: string
 	anchor?: string

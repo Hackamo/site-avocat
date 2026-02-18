@@ -33,7 +33,9 @@ import { CommonModule } from '@angular/common'
 					<p class="mat-body-medium" i18n="404 page|Suggestions label">Peut-être cherchez-vous :</p>
 					<nav class="suggestion-links">
 						<a mat-button routerLink="/" i18n="404 page|Suggestion home">Accueil</a>
-						<a mat-button routerLink="/prestations" i18n="404 page|Suggestion services">Nos Prestations</a>
+						<a mat-button routerLink="/prestations" i18n="404 page|Suggestion services"
+							>Droit des étrangers</a
+						>
 						<a mat-button routerLink="/blog" i18n="404 page|Suggestion blog">Blog</a>
 						<a mat-button routerLink="/a-propos" i18n="404 page|Suggestion about">À Propos</a>
 						<a mat-button routerLink="/contact" i18n="404 page|Suggestion contact">Contact</a>

@@ -18,15 +18,15 @@ export const CONTACT_CONFIG = {
 	},
 
 	// Contact details
-	email: 'contact@maitre-martinet.fr',
-	phone: '01 23 45 67 89',
+	email: 'debora.martinet@avocat.fr',
+	phone: '06 10 96 49 09',
 
 	// Address
 	address: {
-		street: '5 Avenue de la République',
-		city: '33000 Bordeaux',
+		street: '190 Avenue de la République',
+		city: '33200 Bordeaux',
 		country: 'France',
-		full: '5 Avenue de la République, 33000 Bordeaux',
+		full: '190 Avenue de la République, 33200 Bordeaux',
 		building: '',
 		floor: '',
 	},
@@ -34,12 +34,12 @@ export const CONTACT_CONFIG = {
 	// Office hours
 	hours: {
 		weekday: {
-			open: '09:00',
-			close: '18:00',
+			open: '08:00',
+			close: '20:00',
 		},
 		saturday: {
-			open: '10:00',
-			close: '13:00',
+			open: null,
+			close: null,
 		},
 		sunday: {
 			open: null,
@@ -89,6 +89,6 @@ export const CONTACT_CONFIG = {
 	map: {
 		lat: 44.840336,
 		lng: -0.5997146,
-		embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.078425044478!2d-0.5997146!3d44.840336199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527da20689615%3A0x1a5b7e0cc1d30f05!2sDefis%20avocats!5e0!3m2!1sfr!2sfr!4v1769534638232!5m2!1sfr!2sfr',
+		embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.1308670524054!2d-0.6129085872829089!3d44.8392681747957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d9c35b8417dd%3A0x34bffb2f70f02197!2sMa%C3%AEtre%20D%C3%A9bora%20MARTINET%20-%20Avocat%20%C3%A0%20Bordeaux%20-%20Droit%20des%20%C3%A9trangers!5e0!3m2!1sfr!2sfr!4v1771433007294!5m2!1sfr!2sfr',
 	},
 }

@@ -28,6 +28,10 @@
 						Du lundi au vendredi, {{ config.hours.weekday.open.slice(0, 5) }}-{{
 						config.hours.weekday.close.slice(0, 5) }}
 					</p>
+					<p class="subtitle" i18n="Contact page|Consultation time">
+						Les consultations peuvent être réalisées en visioconférence pour les personnes situées en dehors
+						de Bordeaux ou en cas de difficulté de déplacement.
+					</p>
 					<a mat-flat-button [href]="'tel:+33' + config.phone.replace(/\\s/g, '')">
 						<mat-icon>phone</mat-icon>
 						<span i18n="Contact page|Call button">Appeler</span>
@@ -95,24 +99,16 @@
 								>{{ config.hours.weekday.open.slice(0, 5) }} – {{ config.hours.weekday.close.slice(0, 5)
 								}}</span
 							>
+							<span class="note" i18n="Contact page|Weekdays note">Sur rendez-vous</span>
 						</li>
 						<li
 							class="hours-item appointment"
-							i18n-aria-label="Contact page|Saturday hours"
-							aria-label="Samedi sur rendez-vous"
+							i18n-aria-label="Contact page|Saturday & Sunday hours"
+							aria-label="Samedi et Dimanche sur rendez-vous"
 						>
 							<mat-icon aria-hidden="true">event_available</mat-icon>
-							<span class="day" i18n="Contact page|Saturday label">Samedi</span>
-							<span class="note" i18n="Contact page|Saturday note">Sur rendez-vous</span>
-						</li>
-						<li
-							class="hours-item closed"
-							i18n-aria-label="Contact page|Sunday hours"
-							aria-label="Dimanche fermé"
-						>
-							<mat-icon aria-hidden="true">cancel</mat-icon>
-							<span class="day" i18n="Contact page|Sunday label">Dimanche</span>
-							<span class="note" i18n="Contact page|Sunday note">Fermé</span>
+							<span class="day" i18n="Contact page|Saturday label">Samedi & Dimanche</span>
+							<span class="note" i18n="Contact page|Saturday note">Fermé</span>
 						</li>
 					</ul>
 				</mat-card-content>
