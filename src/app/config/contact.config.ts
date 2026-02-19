@@ -5,16 +5,16 @@
 export const CONTACT_CONFIG = {
 	// Business information
 	businessName: 'Cabinet Martinet',
-	businessNameShort: 'Maître Martinet',
-	businessNameFull: 'Cabinet juridique Maître Martinet',
+	businessNameShort: 'Maître Débora Martinet',
+	businessNameFull: 'Cabinet juridique Maître Débora Martinet',
 
 	// Lawyer information
 	lawyer: {
 		title: 'Maître',
-		firstName: 'Déborah',
+		firstName: 'Débora',
 		lastName: 'Martinet',
-		fullName: 'Maître Martinet',
-		specialties: ["Droit de l'immigration", 'Droit de la famille', 'Droit du contentieux'],
+		fullName: 'Maître Débora Martinet',
+		specialties: ['Droit des étrangers', 'Droit de la famille', 'Droit du contentieux'],
 	},
 
 	// Contact details
@@ -36,14 +36,6 @@ export const CONTACT_CONFIG = {
 		weekday: {
 			open: '08:00',
 			close: '20:00',
-		},
-		saturday: {
-			open: null,
-			close: null,
-		},
-		sunday: {
-			open: null,
-			close: null,
 		},
 	},
 

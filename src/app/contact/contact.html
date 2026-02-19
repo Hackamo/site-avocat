@@ -24,9 +24,8 @@
 				<mat-card-content>
 					<p i18n="Contact page|Phone number">{{ config.phone }}</p>
 
-					<p class="subtitle" i18n="Contact page|Phone hours">
-						Du lundi au vendredi, {{ config.hours.weekday.open.slice(0, 5) }}-{{
-						config.hours.weekday.close.slice(0, 5) }}
+					<p class="subtitle" i18n="Contact page|Consultation language">
+						Consultations en français et en anglais.
 					</p>
 					<p class="subtitle" i18n="Contact page|Consultation time">
 						Les consultations peuvent être réalisées en visioconférence pour les personnes situées en dehors
@@ -100,15 +99,6 @@
 								}}</span
 							>
 							<span class="note" i18n="Contact page|Weekdays note">Sur rendez-vous</span>
-						</li>
-						<li
-							class="hours-item appointment"
-							i18n-aria-label="Contact page|Saturday & Sunday hours"
-							aria-label="Samedi et Dimanche sur rendez-vous"
-						>
-							<mat-icon aria-hidden="true">event_available</mat-icon>
-							<span class="day" i18n="Contact page|Saturday label">Samedi & Dimanche</span>
-							<span class="note" i18n="Contact page|Saturday note">Fermé</span>
 						</li>
 					</ul>
 				</mat-card-content>

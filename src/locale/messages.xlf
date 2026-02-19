@@ -12,7 +12,7 @@
         <note priority="1" from="meaning">About page</note>
       </trans-unit>
       <trans-unit id="7490076393202027965" datatype="html">
-        <source> Avocate spécialisée en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France. </source>
+        <source> Avocate exercant en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">8,12</context>
@@ -412,7 +412,7 @@
         <note priority="1" from="meaning">About page</note>
       </trans-unit>
       <trans-unit id="2211277773286083778" datatype="html">
-        <source>Articles réguliers dans la presse spécialisée</source>
+        <source>Articles réguliers dans la presse exercant</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.html</context>
           <context context-type="linenumber">211,213</context>

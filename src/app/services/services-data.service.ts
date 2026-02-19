@@ -33,7 +33,7 @@ export class ServicesDataService {
 	private getFrenchServices(): ServiceItem[] {
 		return [
 			{
-				title: 'Titres de Séjour',
+				title: 'Titres de Séjour et Asile',
 				titleContext: 'Services page|Residence permits title',
 				icon: 'badge',
 				description: 'Accompagnement complet pour tous vos besoins en matière de titre de séjour',
@@ -60,6 +60,13 @@ export class ServicesDataService {
 						context: 'Services page|Residence permits item provisional',
 					},
 					{ text: 'Récours administratifs', context: 'Services page|Residence permits item appeal' },
+					{ text: "Demande d'asile", context: 'Services page|Residence permits item asylum' },
+					{ text: 'Procédure Dublin', context: 'Services page|Residence permits item dublin' },
+					{
+						text: "Refus ou retrait des conditions matérielles d'accueil (CMA)",
+						context: 'Services page|Residence permits item cma',
+					},
+					{ text: 'Mineurs non accompagnés (MNA)', context: 'Services page|Residence permits item mna' },
 				],
 			},
 			{
@@ -95,19 +102,22 @@ export class ServicesDataService {
 				subtitleContext: 'Services page|Litigation subtitle',
 				anchor: 'contentieux-recours',
 				detailedDescription:
-					"Un refus de titre de séjour ou de naturalité ? Une mesure de retrait ou d'expulsion ? Je vous assiste pour contester ces décisions et défendre vos droits auprès de l'administration et des tribunaux. Ma connaissance du droit administratif me permet de construire des stratégies efficaces de recours.",
+					"Un refus de titre de séjour ? Une OQTF ou une mesure d'éloignement ? Une décision défavorable de l'administration ? Je vous assiste afin de contester ces décisions et de défendre vos droits devant l'administration et les juridictions compétentes. Son expérience du contentieux administratif lui permet d'élaborer des stratégies de recours rigoureuses et adaptées à chaque situation.",
 				detailedDescriptionContext: 'Services page|Litigation detailed',
 				items: [
 					{ text: 'Recours gracieux et hiérarchique', context: 'Services page|Litigation item appeal' },
 					{
-						text: 'Recours devant le tribunal administratif',
+						text: "Recours devant le tribunal administratif et la Cour administrative d'appel",
 						context: 'Services page|Litigation item court',
 					},
 					{
 						text: "Assistance en cas d'expulsion ou OQTF",
 						context: 'Services page|Litigation item expulsion',
 					},
-					{ text: 'Représentation en justice', context: 'Services page|Litigation item representation' },
+					{
+						text: "Recours devant la Cour nationale du droit d'asile (CNDA)",
+						context: 'Services page|Litigation item cnda',
+					},
 				],
 			},
 		]

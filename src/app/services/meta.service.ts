@@ -22,7 +22,7 @@ export class MetaService {
 	private readonly pagesMeta: Record<string, PageMeta> = {
 		home: {
 			title: `${CONTACT_CONFIG.businessName} - Avocat Droit des Étrangers à ${CONTACT_CONFIG.address.city}`,
-			description: `Cabinet d'avocat spécialisé en droit des étrangers à ${CONTACT_CONFIG.address.city}. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée.`,
+			description: `Cabinet d'avocat exercant en droit des étrangers à ${CONTACT_CONFIG.address.city}. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée.`,
 			keywords: `avocat droit des étrangers, titre de séjour, naturalisation française, OQTF, contentieux étrangers, ${CONTACT_CONFIG.address.city}`,
 		},
 		prestations: {
@@ -38,7 +38,7 @@ export class MetaService {
 		},
 		about: {
 			title: `À Propos - ${CONTACT_CONFIG.lawyer.fullName}, Avocat Droit des Étrangers`,
-			description: `Découvrez le parcours de ${CONTACT_CONFIG.lawyer.fullName}, avocate spécialisée en droit des étrangers à ${CONTACT_CONFIG.address.city}. Expertise, engagement et accompagnement personnalisé pour vos démarches.`,
+			description: `Découvrez le parcours de ${CONTACT_CONFIG.lawyer.fullName}, avocate exercant en droit des étrangers à ${CONTACT_CONFIG.address.city}. Expertise, engagement et accompagnement personnalisé pour vos démarches.`,
 			keywords: `avocat ${CONTACT_CONFIG.address.city.toLowerCase()}, maître ${CONTACT_CONFIG.lawyer.lastName}, droit des étrangers, avocat immigration`,
 		},
 		contact: {
