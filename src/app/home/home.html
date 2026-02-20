@@ -1,6 +1,26 @@
 <!-- Hero Section (Bannière) -->
 <main animate.enter="enter-fade-animation">
 	<header class="home-section container">
+		<div class="hero-image-wrapper" [attr.aria-busy]="!imageLoaded()">
+			@if (!imageLoaded()) {
+			<div class="image-loader" aria-hidden="true"></div>
+			}
+			<picture>
+				<source srcset="assets/images/debora_home_crop.webp" type="image/webp" />
+				<img
+					class="hero-image"
+					ngSrc="assets/images/debora_home_crop.webp"
+					priority
+					width="400"
+					height="600"
+					alt="Image représentant une balance de justice"
+					i18n-alt="Home page|Hero image alt text"
+					(load)="onImageLoad()"
+					(error)="onImageError()"
+					[class.loaded]="imageLoaded()"
+				/>
+			</picture>
+		</div>
 		<div class="home-content">
 			<h1 class="mat-display-3" i18n="Home page|Hero title">Votre avocate en droit des étrangers</h1>
 			<p class="mat-headline-5" i18n="Home page|Hero subtitle">
@@ -19,26 +39,6 @@
 					Demander une consultation
 				</a>
 			</div>
-		</div>
-		<div class="hero-image-wrapper" [attr.aria-busy]="!imageLoaded()">
-			@if (!imageLoaded()) {
-			<div class="image-loader" aria-hidden="true"></div>
-			}
-			<picture>
-				<source srcset="assets/blog/images/webp1200/ekaterina-bolovtsova.webp" type="image/webp" />
-				<img
-					class="hero-image"
-					ngSrc="assets/blog/images/webp1200/ekaterina-bolovtsova.webp"
-					priority
-					width="400"
-					height="600"
-					alt="Image représentant une balance de justice"
-					i18n-alt="Home page|Hero image alt text"
-					(load)="onImageLoad()"
-					(error)="onImageError()"
-					[class.loaded]="imageLoaded()"
-				/>
-			</picture>
 		</div>
 	</header>
 

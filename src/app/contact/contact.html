@@ -8,8 +8,10 @@
 	<header class="page-header">
 		<h1 class="mat-display-2" i18n="Contact page|Page title">Contactez-nous</h1>
 		<p class="mat-headline-5" i18n="Contact page|Page subtitle">
-			Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous
-			vous répondrons dans les plus brefs délais.
+			Vous avez des questions sur vos droits ou besoin d'une consultation ?
+		</p>
+		<p class="mat-headline-5" i18n="Contact page|Page subtitle">
+			N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.
 		</p>
 	</header>
 
@@ -25,11 +27,7 @@
 					<p i18n="Contact page|Phone number">{{ config.phone }}</p>
 
 					<p class="subtitle" i18n="Contact page|Consultation language">
-						Consultations en français et en anglais.
-					</p>
-					<p class="subtitle" i18n="Contact page|Consultation time">
-						Les consultations peuvent être réalisées en visioconférence pour les personnes situées en dehors
-						de Bordeaux ou en cas de difficulté de déplacement.
+						Consultations en français et en anglais, à distance ou au cabinet
 					</p>
 					<a mat-flat-button [href]="'tel:+33' + config.phone.replace(/\\s/g, '')">
 						<mat-icon>phone</mat-icon>

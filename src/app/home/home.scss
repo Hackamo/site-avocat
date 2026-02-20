@@ -5,6 +5,13 @@
 	padding: 4rem 2rem;
 }
 
+.home-content {
+	max-width: 6on0%;
+	h1 {
+		font-size: 2rem;
+	}
+}
+
 .hero-image-wrapper {
 	position: relative;
 	width: clamp(240px, 40vw, 500px);
@@ -108,6 +115,7 @@
 		max-width: 100%;
 		margin-bottom: 2rem;
 	}
+
 	.home-image-container {
 		width: 100%;
 		max-width: 500px;

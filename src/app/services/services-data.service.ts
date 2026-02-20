@@ -42,7 +42,7 @@ export class ServicesDataService {
 				subtitleContext: 'Services page|Residence permits subtitle',
 				anchor: 'titres-de-sejour',
 				detailedDescription:
-					"Qu'il s'agisse d'une première demande de visa, d'un renouvellement ou d'un changement de statut, je vous guide à travers chaque étape de la procédure administrative. Ma spécialité est d'aider les demandeurs à constituer des dossiers solides et conformes aux exigences des autorités préfectorales.",
+					"Qu'il s'agisse d'une première demande de visa, d'un renouvellement ou d'un changement de statut, je vous guide à travers chaque étape de la procédure administrative. J'accompagne chaque demandeur dans l'élaboration d'un dossier clair, complet et conforme aux exigences de la préfecture.",
 				detailedDescriptionContext: 'Services page|Residence permits detailed',
 				items: [
 					{ text: 'Visa long séjour', context: 'Services page|Residence permits item visa' },
@@ -98,12 +98,15 @@ export class ServicesDataService {
 				icon: 'gavel',
 				description: 'Défense et assistance juridique en cas de refus, de retrait ou de contentieux',
 				descriptionContext: 'Services page|Litigation description',
-				subtitle: 'Recours Administratifs, Recours Gracieux, Tribunaux',
+				subtitle: 'Recours Gracieux, Recours Contentieux',
 				subtitleContext: 'Services page|Litigation subtitle',
 				anchor: 'contentieux-recours',
 				detailedDescription:
-					"Un refus de titre de séjour ? Une OQTF ou une mesure d'éloignement ? Une décision défavorable de l'administration ? Je vous assiste afin de contester ces décisions et de défendre vos droits devant l'administration et les juridictions compétentes. Son expérience du contentieux administratif lui permet d'élaborer des stratégies de recours rigoureuses et adaptées à chaque situation.",
+					"Un refus de titre de séjour ? Une OQTF ou une mesure d'éloignement ? Une décision défavorable de l'administration ? Je vous assiste afin de contester ces décisions et de défendre vos droits devant l'administration et les juridictions compétentes.",
 				detailedDescriptionContext: 'Services page|Litigation detailed',
+				bottomDescription:
+					"Mon expérience du contentieux administratif me permet d'élaborer des stratégies de recours rigoureuses et adaptées à chaque situation.",
+				bottomDescriptionContext: 'Services page|Litigation bottom description',
 				items: [
 					{ text: 'Recours gracieux et hiérarchique', context: 'Services page|Litigation item appeal' },
 					{
