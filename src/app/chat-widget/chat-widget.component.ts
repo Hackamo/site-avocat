@@ -69,10 +69,18 @@ export class ChatWidgetComponent implements OnInit {
 		this.userInput = ''
 		this.isTyping.set(true)
 
+		const botMessageId = this.addBotMessage('')
+
 		this.chatService
-			.sendMessage(userMessage)
-			.then((botResponse) => this.addBotMessage(botResponse))
-			.finally(() => {
+			.streamMessage(userMessage, (chunk) => this.appendBotChunk(botMessageId, chunk))
+			.then(() => {
+				this.isTyping.set(false)
+			})
+			.catch((error) => {
+				this.updateBotMessage(
+					botMessageId,
+					`Erreur : ${error instanceof Error ? error.message : String(error)}`,
+				)
 				this.isTyping.set(false)
 			})
 	}
@@ -88,14 +96,27 @@ export class ChatWidgetComponent implements OnInit {
 		this.scrollToBottom()
 	}
 
-	private addBotMessage(text: string): void {
+	private addBotMessage(text: string): string {
 		const message: ChatMessage = {
-			id: `bot-${Date.now()}`,
+			id: `bot-${Date.now()}-${Math.random().toString(36).slice(2)}`,
 			type: 'bot',
 			text,
 			timestamp: new Date(),
 		}
 		this.messages.update((msgs) => [...msgs, message])
+		this.scrollToBottom()
+		return message.id
+	}
+
+	private appendBotChunk(id: string, chunk: string): void {
+		this.messages.update((msgs) =>
+			msgs.map((message) => (message.id === id ? { ...message, text: `${message.text}${chunk}` } : message)),
+		)
+		this.scrollToBottom()
+	}
+
+	private updateBotMessage(id: string, text: string): void {
+		this.messages.update((msgs) => msgs.map((message) => (message.id === id ? { ...message, text } : message)))
 		this.scrollToBottom()
 	}
 

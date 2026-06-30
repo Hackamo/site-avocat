@@ -10,6 +10,7 @@ import {
 import { ɵsetAngularAppEngineManifest } from '@angular/ssr'
 import express from 'express'
 import { pathToFileURL } from 'node:url'
+import { GoogleGenAI } from '@google/genai'
 
 // Load environment variables from .env.local
 const envPath = join(import.meta.dirname, '../.env.local')
@@ -43,6 +44,51 @@ app.use(async (req, res, next) => {
 })
 
 app.use(express.json())
+
+app.get('/api/chat-stream', async (req, res) => {
+	const userMessage = String(req.query?.['message'] || '').trim()
+	if (!userMessage) {
+		return res.status(400).json({ error: 'Le message est requis.' })
+	}
+
+	const apiKey = process.env['GEMINI_API_KEY']
+	if (!apiKey) {
+		return res.status(500).json({ error: 'GEMINI_API_KEY manquant' })
+	}
+
+	res.setHeader('Content-Type', 'text/event-stream')
+	res.setHeader('Cache-Control', 'no-cache, no-transform')
+	res.setHeader('Connection', 'keep-alive')
+	res.flushHeaders()
+
+	try {
+		const ai = new GoogleGenAI({ apiKey })
+		const stream = await ai.models.generateContentStream({
+			model: geminiModel,
+			contents: buildGeminiPrompt(userMessage),
+			config: {
+				maxOutputTokens: maxGeminiOutputTokens,
+				temperature: 0.1,
+				topP: 0.95,
+			},
+		})
+
+		for await (const chunk of stream) {
+			const text = typeof chunk.text === 'string' ? chunk.text : ''
+			if (text) {
+				res.write(`data: ${JSON.stringify({ text })}\n\n`)
+			}
+		}
+
+		res.write('event: done\ndata: {}\n\n')
+		return res.end()
+	} catch (error) {
+		const errorMessage = error instanceof Error ? error.message : String(error)
+		console.error('AI stream error:', errorMessage)
+		res.write(`event: error\ndata: ${JSON.stringify({ error: errorMessage })}\n\n`)
+		return res.end()
+	}
+})
 
 app.post('/api/chat', async (req, res) => {
 	const userMessage = String(req.body?.message || '').trim()
@@ -84,6 +130,17 @@ app.use(
 )
 
 const geminiModel = 'gemini-3.5-flash'
+const maxGeminiOutputTokens = 80
+
+function buildGeminiPrompt(userMessage: string): string {
+	return [
+		'Tu es un assistant juridique spécialisé en droit des étrangers en France.',
+		'Réponds de manière claire, concise et en français.',
+		'Limite-toi à 3 phrases maximum et à 80 mots maximum.',
+		"Précise que les informations fournies ne remplacent pas un avis juridique professionnel, qu'elles sont à titre informatif uniquement et qu'il faut prendre rendez-vous avec un avocat pour des conseils juridiques personnalisés.",
+		`Question : ${userMessage}`,
+	].join('\n\n')
+}
 
 async function getAiAnswer(userMessage: string): Promise<string> {
 	console.log('Received user message for AI:', userMessage)
@@ -106,16 +163,14 @@ async function getAiAnswer(userMessage: string): Promise<string> {
 					{
 						parts: [
 							{
-								text:
-									"Tu es un assistant juridique spécialisé en droit des étrangers en France. Réponds de manière claire et concise en français et précise que les informations fournies ne remplacent pas un avis juridique professionnel, qu'elles sont à utiliser à titre informatif uniquement et qu il faut prendre rendez-vous avec un avocat pour des conseils juridiques personnalisés.\n\nQuestion : " +
-									userMessage,
+								text: buildGeminiPrompt(userMessage),
 							},
 						],
 					},
 				],
 				generationConfig: {
-					maxOutputTokens: 2048,
-					temperature: 0.2,
+					maxOutputTokens: maxGeminiOutputTokens,
+					temperature: 0.1,
 					topP: 0.95,
 				},
 			}),

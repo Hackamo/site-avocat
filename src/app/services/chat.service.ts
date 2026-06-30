@@ -28,14 +28,51 @@ export class ChatService {
 					return await this.sendGeminiDirect(userMessage, directApiKey)
 				} catch (directError) {
 					console.error('ChatService.sendMessage direct Gemini failed:', directError)
-					return 'Le service d’IA est temporairement indisponible. Veuillez réessayer plus tard.'
+					return 'L’IA est indisponible pour le moment.'
 				}
 			}
 
 			const errorMessage = backendError instanceof Error ? backendError.message : String(backendError)
 			console.error('ChatService.sendMessage failed:', errorMessage)
-			return `Le service d’IA est temporairement indisponible (${errorMessage}).`
+			return 'L’IA est indisponible pour le moment.'
 		}
+	}
+
+	async streamMessage(userMessage: string, onChunk: (chunk: string) => void): Promise<void> {
+		if (typeof window === 'undefined' || !('EventSource' in window)) {
+			const response = await this.sendBackendMessage(userMessage)
+			onChunk(response)
+			return
+		}
+
+		const url = new URL('/api/chat-stream', window.location.origin)
+		url.searchParams.set('message', userMessage)
+
+		return new Promise((resolve, reject) => {
+			const source = new EventSource(url.toString())
+
+			source.onmessage = (event) => {
+				try {
+					const data = JSON.parse(event.data) as { text?: string }
+					if (typeof data.text === 'string' && data.text) {
+						onChunk(data.text)
+					}
+				} catch {
+					source.close()
+					reject(new Error('Impossible de parser le flux du serveur.'))
+				}
+			}
+
+			source.addEventListener('done', () => {
+				source.close()
+				resolve()
+			})
+
+			source.addEventListener('error', () => {
+				source.close()
+				reject(new Error('L’IA est indisponible pour le moment.'))
+			})
+		})
 	}
 
 	private getDirectGeminiApiKey(): string | null {
