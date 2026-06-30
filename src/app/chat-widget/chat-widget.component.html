@@ -27,7 +27,7 @@
 						[class.bot-message]="message.type === 'bot'"
 					>
 						<div class="message-content">
-							{{ message.text }}
+							<span [innerHTML]="formatMessageHtml(message.text)"></span>
 						</div>
 						<div class="message-time">{{ message.timestamp | date: 'short' }}</div>
 					</div>

@@ -1,5 +1,6 @@
 import { Component, inject, signal, ChangeDetectionStrategy, OnInit, PLATFORM_ID } from '@angular/core'
 import { CommonModule, isPlatformBrowser } from '@angular/common'
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
 import { Router, RouterLink } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
@@ -35,13 +36,16 @@ export class ChatWidgetComponent implements OnInit {
 
 	private readonly chatService = inject(ChatService)
 	private readonly router = inject(Router)
+	private readonly sanitizer = inject(DomSanitizer)
 	private readonly platformId = inject(PLATFORM_ID)
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
 	userInput = ''
 
 	ngOnInit(): void {
-		this.addBotMessage('Bonjour ! Comment puis-je vous aider ? Posez-moi une question sur nos services juridiques.')
+		this.addBotMessage(
+			'Bonjour ! Notre assistant est désormais connecté à un service d’IA. Posez votre question et obtenez une réponse rapide sur le droit des étrangers.',
+		)
 	}
 
 	toggleChat(): void {
@@ -63,27 +67,14 @@ export class ChatWidgetComponent implements OnInit {
 
 		this.addUserMessage(userMessage)
 		this.userInput = ''
-
-		// Set typing immediately
 		this.isTyping.set(true)
 
-		setTimeout(
-			() => {
-				const botResponse = this.chatService.getBotResponse(userMessage)
+		this.chatService
+			.sendMessage(userMessage)
+			.then((botResponse) => this.addBotMessage(botResponse))
+			.finally(() => {
 				this.isTyping.set(false)
-				this.addBotMessage(botResponse)
-
-				// Check if this request requires a redirect to contact page
-				const redirectUrl = this.chatService.getRedirectUrl(userMessage)
-				if (redirectUrl && this.isBrowser) {
-					setTimeout(() => {
-						this.router.navigate([redirectUrl])
-						this.closeChat()
-					}, 2000)
-				}
-			},
-			500 + Math.random() * 1000,
-		)
+			})
 	}
 
 	private addUserMessage(text: string): void {
@@ -106,6 +97,62 @@ export class ChatWidgetComponent implements OnInit {
 		}
 		this.messages.update((msgs) => [...msgs, message])
 		this.scrollToBottom()
+	}
+
+	formatMessageHtml(text: string): SafeHtml {
+		const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+		const withLinks = escaped.replace(
+			/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+			'<a href="$2" target="_blank" rel="noreferrer noopener">$1</a>',
+		)
+		const withBold = withLinks.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+		const withItalic = withBold.replace(/\*(.+?)\*/g, '<em>$1</em>')
+		const lines = withItalic.split(/\r?\n/)
+
+		let html = ''
+		let inList = false
+
+		for (const line of lines) {
+			const trimmed = line.trim()
+			if (trimmed.startsWith('### ')) {
+				if (inList) {
+					html += '</ul>'
+					inList = false
+				}
+				html += `<h4>${trimmed.slice(4)}</h4>`
+			} else if (trimmed.startsWith('## ')) {
+				if (inList) {
+					html += '</ul>'
+					inList = false
+				}
+				html += `<h3>${trimmed.slice(3)}</h3>`
+			} else if (trimmed.startsWith('* ')) {
+				if (!inList) {
+					html += '<ul>'
+					inList = true
+				}
+				html += `<li>${trimmed.slice(2)}</li>`
+			} else if (!trimmed) {
+				if (inList) {
+					html += '</ul>'
+					inList = false
+				}
+				html += '<p></p>'
+			} else {
+				if (inList) {
+					html += '</ul>'
+					inList = false
+				}
+				html += `<p>${trimmed.replace(/\s{2,}/g, ' ')}</p>`
+			}
+		}
+
+		if (inList) {
+			html += '</ul>'
+		}
+
+		return this.sanitizer.bypassSecurityTrustHtml(html)
 	}
 
 	private scrollToBottom(): void {

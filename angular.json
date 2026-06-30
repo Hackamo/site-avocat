@@ -122,15 +122,18 @@
 							"buildTarget": "site-avocat:build:production"
 						},
 						"development": {
-							"buildTarget": "site-avocat:build:development"
+							"buildTarget": "site-avocat:build:development",
+							"proxyConfig": "proxy.conf.json"
 						},
 						"development-fr": {
 							"buildTarget": "site-avocat:build:development-fr",
-							"port": 4200
+							"port": 4200,
+							"proxyConfig": "proxy.conf.json"
 						},
 						"development-en": {
 							"buildTarget": "site-avocat:build:development-en",
-							"port": 4201
+							"port": 4201,
+							"proxyConfig": "proxy.conf.json"
 						},
 						"en": {
 							"buildTarget": "site-avocat:build:en"
