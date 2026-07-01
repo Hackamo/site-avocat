@@ -233,7 +233,7 @@ export class Contact implements OnDestroy, AfterViewInit {
 				await new Promise((resolve) => setTimeout(resolve, 300))
 
 				// EmailJS configuration - Replace with your actual EmailJS credentials
-				const serviceId = 'service_nhi3txj' // Get from EmailJS dashboard
+				const serviceId = 'service_tmk6hpd' // Get from EmailJS dashboard
 				const templateId = 'template_9x1kaok' // Create in EmailJS dashboard
 				const publicKey = 'gN3YmDTuAVK7LloXM' // Get from EmailJS dashboard
 

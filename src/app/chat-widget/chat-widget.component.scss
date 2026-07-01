@@ -9,8 +9,8 @@
 .chat-toggle {
 	width: auto;
 	height: 72px;
-	min-width: 72px;
-	min-height: 72px;
+	min-width: 160px;
+	min-height: 56px;
 	border-radius: 999px;
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 	transition: all 0.2s ease;
@@ -40,20 +40,14 @@
 }
 
 .chat-toggle-label {
-	display: none;
+	display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
 	white-space: nowrap;
-	padding: 0.35rem 0.75rem;
+	padding: 0.35rem;
 	border-radius: 999px;
-}
-
-@media (min-width: 1024px) {
-	.chat-toggle-label {
-		display: inline-block;
-	}
 }
 
 .chat-window {
@@ -240,7 +234,7 @@
 
 .chat-input-area {
 	padding: 1rem;
-	border-top: 1px solid var(--mat-sys-outline-variant);
+	border-top: 1px solid var(--mat-sys-outline);
 
 	.input-form {
 		display: flex;

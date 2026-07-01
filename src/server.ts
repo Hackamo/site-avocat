@@ -129,14 +129,14 @@ app.use(
 	}),
 )
 
-const geminiModel = 'gemini-3.5-flash'
-const maxGeminiOutputTokens = 80
+const geminiModel = 'gemini-3.1-flash-lite'
+const maxGeminiOutputTokens = 1024
 
 function buildGeminiPrompt(userMessage: string): string {
 	return [
-		'Tu es un assistant juridique spécialisé en droit des étrangers en France.',
-		'Réponds de manière claire, concise et en français.',
-		'Limite-toi à 3 phrases maximum et à 80 mots maximum.',
+		'Tu es un assistant juridique spécialisé en droit des étrangers en France, de la famille et du handicap.',
+		'Réponds de manière claire et très succinte.',
+		'Limite-toi à 1024 mots maximum.',
 		"Précise que les informations fournies ne remplacent pas un avis juridique professionnel, qu'elles sont à titre informatif uniquement et qu'il faut prendre rendez-vous avec un avocat pour des conseils juridiques personnalisés.",
 		`Question : ${userMessage}`,
 	].join('\n\n')
@@ -170,7 +170,7 @@ async function getAiAnswer(userMessage: string): Promise<string> {
 				],
 				generationConfig: {
 					maxOutputTokens: maxGeminiOutputTokens,
-					temperature: 0.1,
+					temperature: 0.2,
 					topP: 0.95,
 				},
 			}),

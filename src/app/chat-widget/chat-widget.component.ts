@@ -44,7 +44,7 @@ export class ChatWidgetComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.addBotMessage(
-			'Bonjour ! Notre assistant est désormais connecté à un service d’IA. Posez votre question et obtenez une réponse rapide sur le droit des étrangers.',
+			'Bonjour ! Notre assistant est désormais connecté à un service d’IA. Posez votre question et obtenez une réponse rapide.',
 		)
 	}
 

@@ -71,6 +71,11 @@
 		transition-duration: 200ms !important;
 	}
 
+	.mat-mdc-card-header {
+		min-height: 96px;
+		align-items: flex-start;
+	}
+
 	.mat-card-header .mat-icon {
 		font-size: 40px;
 		width: 40px;

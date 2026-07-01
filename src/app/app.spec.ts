@@ -18,6 +18,8 @@ describe('App', () => {
 		const fixture = TestBed.createComponent(App)
 		await fixture.whenStable()
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('h1')?.textContent).toContain('Votre avocate en droit des étrangers')
+		expect(compiled.querySelector('h1')?.textContent).toContain(
+			'Votre avocate en droit des étrangers, de la famille et du handicap',
+		)
 	})
 })
