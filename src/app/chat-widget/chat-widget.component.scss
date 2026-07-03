@@ -124,6 +124,33 @@
 	}
 }
 
+.redirect-progress-wrapper {
+	padding: 0 1rem 0.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	background: rgba(255, 255, 255, 0.88);
+}
+
+.redirect-progress-label {
+	font-size: 0.8rem;
+	color: var(--mat-sys-on-surface-variant);
+}
+
+.redirect-progress-bar {
+	height: 8px;
+	border-radius: 999px;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.redirect-progress-fill {
+	height: 100%;
+	width: 0;
+	background: linear-gradient(90deg, white, var(--mat-sys-on-primary-container)) !important;
+	transition: width 0.05s linear;
+}
+
 .message {
 	display: flex;
 	flex-direction: column;
@@ -248,6 +275,12 @@
 	// Prevent iOS zoom on input focus
 	input {
 		font-size: 16px !important;
+		caret-color: var(--mat-sys-on-primary-container) !important;
+		color: var(--mat-sys-on-surface) !important;
+	}
+
+	input::placeholder {
+		color: rgba(0, 0, 0, 0.5);
 	}
 }
 

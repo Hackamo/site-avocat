@@ -1,4 +1,13 @@
-import { Component, inject, signal, ChangeDetectionStrategy, OnInit, PLATFORM_ID } from '@angular/core'
+import {
+	Component,
+	ElementRef,
+	ViewChild,
+	inject,
+	signal,
+	ChangeDetectionStrategy,
+	OnInit,
+	PLATFORM_ID,
+} from '@angular/core'
 import { CommonModule, isPlatformBrowser } from '@angular/common'
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
@@ -30,9 +39,17 @@ import { ChatService, ChatMessage } from '../services/chat.service'
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatWidgetComponent implements OnInit {
+	@ViewChild('chatInput') private chatInput?: ElementRef<HTMLInputElement>
+
 	readonly isOpen = signal(false)
 	readonly messages = signal<ChatMessage[]>([])
 	readonly isTyping = signal(false)
+	readonly isRedirecting = signal(false)
+	readonly redirectProgress = signal(0)
+
+	private readonly redirectDurationMs = 3000
+	private redirectTimeoutId?: number
+	private redirectIntervalId?: number
 
 	private readonly chatService = inject(ChatService)
 	private readonly router = inject(Router)
@@ -43,16 +60,21 @@ export class ChatWidgetComponent implements OnInit {
 	userInput = ''
 
 	ngOnInit(): void {
-		this.addBotMessage(
-			'Bonjour ! Notre assistant est désormais connecté à un service d’IA. Posez votre question et obtenez une réponse rapide.',
-		)
+		this.addBotMessage('Posez votre question et obtenez une réponse rapide.')
 	}
 
 	toggleChat(): void {
-		this.isOpen.update((isOpen) => !isOpen)
+		this.isOpen.update((isOpen) => {
+			const next = !isOpen
+			if (next) {
+				setTimeout(() => this.chatInput?.nativeElement.focus(), 0)
+			}
+			return next
+		})
 	}
 
 	closeChat(): void {
+		this.clearRedirectCountdown()
 		this.isOpen.set(false)
 	}
 
@@ -70,11 +92,28 @@ export class ChatWidgetComponent implements OnInit {
 		this.isTyping.set(true)
 
 		const botMessageId = this.addBotMessage('')
+		const redirectUrl = this.chatService.getRedirectUrl(userMessage)
 
-		this.chatService
-			.streamMessage(userMessage, (chunk) => this.appendBotChunk(botMessageId, chunk))
+		const redirectIfNeeded = () => {
+			if (redirectUrl && this.isBrowser && !this.isRedirecting()) {
+				this.startRedirectCountdown(botMessageId, redirectUrl)
+			}
+		}
+
+		redirectIfNeeded()
+
+		const responsePromise = this.chatService.canUseChatStream()
+			? this.chatService.streamMessage(userMessage, (chunk) => this.appendBotChunk(botMessageId, chunk))
+			: this.chatService
+				.sendMessage(userMessage)
+				.then((response) => {
+					this.appendBotChunk(botMessageId, response)
+				})
+
+		responsePromise
 			.then(() => {
 				this.isTyping.set(false)
+				redirectIfNeeded()
 			})
 			.catch((error) => {
 				this.updateBotMessage(
@@ -82,6 +121,7 @@ export class ChatWidgetComponent implements OnInit {
 					`Erreur : ${error instanceof Error ? error.message : String(error)}`,
 				)
 				this.isTyping.set(false)
+				redirectIfNeeded()
 			})
 	}
 
@@ -118,6 +158,59 @@ export class ChatWidgetComponent implements OnInit {
 	private updateBotMessage(id: string, text: string): void {
 		this.messages.update((msgs) => msgs.map((message) => (message.id === id ? { ...message, text } : message)))
 		this.scrollToBottom()
+	}
+
+	private addRedirectNotice(botMessageId: string): void {
+		this.messages.update((msgs) =>
+			msgs.map((message) =>
+				message.id === botMessageId
+					? {
+							...message,
+							text: `${message.text}\n\nNous allons vous rediriger vers la bonne page dans 3 secondes...`,
+						}
+					: message,
+			),
+		)
+		this.scrollToBottom()
+	}
+
+	get redirectRemainingSeconds(): number {
+		return Math.max(0, Math.ceil((1 - this.redirectProgress() / 100) * (this.redirectDurationMs / 1000)))
+	}
+
+	private startRedirectCountdown(botMessageId: string, redirectUrl: string): void {
+		this.clearRedirectCountdown()
+		this.addRedirectNotice(botMessageId)
+		this.isRedirecting.set(true)
+		this.redirectProgress.set(0)
+
+		const start = Date.now()
+		this.redirectIntervalId = window.setInterval(() => {
+			const elapsed = Date.now() - start
+			const ratio = Math.min(1, elapsed / this.redirectDurationMs)
+			this.redirectProgress.set(Math.round(ratio * 100))
+		}, 50)
+
+		this.redirectTimeoutId = window.setTimeout(() => {
+			this.clearRedirectCountdown()
+			this.router.navigateByUrl(redirectUrl)
+			this.closeChat()
+		}, this.redirectDurationMs)
+	}
+
+	private clearRedirectCountdown(): void {
+		if (this.redirectTimeoutId) {
+			clearTimeout(this.redirectTimeoutId)
+			this.redirectTimeoutId = undefined
+		}
+
+		if (this.redirectIntervalId) {
+			clearInterval(this.redirectIntervalId)
+			this.redirectIntervalId = undefined
+		}
+
+		this.isRedirecting.set(false)
+		this.redirectProgress.set(0)
 	}
 
 	formatMessageHtml(text: string): SafeHtml {

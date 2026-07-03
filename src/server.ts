@@ -134,7 +134,7 @@ const maxGeminiOutputTokens = 1024
 
 function buildGeminiPrompt(userMessage: string): string {
 	return [
-		'Tu es un assistant juridique spécialisé en droit des étrangers en France, de la famille et du handicap.',
+		'Tu es un assistant juridique spécialisé en droit des étrangers, en droit de la famille et en droit du contentieux en France.',
 		'Réponds de manière claire et très succinte.',
 		'Limite-toi à 1024 mots maximum.',
 		"Précise que les informations fournies ne remplacent pas un avis juridique professionnel, qu'elles sont à titre informatif uniquement et qu'il faut prendre rendez-vous avec un avocat pour des conseils juridiques personnalisés.",

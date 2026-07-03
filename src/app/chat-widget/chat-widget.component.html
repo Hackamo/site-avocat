@@ -8,7 +8,7 @@
 		[matTooltip]="isOpen() ? 'Fermer' : 'Cliquez pour discuter avec notre assistant juridique.'"
 	>
 		<mat-icon>{{ isOpen() ? 'close' : 'chat' }}</mat-icon>
-		<span class="chat-toggle-label">Chat IA</span>
+		<span class="chat-toggle-label">Chat</span>
 	</button>
 
 	<!-- Chat Window -->
@@ -19,6 +19,17 @@
 				<h3 id="chat-title" class="mat-headline-6">Assistant Juridique</h3>
 				<p class="chat-subtitle">Questions fréquentes</p>
 			</div>
+
+			@if (isRedirecting()) {
+				<div class="redirect-progress-wrapper mt-2" aria-live="polite">
+					<div class="redirect-progress-label">
+						Redirection vers la page de contact dans {{ redirectRemainingSeconds }}s
+					</div>
+					<div class="redirect-progress-bar">
+						<div class="redirect-progress-fill" [style.width.%]="redirectProgress()"></div>
+					</div>
+				</div>
+			}
 
 			<div class="chat-messages" #messagesContainer>
 				@for (message of messages(); track message.id) {
@@ -70,7 +81,7 @@
 			<div class="chat-input-area">
 				<form (ngSubmit)="onSubmitMessage()" class="input-form">
 					<mat-form-field appearance="outline" class="full-width">
-						<input
+						<input #chatInput autofocus
 							matInput
 							[(ngModel)]="userInput"
 							name="message"
