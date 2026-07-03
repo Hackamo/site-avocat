@@ -1,4 +1,5 @@
 import {
+	AfterViewChecked,
 	Component,
 	ElementRef,
 	ViewChild,
@@ -38,7 +39,7 @@ import { ChatService, ChatMessage } from '../services/chat.service'
 	styleUrl: './chat-widget.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChatWidgetComponent implements OnInit {
+export class ChatWidgetComponent implements OnInit, AfterViewChecked {
 	@ViewChild('chatInput') private chatInput?: ElementRef<HTMLInputElement>
 
 	readonly isOpen = signal(false)
@@ -58,6 +59,7 @@ export class ChatWidgetComponent implements OnInit {
 	private readonly isBrowser = isPlatformBrowser(this.platformId)
 
 	userInput = ''
+	private shouldFocusInput = false
 
 	ngOnInit(): void {
 		this.addBotMessage('Posez votre question et obtenez une réponse rapide.')
@@ -67,10 +69,17 @@ export class ChatWidgetComponent implements OnInit {
 		this.isOpen.update((isOpen) => {
 			const next = !isOpen
 			if (next) {
-				setTimeout(() => this.chatInput?.nativeElement.focus(), 0)
+				this.shouldFocusInput = true
 			}
 			return next
 		})
+	}
+
+	ngAfterViewChecked(): void {
+		if (this.shouldFocusInput && this.chatInput) {
+			this.shouldFocusInput = false
+			this.chatInput.nativeElement.focus()
+		}
 	}
 
 	closeChat(): void {
@@ -104,9 +113,7 @@ export class ChatWidgetComponent implements OnInit {
 
 		const responsePromise = this.chatService.canUseChatStream()
 			? this.chatService.streamMessage(userMessage, (chunk) => this.appendBotChunk(botMessageId, chunk))
-			: this.chatService
-				.sendMessage(userMessage)
-				.then((response) => {
+			: this.chatService.sendMessage(userMessage).then((response) => {
 					this.appendBotChunk(botMessageId, response)
 				})
 
