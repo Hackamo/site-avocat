@@ -16,7 +16,10 @@
 	line-height: 1;
 	letter-spacing: normal;
 	text-transform: none;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
 	white-space: nowrap;
 	word-wrap: normal;
 	direction: ltr;
@@ -31,99 +34,99 @@
 		'opsz' 24;
 }
 
-// Lato Font Family
+// Lora Font Family
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
 	font-weight: 300;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/static/Lora-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-Italic.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/static/Lora-Italic.ttf') format('truetype');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/static/Lora-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('../../assets/fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+	font-family: 'Lora';
+	src: url('../../assets/fonts/Lora/static/Lora-BoldItalic.ttf') format('truetype');
 	font-weight: 700;
 	font-style: italic;
 	font-display: swap;
 }
 
-// Playfair Display Font Family
+// Fraunces Font Family
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-Italic.ttf') format('truetype');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-SemiBoldItalic.ttf') format('truetype');
 	font-weight: 600;
 	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('../../assets/fonts/Playfair_Display/static/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+	font-family: 'Fraunces';
+	src: url('../../assets/fonts/Fraunces/static/Fraunces_72pt-BoldItalic.ttf') format('truetype');
 	font-weight: 700;
 	font-style: italic;
 	font-display: swap;

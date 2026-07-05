@@ -18,6 +18,7 @@ body.dark-theme {
 	--mat-sys-outline: #666666;
 	--mat-sys-outline-variant: #2e2e2e !important;
 	--mat-sys-error: #ff6b6b;
+	--app-navbar-bg: #242424;
 
 	--mat-tab-divider-color: #ffd740 !important;
 	--mat-tab-active-indicator-color: #ffd740 !important;
@@ -299,15 +300,15 @@ body.dark-theme {
 		}
 	}
 
-	// Override mat-icon arrow_up color to red
+	// Keep scroll-top icon aligned with navbar contrast
 	.scroll-top-btn mat-icon {
-		color: black !important;
+		color: #f8f1f1 !important;
 	}
 
-	// Chat icon box styling for dark theme
+	// Keep chat toggle icon aligned with navbar contrast
 	.chat-icon-box,
 	app-chat-widget mat-icon {
-		color: #2e2e2e !important;
+		color: #f8f1f1 !important;
 	}
 
 	// Remove chat widget overlay and style header

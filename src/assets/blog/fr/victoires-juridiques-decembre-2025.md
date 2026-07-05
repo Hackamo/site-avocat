@@ -15,7 +15,7 @@ Décembre 2025 a été un mois particulièrement fructueux pour le Cabinet Marti
 ## Droit pénal (2 victoires)
 
 1. Détention à domicile sous surveillance électronique
-2. Irresponsabilité pénale malgré expertises contradictoires
+2. Irresponsabilité pénale malgré compétences contradictoires
 
 ## Conclusion
 

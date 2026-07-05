@@ -43,18 +43,29 @@ export class ServicesDataService {
 				subtitleContext: 'Services page|Residence permits subtitle',
 				anchor: 'droit-etrangers',
 				detailedDescription:
-					'Je vous accompagne dans les démarches les plus sensibles liées au séjour, au droit d’asile, à la naturalisation et au contentieux administratif, avec un accompagnement clair, rigoureux et adapté à chaque situation. Chaque dossier est étudié avec attention pour identifier les arguments les plus solides, anticiper les obstacles et proposer une stratégie réaliste dès les premières étapes.',
+					"J'interviens à toutes les étapes de vos démarches en droit des étrangers, qu'il s'agisse d'obtenir ou de renouveler un titre de séjour, de contester une obligation de quitter le territoire français (OQTF), un refus de séjour ou de visa, d'engager une demande de naturalisation ou de vous accompagner dans une procédure d'asile.",
 				detailedDescriptionContext: 'Services page|Residence permits detailed',
+				bottomDescription:
+					"Chaque situation étant unique, j'étudie votre dossier avec attention afin de vous conseiller sur les démarches les plus adaptées et de défendre vos droits devant les juridictions compétentes lorsque cela est nécessaire.",
+				bottomDescriptionContext: 'Services page|Residence permits bottom description',
 				items: [
-					{ text: 'Titre de séjour', context: 'Services page|Residence permits item visa' },
-					{ text: 'Asile', context: 'Services page|Residence permits item asylum' },
 					{
-						text: 'Naturalisation et nationalité',
-						context: 'Services page|Residence permits item nationality',
+						text: 'Titres de séjour et renouvellements',
+						context: 'Services page|Residence permits item visa',
 					},
 					{
-						text: 'Contentieux et recours (service entier)',
+						text: 'OQTF, refus de séjour et contentieux devant le tribunal administratif',
 						context: 'Services page|Residence permits item litigation',
+					},
+					{ text: 'Asile', context: 'Services page|Residence permits item asylum' },
+					{ text: 'Visas', context: 'Services page|Residence permits item visas' },
+					{
+						text: 'Regroupement familial',
+						context: 'Services page|Residence permits item family',
+					},
+					{
+						text: 'Naturalisation et nationalité française',
+						context: 'Services page|Residence permits item nationality',
 					},
 				],
 			},
@@ -62,25 +73,33 @@ export class ServicesDataService {
 				title: 'Droit du handicap',
 				titleContext: 'Services page|Disability title',
 				icon: 'accessible',
-				description: 'Accompagnement attentif face aux démarches MDPH, aux refus de prestations et aux recours',
+				description:
+					'J’accompagne les adultes et les parents d’enfants en situation de handicap dans leurs démarches auprès de la MDPH et dans les recours contre les décisions de la CDAPH',
 				descriptionContext: 'Services page|Disability description',
-				subtitle: 'MDPH, AAH, PCH, RQTH, CMI',
+				subtitle: 'MDPH, AAH, PCH, AEEH, AESH, RQTH, CMI',
 				subtitleContext: 'Services page|Disability subtitle',
 				anchor: 'droit-handicap',
 				detailedDescription:
-					'Lorsqu’un dossier de handicap est refusé ou insuffisamment reconnu, chaque délai compte. J’aide les personnes et leurs familles à comprendre leurs droits, préparer un dossier solide et contester les décisions défavorables avec la clarté et la rigueur nécessaires.',
+					"J'interviens notamment en cas de refus ou de révision de l'Allocation aux adultes handicapés (AAH), de la Prestation de compensation du handicap (PCH), de l'Allocation d'éducation de l'enfant handicapé (AEEH), de la Carte Mobilité Inclusion (CMI), de la Reconnaissance de la qualité de travailleur handicapé (RQTH), des décisions d'orientation ou des difficultés liées à l'accompagnement scolaire, notamment concernant les AESH.",
 				detailedDescriptionContext: 'Services page|Disability detailed',
 				bottomDescription:
-					'L’objectif est de protéger les droits des personnes en situation de handicap, que ce soit pour l’accès aux aides, la reconnaissance de la qualité de travailleur handicapé ou la défense de leurs droits face à l’administration.',
+					'Je vous accompagne à chaque étape de la procédure, depuis la constitution du dossier et le recours administratif préalable obligatoire (RAPO) jusqu’au recours devant le Pôle social du Tribunal judiciaire lorsque cela est nécessaire.',
 				bottomDescriptionContext: 'Services page|Disability bottom description',
 				items: [
-					{ text: 'Dossier MDPH et recours', context: 'Services page|Disability item mdph' },
-					{ text: 'AAH, PCH, AEEH et aides spécifiques', context: 'Services page|Disability item aides' },
+					{ text: 'Dossiers MDPH', context: 'Services page|Disability item mdph' },
 					{
-						text: 'RQTH et reconnaissance du handicap au travail',
-						context: 'Services page|Disability item rqth',
+						text: 'Recours contre les décisions de la MDPH et de la CDAPH',
+						context: 'Services page|Disability item appeals',
 					},
-					{ text: 'CMI, stationnement et aménagements', context: 'Services page|Disability item cmi' },
+					{ text: 'AAH, PCH, AEEH, AESH, CMI, RQTH', context: 'Services page|Disability item benefits' },
+					{
+						text: 'Orientations (IME, IEM, SESSAD, etc.)',
+						context: 'Services page|Disability item orientations',
+					},
+					{
+						text: 'RAPO et recours devant le Tribunal judiciaire',
+						context: 'Services page|Disability item rapo',
+					},
 				],
 			},
 			{
@@ -88,28 +107,26 @@ export class ServicesDataService {
 				titleContext: 'Services page|Family title',
 				icon: 'family_restroom',
 				description:
-					'Conseil et accompagnement dans les situations familiales sensibles, du divorce aux mesures de protection',
+					'J’accompagne mes clients dans les principales problématiques relevant du droit de la famille, qu’il s’agisse d’une séparation, d’un divorce ou de difficultés concernant les enfants',
 				descriptionContext: 'Services page|Family description',
 				subtitle: 'Divorce, autorité parentale, pension alimentaire',
 				subtitleContext: 'Services page|Family subtitle',
 				anchor: 'droit-famille',
 				detailedDescription:
-					'Le droit de la famille exige à la fois une écoute attentive et une stratégie juridique solide. J’accompagne les parents, les couples et les proches dans les moments de rupture ou de fragilité, avec un souci constant de préserver l’intérêt des enfants et la stabilité de la famille.',
+					'Parce que ces procédures touchent directement à la vie personnelle et familiale, je privilégie un accompagnement à la fois humain, disponible et rigoureux afin de défendre au mieux vos intérêts. J’interviens notamment en matière de :',
 				detailedDescriptionContext: 'Services page|Family detailed',
-				bottomDescription:
-					'Je vous aide à trouver une solution adaptée, qu’il s’agisse d’un règlement amiable, d’un divorce contentieux, d’une mesure provisoire ou d’un recours devant le juge aux affaires familiales.',
 				bottomDescriptionContext: 'Services page|Family bottom description',
 				items: [
-					{ text: 'Divorce et séparation', context: 'Services page|Family item divorce' },
+					{ text: 'Divorce par consentement mutuel', context: 'Services page|Family item mutual divorce' },
+					{ text: 'Divorce judiciaire', context: 'Services page|Family item judicial divorce' },
+					{ text: 'Autorité parentale', context: 'Services page|Family item parental' },
+					{ text: 'Résidence des enfants', context: 'Services page|Family item residence' },
+					{ text: 'Droit de visite et d’hébergement', context: 'Services page|Family item visitation' },
+					{ text: 'Pension alimentaire', context: 'Services page|Family item pension' },
 					{
-						text: 'Autorité parentale et résidence des enfants',
-						context: 'Services page|Family item parental',
+						text: 'Assistance éducative devant le juge des enfants',
+						context: 'Services page|Family item educational assistance',
 					},
-					{
-						text: 'Pension alimentaire et contribution aux charges',
-						context: 'Services page|Family item pension',
-					},
-					{ text: 'Mesures de protection et tutelle', context: 'Services page|Family item protection' },
 				],
 			},
 		]
@@ -131,51 +148,85 @@ export class ServicesDataService {
 					'I support you in the most sensitive immigration matters, from residence permits and asylum to naturalization and administrative appeals, with clear and rigorous guidance.',
 				detailedDescriptionContext: 'Services page|Residence permits detailed',
 				items: [
-					{ text: 'Residence permits', context: 'Services page|Residence permits item visa' },
-					{ text: 'Asylum', context: 'Services page|Residence permits item asylum' },
 					{
-						text: 'Naturalization and nationality',
+						text: 'Residence permits and renewals',
+						context: 'Services page|Residence permits item visa',
+					},
+					{
+						text: 'OQTF, refusal of stay and litigation before the administrative court',
+						context: 'Services page|Residence permits item litigation',
+					},
+					{ text: 'Asylum', context: 'Services page|Residence permits item asylum' },
+					{ text: 'Visas', context: 'Services page|Residence permits item visas' },
+					{
+						text: 'Family reunification',
+						context: 'Services page|Residence permits item family',
+					},
+					{
+						text: 'Naturalization and French nationality',
 						context: 'Services page|Residence permits item nationality',
 					},
-					{ text: 'Litigation and appeals', context: 'Services page|Residence permits item litigation' },
 				],
 			},
 			{
 				title: 'Disability Law',
 				titleContext: 'Services page|Disability title',
 				icon: 'accessible',
-				description: 'Support for MDPH procedures, benefit refusals and appeals',
+				description:
+					'I support adults and parents of children with disabilities in their procedures with the MDPH and in appeals against decisions of the CDAPH',
 				descriptionContext: 'Services page|Disability description',
-				subtitle: 'MDPH, AAH, PCH, RQTH, CMI',
+				subtitle: 'MDPH, AAH, PCH, AEEH, AESH, RQTH, CMI',
 				subtitleContext: 'Services page|Disability subtitle',
 				anchor: 'droit-handicap',
 				detailedDescription:
-					'When a disability-related request is denied or insufficiently recognized, every deadline matters. I help individuals and families understand their rights, prepare strong files and challenge unfavorable decisions with clarity and rigor.',
+					'I intervene particularly in cases of refusal or revision of the Disability Allowance for Adults (AAH), the Disability Compensation Benefit (PCH), the Education Allowance for Disabled Children (AEEH), the Inclusion Mobility Card (CMI), the recognition of the status of disabled worker (RQTH), orientation decisions or difficulties related to school support, particularly concerning AESH.',
 				detailedDescriptionContext: 'Services page|Disability detailed',
 				items: [
-					{ text: 'MDPH file and appeal strategy', context: 'Services page|Disability item mdph' },
-					{ text: 'AAH, PCH, AEEH and specific benefits', context: 'Services page|Disability item aides' },
-					{ text: 'RQTH and recognition at work', context: 'Services page|Disability item rqth' },
-					{ text: 'CMI and mobility-related rights', context: 'Services page|Disability item cmi' },
+					{ text: 'MDPH files', context: 'Services page|Disability item mdph' },
+					{
+						text: 'Appeals against MDPH and CDAPH decisions',
+						context: 'Services page|Disability item appeals',
+					},
+					{ text: 'AAH', context: 'Services page|Disability item aah' },
+					{ text: 'PCH', context: 'Services page|Disability item pch' },
+					{ text: 'AEEH', context: 'Services page|Disability item aeeh' },
+					{ text: 'AESH', context: 'Services page|Disability item aesh' },
+					{ text: 'CMI', context: 'Services page|Disability item cmi' },
+					{ text: 'RQTH', context: 'Services page|Disability item rqth' },
+					{
+						text: 'Orientations (IME, IEM, SESSAD, etc.)',
+						context: 'Services page|Disability item orientations',
+					},
+					{
+						text: 'RAPO and appeals before the judicial court',
+						context: 'Services page|Disability item rapo',
+					},
 				],
 			},
 			{
 				title: 'Family Law',
 				titleContext: 'Services page|Family title',
 				icon: 'family_restroom',
-				description: 'Advice and support in sensitive family matters, from divorce to protection measures',
+				description:
+					'I support my clients in the main issues relating to family law, whether it be separation, divorce or difficulties concerning children',
 				descriptionContext: 'Services page|Family description',
 				subtitle: 'Divorce, parental authority, alimony',
 				subtitleContext: 'Services page|Family subtitle',
 				anchor: 'droit-famille',
 				detailedDescription:
-					'Family law requires both empathy and a strong legal strategy. I support parents, couples and relatives in times of separation or vulnerability, always with the interest of the children and the stability of the family in mind.',
+					'Because these proceedings directly affect personal and family life, I favour a human, available and rigorous approach in order to defend your interests as effectively as possible.',
 				detailedDescriptionContext: 'Services page|Family detailed',
 				items: [
-					{ text: 'Divorce and separation', context: 'Services page|Family item divorce' },
-					{ text: 'Parental authority and child residence', context: 'Services page|Family item parental' },
-					{ text: 'Child support and shared expenses', context: 'Services page|Family item pension' },
-					{ text: 'Protection measures and guardianship', context: 'Services page|Family item protection' },
+					{ text: 'Mutual consent divorce', context: 'Services page|Family item mutual divorce' },
+					{ text: 'Judicial divorce', context: 'Services page|Family item judicial divorce' },
+					{ text: 'Parental authority', context: 'Services page|Family item parental' },
+					{ text: 'Child residence', context: 'Services page|Family item residence' },
+					{ text: 'Visitation and accommodation rights', context: 'Services page|Family item visitation' },
+					{ text: 'Child support', context: 'Services page|Family item pension' },
+					{
+						text: 'Educational assistance before the juvenile judge',
+						context: 'Services page|Family item educational assistance',
+					},
 				],
 			},
 		]

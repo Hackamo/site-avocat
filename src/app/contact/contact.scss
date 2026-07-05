@@ -79,23 +79,88 @@
 }
 
 .info-card {
+	--info-card-padding-block: 1rem;
+	--info-card-padding-inline: 1.1rem;
 	height: auto;
 	display: flex;
 	justify-content: center;
+	border-radius: 1.05rem;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+	border: 1.5px solid var(--mat-divider-color, --mat-primary-color);
+	background:
+		linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 35%),
+		var(--mat-card-background, #fff);
+	padding: var(--info-card-padding-block) var(--info-card-padding-inline);
+	position: relative;
+	overflow: hidden;
+	transition:
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-	mat-card-header {
-		margin-bottom: 0.5rem;
-		height: auto;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0 0 auto 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--app-navbar-bg, #79082b), rgba(121, 8, 43, 0.18));
 	}
 
-	mat-card-avatar {
-		color: white;
+	&:hover {
+		box-shadow: 0 12px 28px rgba(117, 64, 64, 0.18);
+		border-color: rgba(86, 32, 32, 0.22);
+		transform: translateY(-2px);
+	}
+
+	.mat-mdc-card-header {
+		min-height: auto;
+		padding: 0;
+		margin-bottom: 0.5rem;
+		align-items: center;
+		gap: 0.85rem;
+	}
+
+	.mat-mdc-card-avatar {
+		margin: 0;
+		width: 1.4rem;
+		height: 1.4rem;
+		min-width: 1.4rem;
+		min-height: 1.4rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 1.4rem;
+		color: var(--app-navbar-bg, #79082b);
+	}
+
+	.info-card-title {
+		font-size: clamp(1.2rem, 1.48vw, 1.38rem);
+		font-weight: 900;
+		line-height: 1.25;
+		color: var(--app-navbar-bg, #79082b);
+		letter-spacing: 0.01em;
+		white-space: normal;
+		overflow-wrap: normal;
+	}
+
+	.mat-mdc-card-content {
+		padding: 0;
+		margin-top: 0.25rem;
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.subtitle {
 		font-size: 0.875rem;
 		color: var(--mat-text-secondary-color);
 		margin-top: 0.25rem;
+		font-weight: 300;
 	}
 
 	.hours-list {
@@ -106,9 +171,15 @@
 		.hours-item {
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 			gap: 0.5rem;
 			padding: 0.4rem 0;
 			border-radius: 6px;
+
+			.note {
+				flex-basis: 100%;
+				margin-left: calc(24px + 0.5rem);
+			}
 		}
 	}
 
@@ -136,18 +207,54 @@
 	display: flex;
 	flex-direction: column;
 
+	mat-card {
+		border-radius: 1.05rem;
+		box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+		border: 1.5px solid var(--mat-divider-color, --mat-primary-color);
+		background:
+			linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 35%),
+			color-mix(in srgb, var(--mat-sys-primary) 6%, #fff);
+		padding: 1rem 1.1rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	mat-card::before {
+		content: '';
+		position: absolute;
+		inset: 0 0 auto 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--app-navbar-bg, #79082b), rgba(121, 8, 43, 0.18));
+	}
+
 	mat-card-header {
-		margin-bottom: 2rem;
+		min-height: auto;
+		padding: 0;
+		margin-bottom: 1rem;
 		height: auto;
 	}
 
 	mat-card-title {
-		font-weight: 700;
+		font-size: clamp(1.2rem, 1.48vw, 1.38rem);
+		font-weight: 900;
+		line-height: 1.25;
+		color: var(--app-navbar-bg, #79082b);
+		letter-spacing: 0.01em;
 	}
 
 	mat-card-subtitle,
 	mat-label {
 		font-weight: 500;
+	}
+
+	mat-card-subtitle {
+		margin-top: 0.2rem;
+		color: var(--mat-text-secondary-color);
+	}
+
+	mat-card-content {
+		padding: 0;
+		margin-top: 0.35rem;
 	}
 
 	input,
@@ -178,14 +285,45 @@
 		width: 100%;
 	}
 
+	.subject-field {
+		--mat-select-enabled-trigger-text-color: var(--app-navbar-bg, #79082b);
+		--mat-select-enabled-arrow-color: var(--app-navbar-bg, #79082b);
+		--mat-form-field-focus-outline-color: var(--app-navbar-bg, #79082b);
+		--mat-form-field-focus-label-text-color: var(--app-navbar-bg, #79082b);
+		--mat-select-focused-arrow-color: var(--app-navbar-bg, #79082b);
+
+		.mat-mdc-select-value-text {
+			color: var(--app-navbar-bg, #79082b);
+		}
+	}
+
 	.form-actions {
 		display: flex;
 		justify-content: center;
-		margin-top: 1rem;
+		margin-top: 1.15rem;
+
+		button {
+			--mat-fab-container-color: var(--app-navbar-bg, #79082b) !important;
+			--mat-fab-foreground-color: #f8f1f1 !important;
+		}
 
 		@media (max-width: 576px) {
 			justify-content: center;
 		}
+	}
+}
+
+::ng-deep .subject-select-panel {
+	.mdc-list-item__primary-text {
+		color: var(--app-navbar-bg, #79082b);
+	}
+
+	.mat-mdc-option:hover:not(.mdc-list-item--disabled) {
+		background: color-mix(in srgb, var(--app-navbar-bg, #79082b) 12%, transparent);
+	}
+
+	.mdc-list-item--selected:not(.mdc-list-item--disabled) {
+		background: color-mix(in srgb, var(--app-navbar-bg, #79082b) 16%, transparent);
 	}
 }
 
@@ -261,22 +399,23 @@
 	}
 }
 
-/* Ensure both columns stretch to full height */
-.contact-info,
-.contact-form {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+/* Keep contact cards on the left at natural height; only the form card can stretch */
+.contact-info {
+	height: auto;
 }
 
-/* Make immediate children fill column height (e.g., mat-cards) */
-.contact-info > *,
+.contact-info > * {
+	height: auto;
+}
+
+.contact-form {
+	height: 100%;
+}
+
 .contact-form > * {
 	height: 100%;
 }
 
-/* If using mat-card inside, ensure it expands */
-.info-card mat-card,
 .contact-form mat-card {
 	height: 100%;
 	display: flex;
@@ -284,7 +423,7 @@
 }
 /* Textarea styling for better UX */
 textarea.message-textarea {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lora', serif;
 	resize: vertical;
 	min-height: 300px;
 	letter-spacing: 0.3px;
@@ -428,6 +567,38 @@ select:-webkit-autofill {
 		::ng-deep circle {
 			stroke: var(--mat-button-filled-container-color) !important;
 		}
+	}
+}
+
+.info-card.address-card {
+	min-height: 430px;
+
+	.map-container {
+		min-height: 230px;
+	}
+
+	iframe {
+		height: 230px;
+	}
+}
+
+.info-card.phone-card,
+.info-card.email-card {
+	.mat-mdc-card-header {
+		margin-bottom: 0.85rem;
+	}
+
+	.mat-mdc-card-content {
+		margin-top: 0.45rem;
+	}
+
+	p {
+		margin-bottom: 0.7rem;
+	}
+
+	.subtitle {
+		margin-top: 0.5rem;
+		margin-bottom: 0.95rem;
 	}
 }
 

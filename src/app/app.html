@@ -4,54 +4,82 @@
 
 	<!-- Navigation -->
 	<mat-toolbar class="app-toolbar">
-		<span routerLink="/" routerLinkActive="active-link" class="logo">{{ config.businessNameShort }}</span>
+		<a
+			class="brand"
+			routerLink="/"
+			routerLinkActive="active-link"
+			[routerLinkActiveOptions]="{ exact: true }"
+			aria-label="Retour a l'accueil"
+			i18n-aria-label="Navigation|Back to homepage"
+		>
+			<span class="brand-mark" aria-hidden="true">DM</span>
+			<span class="brand-text">
+				<span class="brand-name" i18n="Navigation|Brand full name">Débora MARTINET</span>
+				<span class="brand-role" i18n="Navigation|Brand role">Avocate à Bordeaux</span>
+			</span>
+		</a>
 		<span class="spacer"></span>
-		<nav>
+		<button
+			mat-icon-button
+			class="mobile-menu-toggle"
+			type="button"
+			(click)="toggleMobileNav()"
+			[attr.aria-expanded]="mobileNavOpen()"
+			aria-controls="main-navigation"
+			aria-label="Ouvrir le menu de navigation"
+			i18n-aria-label="Navigation|Open navigation menu"
+		>
+			<mat-icon>{{ mobileNavOpen() ? 'close' : 'menu' }}</mat-icon>
+		</button>
+		<nav
+			id="main-navigation"
+			class="main-nav"
+			[class.mobile-open]="mobileNavOpen()"
+			aria-label="Navigation principale"
+			i18n-aria-label="Navigation|Main navigation"
+		>
 			<a
 				mat-button
 				routerLink="/"
 				routerLinkActive="active-link"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="closeMobileNav()"
 				i18n="Navigation|Home menu item"
 				>Accueil</a
 			>
-			<a mat-button routerLink="/prestations" routerLinkActive="active-link" i18n="Navigation|Services menu item"
-				>Expertise</a
+			<a
+				mat-button
+				routerLink="/prestations"
+				routerLinkActive="active-link"
+				(click)="closeMobileNav()"
+				i18n="Navigation|Services menu item"
+				>Compétences</a
 			>
-			<a mat-button routerLink="/blog" routerLinkActive="active-link" i18n="Navigation|Blog menu item">Blog</a>
-			<a mat-button routerLink="/a-propos" routerLinkActive="active-link" i18n="Navigation|About menu item"
+			<a
+				mat-button
+				routerLink="/a-propos"
+				routerLinkActive="active-link"
+				(click)="closeMobileNav()"
+				i18n="Navigation|About menu item"
 				>À Propos</a
 			>
-			<a routerLink="/contact" routerLinkActive="active-link" mat-flat-button i18n="Navigation|Contact menu item">
+			<a
+				mat-button
+				routerLink="/honoraires"
+				routerLinkActive="active-link"
+				(click)="closeMobileNav()"
+				i18n="Navigation|Fees menu item"
+				>Honoraires</a
+			>
+			<a
+				mat-button
+				routerLink="/contact"
+				routerLinkActive="active-link"
+				(click)="closeMobileNav()"
+				i18n="Navigation|Contact menu item"
+			>
 				Contact et RDV
 			</a>
-			<!-- Desktop: Menu with settings -->
-			<a
-				[matTooltip]="'Réglages'"
-				class="theme-toggle"
-				matIconButton
-				[matMenuTriggerFor]="settingsMenu"
-				aria-label="Settings menu"
-			>
-				<mat-icon>settings_heart</mat-icon>
-			</a>
-			<mat-menu #settingsMenu="matMenu">
-				<button mat-menu-item (click)="toggleDarkMode()">
-					<mat-icon>{{ darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-					<span>{{ darkMode() ? 'Mode clair' : 'Mode sombre' }}</span>
-				</button>
-				<button mat-menu-item (click)="resetPreferences()">
-					<mat-icon>restart_alt</mat-icon>
-					<span i18n="Navigation|Reset preferences">Réinitialiser les préférences</span>
-				</button>
-				<mat-divider></mat-divider>
-				<button mat-menu-item (click)="changeLanguage('fr')" [class.active]="currentLanguage() === 'fr'">
-					<span>Français</span>
-				</button>
-				<button mat-menu-item (click)="changeLanguage('en')" [class.active]="currentLanguage() === 'en'">
-					<span>English</span>
-				</button>
-			</mat-menu>
 		</nav>
 	</mat-toolbar>
 
@@ -103,22 +131,6 @@
 					<mat-option value="rose" i18n="Theme colors|Rose">Rose</mat-option>
 				</mat-select>
 			</mat-form-field>
-			<mat-form-field
-				appearance="outline"
-				class="footer-language-select"
-				[matTooltip]="'Choisir la langue'"
-				aria-label="Select language tooltip"
-			>
-				<mat-label i18n="Footer|Language selector label">Langue</mat-label>
-				<mat-select
-					[value]="currentLanguage()"
-					(selectionChange)="changeLanguage($event.value)"
-					aria-label="Select language"
-				>
-					<mat-option value="fr">Français</mat-option>
-					<mat-option value="en">English</mat-option>
-				</mat-select>
-			</mat-form-field>
 		</div>
 
 		<p i18n="Footer|Copyright notice">
@@ -143,8 +155,5 @@
 		</div>
 	</footer>
 
-	<!-- Chat Widget (French only) -->
-	@if (currentLanguage() === 'fr') {
 	<app-chat-widget></app-chat-widget>
-	}
 </div>

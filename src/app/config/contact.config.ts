@@ -23,10 +23,11 @@ export const CONTACT_CONFIG = {
 
 	// Address
 	address: {
-		street: '190 Avenue de la République',
-		city: '33200 Bordeaux',
+		street: '14 Rue Mazarin',
+		city: 'Bordeaux',
+		postalCode: '33000',
 		country: 'France',
-		full: '190 Avenue de la République, 33200 Bordeaux',
+		full: '14 Rue Mazarin, 33000 Bordeaux',
 		building: '',
 		floor: '',
 	},
@@ -81,6 +82,6 @@ export const CONTACT_CONFIG = {
 	map: {
 		lat: 44.840336,
 		lng: -0.5997146,
-		embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.1308670524054!2d-0.6129085872829089!3d44.8392681747957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d9c35b8417dd%3A0x34bffb2f70f02197!2sMa%C3%AEtre%20D%C3%A9bora%20MARTINET%20-%20Avocat%20%C3%A0%20Bordeaux%20-%20Droit%20des%20%C3%A9trangers!5e0!3m2!1sfr!2sfr!4v1771433007294!5m2!1sfr!2sfr',
+		embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.565364590384!2d-0.5779476!3d44.8304185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54d9c35b8417dd%3A0x34bffb2f70f02197!2sMa%C3%AEtre%20D%C3%A9bora%20MARTINET%20-%20Avocat%20%C3%A0%20Bordeaux%20-%20Droit%20des%20%C3%A9trangers%20-%20Droit%20du%20handicap!5e0!3m2!1sfr!2sfr!4v1783288681579!5m2!1sfr!2sfr',
 	},
 }

@@ -1,0 +1,208 @@
+.services-page {
+	padding: 2rem 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-wrap: pretty;
+	color: var(--mat-sys-on-surface);
+
+	a {
+		color: var(--mat-sys-primary);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	p {
+		line-height: 1.75;
+	}
+
+	mat-card-title {
+		white-space: normal;
+	}
+}
+
+.mat-mdc-card-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.page-header {
+	text-align: center;
+	margin-bottom: 4rem;
+
+	.mat-display-2 {
+		margin-bottom: 1rem;
+		color: var(--mat-button-filled-container-color);
+	}
+}
+
+.section-kicker {
+	margin: 0 0 0.75rem;
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--mat-sys-primary);
+}
+
+.intro-text {
+	max-width: 85 ch;
+	margin-inline: auto;
+	margin-bottom: 1rem;
+	color: color-mix(in srgb, var(--mat-sys-on-surface) 88%, transparent);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.experience-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+
+.experience-card {
+	height: auto;
+	border-radius: 1.05rem;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+	border: 1.5px solid var(--mat-divider-color, --mat-primary-color);
+	background:
+		linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 35%),
+		var(--mat-card-background, #fff);
+	padding: 1rem 1.1rem;
+	position: relative;
+	overflow: hidden;
+	transition:
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0 0 auto 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--app-navbar-bg, #79082b), rgba(121, 8, 43, 0.18));
+	}
+
+	&:hover {
+		box-shadow: 0 12px 28px rgba(117, 64, 64, 0.18);
+		border-color: rgba(86, 32, 32, 0.22);
+		transform: translateY(-2px);
+	}
+
+	.mat-mdc-card-header {
+		min-height: auto;
+		padding: 0;
+		margin-bottom: 0.5rem;
+		align-items: center;
+		gap: 0.85rem;
+	}
+
+	.mat-mdc-card-avatar {
+		margin: 0;
+		width: 1.4rem;
+		height: 1.4rem;
+		min-width: 1.4rem;
+		min-height: 1.4rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 1.4rem;
+		color: var(--app-navbar-bg, #79082b);
+	}
+
+	.mat-mdc-card-title {
+		font-size: clamp(1.2rem, 1.48vw, 1.38rem);
+		font-weight: 900;
+		color: var(--app-navbar-bg, #79082b);
+		letter-spacing: 0.01em;
+	}
+
+	.mat-mdc-card-content {
+		padding: 0;
+		margin-top: 0.25rem;
+	}
+
+	.achievement-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 0.5rem 0;
+			border-bottom: 1px solid var(--mat-divider-color);
+			font-size: 0.95rem;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&::before {
+				content: '✓';
+				color: var(--mat-primary-color);
+				font-weight: bold;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+.cta-section {
+	padding: 3rem;
+	color: var(--mat-sys-on-primary-container);
+	border-radius: 8px;
+
+	.cta-button {
+		margin-top: 1.5rem;
+		padding: 1rem 2rem;
+		font-size: 1.1rem;
+		text-decoration: none;
+	}
+
+	p {
+		max-width: 60ch;
+		margin-inline: auto;
+	}
+}
+
+@media (max-width: 1300px) {
+	.services-page {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 1100px) {
+	.services-page {
+		padding: 1rem;
+	}
+
+	.experience-grid {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	.services-page {
+		padding: 1rem;
+	}
+
+	.page-header {
+		margin-bottom: 2rem;
+	}
+
+	.experience-grid {
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.cta-section {
+		padding: 1.5rem;
+
+		.cta-button {
+			width: 100%;
+		}
+	}
+}

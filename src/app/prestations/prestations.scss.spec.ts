@@ -16,7 +16,7 @@ describe('Services', () => {
 		await fixture.whenStable()
 	})
 
-	it('should expose disability and family law expertise cards', () => {
+	it('should expose disability and family law compétence cards', () => {
 		const titles = component.services.map((service) => service.title)
 
 		expect(titles).toContain('Droit du handicap')

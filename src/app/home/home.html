@@ -1,6 +1,29 @@
 <!-- Hero Section (Bannière) -->
-<main animate.enter="enter-fade-animation">
-	<header class="home-section container">
+<main class="home-page" animate.enter="enter-fade-animation">
+	<header class="home-hero container">
+		<div class="home-content">
+			<p class="hero-kicker" i18n="Home page|Hero kicker">Cabinet d'avocate à Bordeaux</p>
+			<h1 class="mat-display-2" i18n="Home page|Hero title">
+				VOTRE AVOCATE EN DROIT DES ETRANGERS, DE LA FAMILLE ET DU HANDICAP
+			</h1>
+			<p class="mat-headline-5 hero-subtitle" i18n="Home page|Hero subtitle">
+				Défendre vos droits face à l'administration et vous accompagner dans les moments clés de votre vie.
+			</p>
+
+			<div class="hero-cta" animate.enter="enter-scale-fade-animation">
+				<a
+					routerLink="/contact"
+					routerLinkActive="active-link"
+					mat-flat-button
+					color="neutral"
+					class="cta-button"
+					i18n="Home page|CTA button"
+				>
+					<strong>DEMANDER UNE CONSULTATION</strong>
+				</a>
+			</div>
+		</div>
+
 		<div class="hero-image-wrapper" [attr.aria-busy]="!imageLoaded()">
 			@if (!imageLoaded()) {
 			<div class="image-loader" aria-hidden="true"></div>
@@ -21,43 +44,36 @@
 				/>
 			</picture>
 		</div>
-		<div class="home-content">
-			<h1 class="mat-display-3" i18n="Home page|Hero title">
-				Votre avocate en droit des étrangers, de la famille et du handicap
-			</h1>
-			<p class="mat-headline-5" i18n="Home page|Hero subtitle">
-				Accompagnement juridique pour vos démarches de séjour et de nationalité à Bordeaux, en Gironde et dans
-				toute la France
-			</p>
-			<div animate.enter="enter-scale-fade-animation">
-				<a
-					routerLink="/contact"
-					routerLinkActive="active-link"
-					mat-flat-button
-					color="neutral"
-					class="cta-button"
-					i18n="Home page|CTA button"
-				>
-					Demander une consultation
-				</a>
-			</div>
-		</div>
 	</header>
 
-	<section class="container">
-		<h2>Expertise stratégique du contentieux</h2>
-		<p>
-			Formée au sein d'un cabinet bordelais reconnu en droit des étrangers et forte d'une expérience au sein d'un
-			service préfectoral chargé du contentieux, Maître Débora MARTINET accompagne ses clients avec rigueur et
-			stratégie dans leurs démarches administratives et contentieuses.
+	<section class="container intro-panel">
+		<p class="mat-headline-5 intro-highlight" i18n="Home page|Introduction paragraph 1">
+			Qu'il s'agisse d'obtenir un titre de séjour, de contester une décision de la MDPH ou de traverser une
+			séparation, certaines démarches sont déterminantes et méritent un accompagnement juridique à la fois
+			rigoureux et humain.
+		</p>
+		<p class="mat-body-1 intro-text" i18n="Home page|Introduction paragraph 2">
+			J'ai choisi d'exercer pour accompagner les personnes confrontées à ces situations, en leur apportant une
+			ecoute attentive, des conseils clairs et une défense engagée de leurs intérêts.
+		</p>
+		<p class="mat-body-1 intro-text" i18n="Home page|Introduction paragraph 3">
+			J'interviens principalement en droit des étrangers (titre de séjour, OQTF, naturalisation, visas), en droit
+			du handicap (recours MDPH, AAH, PCH, CMI, RQTH) et en droit de la famille (divorce, autorité parentale,
+			pension alimentaire et assistance éducative).
+		</p>
+		<p class="mat-body-1 intro-text" i18n="Home page|Introduction paragraph 4">
+			Installée à Bordeaux, je vous accompagne en Gironde et dans toute la France lorsque la procédure le permet,
+			avec une approche personnalisée, fondée sur la disponibilité, la transparence et la confiance.
 		</p>
 	</section>
 
 	<!-- Section Prestations -->
-	<section class="container">
-		<h2 animateText="fade" class="mat-display-1 text-center mb-4" i18n="Home page|Services section title">
-			Nos Domaines d'Intervention
-		</h2>
+	<section class="container home-block">
+		<div class="section-heading">
+			<h2 animateText="fade" class="mat-display-1" i18n="Home page|Services section title">
+				Domaines d'intervention
+			</h2>
+		</div>
 
 		<div class="cards-grid">
 			@for (service of services; track $index) {
@@ -67,17 +83,12 @@
 				[routerLink]="['/prestations']"
 				[fragment]="service.anchor"
 			>
-				<mat-card-header>
-					<div mat-card-avatar class="service-icon">
-						<mat-icon>{{ service.icon }}</mat-icon>
-					</div>
-					<mat-card-title>{{ service.title }}</mat-card-title>
-				</mat-card-header>
 				<mat-card-content>
-					<p>{{ service.description }}</p>
+					<h3 class="service-title">{{ service.title }}</h3>
+					<p class="service-description">{{ service.description }}</p>
 				</mat-card-content>
-				<mat-card-actions align="end">
-					<button mat-button i18n="Common|Learn more button">EN SAVOIR PLUS</button>
+				<mat-card-actions>
+					<button mat-flat-button class="service-cta" i18n="Common|Learn more button">EN SAVOIR PLUS</button>
 				</mat-card-actions>
 			</mat-card>
 			}
@@ -85,10 +96,13 @@
 	</section>
 
 	<!-- Latest Articles Section -->
-	<section class="container">
-		<h2 animateText="fade" class="mat-display-1 text-center mb-4" i18n="Home page|Latest articles section title">
-			Nos Derniers Articles
-		</h2>
+	<section class="container home-block">
+		<div class="section-heading">
+			<p class="section-kicker articles-kicker" i18n="Home page|Latest articles section kicker">Actualités</p>
+			<h2 animateText="fade" class="mat-display-1" i18n="Home page|Latest articles section title">
+				Derniers articles
+			</h2>
+		</div>
 
 		<div class="articles-grid">
 			@for (article of latestArticles(); track article.slug) {
@@ -97,7 +111,7 @@
 		</div>
 
 		<div class="text-center mt-4">
-			<a routerLink="/blog" mat-flat-button color="primary" i18n="Home page|View all articles link">
+			<a routerLink="/blog" mat-flat-button color="primary" class="cta-button" i18n="Home page|View all articles link">
 				Voir tous les articles
 			</a>
 		</div>

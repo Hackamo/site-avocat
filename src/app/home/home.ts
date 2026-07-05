@@ -46,7 +46,7 @@ export class Home implements OnInit {
 	services = this.servicesDataService.services()
 
 	readonly latestArticles = computed(() => {
-		return this.blogDataService.getSortedByDate().slice(0, 3)
+		return this.blogDataService.getSortedByDate().slice(0, 2)
 	})
 
 	onImageLoad() {

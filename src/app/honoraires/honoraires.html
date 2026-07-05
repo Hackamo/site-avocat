@@ -1,0 +1,126 @@
+<main>
+	<div class="container services-page">
+		<header class="page-header">
+			<h1 class="mat-display-2" i18n="Fees page|Page title">Honoraires du cabinet</h1>
+			<p class="mat-headline-5 intro-text intro-text--lead" i18n="Fees page|Hero paragraph 1">
+				Mes honoraires sont fixés en toute transparence, conformement aux règles déontologiques de la profession
+				d'avocat.
+			</p>
+			<p class="intro-text" i18n="Fees page|Hero paragraph 2">
+				La question des honoraires est évoquée dès le premier rendez-vous, après analyse de votre situation,
+				afin de déterminer le mode de rémunération le plus adapté à votre dossier.
+			</p>
+			<p class="intro-text" i18n="Fees page|Hero paragraph 3">
+				Chaque affaire fait l'objet d'une convention d'honoraires écrite, précisant les modalités d'intervention
+				et de facturation.
+			</p>
+		</header>
+
+		<section class="experience-grid" aria-label="Modes de rémunération" i18n-aria-label="Fees page|Fees grid label">
+			<mat-card class="experience-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>receipt_long</mat-icon>
+					<mat-card-title i18n="Fees page|Flat fee title">L'honoraire au forfait</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<ul class="achievement-list">
+						<li i18n="Fees page|Flat fee paragraph 1">
+							Lorsque la nature de la procédure le permet, les honoraires peuvent être fixés de manière
+							forfaitaire.
+						</li>
+						<li i18n="Fees page|Flat fee paragraph 2">
+							Le montant est déterminé en amont et couvre les diligences prévues dans la convention
+							d'honoraires.
+						</li>
+						<li i18n="Fees page|Flat fee paragraph 3">
+							Cette solution offre une sécurité et une prévisibilité quant au coût de l'intervention.
+						</li>
+					</ul>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="experience-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>schedule</mat-icon>
+					<mat-card-title i18n="Fees page|Hourly fee title">L'honoraire au temps passé</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<ul class="achievement-list">
+						<li i18n="Fees page|Hourly fee paragraph 1">
+							Lorsque la nature du dossier ne permet pas de prévoir avec précision le volume de travail
+							nécessaire, les honoraires peuvent être fixés au temps passé.
+						</li>
+						<li i18n="Fees page|Hourly fee paragraph 2">
+							Un taux horaire est alors défini et les diligences accomplies sont facturées en fonction du
+							temps effectivement consacré au dossier.
+						</li>
+						<li i18n="Fees page|Hourly fee paragraph 3">
+							Cette modalité est notamment adaptée aux dossiers complexes ou évolutifs.
+						</li>
+					</ul>
+				</mat-card-content>
+			</mat-card>
+		</section>
+
+		<section class="experience-grid support-section">
+			<mat-card class="experience-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>account_balance</mat-icon>
+					<mat-card-title i18n="Fees page|Legal aid title">Aide juridictionnelle</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<ul class="achievement-list">
+						<li i18n="Fees page|Legal aid paragraph 1">
+							Maître Débora MARTINET accepte l'aide juridictionnelle.
+						</li>
+						<li i18n="Fees page|Legal aid paragraph 2">
+							Sous réserve de remplir les conditions de ressources prévues par la loi, vos frais d'avocat
+							peuvent être pris en charge totalement ou partiellement par l'État.
+						</li>
+						<li i18n="Fees page|Legal aid paragraph 3">
+							Vous pouvez vérifier votre éligibilité et simuler vos droits directement sur
+							<a [href]="legalAidSimulatorUrl" target="_blank" rel="noopener noreferrer"
+								>le simulateur officiel Service-Public.fr</a
+							>.
+						</li>
+						<li i18n="Fees page|Legal aid paragraph 4">
+							Le cabinet vous accompagne dans la constitution et le dépôt du dossier de demande d'aide
+							juridictionnelle.
+						</li>
+					</ul>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card class="experience-card">
+				<mat-card-header>
+					<mat-icon mat-card-avatar>verified_user</mat-icon>
+					<mat-card-title i18n="Fees page|Legal protection title">Protection juridique</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<ul class="achievement-list">
+						<li i18n="Fees page|Legal protection paragraph 1">
+							Si vous bénéficiez d'un contrat de protection juridique (assurance habitation, assurance
+							bancaire ou autre), celui-ci peut prendre en charge tout ou partie des honoraires d'avocat.
+						</li>
+						<li i18n="Fees page|Legal protection paragraph 2">
+							Il est recommandé de vérifier les garanties prévues par votre contrat.
+						</li>
+						<li i18n="Fees page|Legal protection paragraph 3">
+							Le cabinet peut vous assister dans vos démarches auprès de votre assureur.
+						</li>
+					</ul>
+				</mat-card-content>
+			</mat-card>
+		</section>
+
+		<section class="cta-section text-center">
+			<h2 class="mat-headline-4" i18n="Fees page|CTA title">Besoin d'une estimation adaptée à votre dossier ?</h2>
+			<p i18n="Fees page|CTA text">
+				Un premier échange permet de cerner votre situation et de définir un cadre d'intervention clair.
+			</p>
+			<a mat-flat-button routerLink="/contact" class="cta-button" i18n="Fees page|CTA button"
+				>Contacter le cabinet</a
+			>
+		</section>
+	</div>
+</main>

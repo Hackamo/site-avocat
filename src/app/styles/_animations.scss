@@ -1,42 +1,56 @@
 // Button animations
 button,
+a[mat-button],
+a[mat-flat-button],
+a[mat-raised-button],
+a[mat-stroked-button],
 .mat-mdc-button,
+.mat-mdc-unelevated-button,
 .mat-mdc-raised-button,
+.mat-mdc-outlined-button,
 .mat-mdc-flat-button,
 .mat-mdc-stroked-button {
-	transition: all 0.1s cubic-bezier(0.3, 0, 0.1, 1);
+	transition:
+		transform 1s cubic-bezier(0.34, 1.56, 0.64, 1),
+		box-shadow 1s ease;
 	position: relative;
 	overflow: hidden;
+	will-change: transform;
 
 	&:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-2px) scale(1.03);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 	}
 
 	&:active {
-		transform: translateY(0);
+		transform: translateY(0) scale(0.98);
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+		transition-duration: 0.1s;
 	}
 }
 
 // Button Switch for touch devices
-button,
 .mat-mdc-switch {
-	transition: all 0.1s cubic-bezier(0.3, 0, 0.1, 1);
+	transition:
+		transform 1s cubic-bezier(0.34, 1.56, 0.64, 1),
+		box-shadow 1s ease;
+	will-change: transform;
 
 	&:hover {
-		transform: translateY(0px);
+		transform: scale(1.08);
 		box-shadow: none !important;
 	}
 
 	&:active {
-		transform: translateY(0);
+		transform: scale(0.95);
 		box-shadow: none !important;
+		transition-duration: 0.1s;
 	}
 }
 
 // Scroll animations
 .animate-scroll {
+	will-change: transform;
 	transition:
 		opacity 0.6s ease,
 		transform 0.6s ease;
@@ -73,6 +87,7 @@ button,
 
 // Text animations (slower)
 .animate-text {
+	will-change: transform;
 	transition:
 		opacity 1.2s ease-out,
 		transform 1.2s ease-out;
@@ -104,6 +119,7 @@ button,
 
 // Enter animations (triggered on scroll into view)
 .animate-on-enter {
+	will-change: transform;
 	transition:
 		opacity 1s ease-out,
 		transform 1s ease-out;

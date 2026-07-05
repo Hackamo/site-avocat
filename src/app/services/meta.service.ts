@@ -24,37 +24,52 @@ export class MetaService {
 			title: `${CONTACT_CONFIG.businessName} - Avocat Droit des Étrangers à ${CONTACT_CONFIG.address.city}`,
 			description: `Cabinet d'avocat exercant en droit des étrangers à ${CONTACT_CONFIG.address.city}. Accompagnement juridique pour vos démarches de titre de séjour, naturalisation et contentieux. Consultation personnalisée.`,
 			keywords: `avocat droit des étrangers, titre de séjour, naturalisation française, OQTF, contentieux étrangers, ${CONTACT_CONFIG.address.city}`,
+			url: '',
+		},
+		honoraires: {
+			title: `Honoraires | ${CONTACT_CONFIG.businessName}`,
+			description:
+				'Informations sur les honoraires du cabinet : forfait, temps passé, aide juridictionnelle et protection juridique. Transparence et clarté dès le premier rendez-vous.',
+			keywords:
+				'honoraires avocat, forfait avocat, taux horaire avocat, aide juridictionnelle, protection juridique',
+			url: '/honoraires',
 		},
 		prestations: {
 			title: `Nos Prestations - Droit des Étrangers | ${CONTACT_CONFIG.businessName}`,
 			description: `Découvrez nos domaines d'intervention en droit des étrangers : titres de séjour, naturalisation française, contentieux et recours. Expertise juridique à ${CONTACT_CONFIG.address.city}.`,
 			keywords: 'prestations avocat, droit immigration, carte de résident, naturalisation, recours OQTF',
+			url: '/prestations',
 		},
 		blog: {
 			title: `Blog Juridique - Actualités Droit des Étrangers | ${CONTACT_CONFIG.businessName}`,
 			description:
 				'Actualités, conseils et analyses en droit des étrangers. Articles juridiques sur les titres de séjour, naturalisation, OQTF et contentieux des étrangers.',
 			keywords: `blog juridique, actualités droit étrangers, conseils immigration, OQTF, ${CONTACT_CONFIG.address.city}`,
+			url: '/blog',
 		},
 		about: {
 			title: `À Propos - ${CONTACT_CONFIG.lawyer.fullName}, Avocat Droit des Étrangers`,
 			description: `Découvrez le parcours de ${CONTACT_CONFIG.lawyer.fullName}, avocate exercant en droit des étrangers à ${CONTACT_CONFIG.address.city}. Expertise, engagement et accompagnement personnalisé pour vos démarches.`,
 			keywords: `avocat ${CONTACT_CONFIG.address.city.toLowerCase()}, maître ${CONTACT_CONFIG.lawyer.lastName}, droit des étrangers, avocat immigration`,
+			url: '/a-propos',
 		},
 		contact: {
 			title: `Contact - ${CONTACT_CONFIG.businessName} ${CONTACT_CONFIG.address.city} | Avocat Droit des Étrangers`,
 			description: `Contactez le ${CONTACT_CONFIG.businessName} à ${CONTACT_CONFIG.address.city} pour une consultation en droit des étrangers. Prenez rendez-vous pour vos démarches de titre de séjour, naturalisation ou contentieux.`,
 			keywords: `contact avocat ${CONTACT_CONFIG.address.city.toLowerCase()}, rendez-vous avocat, consultation droit étrangers`,
+			url: '/contact',
 		},
 		legal: {
 			title: `Mentions Légales | ${CONTACT_CONFIG.businessName}`,
 			description: `Mentions légales du ${CONTACT_CONFIG.businessName}, avocat en droit des étrangers à ${CONTACT_CONFIG.address.city}. Informations légales, RGPD et conditions d'utilisation du site.`,
 			keywords: `mentions légales, cabinet avocat, ${CONTACT_CONFIG.address.city.toLowerCase()}`,
+			url: '/mentions-legales',
 		},
 		privacy: {
 			title: `Politique de Confidentialité | ${CONTACT_CONFIG.businessName}`,
 			description: `Politique de confidentialité et protection des données personnelles du ${CONTACT_CONFIG.businessName}. Informations sur le traitement de vos données conformément au RGPD.`,
 			keywords: `politique confidentialité, RGPD, protection données, cabinet avocat`,
+			url: '/politique-confidentialite',
 		},
 	}
 
@@ -65,7 +80,8 @@ export class MetaService {
 		if (!meta) return
 
 		const baseUrl = this.getBaseUrl()
-		const url = `${baseUrl}/${locale}`
+		const pagePath = meta.url ?? ''
+		const url = `${baseUrl}/${locale}${pagePath}`
 
 		// Title and description
 		this.titleService.setTitle(meta.title)
@@ -137,7 +153,7 @@ export class MetaService {
 		existing.forEach((el) => el.remove())
 
 		const baseUrl = this.getBaseUrl()
-		const pageUrl = page === 'home' ? '' : `/${page}`
+		const pageUrl = this.pagesMeta[page]?.url ?? ''
 
 		// Add French version
 		let linkFr = this.document.createElement('link')

@@ -41,7 +41,7 @@ We demonstrated the prefect's manifest error of assessment:
 - Confirmed occupation in shortage: profession listed in the ministerial order for the region
 - Genuine employment promise: permanent contract offered with employer attestation of recruitment difficulties
 - Successful integration: long-standing presence in France, French language proficiency, absence of recent antecedents
-- Rare skills: specialized expertise difficult to find on the labor market
+- Rare skills: specialized compétence difficult to find on the labor market
 
 **✅ Result Obtained:**
 

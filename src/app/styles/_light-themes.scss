@@ -51,6 +51,7 @@
 .theme-blue {
 	@include themes.base-theme(theme.$blue-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #004d80;
 	--mat-sys-primary: #f5f9ff;
 	--mat-card-elevated-container-color: var(--mat-sys-primary) !important;
 	--mat-card-container-color: #fafcff !important;
@@ -76,6 +77,7 @@
 .theme-green {
 	@include themes.base-theme(theme.$green-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #005844;
 	--mat-sys-primary: #e8fef5;
 	--mat-card-elevated-container-color: #e8fef5 !important;
 	--mat-card-container-color: #f4fffb !important;
@@ -100,6 +102,7 @@
 .theme-yellow {
 	@include themes.base-theme(theme.$yellow-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #796e00;
 	--mat-sys-primary: #fffae5;
 	--mat-card-elevated-container-color: #fffae5 !important;
 	--mat-card-container-color: #fffbff !important;
@@ -124,6 +127,7 @@
 .theme-magenta {
 	@include themes.base-theme(theme.$magenta-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #7f3053;
 	--mat-sys-primary: #ffebf5;
 	--mat-card-elevated-container-color: #ffebf5 !important;
 	--mat-card-container-color: #fff7fb !important;
@@ -148,6 +152,7 @@
 .theme-orange {
 	@include themes.base-theme(theme.$orange-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #764a00;
 	--mat-sys-primary: #fff0db;
 	--mat-card-elevated-container-color: #fff0db !important;
 	--mat-card-container-color: #fffbf5 !important;
@@ -172,6 +177,7 @@
 .theme-rose {
 	@include themes.base-theme(theme.$rose-primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #7d4b5d;
 	--mat-sys-primary: #fff7f9;
 	--mat-card-elevated-container-color: #fff7f9 !important;
 	--mat-card-container-color: #fffbfd !important;
@@ -196,6 +202,7 @@
 .theme-red {
 	@include themes.base-theme(theme.$primary-palette);
 	@include theme-component-base;
+	--app-navbar-bg: #79082b;
 	--mat-sys-primary: #ffe6e6;
 	--mat-card-elevated-container-color: #ffe6e6 !important;
 	--mat-card-container-color: #fff5f5 !important;

@@ -4,12 +4,9 @@
 		<div class="container">
 			<div class="hero-content">
 				<h1 class="mat-display-2" i18n="About page|Page title">
-					À Propos de @if (isMobile()) { <br />} {{ config.lawyer.fullName }}
+					<span class="hero-title-prefix">À Propos de</span>
+					<span class="hero-title-name">Maître Débora Martinet</span>
 				</h1>
-				<p class="mat-headline-5 hero-subtitle" i18n="About page|Page subtitle">
-					Avocate exercant en droit des étrangers, elle vous accompagne avec rigueur et humanité dans toutes
-					vos démarches administratives et juridiques à Bordeaux et dans toute la France.
-				</p>
 			</div>
 			<div class="hero-image">
 				@if (!imageLoaded()) {
@@ -41,24 +38,44 @@
 		<section class="intro-section">
 			<div class="intro-content">
 				<h2 class="mat-display-1 section-title" i18n="About page|Engagement section title">Mon Engagement</h2>
-				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 1">
-					Maître Débora MARTINET est avocate au Barreau de Bordeaux. Elle exerce principalement en droit des
-					étrangers et de l'asile. Son parcours s'est construit autour de la protection des libertés et de la
-					défense des personnes confrontées à des décisions administratives pouvant avoir des conséquences
-					importantes sur leur vie personnelle et familiale. Formée au sein d'un cabinet bordelais reconnu en
-					droit des étrangers, elle y a développé une pratique du contentieux administratif et des recours
-					contre les décisions préfectorales.
+				<p class="mat-body-1 intro-lead" animateText="fade" i18n="About page|Engagement paragraph 1">
+					Je suis avocate au Barreau de Bordeaux et j'interviens principalement en droit des étrangers, en
+					droit du handicap et en droit de la famille.
 				</p>
-				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 2">
-					Elle a également exercé au sein d'un service préfectoral chargé du contentieux des étrangers, lui
-					permettant d'acquérir une compréhension concrète du fonctionnement administratif et juridictionnel.
-					Cette double expérience lui permet aujourd'hui d'aborder chaque dossier avec une approche à la fois
-					rigoureuse, stratégique et pragmatique. Maître Débora MARTINET attache une importance particulière à
-					l'écoute, à la pédagogie et à la clarté dans l'accompagnement de ses clients.
+				<blockquote
+					class="mat-body-1 quote-highlight"
+					animateText="fade"
+					i18n="About page|Engagement paragraph 2"
+				>
+					« Être avocate, c'est avant tout accompagner des personnes confrontées à des décisions qui peuvent
+					profondément bouleverser leur quotidien. »
+				</blockquote>
+				<p class="mat-body-1 intro-paragraph" animateText="fade" i18n="About page|Engagement paragraph 3">
+					Qu'il s'agisse d'un refus de titre de séjour, d'une décision de la MDPH, d'un divorce ou d'une
+					procédure concernant un enfant, je suis convaincue qu'un accompagnement juridique doit être à la
+					fois rigoureux, accessible et humain.
 				</p>
-				<p class="mat-body-1" animateText="fade" i18n="About page|Engagement paragraph 3">
-					Chaque situation est examinée avec sérieux et engagement, afin de proposer une stratégie adaptée et
-					efficace.
+				<p class="mat-body-1 intro-paragraph" animateText="fade" i18n="About page|Engagement paragraph 4">
+					J'interviens principalement en droit des étrangers, en droit du handicap et en droit de la famille.
+					Ces domaines ont un point commun : ils touchent directement aux droits fondamentaux des personnes et
+					à des moments importants de leur vie.
+				</p>
+				<p class="mat-body-1 intro-paragraph" animateText="fade" i18n="About page|Engagement paragraph 5">
+					Mon parcours m'a permis d'acquérir une solide expérience du contentieux administratif, notamment en
+					droit des étrangers, ainsi que des recours contre les décisions de la MDPH et des procédures
+					familiales.
+				</p>
+				<p class="mat-body-1 intro-paragraph" animateText="fade" i18n="About page|Engagement paragraph 6">
+					Aujourd'hui, je mets cette expérience au service de mes clients, avec une approche fondée sur
+					l'écoute, la disponibilité et la transparence.
+				</p>
+				<p
+					class="mat-body-1 intro-paragraph intro-paragraph--closing"
+					animateText="fade"
+					i18n="About page|Engagement paragraph 7"
+				>
+					Je prends le temps de comprendre chaque situation, de répondre à vos questions et de construire avec
+					vous la stratégie la plus adaptée afin de défendre efficacement vos droits.
 				</p>
 			</div>
 		</section>
@@ -107,22 +124,6 @@
 							</li>
 							<li i18n="About page|Experience item 2">Membre du Pôle MNA du barreau de Bordeaux</li>
 							<li i18n="About page|Experience item 3">Membre du bureau de l'UJA de Bordeaux</li>
-						</ul>
-					</mat-card-content>
-				</mat-card>
-
-				<mat-card class="experience-card" animateText="fade">
-					<mat-card-header>
-						<mat-icon mat-card-avatar>gavel</mat-icon>
-						<mat-card-title i18n="About page|Expertise card title">Domaines d'intervention</mat-card-title>
-					</mat-card-header>
-					<mat-card-content>
-						<ul class="achievement-list">
-							<li i18n="About page|Expertise item 1">Titre de séjour</li>
-							<li i18n="About page|Expertise item 2">Asile et procédure Dublin</li>
-							<li i18n="About page|Expertise item 3">OQTF et éloignement</li>
-							<li i18n="About page|Expertise item 4">Contentieux administratif</li>
-							<li i18n="About page|Expertise item 5">Nationalité française</li>
 						</ul>
 					</mat-card-content>
 				</mat-card>
@@ -264,13 +265,13 @@
 					stratégies à adopter.
 				</p>
 				<div class="cta-buttons">
-					<button mat-flat-button routerLink="/contact">
+					<button mat-flat-button class="cta-button" routerLink="/contact">
 						<mat-icon>email</mat-icon>
 						<span i18n="About page|Contact button">Me contacter</span>
 					</button>
-					<button mat-stroked-button routerLink="/prestations">
+					<button mat-stroked-button class="cta-button" routerLink="/prestations">
 						<mat-icon>info</mat-icon>
-						<span i18n="About page|Services button">Mes services</span>
+						<span i18n="About page|Services button">Mes compétences</span>
 					</button>
 				</div>
 			</div>
