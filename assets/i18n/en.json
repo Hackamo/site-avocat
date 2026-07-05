@@ -32,7 +32,7 @@
 		"subtitle": "Immigration law specialist, I assist you with rigor and humanity in all your administrative and legal procedures in France.",
 		"imageAlt": "Image of Maître Martinet",
 		"engagementTitle": "My Commitment",
-		"engagementText1": "With over 5 years of experience in immigration law, I put my expertise at the service of individuals and businesses to support them in their residence, settlement and naturalization projects in France.",
+		"engagementText1": "With over 5 years of experience in immigration law, I put my compétence at the service of individuals and businesses to support them in their residence, settlement and naturalization projects in France.",
 		"engagementText2": "My approach is characterized by attentive listening, rigorous legal analysis and personalized support adapted to each situation. I firmly believe that everyone deserves a chance to succeed in their life project in France, and I am committed to defending your rights with determination and professionalism.",
 		"experienceTitle": "Professional Background",
 		"formation": {
@@ -56,7 +56,7 @@
 			]
 		},
 		"expertise": {
-			"title": "Areas of Expertise",
+			"title": "Areas of Compétence",
 			"subtitle": "Areas of Specialization",
 			"items": [
 				"Residence permit law",
@@ -150,8 +150,8 @@
 		}
 	},
 	"services": {
-		"title": "Our areas of expertise",
-		"subtitle": "Martinet Law Office assists you with rigor and humanity in all your immigration and nationality matters. We put our expertise at your service to defend your rights and realize your life project in France.",
+		"title": "Our areas of compétence",
+		"subtitle": "Martinet Law Office assists you with rigor and humanity in all your immigration and nationality matters. We put our compétence at your service to defend your rights and realize your life project in France.",
 		"gridView": "Grid view",
 		"ctaTitle": "Need legal assistance?",
 		"ctaDescription": "Each situation is unique. Contact us for an initial analysis of your case.",
@@ -249,8 +249,8 @@
 		},
 		"address": {
 			"title": "Address",
-			"line1": "5 Av. de la République",
-			"line2": "33000 Bordeaux",
+			"line1": "14 Rue Mazarin, 33000 Bordeaux",
+			"line2": "",
 			"aria": "Law firm address",
 			"copyLabel": "Copy address",
 			"copied": "Address copied",
@@ -310,7 +310,7 @@
 	},
 	"footer": {
 		"copyright": "© 2026 Martinet Law Office. All rights reserved.",
-		"address": "5 Avenue de la République, 33000 Bordeaux | Tel: 01 23 45 67 89",
+		"address": "14 Rue Mazarin, 33000 Bordeaux | Tel: 01 23 45 67 89",
 		"legal": "Legal Notice",
 		"privacy": "Privacy Policy",
 		"theme": "Theme"

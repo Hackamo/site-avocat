@@ -32,7 +32,7 @@
 		"subtitle": "Avocate exercant en droit des étrangers, je vous accompagne avec rigueur et humanité dans toutes vos démarches administratives et juridiques en France.",
 		"imageAlt": "Image du Maître Martinet",
 		"engagementTitle": "Mon Engagement",
-		"engagementText1": "Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon expertise au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d'installation et de naturalisation en France.",
+		"engagementText1": "Fort d'une expérience de plus de 5 ans dans le domaine du droit des étrangers, je mets mon compétence au service des particuliers et des entreprises pour les accompagner dans leurs projets de séjour, d'installation et de naturalisation en France.",
 		"engagementText2": "Mon approche se caractérise par une écoute attentive, une analyse juridique rigoureuse et un accompagnement personnalisé adapté à chaque situation. Je crois fermement que chacun mérite une chance de réussir son projet de vie en France, et je m'engage à défendre vos droits avec détermination et professionnalisme.",
 		"experienceTitle": "Parcours Professionnel",
 		"formation": {
@@ -56,7 +56,7 @@
 			]
 		},
 		"expertise": {
-			"title": "Domaines d'Expertise",
+			"title": "Domaines d'Compétence",
 			"subtitle": "Areas of Specialization",
 			"items": [
 				"Droit des titres de séjour",
@@ -150,8 +150,8 @@
 		}
 	},
 	"services": {
-		"title": "Nos domaines d'expertise",
-		"subtitle": "Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit des étrangers et de la nationalité. Nous mettons notre expertise à votre service pour défendre vos droits et concrétiser votre projet de vie en France.",
+		"title": "Nos domaines d'compétence",
+		"subtitle": "Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit des étrangers et de la nationalité. Nous mettons notre compétence à votre service pour défendre vos droits et concrétiser votre projet de vie en France.",
 		"gridView": "Vue en grille",
 		"ctaTitle": "Besoin d'une assistance juridique ?",
 		"ctaDescription": "Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.",
@@ -249,8 +249,8 @@
 		},
 		"address": {
 			"title": "Adresse",
-			"line1": "5 Av. de la République",
-			"line2": "33000 Bordeaux",
+			"line1": "14 Rue Mazarin, 33000 Bordeaux",
+			"line2": "",
 			"aria": "Adresse du cabinet",
 			"copyLabel": "Copier l'adresse",
 			"copied": "Adresse copiée",
@@ -310,7 +310,7 @@
 	},
 	"footer": {
 		"copyright": "© 2026 Cabinet Martinet. Tous droits réservés.",
-		"address": "5 Avenue de la République, 33000 Bordeaux | Tél : 01 23 45 67 89",
+		"address": "14 Rue Mazarin, 33000 Bordeaux | Tél : 01 23 45 67 89",
 		"legal": "Mentions Légales",
 		"privacy": "Politique de Confidentialité",
 		"theme": "Thème"

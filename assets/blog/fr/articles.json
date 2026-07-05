@@ -5,7 +5,7 @@
 		"summary": "Décembre 2025 a été particulièrement fructueux pour le Cabinet Martinet. Découvrez nos 9 victoires en droit des étrangers et droit pénal à Bordeaux.",
 		"image": "assets/blog/images/webp1200/andy-barbour.webp",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-06",
+		"date": "2026-07-06",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -25,7 +25,7 @@
 		"summary": "Conseils pour contester efficacement une obligation de quitter le territoire français.",
 		"image": "assets/blog/images/webp1200/cottonbro.webp",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-05",
+		"date": "2026-06-29",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -45,7 +45,7 @@
 		"summary": "Le guide complet pour ne plus se tromper dans vos démarches de titre de séjour.",
 		"image": "assets/blog/images/webp1200/dom-seven.webp",
 		"category": "Titres de Séjour",
-		"date": "2026-01-04",
+		"date": "2026-06-22",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -65,7 +65,7 @@
 		"summary": "Comprendre les pièges à éviter lors d'une demande de naturalisation.",
 		"image": "assets/blog/images/webp1200/ekaterina-bolovtsova.webp",
 		"category": "Nationalité Française",
-		"date": "2026-02-02",
+		"date": "2026-06-15",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -85,7 +85,7 @@
 		"summary": "Tout savoir sur les conditions d'obtention de la carte de résident en 2026.",
 		"image": "assets/blog/images/webp1200/ekaterina-bolovtsova-alt.webp",
 		"category": "Titres de Séjour",
-		"date": "2026-01-28",
+		"date": "2026-06-08",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -105,7 +105,7 @@
 		"summary": "Comment réussir son changement de statut étudiant vers salarié en France.",
 		"image": "assets/blog/images/webp1200/ekaterina-bolovtsova-altb.webp",
 		"category": "Titres de Séjour",
-		"date": "2026-01-27",
+		"date": "2026-06-01",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -125,7 +125,7 @@
 		"summary": "Comment invoquer efficacement l'article 8 de la CEDH pour défendre votre droit au séjour.",
 		"image": "assets/blog/images/webp1200/karola-g.webp",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-26",
+		"date": "2026-05-25",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -145,7 +145,7 @@
 		"summary": "Guide complet des recours gracieux et contentieux après un refus de titre de séjour.",
 		"image": "assets/blog/images/webp1200/karola-g-alt.webp",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-25",
+		"date": "2026-05-18",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -165,7 +165,7 @@
 		"summary": "Toutes les conditions et démarches pour faire venir votre famille en France.",
 		"image": "assets/blog/images/webp1200/pixabay.webp",
 		"category": "Titres de Séjour",
-		"date": "2026-01-24",
+		"date": "2026-05-11",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -185,7 +185,7 @@
 		"summary": "Guide pratique pour défendre vos droits en centre de rétention administrative.",
 		"image": "assets/blog/images/webp1200/rdne.webp",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-23",
+		"date": "2026-05-04",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -205,7 +205,7 @@
 		"summary": "Mariage, PACS ou concubinage : quels sont vos droits en tant que conjoint de Français ?",
 		"image": "assets/blog/images/webp1200/sora-shimazaki.webp",
 		"category": "Titres de Séjour",
-		"date": "2026-01-22",
+		"date": "2026-04-27",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -213,7 +213,10 @@
 			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
 		},
 		"markdownFile": "conjoint-francais-droits-sejour.md",
-		"similarSlugs": ["regroupement-familial-guide-complet-2026", "vie-privee-familiale-article-8-cedh"]
+		"similarSlugs": [
+			"regroupement-familial-guide-complet-2026",
+			"vie-privee-familiale-article-8-cedh"
+		]
 	},
 	{
 		"slug": "creer-entreprise-france-etranger",
@@ -221,7 +224,7 @@
 		"image": "assets/blog/images/webp1200/sora-shimazaki-altb.webp",
 		"summary": "Les démarches, conditions et titres de séjour pour créer son entreprise en France.",
 		"category": "Titres de Séjour",
-		"date": "2026-01-21",
+		"date": "2026-04-20",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -229,7 +232,10 @@
 			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
 		},
 		"markdownFile": "creer-entreprise-france-etranger.md",
-		"similarSlugs": ["passeport-talent-guide-complet", "carte-resident-10-ans-criteres-2026"]
+		"similarSlugs": [
+			"passeport-talent-guide-complet",
+			"carte-resident-10-ans-criteres-2026"
+		]
 	},
 	{
 		"slug": "assignation-residence-droits-obligations",
@@ -237,7 +243,7 @@
 		"image": "assets/blog/images/webp1200/tima-miroshnichenko.webp",
 		"summary": "Droits, obligations et recours en cas d'assignation à résidence administrative.",
 		"category": "Contentieux et Recours",
-		"date": "2026-01-20",
+		"date": "2026-04-13",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
@@ -245,14 +251,17 @@
 			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
 		},
 		"markdownFile": "assignation-residence-droits-obligations.md",
-		"similarSlugs": ["retention-administrative-droits-recours", "refus-titre-sejour-que-faire"]
+		"similarSlugs": [
+			"retention-administrative-droits-recours",
+			"refus-titre-sejour-que-faire"
+		]
 	},
 	{
 		"slug": "passeport-talent-guide-complet",
 		"title": "Passeport Talent : Le guide complet des 10 catégories",
 		"summary": "Tout savoir sur la carte de séjour pluriannuelle 'passeport talent' en 2026.",
 		"category": "Titres de Séjour",
-		"date": "2026-01-19",
+		"date": "2026-04-06",
 		"author": {
 			"name": "Maître Martinet",
 			"title": "Avocate exercant en droit des étrangers",
