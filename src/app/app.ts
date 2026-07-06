@@ -1,4 +1,4 @@
-import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common'
+import { CommonModule, DOCUMENT, isPlatformBrowser, NgOptimizedImage } from '@angular/common'
 import {
 	ChangeDetectionStrategy,
 	Component,
@@ -45,6 +45,7 @@ import { CONTACT_CONFIG } from './config/contact.config'
 		MatSelectModule,
 		MatTooltipModule,
 		CommonModule,
+		NgOptimizedImage,
 		AnimateText,
 		SkeletonLoaderComponent,
 		ChatWidgetComponent,

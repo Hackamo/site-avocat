@@ -6,13 +6,14 @@
 	color: var(--mat-sys-on-surface);
 
 	a {
-		color: var(--mat-sys-primary);
+		color: var(--app-navbar-bg, #79082b);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
 
 	p {
 		line-height: 1.75;
+		text-wrap: pretty;
 	}
 
 	mat-card-title {
@@ -129,6 +130,7 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		text-wrap: pretty;
 
 		li {
 			padding: 0.5rem 0;
@@ -140,10 +142,11 @@
 			}
 
 			&::before {
-				content: '✓';
-				color: var(--mat-primary-color);
+				content: '•';
+				color: var(--app-navbar-bg, #79082b);
 				font-weight: bold;
 				margin-right: 0.5rem;
+				font-size: 1.2em;
 			}
 		}
 	}
@@ -158,6 +161,8 @@
 		margin-top: 1.5rem;
 		padding: 1rem 2rem;
 		font-size: 1.1rem;
+		background: var(--app-navbar-bg, #79082b);
+		color: #f7e8ed !important;
 		text-decoration: none;
 	}
 
