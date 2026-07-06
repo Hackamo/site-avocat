@@ -1,4 +1,4 @@
-<main>
+<main animate.enter="enter-fade-animation">
 	<div class="container services-page">
 		<header class="page-header">
 			<h1 class="mat-display-2" i18n="Fees page|Page title">Honoraires du cabinet</h1>
@@ -17,7 +17,7 @@
 		</header>
 
 		<section class="experience-grid" aria-label="Modes de rémunération" i18n-aria-label="Fees page|Fees grid label">
-			<mat-card class="experience-card">
+			<mat-card class="experience-card" animate.enter="enter-slide-fade-animation">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>receipt_long</mat-icon>
 					<mat-card-title i18n="Fees page|Flat fee title">L'honoraire au forfait</mat-card-title>
@@ -39,7 +39,7 @@
 				</mat-card-content>
 			</mat-card>
 
-			<mat-card class="experience-card">
+			<mat-card class="experience-card" animate.enter="enter-slide-fade-animation">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>schedule</mat-icon>
 					<mat-card-title i18n="Fees page|Hourly fee title">L'honoraire au temps passé</mat-card-title>
@@ -63,7 +63,7 @@
 		</section>
 
 		<section class="experience-grid support-section">
-			<mat-card class="experience-card">
+			<mat-card class="experience-card" animate.enter="enter-slide-fade-animation">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>account_balance</mat-icon>
 					<mat-card-title i18n="Fees page|Legal aid title">Aide juridictionnelle</mat-card-title>
@@ -91,7 +91,7 @@
 				</mat-card-content>
 			</mat-card>
 
-			<mat-card class="experience-card">
+			<mat-card class="experience-card" animate.enter="enter-slide-fade-animation">
 				<mat-card-header>
 					<mat-icon mat-card-avatar>verified_user</mat-icon>
 					<mat-card-title i18n="Fees page|Legal protection title">Protection juridique</mat-card-title>

@@ -26,6 +26,7 @@ import {
 	RouterModule,
 	RouterOutlet,
 } from '@angular/router'
+import { AnimateText } from './directives/animate-text.directive'
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component'
 import { SkeletonLoaderComponent } from './components/skeleton-loader.component'
 import { CONTACT_CONFIG } from './config/contact.config'
@@ -44,6 +45,7 @@ import { CONTACT_CONFIG } from './config/contact.config'
 		MatSelectModule,
 		MatTooltipModule,
 		CommonModule,
+		AnimateText,
 		SkeletonLoaderComponent,
 		ChatWidgetComponent,
 	],

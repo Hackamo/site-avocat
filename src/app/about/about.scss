@@ -222,14 +222,21 @@ h2 {
 
 			.mat-mdc-card-avatar {
 				margin: 0;
-				width: 1.4rem;
-				height: 1.4rem;
-				min-width: 1.4rem;
-				min-height: 1.4rem;
+				width: 2.5rem;
+				height: 2.5rem;
+				min-width: 2.5rem;
+				min-height: 2.5rem;
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
-				flex: 0 0 1.4rem;
+				flex: 0 0 2.5rem;
+				color: var(--app-navbar-bg, #79082b);
+			}
+
+			mat-card-avatar {
+				font-size: 2rem;
+				line-height: 1;
+				--mat-icon-color: var(--app-navbar-bg, #79082b);
 				color: var(--app-navbar-bg, #79082b);
 			}
 

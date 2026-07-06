@@ -2,15 +2,16 @@ import { AfterViewInit, Directive, ElementRef, inject, input, PLATFORM_ID } from
 import { isPlatformBrowser } from '@angular/common'
 
 @Directive({
-	selector: '[animateText]',
+	selector:
+		'[animateText], h1, h2, h3, h4, h5, h6, p, li, blockquote, mat-card-title, mat-card-subtitle, mat-label, mat-option, a[mat-button], a[mat-flat-button], a[mat-stroked-button], a[mat-raised-button], button[mat-button], button[mat-flat-button], button[mat-stroked-button], button[mat-raised-button]',
 })
 export class AnimateText implements AfterViewInit {
 	private readonly element = inject(ElementRef)
 	private readonly platformId = inject(PLATFORM_ID)
 	animateText = input<'fade' | 'slide-up' | 'slide-left' | 'slide-right'>('fade')
-	threshold = input<number>(0.3)
-	delay = input<number>(0)
-	duration = input<number>(750)
+	threshold = input<number>(0.4)
+	delay = input<number>(200)
+	duration = input<number>(800)
 
 	ngAfterViewInit() {
 		// Only run in browser environment
