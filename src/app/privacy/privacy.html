@@ -42,8 +42,6 @@
 		<p i18n="Privacy|Processing purposes intro">Vos données sont traitées pour :</p>
 		<ul>
 			<li i18n="Privacy|Purpose contact">Vous contacter en réponse à votre demande via le formulaire</li>
-			<li i18n="Privacy|Purpose experience">Améliorer votre expérience utilisateur et la performance du site</li>
-			<li i18n="Privacy|Purpose statistics">Analyser l'utilisation du site pour des statistiques internes</li>
 			<li i18n="Privacy|Purpose legal">Respecter nos obligations légales et réglementaires</li>
 		</ul>
 	</section>
@@ -54,9 +52,6 @@
 		<ul>
 			<li i18n="Privacy|Basis consent">
 				<strong>Votre consentement explicite</strong> : Lorsque vous remplissez un formulaire de contact
-			</li>
-			<li i18n="Privacy|Basis interest">
-				<strong>L'intérêt légitime</strong> : Pour améliorer nos services et analyser le site
 			</li>
 			<li i18n="Privacy|Basis obligation">
 				<strong>Nos obligations légales</strong> : Conservation des données conformément aux lois applicables
@@ -83,7 +78,6 @@
 				Avec les avocats du {{ contactConfig.businessName }} pour répondre à votre demande
 			</li>
 			<li i18n="Privacy|Recipient authorities">Avec les autorités compétentes si requis par la loi</li>
-			<li i18n="Privacy|Recipient hosting">Avec notre hébergeur (GitHub Pages) pour la continuité du service</li>
 		</ul>
 		<p i18n="Privacy|No transfer outside EU">
 			<strong>Pas de transfert hors de l'Union Européenne sans garanties appropriées.</strong>
@@ -124,12 +118,7 @@
 		<p i18n="Privacy|Cookies intro">Ce site utilise les types de cookies suivants :</p>
 		<ul>
 			<li i18n="Privacy|Essential cookies">
-				<strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site (authentification,
-				préférences de thème)
-			</li>
-			<li i18n="Privacy|Performance cookies">
-				<strong>Cookies de performance :</strong> Pour analyser votre utilisation du site afin d'améliorer votre
-				expérience
+				<strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site (préférences de thème)
 			</li>
 		</ul>
 		<p i18n="Privacy|Cookies settings">
@@ -166,8 +155,8 @@
 			Si vous avez des questions ou préoccupations concernant cette politique, veuillez nous contacter à :
 		</p>
 		<p i18n="Privacy|Contact details">
-			<strong>Email :</strong> <a [href]="'mailto:' + contactConfig.email">{{ contactConfig.email }}</a><br />
-			<strong>Adresse :</strong> {{ contactConfig.address.full }}
+			<strong>Email : </strong> <a [href]="'mailto:' + contactConfig.email">{{ contactConfig.email }}</a><br />
+			<strong>Adresse : </strong> {{ contactConfig.address.full }}
 		</p>
 		<p i18n="Privacy|CNIL complaint">
 			Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l'Informatique et

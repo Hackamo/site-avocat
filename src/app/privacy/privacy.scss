@@ -36,7 +36,7 @@ li {
 }
 
 a {
-	color: var(--mat-sys-primary);
+	color: var(--app-navbar-bg, #79082b);
 	text-decoration: underline;
 	text-underline-offset: 3px;
 

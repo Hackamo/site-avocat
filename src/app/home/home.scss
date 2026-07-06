@@ -253,7 +253,7 @@
 	.service-title {
 		margin: 0;
 		font-family: 'Fraunces', serif;
-		font-size: clamp(1.35rem, 1.6vw, 1.75rem);
+		font-size: clamp(1.35rem, 1.6vw, 1.65rem);
 		font-weight: 900;
 		line-height: 1.1;
 		text-transform: uppercase;
@@ -282,9 +282,8 @@
 		border-radius: 999px;
 		background: var(--app-navbar-bg, #79082b);
 		color: #f7e8ed !important;
-		font-family: 'Fraunces', serif;
 		font-size: clamp(0.95rem, 1vw, 1.04rem);
-		font-weight: 700;
+		font-weight: 600;
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
 	}

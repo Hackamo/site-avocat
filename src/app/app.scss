@@ -155,42 +155,42 @@
 		&:hover {
 			background: transparent;
 			box-shadow: none !important;
-			transform: translateY(-2px) scale(1.04);
+			transform: translateY(-1px) scale(1.1);
 		}
 
 		&:hover::after {
 			content: '';
 			position: absolute;
 			left: 50%;
-			bottom: -0.38rem;
+			bottom: -0.45rem;
 			transform: translateX(-50%);
-			width: 6px;
+			width: 5px;
 			height: 6px;
 			border-radius: 50%;
-			border: 1px solid #ffe4ea;
+			border: 1px solid #fff9f9;
 			background: transparent;
 		}
 
 		&:focus-visible {
-			outline: 2px solid #f7d6de;
 			outline-offset: 2px;
+			outline: 2px solid #fff9f9;
 		}
 
 		&.active-link::after {
 			content: '';
 			position: absolute;
 			left: 50%;
-			bottom: -0.38rem;
+			bottom: -0.45rem;
 			transform: translateX(-50%);
 			width: 6px;
 			height: 6px;
 			border-radius: 50%;
-			background: #ffe4ea;
+			background: #fff9f9;
 		}
 
 		&.active-link:hover::after {
 			border: none;
-			background: #ffe4ea;
+			background: #fff9f9;
 		}
 
 		::ng-deep .mat-mdc-button-persistent-ripple::before,
@@ -205,7 +205,7 @@
 	a[routerLink='/contact'] {
 		max-width: 10rem;
 		text-align: center;
-		line-height: 1.05;
+		line-height: 1.2;
 	}
 
 	.theme-toggle {

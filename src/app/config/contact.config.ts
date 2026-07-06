@@ -14,7 +14,7 @@ export const CONTACT_CONFIG = {
 		firstName: 'Débora',
 		lastName: 'Martinet',
 		fullName: 'Maître Débora Martinet',
-		specialties: ['Droit des étrangers', 'Droit de la famille', 'Droit du contentieux'],
+		specialties: ['Droit des étrangers', 'Droit du handicap', 'Droit de la famille'],
 	},
 
 	// Contact details
@@ -57,8 +57,8 @@ export const CONTACT_CONFIG = {
 
 	// Business registration
 	businessInfo: {
-		siret: '00000000000000',
-		siren: '000000000',
+		siret: '99936948100018',
+		siren: '999369481',
 		rcs: 'RCS Bordeaux',
 		vat: 'FR00000000000',
 		insurance: 'Assurance Responsabilité Civile Professionnelle',
