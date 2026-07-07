@@ -43,7 +43,7 @@ export class ChatService {
 				'étudiant',
 			],
 			question: 'Comment obtenir un titre de séjour en France ?',
-			answer: 'Le titre de séjour dépend de votre situation : étudiant, travailleur, famille, réfugié... Je peux vous aider à déterminer le type de titre adapté à votre cas. Contactez-nous pour une consultation détaillée.',
+			answer: 'Le titre de séjour dépend de votre situation : étudiant, travailleur, famille, réfugié... Je peux vous aider à déterminer le type de titre adapté à votre cas. Contactez-moi pour une consultation détaillée.',
 		},
 		{
 			id: 'naturalisation',
@@ -59,7 +59,7 @@ export class ChatService {
 				'dossier naturalisation',
 			],
 			question: 'Quelles sont les conditions pour la naturalisation française ?',
-			answer: 'La naturalisation requiert généralement 5 ans de résidence en France, la maîtrise du français, et le respect des valeurs de la République. Les conditions peuvent varier selon votre profil. Consultez-nous pour évaluer votre cas.',
+			answer: 'La naturalisation requiert généralement 5 ans de résidence en France, la maîtrise du français, et le respect des valeurs de la République. Les conditions peuvent varier selon votre profil. Contactez-moi pour évaluer votre cas.',
 		},
 		{
 			id: 'oqtf',
@@ -123,7 +123,7 @@ export class ChatService {
 				'audience rapide',
 			],
 			question: 'Avez-vous des services pour les cas urgents ?',
-			answer: 'Oui, nous proposons une prise en charge prioritaire pour les cas urgents de droit des étrangers. Appelez-nous immédiatement au +33 5 56 51 09 51 ou utilisez le formulaire de contact.',
+			answer: 'Oui, nous proposons une prise en charge prioritaire pour les cas urgents de droit des étrangers. Appelez-moi immédiatement au +33 5 56 51 09 51 ou utilisez le formulaire de contact.',
 		},
 		{
 			id: 'consultation',
@@ -146,7 +146,7 @@ export class ChatService {
 				'visio',
 			],
 			question: 'Comment prendre un rendez-vous pour une consultation ?',
-			answer: 'Pour prendre rendez-vous, veuillez utiliser notre formulaire de contact. Nous vous recontacterons pour confirmer votre créneau.',
+			answer: 'Pour prendre rendez-vous, veuillez utiliser mon formulaire de contact. Je vous recontacterai pour confirmer votre créneau.',
 			redirectUrl: '/contact#contact-phone',
 		},
 		{
@@ -169,7 +169,7 @@ export class ChatService {
 				'honoraire avocat',
 			],
 			question: 'Quels sont vos tarifs ?',
-			answer: 'Nos tarifs varient selon la complexité de votre dossier et le type de prestation. Nous proposons une première consultation pour établir un devis personnalisé. Contactez-nous pour discuter de vos besoins.',
+			answer: 'Nos tarifs varient selon la complexité de votre dossier et le type de prestation. Nous proposons une première consultation pour établir un devis personnalisé. Contactez-moi pour discuter de vos besoins.',
 		},
 		{
 			id: 'langues',

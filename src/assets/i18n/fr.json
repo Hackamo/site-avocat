@@ -154,11 +154,11 @@
 		"subtitle": "Le cabinet de Maître Martinet vous accompagne avec rigueur et humanité dans toutes vos démarches en droit des étrangers et de la nationalité. Nous mettons notre compétence à votre service pour défendre vos droits et concrétiser votre projet de vie en France.",
 		"gridView": "Vue en grille",
 		"ctaTitle": "Besoin d'une assistance juridique ?",
-		"ctaDescription": "Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.",
+		"ctaDescription": "Chaque situation est unique. Contactez-moi pour une première analyse de votre dossier.",
 		"ctaButton": "Prendre rendez-vous",
 		"viewToggle": "Afficher en grille",
 		"cta.title": "Besoin d'une assistance juridique ?",
-		"cta.description": "Chaque situation est unique. Contactez-nous pour une première analyse de votre dossier.",
+		"cta.description": "Chaque situation est unique. Contactez-moi pour une première analyse de votre dossier.",
 		"cta.button": "Prendre rendez-vous",
 		"categories": {
 			"residencePermits": {
@@ -209,8 +209,8 @@
 		"article": "Article introuvable."
 	},
 	"contact": {
-		"title": "Contactez-nous",
-		"subtitle": "Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais.",
+		"title": "Contactez-moi",
+		"subtitle": "Vous avez des questions sur vos droits ou besoin d'une consultation ? N'hésitez pas à me contacter. Je vous répondrai dans les plus brefs délais.",
 		"submitting": "Envoi en cours...",
 		"copyError": "Impossible de copier. Veuillez copier manuellement.",
 		"phone": {
@@ -258,7 +258,7 @@
 			"mapTitle": "Carte de l'adresse du cabinet"
 		},
 		"form": {
-			"title": "Envoyez-nous un message",
+			"title": "Envoyez-moi un message",
 			"subtitle": "Remplissez le formulaire ci-dessous",
 			"name": {
 				"label": "Nom complet",
@@ -294,7 +294,7 @@
 		},
 		"cta": {
 			"title": "Besoin d'une consultation urgente ?",
-			"description": "Contactez-nous directement par téléphone pour une prise en charge rapide.",
+			"description": "Contactez-moi directement par téléphone pour une prise en charge rapide.",
 			"button": "Appeler maintenant"
 		},
 		"success": "Message envoyé avec succès !",
