@@ -329,4 +329,4 @@ L'assignation à résidence est une mesure moins restrictive que la rétention, 
 
 L'assignation vous donne du temps et de la liberté pour construire votre défense. Profitez-en pour maximiser vos chances d'obtenir l'annulation de la mesure d'éloignement et, à terme, un titre de séjour.
 
-Le Cabinet Martinet vous accompagne dans toutes les procédures liées à l'éloignement du territoire. Contactez-nous dès la notification de l'assignation pour une défense efficace et réactive.
+Le Cabinet Martinet vous accompagne dans toutes les procédures liées à l'éloignement du territoire. Contactez-moi dès la notification de l'assignation pour une défense efficace et réactive.
