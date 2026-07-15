@@ -19,6 +19,7 @@ body.dark-theme {
 	--mat-sys-outline-variant: #2e2e2e !important;
 	--mat-sys-error: #ff6b6b;
 	--app-navbar-bg: #242424;
+	--mat-select-panel-background-color: #242424 !important;
 
 	--mat-tab-divider-color: #ffd740 !important;
 	--mat-tab-active-indicator-color: #ffd740 !important;
@@ -281,7 +282,7 @@ body.dark-theme {
 	}
 
 	.mat-mdc-select-panel {
-		background: #242424 !important;
+		background: var(--mat-select-panel-background-color) !important;
 	}
 
 	.mat-mdc-option {

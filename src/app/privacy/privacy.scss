@@ -1,18 +1,27 @@
+:host {
+	display: block;
+	width: 100%;
+}
+
 .container {
-	max-width: min(100%, 70ch);
+	display: block;
+	max-width: 75ch !important;
+	margin: 0 auto !important;
+	padding: 2rem !important;
 	text-wrap: pretty;
 	hyphens: auto;
+	box-sizing: border-box;
 }
 
 h1 {
 	font-size: 2.5rem;
 	margin-top: 0px;
-	color: var(--mat-button-filled-container-color);
+	color: var(--app-navbar-bg, #79082b);
 }
 
 h2 {
 	font-size: 1.5rem;
-	margin-top: 2rem;
+	margin-top: 2.5rem;
 	margin-bottom: 1rem;
 	color: var(--mat-button-filled-container-color);
 }
@@ -23,16 +32,18 @@ section {
 }
 
 p {
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
 	font-size: 1.1rem;
 }
 
 ul {
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
+	padding-left: 1.5rem;
 }
 
 li {
 	margin-bottom: 0.5rem;
+	line-height: 1.6;
 }
 
 a {
@@ -43,4 +54,8 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.back-button {
+	margin-bottom: 1.5rem;
 }

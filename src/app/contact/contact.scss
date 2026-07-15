@@ -341,17 +341,15 @@
 	}
 
 	h2 {
-		margin-bottom: 1rem;
-		color: var(--mat-primary-color);
-
-		@media (max-width: 768px) {
-			font-size: clamp(1.125rem, 3.5vw, 1.5rem);
-		}
+		color: black !important;
+		font-weight: normal !important;
+		font-size: clamp(1.5rem, 3.5vw, 2.125rem) !important;
+		margin-bottom: 1rem !important;
 	}
 
 	p {
 		margin-bottom: 1.5rem;
-		color: var(--mat-text-secondary-color);
+		color: black;
 
 		@media (max-width: 768px) {
 			margin-bottom: 1rem;

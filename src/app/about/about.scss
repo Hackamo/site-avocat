@@ -381,8 +381,10 @@ h2 {
 	}
 
 	h2 {
-		margin-bottom: 1rem;
-		color: var(--mat-primary-color);
+		color: black !important;
+		font-weight: normal !important;
+		font-size: clamp(1.5rem, 3.5vw, 2.125rem) !important;
+		margin-bottom: 1rem !important;
 	}
 
 	p {
@@ -390,7 +392,7 @@ h2 {
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
-		color: var(--mat-text-secondary-color);
+		color: black;
 	}
 
 	.cta-buttons {

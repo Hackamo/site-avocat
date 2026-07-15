@@ -181,6 +181,17 @@
 	color: var(--mat-sys-on-primary-container);
 	border-radius: 8px;
 
+	h2 {
+		color: black !important;
+		font-weight: normal !important;
+		font-size: clamp(1.5rem, 3.5vw, 2.125rem) !important;
+		margin-bottom: 1rem !important;
+	}
+
+	p {
+		color: black;
+	}
+
 	.cta-button {
 		margin-top: 1.5rem;
 		padding: 1rem 2rem;

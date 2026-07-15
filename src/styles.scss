@@ -200,3 +200,20 @@ h6 {
 		transform: translateY(0) scale(1);
 	}
 }
+
+/* Global styles for Legal and Privacy pages to ensure identical layout */
+app-legal,
+app-privacy {
+	display: block;
+	width: 100%;
+
+	.container {
+		display: block;
+		max-width: 75ch !important;
+		margin: 0 auto !important;
+		padding: 2rem !important;
+		text-wrap: pretty;
+		hyphens: auto;
+		box-sizing: border-box;
+	}
+}

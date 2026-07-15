@@ -5,10 +5,11 @@ import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { RouterLink } from '@angular/router'
 import { MetaService } from '../services/meta.service'
+import { AnimateText } from '../directives/animate-text.directive'
 
 @Component({
 	selector: 'app-honoraires',
-	imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule, RouterLink],
+	imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule, RouterLink, AnimateText],
 	templateUrl: './honoraires.html',
 	styleUrl: './honoraires.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
