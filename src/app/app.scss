@@ -272,9 +272,9 @@
 }
 
 .app-footer {
-	margin: 1rem 0.5rem;
+	overflow: hidden;
+	margin: 0rem 0.5rem 1rem 0.5rem;
 	text-align: center;
-	position: sticky;
 	bottom: 0;
 	background: var(--mat-sys-surface);
 	z-index: 10;
