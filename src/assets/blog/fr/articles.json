@@ -1,5 +1,69 @@
 [
 	{
+		"slug": "comment-contester-MDPH",
+		"title": "Comment contester une décision de la MDPH : Recours et étapes",
+		"summary": "Guide pratique pour contester un refus de l'AAH, de la PCH ou de la RQTH devant la MDPH et le tribunal.",
+		"image": "assets/blog/images/webp/mdph.webp",
+		"category": "Droit Social & Handicap",
+		"date": "2026-06-15",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Avocate au Barreau de Bordeaux",
+			"image": "assets/images/debora_blog.JPG",
+			"bio": "Avocate au Barreau de Bordeaux, exerçant en droit des étrangers, droit de la famille et droit pénal."
+		},
+		"markdownFile": "comment-contester-MDPH.md",
+		"similarSlugs": ["titre-sejour-refuse", "OQTF-que-faire"]
+	},
+	{
+		"slug": "divorce-consentement-mutuel",
+		"title": "Le divorce par consentement mutuel sans juge : Procédure et démarches",
+		"summary": "Tout ce qu'il faut savoir sur le divorce à l'amiable par convention d'avocats et notaire.",
+		"image": "assets/blog/images/webp/divorce.webp",
+		"category": "Droit de la Famille",
+		"date": "2026-06-20",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Avocate au Barreau de Bordeaux",
+			"image": "assets/images/debora_blog.JPG",
+			"bio": "Avocate au Barreau de Bordeaux, exerçant en droit des étrangers, droit de la famille et droit pénal."
+		},
+		"markdownFile": "divorce-consentement-mutuel.md",
+		"similarSlugs": ["comment-contester-MDPH"]
+	},
+	{
+		"slug": "OQTF-que-faire",
+		"title": "OQTF : Quels recours et délais pour contester une obligation de quitter le territoire ?",
+		"summary": "Les démarches urgentes à entreprendre et les délais légaux pour contester une OQTF devant le tribunal administratif.",
+		"image": "assets/blog/images/webp/oqtf.webp",
+		"category": "Droit des Étrangers",
+		"date": "2026-07-01",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Avocate exerçant en droit des étrangers",
+			"image": "assets/images/debora_blog.JPG",
+			"bio": "Avocate au Barreau de Bordeaux, exerçant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
+		},
+		"markdownFile": "OQTF-que-faire.md",
+		"similarSlugs": ["titre-sejour-refuse", "titre-sejour-etudiant-changement-salarie"]
+	},
+	{
+		"slug": "titre-sejour-refuse",
+		"title": "Refus de titre de séjour et OQTF : Comment réagir et faire recours ?",
+		"summary": "Comprendre les motifs de refus de titre de séjour et engager un recours contentieux ou gracieux rapidement.",
+		"image": "assets/blog/images/webp/titre-sejour-refus.webp",
+		"category": "Titres de Séjour",
+		"date": "2026-07-10",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Avocate exerçant en droit des étrangers",
+			"image": "assets/images/debora_blog.JPG",
+			"bio": "Avocate au Barreau de Bordeaux, exerçant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
+		},
+		"markdownFile": "titre-sejour-refuse.md",
+		"similarSlugs": ["OQTF-que-faire", "titre-sejour-etudiant-changement-salarie"]
+	},
+	{
 		"slug": "victoires-juridiques-decembre-2025",
 		"title": "Nos victoires juridiques – Décembre 2025",
 		"summary": "Décembre 2025 a été particulièrement fructueux pour le Cabinet Martinet. Découvrez nos 9 victoires en droit des étrangers et droit pénal à Bordeaux.",
@@ -213,10 +277,23 @@
 			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
 		},
 		"markdownFile": "conjoint-francais-droits-sejour.md",
-		"similarSlugs": [
-			"regroupement-familial-guide-complet-2026",
-			"vie-privee-familiale-article-8-cedh"
-		]
+		"similarSlugs": ["regroupement-familial-guide-complet-2026", "vie-privee-familiale-article-8-cedh"]
+	},
+	{
+		"slug": "assignation-residence-droits-obligations",
+		"title": "Assignation à résidence : Ce que vous devez savoir",
+		"image": "assets/blog/images/jpg/assignation.jpg",
+		"summary": "Droits, obligations et recours en cas d'assignation à résidence administrative.",
+		"category": "Contentieux et Recours",
+		"date": "2026-04-13",
+		"author": {
+			"name": "Maître Martinet",
+			"title": "Avocate exercant en droit des étrangers",
+			"image": "assets/images/debora_blog.JPG",
+			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
+		},
+		"markdownFile": "assignation-residence-droits-obligations.md",
+		"similarSlugs": ["retention-administrative-droits-recours", "refus-titre-sejour-que-faire"]
 	},
 	{
 		"slug": "creer-entreprise-france-etranger",
@@ -232,33 +309,12 @@
 			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
 		},
 		"markdownFile": "creer-entreprise-france-etranger.md",
-		"similarSlugs": [
-			"passeport-talent-guide-complet",
-			"carte-resident-10-ans-criteres-2026"
-		]
-	},
-	{
-		"slug": "assignation-residence-droits-obligations",
-		"title": "Assignation à résidence : Ce que vous devez savoir",
-		"image": "assets/blog/images/webp1200/tima-miroshnichenko.webp",
-		"summary": "Droits, obligations et recours en cas d'assignation à résidence administrative.",
-		"category": "Contentieux et Recours",
-		"date": "2026-04-13",
-		"author": {
-			"name": "Maître Martinet",
-			"title": "Avocate exercant en droit des étrangers",
-			"image": "assets/images/debora_blog.JPG",
-			"bio": "Avocate au Barreau de Bordeaux, exercant en droit des étrangers et droit pénal. Plus de 10 ans d'expérience dans la défense des droits des étrangers."
-		},
-		"markdownFile": "assignation-residence-droits-obligations.md",
-		"similarSlugs": [
-			"retention-administrative-droits-recours",
-			"refus-titre-sejour-que-faire"
-		]
+		"similarSlugs": ["passeport-talent-guide-complet", "carte-resident-10-ans-criteres-2026"]
 	},
 	{
 		"slug": "passeport-talent-guide-complet",
 		"title": "Passeport Talent : Le guide complet des 10 catégories",
+		"image": "assets/blog/images/webp1200/tima-miroshnichenko.webp",
 		"summary": "Tout savoir sur la carte de séjour pluriannuelle 'passeport talent' en 2026.",
 		"category": "Titres de Séjour",
 		"date": "2026-04-06",
