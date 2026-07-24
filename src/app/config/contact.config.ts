@@ -49,10 +49,10 @@ export const CONTACT_CONFIG = {
 
 	// Special email addresses
 	specialEmails: {
-		legal: 'legal@cabinet-martinet.fr',
-		privacy: 'privacy@cabinet-martinet.fr',
-		security: 'security@cabinet-martinet.fr',
-		appointments: 'rdv@cabinet-martinet.fr',
+		legal: 'debora.martinet@avocat.fr',
+		privacy: 'debora.martinet@avocat.fr',
+		security: 'debora.martinet@avocat.fr',
+		appointments: 'debora.martinet@avocat.fr',
 	},
 
 	// Business registration
