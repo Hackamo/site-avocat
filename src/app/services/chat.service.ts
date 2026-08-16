@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core'
+import { Observable, ReplaySubject } from 'rxjs'
+import { CONTACT_CONFIG } from '../config/contact.config'
 
 export interface ChatMessage {
 	id: string
@@ -18,9 +20,15 @@ export interface FAQ {
 @Injectable({ providedIn: 'root' })
 export class ChatService {
 	private readonly apiUrl = '/api/chat'
-	private readonly directGeminiModel = 'gemini-3.5-flash'
-	private readonly directGeminiDisabled = this.readDirectGeminiDisabled()
-	private readonly directGeminiEnabled = this.readDirectGeminiEnabled()
+
+	// Message stream for components to subscribe to (keeps recent messages)
+	private readonly messageSubject = new ReplaySubject<ChatMessage>(50)
+	public readonly messages$: Observable<ChatMessage> = this.messageSubject.asObservable()
+
+	// Simple in-memory send queue to serialize outbound messages and apply a small rate limit
+	private readonly sendQueue: Array<{ message: string; resolve: (r: string) => void; reject: (e: any) => void }> = []
+	private processingQueue = false
+	private readonly sendDelayMs = 250
 
 	private readonly faqs: FAQ[] = [
 		{
@@ -123,7 +131,7 @@ export class ChatService {
 				'audience rapide',
 			],
 			question: 'Avez-vous des services pour les cas urgents ?',
-			answer: 'Oui, nous proposons une prise en charge prioritaire pour les cas urgents de droit des étrangers. Appelez-moi immédiatement au +33 5 56 51 09 51 ou utilisez le formulaire de contact.',
+			answer: `Oui, nous proposons une prise en charge prioritaire pour les cas urgents de droit des étrangers. Appelez-moi au ${CONTACT_CONFIG.phone} ou utilisez le formulaire de contact.`,
 		},
 		{
 			id: 'consultation',
@@ -335,128 +343,64 @@ export class ChatService {
 	}
 
 	async sendMessage(userMessage: string): Promise<string> {
-		const directApiKey = this.getDirectGeminiApiKey()
-
-		try {
-			return await this.sendBackendMessage(userMessage)
-		} catch (backendError) {
-			console.warn(
-				'ChatService.sendMessage backend failed, falling back to direct Gemini if configured.',
-				backendError,
-			)
-
-			if (directApiKey) {
-				try {
-					return await this.sendGeminiDirect(userMessage, directApiKey)
-				} catch (directError) {
-					console.error('ChatService.sendMessage direct Gemini failed:', directError)
-					return this.getBotResponse(userMessage)
-				}
-			}
-
-			console.warn('ChatService.sendMessage error fallback using legacy chatbox for:', userMessage)
-			return this.getBotResponse(userMessage)
-		}
-	}
-
-	async streamMessage(userMessage: string, onChunk: (chunk: string) => void): Promise<void> {
-		if (typeof window === 'undefined' || !('EventSource' in window) || !this.directGeminiEnabled) {
+		return new Promise((resolve, reject) => {
+			// push user message immediately to the observable stream
 			try {
-				const response = await this.sendBackendMessage(userMessage)
-				onChunk(response)
-				return
-			} catch {
-				onChunk(this.getBotResponse(userMessage))
-				return
-			}
-		}
-
-		const url = new URL('/api/chat-stream', window.location.origin)
-		url.searchParams.set('message', userMessage)
-
-		return new Promise((resolve) => {
-			const source = new EventSource(url.toString())
-
-			source.onmessage = (event) => {
-				try {
-					const data = JSON.parse(event.data) as { text?: string }
-					if (typeof data.text === 'string' && data.text) {
-						onChunk(data.text)
-					}
-				} catch {
-					source.close()
-					onChunk(this.getBotResponse(userMessage))
-					resolve()
-				}
+				this.messageSubject.next({ id: this._makeId(), type: 'user', text: userMessage, timestamp: new Date() })
+			} catch (e) {
+				// non-blocking
+				console.warn('ChatService.sendMessage could not push user message to stream', e)
 			}
 
-			source.addEventListener('done', () => {
-				source.close()
-				resolve()
-			})
-
-			source.addEventListener('error', () => {
-				source.close()
-				onChunk(this.getBotResponse(userMessage))
-				resolve()
-			})
+			this.sendQueue.push({ message: userMessage, resolve, reject })
+			this.processQueue().catch((err) => console.error('ChatService.processQueue failed:', err))
 		})
 	}
 
+	private async processQueue(): Promise<void> {
+		if (this.processingQueue) return
+		this.processingQueue = true
+
+		while (this.sendQueue.length) {
+			const item = this.sendQueue.shift()!
+			try {
+				const answer = await this._sendAttempt(item.message)
+				this.messageSubject.next({ id: this._makeId(), type: 'bot', text: answer, timestamp: new Date() })
+				item.resolve(answer)
+			} catch (err) {
+				console.error('ChatService._sendAttempt failed, returning fallback response:', err)
+				const fallback = this.getBotResponse(item.message)
+				this.messageSubject.next({ id: this._makeId(), type: 'bot', text: fallback, timestamp: new Date() })
+				// resolve with fallback so callers always get a useful reply
+				item.resolve(fallback)
+			}
+
+			// small delay between messages to avoid bursts
+			await new Promise((r) => setTimeout(r, this.sendDelayMs))
+		}
+
+		this.processingQueue = false
+	}
+
+	private async _sendAttempt(userMessage: string): Promise<string> {
+		return await this.sendBackendMessage(userMessage)
+	}
+
+	private _makeId(): string {
+		return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
+	}
+
+	async streamMessage(userMessage: string, onChunk: (chunk: string) => void): Promise<void> {
+		try {
+			const response = await this.sendBackendMessage(userMessage)
+			onChunk(response)
+		} catch {
+			onChunk(this.getBotResponse(userMessage))
+		}
+	}
+
 	canUseChatStream(): boolean {
-		return typeof window !== 'undefined' && 'EventSource' in window && this.directGeminiEnabled
-	}
-
-	private getDirectGeminiApiKey(): string | null {
-		if (typeof window === 'undefined') {
-			return null
-		}
-
-		if (!this.directGeminiEnabled) {
-			return null
-		}
-
-		const candidate = (window as any).GEMINI_API_KEY ?? (window as any).VITE_GEMINI_API_KEY ?? ''
-		const apiKey = String(candidate).trim()
-		return apiKey || null
-	}
-
-	private readDirectGeminiEnabled(): boolean {
-		if (typeof window === 'undefined') {
-			return false
-		}
-
-		if (this.directGeminiDisabled) {
-			return false
-		}
-
-		const enabledValue = (window as any).GEMINI_DIRECT_ENABLED ?? (window as any).VITE_GEMINI_DIRECT_ENABLED
-		if (enabledValue === undefined || enabledValue === null) {
-			return true
-		}
-
-		if (typeof enabledValue === 'string') {
-			return enabledValue.toLowerCase() !== 'false' && enabledValue !== '0'
-		}
-
-		return Boolean(enabledValue)
-	}
-
-	private readDirectGeminiDisabled(): boolean {
-		if (typeof window === 'undefined') {
-			return false
-		}
-
-		const disabledValue = (window as any).GEMINI_DIRECT_DISABLED ?? (window as any).VITE_GEMINI_DIRECT_DISABLED
-		if (disabledValue === undefined || disabledValue === null) {
-			return false
-		}
-
-		if (typeof disabledValue === 'string') {
-			return disabledValue.toLowerCase() !== 'false' && disabledValue !== '0'
-		}
-
-		return Boolean(disabledValue)
+		return false
 	}
 
 	private async sendBackendMessage(userMessage: string): Promise<string> {
@@ -499,50 +443,5 @@ export class ChatService {
 		throw new Error('ChatService.sendMessage unexpected content type')
 	}
 
-	private async sendGeminiDirect(userMessage: string, apiKey: string): Promise<string> {
-		const response = await fetch(
-			`https://generativelanguage.googleapis.com/v1/models/${this.directGeminiModel}:generateContent?key=${encodeURIComponent(apiKey)}`,
-			{
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					contents: [
-						{
-							parts: [
-								{
-									text:
-										'Tu es un assistant juridique spécialisé en droit des étrangers en France. Réponds de manière claire et concise en français et précise que les informations fournies ne remplacent pas un avis juridique professionnel.\n\nQuestion : ' +
-										userMessage,
-								},
-							],
-						},
-					],
-					generationConfig: {
-						maxOutputTokens: 4096,
-						temperature: 0.2,
-						topP: 0.95,
-					},
-				}),
-			},
-		)
-
-		const bodyText = await response.text()
-		if (!response.ok) {
-			const errorMessage = bodyText.trim() || `Gemini direct error ${response.status}`
-			throw new Error(errorMessage)
-		}
-
-		const result = JSON.parse(bodyText) as {
-			candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>
-		}
-		const text = result.candidates?.[0]?.content?.parts
-			?.map((part) => part.text ?? '')
-			.join('')
-			.trim()
-		if (!text) {
-			throw new Error('Aucune réponse reçue de l’IA')
-		}
-
-		return text
-	}
+    
 }

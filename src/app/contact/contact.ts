@@ -240,6 +240,8 @@ export class Contact implements OnDestroy, AfterViewInit {
 				const templateParams = {
 					from_name: this.contactForm.value.name,
 					from_email: this.contactForm.value.email,
+					subject: this.contactForm.value.subject || 'Demande de contact',
+					message: this.contactForm.value.message || 'Aucun message fourni',
 					phone: this.contactForm.value.phone || 'Non fourni',
 					to_email: this.config.email,
 				}
